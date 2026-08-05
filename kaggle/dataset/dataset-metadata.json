@@ -1,0 +1,41 @@
+{
+  "title": "SuppDB - Supplements & Nootropics (Sample)",
+  "subtitle": "Real supplement labels: mg doses, proprietary blends, PubChem chemistry",
+  "id": "ahtiticheamine/suppdb-supplements-sample",
+  "licenses": [{"name": "CC-BY-NC-4.0"}],
+  "keywords": ["health", "medicine", "chemistry", "nutrition", "biology"],
+  "description": "# SuppDB - Supplements & Nootropics Dataset (Free Sample)\n\nA structured dataset of real supplement & nootropic products, built **exclusively from the public [NIH Dietary Supplement Label Database (DSLD)](https://dsld.od.nih.gov/)** - every active ingredient normalized to **milligrams**, proprietary blends flagged where the dose is undisclosed, and each compound enriched with **NIH PubChem** chemical identity. A **source label ID + URL on every record** means any fact can be re-verified.\n\nThink *INCIDecoder for supplements*: **one row per active ingredient**, with its dose, form, safety reference, and molecular identity. Built only from **public-domain U.S. Government data** (NIH DSLD + PubChem).\n\nThis Kaggle dataset is the **free sample - 2,249 ingredient records across 300 real products from 218 brands**. The full dataset - **17,000+ products from 2,000+ brands, 115,000+ active-ingredient records** - is available at [suppdb.net](https://supplements-nootropics-suppdb.pages.dev).\n\n## What makes it useful\n\n- **Normalized mg dosages** - `mcg`, `g`, and substance-specific `IU` handled correctly (Vitamin D 1,000 IU -> 0.025 mg, not a bogus flat factor).\n- **Proprietary-blend transparency** - ingredients whose dose is hidden on the label are flagged `is_proprietary_blend = 1` with `amount = 0`; you can see the hidden-dose ingredients, not just miss them.\n- **PubChem chemistry + canonicalization** - `pubchem_cid`, `molecular_formula`, `molecular_weight`, `canonical_smiles`, `inchikey`. Rows sharing an InChIKey are the same molecule under different names (e.g. Vitamin C / Ascorbic Acid), so you can canonicalize deterministically.\n- **NIH DRI reference intakes** - `recommended_daily_mg` / `upper_safety_limit_mg` from authoritative NIH DRIs, NULL where none exists (never invented).\n- **Honest, uneven coverage** - botanicals and blends legitimately lack chemistry/reference values. NULL means no established value, not missing.\n\n## Field coverage (full dataset)\n\n| Field | Coverage | | Field | Coverage |\n| :--- | ---: | --- | :--- | ---: |\n| Brand / product / ingredient | 100% | | Proprietary-blend flag | 37% of rows |\n| UPC barcode | 86% | | RDA / upper limit (NIH DRI) | ~9% |\n| Dose normalized to mg | 100% | | PubChem CID / formula / weight | ~25% |\n| Servings per container | 85% | | SMILES / InChIKey | ~25% |\n\n## Columns\n\nSee the column descriptions tab - every field is documented. A starter notebook demonstrating loading, tabular preview, dose & proprietary-blend analysis, and chemistry/provenance is attached.\n\n## License & attribution\n\nThe **sample** is shared under **CC-BY-NC-4.0** (attribution, non-commercial). The **full commercial dataset** is licensed separately via [suppdb.net](https://supplements-nootropics-suppdb.pages.dev). Underlying facts are public-domain (NIH DSLD + PubChem). **Not medical advice** - verify against the current physical label.\n\n**Full dataset & updates:** https://supplements-nootropics-suppdb.pages.dev",
+  "resources": [
+    {
+      "path": "suppdb_sample.csv",
+      "description": "2,249 active-ingredient records across 300 real supplement products from 218 brands. One row per (product x active ingredient), with normalized mg dose, proprietary-blend flag, NIH DRI reference intakes, NIH PubChem chemistry, and full DSLD provenance.",
+      "schema": {
+        "fields": [
+          {"name": "product_id", "type": "number", "description": "SuppDB product identifier (stable within a snapshot). Multiple rows share it - one per active ingredient."},
+          {"name": "brand", "type": "string", "description": "Brand / manufacturer as printed on the label."},
+          {"name": "product_name", "type": "string", "description": "Product name as listed on the NIH DSLD label."},
+          {"name": "upc_barcode", "type": "string", "description": "UPC / GTIN barcode. A 'DSLD-<id>' placeholder is used where the label has no printed barcode (86% are real barcodes)."},
+          {"name": "form_type", "type": "string", "description": "Physical form: Capsule, Tablet, Powder, Softgel Capsule, Liquid, etc."},
+          {"name": "serving_size_count", "type": "number", "description": "Number of units per serving (e.g. 2 capsules)."},
+          {"name": "serving_size_unit", "type": "string", "description": "Unit of the serving size (capsule, softgel, scoop, mL, ...)."},
+          {"name": "servings_per_container", "type": "number", "description": "Servings per container, from the DSLD label where the manufacturer stated it (85% populated); NULL otherwise."},
+          {"name": "ingredient", "type": "string", "description": "Canonical ingredient name (DSLD ingredient group), e.g. Magnesium, Vitamin C, Ashwagandha."},
+          {"name": "ingredient_form", "type": "string", "description": "Specific form as listed on the label, e.g. Magnesium Bisglycinate, Ascorbic Acid."},
+          {"name": "ingredient_category", "type": "string", "description": "DSLD ingredient category: mineral, vitamin, botanical, amino acid, fatty acid, etc."},
+          {"name": "amount_per_serving_mg", "type": "number", "description": "Dose per serving normalized to milligrams. 0 means the dose is undisclosed inside a proprietary blend (see is_proprietary_blend)."},
+          {"name": "is_proprietary_blend", "type": "number", "description": "1 = this ingredient's per-serving dose is undisclosed on the label (hidden in a proprietary blend; amount_per_serving_mg is 0). 0 = disclosed."},
+          {"name": "recommended_daily_mg", "type": "number", "description": "Recommended daily intake in mg, from authoritative NIH Dietary Reference Intakes. NULL where no official value exists (most herbs, amino acids, nootropics)."},
+          {"name": "upper_safety_limit_mg", "type": "number", "description": "NIH DRI Tolerable Upper Intake Level in mg. NULL where none has been established."},
+          {"name": "pubchem_cid", "type": "number", "description": "NIH PubChem Compound ID. NULL for botanicals / multi-component blends with no single PubChem compound."},
+          {"name": "molecular_formula", "type": "string", "description": "Molecular formula from NIH PubChem, e.g. C8H10N4O2. NULL where not a single defined compound."},
+          {"name": "molecular_weight", "type": "number", "description": "Molecular weight (g/mol) from NIH PubChem. NULL where not a single defined compound."},
+          {"name": "inchikey", "type": "string", "description": "PubChem InChIKey: a canonical chemical key. Rows sharing an InChIKey are the same molecule regardless of label name (use to canonicalize variants)."},
+          {"name": "canonical_smiles", "type": "string", "description": "Canonical SMILES structure string from NIH PubChem. NULL where not a single defined compound."},
+          {"name": "dsld_label_id", "type": "string", "description": "NIH DSLD label identifier (provenance)."},
+          {"name": "source_url", "type": "string", "description": "Exact NIH DSLD label URL the record was extracted from (re-verifiable provenance)."},
+          {"name": "dataset_version", "type": "string", "description": "Snapshot identifier, e.g. 2026.07."}
+        ]
+      }
+    }
+  ]
+}

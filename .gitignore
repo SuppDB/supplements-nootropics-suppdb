@@ -1,0 +1,35 @@
+# This is the PUBLIC showcase repo — never commit the full dataset or any
+# pipeline source here. Only the sample, docs, and assets belong.
+
+# Full dataset / exports (paid deliverable — keep OUT of this repo)
+suppdb_export.*
+suppdb_master.*
+suppdb.sqlite
+*.sqlite
+*.sqlite3
+suppdb_v*.*
+enterprise_release/
+# ...but DO keep the public sample
+!samples/suppdb_sample.csv
+!kaggle/dataset/suppdb_sample.csv
+
+# Never bring the engine source / caches into this repo
+src/
+ingest_*.py
+enrich_*.py
+extraction_pipeline.py
+seed_*.py
+run_ingestion_pipeline.py
+dsld_cache/
+pubchem_cache/
+dsld_manifest.json
+
+# OS / tooling
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.wrangler/
+
+# Internal / Working documentation
+SEO Optimisation/
