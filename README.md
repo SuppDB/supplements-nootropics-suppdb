@@ -37,6 +37,8 @@ This is a **label-facts + chemistry** dataset — think *INCIDecoder for supplem
 
 The free [`samples/suppdb_sample.csv`](samples/suppdb_sample.csv) is a flat, one-row-per-ingredient table — **2,249 ingredient records across 300 real products from 218 brands** — a true taste of the schema and quality. Explore it interactively in the [🤗 Sample Explorer](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers), or load it straight from the [🤗 sample dataset](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample). The full dataset is available at **[suppdb.net](https://supplements-nootropics-suppdb.pages.dev)**.
 
+Each sample product also carries a **[Safety layer](#safety-layer) teaser** — `product_max_pct_ul`, `product_over_ul_flag`, and `product_interaction_count` — and [`samples/interactions_sample.csv`](samples/interactions_sample.csv) shows 30 example interactions. The full 8,800+-interaction Safety layer (with per-compound detail, contraindications, and WADA flags) is the paid add-on.
+
 ## Field coverage (the honest numbers)
 
 Measured across all 17,000+ products. Published up front so you can decide if the fields you need are covered — supplement labels don't all publish every attribute, and reference/chemistry data only exists for some compounds.

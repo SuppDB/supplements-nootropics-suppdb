@@ -1,0 +1,31 @@
+supplement,partner_type,partner_name,severity,mechanism,effect,evidence_grade,source
+St. John's Wort,drug,cyclosporine,contraindicated,strong CYP3A4 / P-gp induction,sub-therapeutic immunosuppression; transplant-rejection risk,clinical,MedlinePlus
+5-HTP,drug_class,SSRIs / SNRIs / MAOIs,major,additive serotonin,serotonin syndrome risk,clinical,MedlinePlus
+Licorice,drug,digoxin,major,glycyrrhizin-induced hypokalemia potentiates digoxin,increased digoxin toxicity risk,clinical,MedlinePlus
+Licorice,drug_class,diuretics / antihypertensives,major,causes sodium retention and potassium loss,hypokalemia and reduced BP control,clinical,MedlinePlus
+Potassium,drug_class,ACE inhibitors / ARBs,major,both raise serum potassium,additive hyperkalemia (dangerous arrhythmia risk),clinical,DailyMed ACE-inhibitor labels
+Potassium,drug_class,potassium-sparing diuretics,major,reduced potassium excretion plus supplementation,additive hyperkalemia,clinical,DailyMed diuretic labels
+St. John's Wort,drug_class,SSRIs / SNRIs (antidepressants),major,additive serotonergic activity plus CYP induction,serotonin syndrome risk and reduced antidepressant levels,clinical,NIH ODS / MedlinePlus
+St. John's Wort,drug,digoxin,major,P-glycoprotein induction lowers digoxin absorption,reduced digoxin levels / loss of control,clinical,MedlinePlus
+St. John's Wort,drug_class,oral contraceptives,major,CYP3A4 induction accelerates hormone metabolism,reduced contraceptive efficacy / breakthrough bleeding,clinical,MedlinePlus
+St. John's Wort,drug,warfarin,major,CYP3A4 / P-glycoprotein induction,reduces warfarin plasma levels and anticoagulant effect,clinical,MedlinePlus
+Vitamin K,drug,warfarin,major,vitamin K restores clotting-factor synthesis that warfarin blocks,antagonizes anticoagulation; lowers INR and raises clot risk if intake swings,clinical,DailyMed warfarin label / NIH ODS
+Berberine,drug_class,CYP3A4 substrates (e.g. cyclosporine),moderate,inhibits CYP3A4 and P-gp,raised plasma levels of co-administered CYP3A4 drugs,clinical,MedlinePlus
+Calcium,compound,iron,moderate,calcium competes with non-heme iron for absorption,reduced iron absorption; take apart,clinical,NIH ODS Iron
+Calcium,drug,levothyroxine,moderate,forms an insoluble complex in the gut,reduced thyroid-hormone absorption; separate doses by 4 h,clinical,DailyMed levothyroxine label
+Calcium,drug_class,tetracycline / quinolone antibiotics,moderate,cation chelation of the antibiotic,reduced antibiotic absorption and efficacy,clinical,DailyMed antibiotic labels
+Garlic,drug_class,HIV protease inhibitors (saquinavir),moderate,reduces protease-inhibitor plasma levels,sub-therapeutic antiviral levels,clinical,MedlinePlus
+Garlic,drug,warfarin,moderate,antiplatelet activity,increased bleeding risk / raised INR,clinical,MedlinePlus
+Ginkgo,drug_class,NSAIDs / aspirin,moderate,additive antiplatelet effect,increased bleeding risk,theoretical,MedlinePlus
+Ginkgo,drug_class,anticoagulants / antiplatelets,moderate,inhibits platelet-activating factor,increased bleeding risk,clinical,MedlinePlus
+Green Tea,drug,nadolol,moderate,reduces nadolol absorption (OATP inhibition),reduced beta-blocker effect,clinical,MedlinePlus
+Iron,drug,levothyroxine,moderate,forms a complex reducing absorption,reduced thyroid-hormone absorption; separate doses,clinical,DailyMed levothyroxine label
+Iron,drug_class,tetracycline / quinolone antibiotics,moderate,cation chelation,reduced absorption of both the antibiotic and iron,clinical,DailyMed antibiotic labels
+Magnesium,drug_class,bisphosphonates,moderate,reduced GI absorption,lower bisphosphonate efficacy; separate doses,clinical,DailyMed bisphosphonate labels
+Magnesium,drug_class,tetracycline / quinolone antibiotics,moderate,cation chelation,reduced antibiotic absorption; separate doses by 2-4 h,clinical,DailyMed antibiotic labels
+Melatonin,drug_class,anticoagulants,moderate,may reduce clotting,possible increased bleeding risk,theoretical,MedlinePlus
+Melatonin,drug_class,sedatives / benzodiazepines,moderate,additive CNS depression,excess sedation / drowsiness,clinical,MedlinePlus
+Niacin,drug_class,statins,moderate,additive myotoxicity at high niacin doses,increased myopathy / rhabdomyolysis risk,clinical,DailyMed statin labels
+Panax Ginseng,drug,warfarin,moderate,reduces warfarin effect,lowered INR / reduced anticoagulation,clinical,MedlinePlus
+Vitamin B6,drug,levodopa (without carbidopa),moderate,accelerates peripheral levodopa decarboxylation,reduced levodopa efficacy,clinical,NIH ODS
+Vitamin E,drug_class,anticoagulants / antiplatelets,moderate,high-dose vitamin E has antiplatelet activity,additive bleeding risk,clinical,NIH ODS
