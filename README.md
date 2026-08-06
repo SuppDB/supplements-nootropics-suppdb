@@ -12,6 +12,7 @@
 [![Brands: 2,000+](https://img.shields.io/badge/Brands-2%2C000%2B-4c8bf5.svg)](#whats-inside)
 [![Source: NIH DSLD](https://img.shields.io/badge/Source-NIH%20DSLD%20%2B%20PubChem-2fb389.svg)](#provenance)
 [![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
+[![Safety layer: 8,800+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C800%2B%20interactions-e11d48.svg)](#safety-layer)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.net-10b981.svg)](https://supplements-nootropics-suppdb.pages.dev)
 
 **[→ Get the full dataset at suppdb.net](https://supplements-nootropics-suppdb.pages.dev)**
@@ -33,6 +34,8 @@ This is a **label-facts + chemistry** dataset — think *INCIDecoder for supplem
 | Active-ingredient records | **115,000+** | 2,249 |
 | Proprietary-blend flags | **40,000+** | 883 |
 | Compounds w/ PubChem chemistry | **4,000+** | 50% of rows |
+| Interactions *(Safety layer)* | **8,800+** | 30 examples |
+| Products over an upper limit *(Safety layer)* | **1,300+** | 26 |
 | Formats | SQLite · CSV · JSON | CSV |
 
 The free [`samples/suppdb_sample.csv`](samples/suppdb_sample.csv) is a flat, one-row-per-ingredient table — **2,249 ingredient records across 300 real products from 218 brands** — a true taste of the schema and quality. Explore it interactively in the [🤗 Sample Explorer](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers), or load it straight from the [🤗 sample dataset](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample). The full dataset is available at **[suppdb.net](https://supplements-nootropics-suppdb.pages.dev)**.
@@ -99,6 +102,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 ## Use cases
 
 - AI health co-pilots & supplement recommendation apps (structured dose + chemistry data)
+- **Drug-interaction & upper-limit checking** for pharmacy, telehealth, and supplement-stack apps (Safety layer)
 - Ingredient/dose comparison and proprietary-blend transparency tools
 - ML / RAG corpora over supplement labels
 - Formulation, market, and assortment research across brands and ingredient categories
