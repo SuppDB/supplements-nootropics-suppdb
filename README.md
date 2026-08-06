@@ -4,7 +4,7 @@
 
 # 💊 SuppDB — Supplements & Nootropics Dataset
 
-**17,000+ real supplement products · 2,000+ brands · normalized mg dosages · proprietary-blend flags · NIH PubChem chemistry**
+**17,000+ real supplement products · 2,000+ brands · normalized mg dosages · proprietary-blend flags · NIH PubChem chemistry · drug-interaction & upper-limit safety layer**
 
 [![Sample: 300 products](https://img.shields.io/badge/Free%20Sample-300%20products-brightgreen.svg)](samples/suppdb_sample.csv)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)
@@ -59,6 +59,17 @@ Measured across all 17,000+ products. Published up front so you can decide if th
 - **PubChem chemistry + canonicalization.** `pubchem_cid`, `molecular_formula`, `molecular_weight`, `canonical_smiles`, `inchikey`. The **InChIKey** is a canonical chemical key — rows sharing one are the same molecule under different label names (e.g. *Vitamin C* and *Ascorbic Acid* → same InChIKey), so you can canonicalize deterministically.
 - **NIH DRI reference intakes.** `recommended_daily_mg` / `upper_safety_limit_mg` populated from authoritative NIH Dietary Reference Intakes, and **NULL** where no official value exists — never invented.
 
+## Safety layer
+
+Beyond the catalog, an optional **Safety layer** turns the normalized doses into a decision layer — the part health apps, pharmacies, and telehealth teams can't easily reproduce:
+
+- **8,800+ interactions** — supplement × drug / drug-class / supplement, each with severity, mechanism, effect and a **cited public-domain source**. A hand-verified core plus label-cited entries auto-extracted from FDA (DailyMed) drug labels, **evidence-graded** so you can filter to the vetted set.
+- **% of the Tolerable Upper Limit** per product, with over-limit flags — computed from the mg-normalized doses against NIH DRI limits.
+- **Condition contraindications** (pregnancy, anticoagulation, renal impairment, pre-surgery, …) and **WADA doping flags** for banned / monitored compounds.
+- **Transparency score** per product from dose disclosure + brand quality flags.
+
+Delivered as relational SQLite + CSV + JSON, self-joinable via a slim compound index. Sources are public-domain (NIH ODS, DailyMed, MedlinePlus, WADA). Available at **[suppdb.net](https://supplements-nootropics-suppdb.pages.dev)** as a one-time download. **Not medical advice** — every row cites its source; verify with a clinician.
+
 ## Provenance
 
 Every record is traceable and re-verifiable:
@@ -78,6 +89,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | :--- | :--- | :--- |
 | **Sample** | ~300 products, flat CSV (this repo) | Free |
 | **Snapshot** | Full 17,000+ products · SQLite + CSV + JSON | **$49** one-time |
+| **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
 | **Custom & Enterprise** | Your target brands/ingredients · recurring refreshes · API | **$99+** |
 
 **[→ Get it at suppdb.net](https://supplements-nootropics-suppdb.pages.dev)** · or email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)** for custom work.
