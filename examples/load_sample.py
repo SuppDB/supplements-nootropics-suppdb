@@ -4,7 +4,7 @@
 
 The sample is one row per (product x active ingredient). No dependencies beyond
 the Python standard library.
-Full dataset: https://supplements-nootropics-suppdb.pages.dev
+Full dataset: https://suppdb.dataengineered.io
 """
 
 import csv

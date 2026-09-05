@@ -16,4 +16,4 @@ All notable changes to the SuppDB dataset snapshots.
 - **NIH DRI reference intakes** (RDA / upper limit) where an official value exists; NULL otherwise.
 - Built exclusively from public-domain **NIH DSLD** labels; per-record provenance via `dsld_label_id`, `source_url`, `dataset_version`.
 
-Full dataset & updates: [suppdb.net](https://supplements-nootropics-suppdb.pages.dev)
+Full dataset & updates: [suppdb.net](https://suppdb.dataengineered.io)

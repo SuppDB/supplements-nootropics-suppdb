@@ -13,9 +13,9 @@
 [![Source: NIH DSLD](https://img.shields.io/badge/Source-NIH%20DSLD%20%2B%20PubChem-2fb389.svg)](#provenance)
 [![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
 [![Safety layer: 8,800+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C800%2B%20interactions-e11d48.svg)](#safety-layer)
-[![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.net-10b981.svg)](https://supplements-nootropics-suppdb.pages.dev)
+[![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.net-10b981.svg)](https://suppdb.dataengineered.io)
 
-**[→ Get the full dataset at suppdb.net](https://supplements-nootropics-suppdb.pages.dev)**
+**[→ Get the full dataset at suppdb.net](https://suppdb.dataengineered.io)**
 
 </div>
 
@@ -38,7 +38,7 @@ This is a **label-facts + chemistry** dataset — think *INCIDecoder for supplem
 | Products over an upper limit *(Safety layer)* | **1,300+** | 26 |
 | Formats | SQLite · CSV · JSON | CSV |
 
-The free [`samples/suppdb_sample.csv`](samples/suppdb_sample.csv) is a flat, one-row-per-ingredient table — **2,249 ingredient records across 300 real products from 218 brands** — a true taste of the schema and quality. Explore it interactively in the [🤗 Sample Explorer](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers), or load it straight from the [🤗 sample dataset](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample). The full dataset is available at **[suppdb.net](https://supplements-nootropics-suppdb.pages.dev)**.
+The free [`samples/suppdb_sample.csv`](samples/suppdb_sample.csv) is a flat, one-row-per-ingredient table — **2,249 ingredient records across 300 real products from 218 brands** — a true taste of the schema and quality. Explore it interactively in the [🤗 Sample Explorer](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers), or load it straight from the [🤗 sample dataset](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample). The full dataset is available at **[suppdb.net](https://suppdb.dataengineered.io)**.
 
 Each sample product also carries a **[Safety layer](#safety-layer) teaser** — `product_max_pct_ul`, `product_over_ul_flag`, and `product_interaction_count` — and [`samples/interactions_sample.csv`](samples/interactions_sample.csv) shows 30 example interactions. The full 8,800+-interaction Safety layer (with per-compound detail, contraindications, and WADA flags) is the paid add-on.
 
@@ -73,7 +73,7 @@ Beyond the catalog, an optional **Safety layer** turns the normalized doses into
 - **Condition contraindications** (pregnancy, anticoagulation, renal impairment, pre-surgery, …) and **WADA doping flags** for banned / monitored compounds.
 - **Transparency score** per product from dose disclosure + brand quality flags.
 
-Delivered as relational SQLite + CSV + JSON, self-joinable via a slim compound index. Sources are public-domain (NIH ODS, DailyMed, MedlinePlus, WADA). Available at **[suppdb.net](https://supplements-nootropics-suppdb.pages.dev)** as a one-time download. **Not medical advice** — every row cites its source; verify with a clinician.
+Delivered as relational SQLite + CSV + JSON, self-joinable via a slim compound index. Sources are public-domain (NIH ODS, DailyMed, MedlinePlus, WADA). Available at **[suppdb.net](https://suppdb.dataengineered.io)** as a one-time download. **Not medical advice** — every row cites its source; verify with a clinician.
 
 ## Provenance
 
@@ -97,7 +97,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
 | **Custom & Enterprise** | Your target brands/ingredients · recurring refreshes · API | **$99+** |
 
-**[→ Get it at suppdb.net](https://supplements-nootropics-suppdb.pages.dev)** · or email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)** for custom work.
+**[→ Get it at suppdb.net](https://suppdb.dataengineered.io)** · or email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)** for custom work.
 
 ## Use cases
 
@@ -120,6 +120,6 @@ A fuller example is in [`examples/load_sample.py`](examples/load_sample.py).
 ## License
 
 - **Sample data & docs in this repo:** CC-BY-NC-4.0 — free to use with attribution, non-commercial (see [`LICENSE`](LICENSE)).
-- **Full dataset:** commercial license, available at [suppdb.net](https://supplements-nootropics-suppdb.pages.dev). The underlying facts are public-domain (NIH DSLD + PubChem); the license covers SuppDB's curated, normalized compilation.
+- **Full dataset:** commercial license, available at [suppdb.net](https://suppdb.dataengineered.io). The underlying facts are public-domain (NIH DSLD + PubChem); the license covers SuppDB's curated, normalized compilation.
 
 **Not medical advice.** SuppDB is factual reference data compiled from public labels — always verify against the current physical label. Are you a brand and want a record corrected? Email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)**.

@@ -3,16 +3,16 @@
 > SuppDB is a structured catalog of 17,000+ real supplement & nootropic products from 2,000+ brands, built exclusively from the public-domain NIH Dietary Supplement Label Database (DSLD). Every active ingredient (115,000+ records) is normalized to milligrams, proprietary blends are flagged where the label hides the dose (40,000+ flags), and 4,000+ compounds are enriched with NIH PubChem chemistry (CID, molecular formula, SMILES, InChIKey). A source label ID and URL on every record means any fact can be re-verified against the original NIH DSLD label.
 
 ## Key Links & Documentation
-- [Landing Page](https://supplements-nootropics-suppdb.pages.dev/)
+- [Landing Page](https://suppdb.dataengineered.io/)
 - [GitHub Repository](https://github.com/SuppDB/supplements-nootropics-suppdb)
-- [Data Dictionary & Field Definitions](https://supplements-nootropics-suppdb.pages.dev/DATA_DICTIONARY.md)
-- [Free Preview Sample (CSV)](https://supplements-nootropics-suppdb.pages.dev/samples/suppdb_sample.csv)
+- [Data Dictionary & Field Definitions](https://suppdb.dataengineered.io/DATA_DICTIONARY.md)
+- [Free Preview Sample (CSV)](https://suppdb.dataengineered.io/samples/suppdb_sample.csv)
 
 ## Core Capabilities & Specs
 - **Data Formats:** Full dataset in relational SQLite + CSV + JSON; free sample as flat, one-row-per-ingredient CSV.
 - **Data Sources:** NIH Dietary Supplement Label Database (DSLD) for labels + NIH PubChem for chemistry — both U.S. Government public domain.
 - **Attribution:** Sample data & docs licensed CC-BY-NC-4.0 (free to use with attribution, non-commercial); the full dataset is a commercial license covering SuppDB's curated, normalized compilation. The underlying facts (NIH DSLD + PubChem) are public domain.
 - **Licensing Tiers:**
-  - Free Sample — ~300 products, flat CSV — free ([sample CSV](https://supplements-nootropics-suppdb.pages.dev/samples/suppdb_sample.csv))
+  - Free Sample — ~300 products, flat CSV — free ([sample CSV](https://suppdb.dataengineered.io/samples/suppdb_sample.csv))
   - Full Snapshot — 17,000+ products, SQLite + CSV + JSON — $49 one-time ([Stripe checkout](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406))
-  - Custom & Enterprise — target brands/ingredients, recurring refreshes, API delivery — $99+ ([pricing](https://supplements-nootropics-suppdb.pages.dev/#pricing))
+  - Custom & Enterprise — target brands/ingredients, recurring refreshes, API delivery — $99+ ([pricing](https://suppdb.dataengineered.io/#pricing))

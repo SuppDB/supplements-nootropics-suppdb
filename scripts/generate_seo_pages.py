@@ -149,7 +149,7 @@ def main():
     print(f"Loaded {len(products)} distinct products and {len(ingredients)} unique active ingredients from CSV.")
 
     sitemap_urls = [
-        ("https://supplements-nootropics-suppdb.pages.dev/", "1.0", "weekly")
+        ("https://suppdb.dataengineered.io/", "1.0", "weekly")
     ]
 
     # Generate Product Monograph Pages (top products or all products in sample)
@@ -170,7 +170,7 @@ def main():
         slug = slugify(f"{brand}-{pname}")
         if not slug or len(slug) < 3:
             continue
-        page_url = f"https://supplements-nootropics-suppdb.pages.dev/products/{slug}"
+        page_url = f"https://suppdb.dataengineered.io/products/{slug}"
         sitemap_urls.append((page_url, "0.8", "monthly"))
         generated_products += 1
 
@@ -233,8 +233,8 @@ def main():
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://supplements-nootropics-suppdb.pages.dev/"}},
-      {{"@type": "ListItem", "position": 2, "name": "Products Index", "item": "https://supplements-nootropics-suppdb.pages.dev/#explorer"}},
+      {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://suppdb.dataengineered.io/"}},
+      {{"@type": "ListItem", "position": 2, "name": "Products Index", "item": "https://suppdb.dataengineered.io/#explorer"}},
       {{"@type": "ListItem", "position": 3, "name": "{pname}", "item": "{page_url}"}}
     ]
   }}
@@ -344,7 +344,7 @@ def main():
         inchikey = first.get('inchikey', '').strip() or 'N/A'
         smiles = first.get('canonical_smiles', '').strip() or 'N/A'
 
-        page_url = f"https://supplements-nootropics-suppdb.pages.dev/ingredients/{slug}"
+        page_url = f"https://suppdb.dataengineered.io/ingredients/{slug}"
         sitemap_urls.append((page_url, "0.9", "monthly"))
         generated_ingredients += 1
 
@@ -404,8 +404,8 @@ def main():
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://supplements-nootropics-suppdb.pages.dev/"}},
-      {{"@type": "ListItem", "position": 2, "name": "Ingredients Index", "item": "https://supplements-nootropics-suppdb.pages.dev/#explorer"}},
+      {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://suppdb.dataengineered.io/"}},
+      {{"@type": "ListItem", "position": 2, "name": "Ingredients Index", "item": "https://suppdb.dataengineered.io/#explorer"}},
       {{"@type": "ListItem", "position": 3, "name": "{ing_name}", "item": "{page_url}"}}
     ]
   }}

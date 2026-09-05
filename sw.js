@@ -12,7 +12,7 @@
  * are never written to or served from the cache.
  */
 
-const CACHE_NAME = 'suppdb-public-cache-v2026.07.2';
+const CACHE_NAME = 'suppdb-public-cache-v2026.09.1';
 const CORE_ASSETS = [
   '/',
   '/favicon.ico',

@@ -42,4 +42,4 @@ By contributing, you agree that your contributions to the sample and docs are
 licensed under **CC-BY-NC-4.0**, the same license as this repository (see
 [`LICENSE`](LICENSE)).
 
-Questions? **suppdb.doorframe589@simplelogin.com** · full dataset: [suppdb.net](https://supplements-nootropics-suppdb.pages.dev)
+Questions? **suppdb.doorframe589@simplelogin.com** · full dataset: [suppdb.net](https://suppdb.dataengineered.io)
