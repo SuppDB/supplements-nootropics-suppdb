@@ -17,6 +17,8 @@
 
 **[→ Get the full dataset at suppdb.net](https://suppdb.dataengineered.io)**
 
+**Free sample:** [300 products](samples/suppdb_sample.csv) · **Full snapshot: $49 one-time** → [Buy on Stripe](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406) · **Safety & Interaction Layer: $199** → [Buy on Stripe](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e)
+
 </div>
 
 ---
