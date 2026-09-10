@@ -12,7 +12,7 @@ any of the following, please report it privately:
   looks wrong and could mislead.
 - Any suspected leak of the full (paid) dataset or pipeline source.
 
-**Please email: suppdb.doorframe589@simplelogin.com**
+**Please email: suppdb@dataengineered.io**
 
 Do **not** open a public GitHub issue for security-sensitive reports.
 

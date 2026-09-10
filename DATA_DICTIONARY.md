@@ -47,4 +47,4 @@ plus a relational SQLite build.
 - **Relational build (full dataset).** The SQLite export normalizes into `supplement_brands`, `supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, and `data_sources`.
 
 Sources: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — U.S. Government public domain.
-Full dataset: **[suppdb.net](https://suppdb.dataengineered.io)** · Questions: **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)**
+Full dataset: **[suppdb.net](https://suppdb.dataengineered.io)** · Questions: **[suppdb@dataengineered.io](mailto:suppdb@dataengineered.io)**

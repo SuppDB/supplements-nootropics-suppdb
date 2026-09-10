@@ -35,7 +35,7 @@
     "@type": "Organization",
     "name": "SuppDB",
     "url": "https://suppdb.dataengineered.io",
-    "email": "suppdb.doorframe589@simplelogin.com",
+    "email": "suppdb@dataengineered.io",
     "description": "Supplements & nootropics dataset provider — real NIH DSLD labels normalized to mg dosages with NIH PubChem chemistry, plus a safety layer of drug interactions, tolerable-upper-limit scores and contraindications."
   }
   </script>
@@ -590,7 +590,7 @@
 
         <div style="margin-top: 20px; text-align: center; font-size: 0.7rem; color: var(--text-muted);">
           Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · download link delivered by email after payment<br>
-          Need a company invoice or crypto payment? <a href="mailto:suppdb.doorframe589@simplelogin.com?subject=SuppDB%20Snapshot%20%E2%80%94%20invoice%20%2F%20crypto%20request" style="text-decoration: underline;">email our desk</a>
+          Need a company invoice or crypto payment? <a href="mailto:suppdb@dataengineered.io?subject=SuppDB%20Snapshot%20%E2%80%94%20invoice%20%2F%20crypto%20request" style="text-decoration: underline;">email our desk</a>
         </div>
       </div>
 
@@ -709,7 +709,7 @@
       </div>
       <h3 class="font-display" style="font-size: 1.8rem;">Have Questions or Need Custom Data?</h3>
       <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">
-        Whether you need custom schema formats, API access, or enterprise invoicing, reach out directly to our desk at <code>suppdb.doorframe589@simplelogin.com</code>.
+        Whether you need custom schema formats, API access, or enterprise invoicing, reach out directly to our desk at <code>suppdb@dataengineered.io</code>.
       </p>
 
       <button type="button" class="btn btn-outline" style="margin-top: 24px; padding: 16px 32px; font-weight: 600;" onclick="toggleSupportForm()">
@@ -748,7 +748,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 18px; margin-top: 8px;">
-            <span>Send Message to suppdb.doorframe589@simplelogin.com ➔</span>
+            <span>Send Message to suppdb@dataengineered.io ➔</span>
           </button>
         </form>
 
@@ -757,7 +757,7 @@
             ✦ Support Inquiry Dispatched!
           </div>
           <p style="margin-top: 8px; font-size: 0.85rem;">
-            Your message has been sent directly to <code>suppdb.doorframe589@simplelogin.com</code>. Our team typically responds within 2–4 business hours.
+            Your message has been sent directly to <code>suppdb@dataengineered.io</code>. Our team typically responds within 2–4 business hours.
           </p>
           <button type="button" class="btn btn-outline" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" onclick="resetSupport()">
             <span>↻ Send another message</span>
@@ -850,7 +850,7 @@
         const bodyText = encodeURIComponent(
           `Hello SuppDB Team,\n\nI would like to purchase the full SuppDB dataset snapshot ($49).\n\nDetails:\nName: ${name}\nEmail: ${email}\nPayment Method: ${payMethod}\nUse Case: ${useCase}\n\nPlease reply with our download link and payment confirmation.\n\nThank you!`
         );
-        window.location.href = `mailto:suppdb.doorframe589@simplelogin.com?subject=${subject}&body=${bodyText}`;
+        window.location.href = `mailto:suppdb@dataengineered.io?subject=${subject}&body=${bodyText}`;
         form.style.display = 'none';
         const successEl = document.getElementById('checkoutSuccess');
         if (successEl) {
@@ -859,7 +859,7 @@
               ✦ Order Request Initiated via Email Client!
             </div>
             <p style="margin-top: 8px; font-size: 0.85rem;">
-              Since our automated form gateway returned a delay, we have automatically opened your default email client with your exact order request pre-filled to <code>suppdb.doorframe589@simplelogin.com</code>. Please hit Send to finalize your request!
+              Since our automated form gateway returned a delay, we have automatically opened your default email client with your exact order request pre-filled to <code>suppdb@dataengineered.io</code>. Please hit Send to finalize your request!
             </p>
             <button type="button" class="btn btn-outline" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" onclick="resetCheckout()">
               <span>↻ Send another request</span>
@@ -956,7 +956,7 @@
         const bodyText = encodeURIComponent(
           `Hello SuppDB Support Desk,\n\nInquiry Topic: ${topic}\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nThank you!`
         );
-        window.location.href = `mailto:suppdb.doorframe589@simplelogin.com?subject=${subject}&body=${bodyText}`;
+        window.location.href = `mailto:suppdb@dataengineered.io?subject=${subject}&body=${bodyText}`;
         form.style.display = 'none';
         const successEl = document.getElementById('supportSuccess');
         if (successEl) {
@@ -965,7 +965,7 @@
               ✦ Support Inquiry Initiated via Email Client!
             </div>
             <p style="margin-top: 8px; font-size: 0.85rem;">
-              Since our automated form gateway returned a delay, we have automatically opened your default email client with your exact inquiry pre-filled to <code>suppdb.doorframe589@simplelogin.com</code>. Please hit Send to dispatch your message!
+              Since our automated form gateway returned a delay, we have automatically opened your default email client with your exact inquiry pre-filled to <code>suppdb@dataengineered.io</code>. Please hit Send to dispatch your message!
             </p>
             <button type="button" class="btn btn-outline" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" onclick="resetSupport()">
               <span>↻ Send another message</span>

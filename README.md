@@ -97,7 +97,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
 | **Custom & Enterprise** | Your target brands/ingredients · recurring refreshes · API | **$99+** |
 
-**[→ Get it at suppdb.net](https://suppdb.dataengineered.io)** · or email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)** for custom work.
+**[→ Get it at suppdb.net](https://suppdb.dataengineered.io)** · or email **[suppdb@dataengineered.io](mailto:suppdb@dataengineered.io)** for custom work.
 
 ## Use cases
 
@@ -122,4 +122,4 @@ A fuller example is in [`examples/load_sample.py`](examples/load_sample.py).
 - **Sample data & docs in this repo:** CC-BY-NC-4.0 — free to use with attribution, non-commercial (see [`LICENSE`](LICENSE)).
 - **Full dataset:** commercial license, available at [suppdb.net](https://suppdb.dataengineered.io). The underlying facts are public-domain (NIH DSLD + PubChem); the license covers SuppDB's curated, normalized compilation.
 
-**Not medical advice.** SuppDB is factual reference data compiled from public labels — always verify against the current physical label. Are you a brand and want a record corrected? Email **[suppdb.doorframe589@simplelogin.com](mailto:suppdb.doorframe589@simplelogin.com)**.
+**Not medical advice.** SuppDB is factual reference data compiled from public labels — always verify against the current physical label. Are you a brand and want a record corrected? Email **[suppdb@dataengineered.io](mailto:suppdb@dataengineered.io)**.

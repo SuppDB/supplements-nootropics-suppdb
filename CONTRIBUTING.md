@@ -26,7 +26,7 @@ prioritize snapshots and informs custom builds.
 ## Brands / manufacturers: correction or removal requests
 
 If you represent a brand and want a record corrected or removed, please email
-**suppdb.doorframe589@simplelogin.com** (or open an issue). Note that the underlying records come
+**suppdb@dataengineered.io** (or open an issue). Note that the underlying records come
 from the public NIH DSLD label database.
 
 ## Pull request guidelines
@@ -42,4 +42,4 @@ By contributing, you agree that your contributions to the sample and docs are
 licensed under **CC-BY-NC-4.0**, the same license as this repository (see
 [`LICENSE`](LICENSE)).
 
-Questions? **suppdb.doorframe589@simplelogin.com** · full dataset: [suppdb.net](https://suppdb.dataengineered.io)
+Questions? **suppdb@dataengineered.io** · full dataset: [suppdb.net](https://suppdb.dataengineered.io)
