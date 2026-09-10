@@ -42,4 +42,4 @@ By contributing, you agree that your contributions to the sample and docs are
 licensed under **CC-BY-NC-4.0**, the same license as this repository (see
 [`LICENSE`](LICENSE)).
 
-Questions? **suppdb@dataengineered.io** · full dataset: [suppdb.net](https://suppdb.dataengineered.io)
+Questions? **suppdb@dataengineered.io** · full dataset: [suppdb.dataengineered.io](https://suppdb.dataengineered.io)
