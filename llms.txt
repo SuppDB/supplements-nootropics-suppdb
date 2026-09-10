@@ -15,4 +15,7 @@
 - **Licensing Tiers:**
   - Free Sample — ~300 products, flat CSV — free ([sample CSV](https://suppdb.dataengineered.io/samples/suppdb_sample.csv))
   - Full Snapshot — 17,000+ products, SQLite + CSV + JSON — $49 one-time ([Stripe checkout](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406))
+  - Safety & Interaction Layer — interactions, upper-limit %, contraindications — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
+  - Safety & Interaction Layer — interactions, upper-limit %, contraindications — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
+  - Safety & Interaction Layer — interactions, upper-limit %, contraindications — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
   - Custom & Enterprise — target brands/ingredients, recurring refreshes, API delivery — $99+ ([pricing](https://suppdb.dataengineered.io/#pricing))
