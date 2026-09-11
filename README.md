@@ -17,7 +17,7 @@
 
 **[→ Get the full dataset at suppdb.dataengineered.io](https://suppdb.dataengineered.io)**
 
-**Free sample:** [300 products](samples/suppdb_sample.csv) · **Full snapshot: $49 one-time** → [Buy on Stripe](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406) · **Safety & Interaction Layer: $199** → [Buy on Stripe](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e)
+**Free sample:** [300 products](samples/suppdb_sample.csv) · **Safety & Interaction Layer: $199 one-time** → [Buy on Stripe](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e) · **Catalog only: $49 one-time** → [Buy on Stripe](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406)
 
 **Same sample on [Hugging Face](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)** · **[Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/suppdb-supplements-sample)**
 
@@ -97,9 +97,9 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | Tier | What | Price |
 | :--- | :--- | :--- |
 | **Sample** | ~300 products, flat CSV (this repo) | Free |
-| **Snapshot** | Full 17,000+ products · SQLite + CSV + JSON | **$49** one-time |
 | **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
-| **Custom & Enterprise** | Your target brands/ingredients · recurring refreshes · API | **$99+** |
+| **Catalog only (Snapshot)** | Full 17,000+ products · SQLite + CSV + JSON | **$49** one-time |
+| **Custom work** | Subsets, recurring refreshes, schema mapping — quoted per engagement | from $99, via the [contact form](https://suppdb.dataengineered.io/#support) |
 
 **[→ Get it at suppdb.dataengineered.io](https://suppdb.dataengineered.io)** · or use the [contact form](https://suppdb.dataengineered.io/#support) (suppdb@dataengineered.io) for custom work.
 

@@ -79,6 +79,29 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "Product",
+    "image": "https://suppdb.dataengineered.io/og-image.png",
+    "name": "SuppDB Safety & Interaction Layer",
+    "description": "Safety layer for supplement products: 8,800+ evidence-graded supplement × drug interactions, per-product % of the tolerable upper limit with over-limit flags, condition contraindications and WADA flags, delivered as relational SQLite + CSV + JSON.",
+    "brand": {
+      "@type": "Brand",
+      "name": "SuppDB"
+    },
+    "category": "Software > Data & Databases",
+    "offers": {
+      "@type": "Offer",
+      "price": "199.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://suppdb.dataengineered.io/#pricing",
+      "shippingDetails": {"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"USD"},"shippingDestination":[{"@type":"DefinedRegion","addressCountry":"US"},{"@type":"DefinedRegion","addressCountry":"GB"},{"@type":"DefinedRegion","addressCountry":"CA"},{"@type":"DefinedRegion","addressCountry":"AU"}],"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"}}},
+      "hasMerchantReturnPolicy": {"@type":"MerchantReturnPolicy","applicableCountry":["US", "GB", "CA", "AU"],"returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"}
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "SuppDB Supplements & Nootropics Dataset",
     "description": "Normalized supplement facts dataset containing 17,000+ real products from 2,000+ brands, with exact mg dosage conversions, proprietary blend boolean flags, and NIH PubChem chemical enrichment.",
@@ -376,7 +399,7 @@
           <div class="hero-abstract">
             <span class="abstract-label">Abstract</span>
             <p class="abstract-text">
-              A structured catalog of 17,000+ real supplement &amp; nootropic products from 2,000+ brands, built exclusively from the public NIH Dietary Supplement Label Database (DSLD). Every active ingredient is normalized to milligrams, proprietary blends are flagged where the dose is hidden, and each compound is enriched with NIH PubChem chemistry — with a source label URL on every record so any fact can be re-verified. A separate <strong>Safety layer</strong> builds on the normalized doses: 8,800+ supplement–drug interactions, per-product percentage of the tolerable upper limit, condition contraindications, and WADA doping flags — every interaction cited to its public-domain source.
+              SuppDB leads with its Safety &amp; Interaction Layer — 8,800+ supplement × drug interactions, per-product % of the tolerable upper limit, condition contraindications and WADA flags — on top of a structured catalog of 17,000+ real supplement &amp; nootropic products from 2,000+ brands, built exclusively from the public NIH Dietary Supplement Label Database (DSLD). Every active ingredient is normalized to milligrams, proprietary blends are flagged where the dose is hidden, and each compound is enriched with NIH PubChem chemistry — with a source label URL on every record so any fact can be re-verified. A separate <strong>Safety layer</strong> builds on the normalized doses: 8,800+ supplement–drug interactions, per-product percentage of the tolerable upper limit, condition contraindications, and WADA doping flags — every interaction cited to its public-domain source.
             </p>
           </div>
 
@@ -562,40 +585,11 @@
         <span class="section-diamond"></span>
         <span>§ 03 · Three Ways to Get the Data</span>
         <div class="section-line"></div>
-        <span>Snapshot · Safety · Custom</span>
+        <span>Safety · Catalog · Custom</span>
       </div>
 
       <div class="pricing-container">
-        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Tier 1 · Self-Serve Snapshot</div>
-        <div class="pricing-header">
-          <div>
-            <h2 class="font-display" style="font-size: 2rem;">Full Snapshot Dataset</h2>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">One-time download · 17,000+ products · Snapshot 2026.07</p>
-          </div>
-          <div class="price-amount"><span class="js-snapshot-price">$49</span></div>
-        </div>
-
-        <ul class="feature-list">
-          <li><strong>17,000+ real supplement products</strong> from 2,000+ brands, built entirely from public-domain NIH DSLD labels.</li>
-          <li><strong>Relational SQLite + CSV + JSON:</strong> normalized tables (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), ready for AI health apps, dose comparison, and B2B integration.</li>
-          <li><strong>Normalized mg dosages</strong> across 115,000+ active-ingredient records, with 40,000+ proprietary-blend flags for undisclosed doses.</li>
-          <li><strong>NIH PubChem chemistry:</strong> CID, molecular formula, weight, SMILES, and InChIKey on 4,000+ compounds — plus InChIKey canonicalization of name variants.</li>
-          <li><strong>Full provenance:</strong> every record carries its DSLD label id and source URL — traceable and re-verifiable.</li>
-          <li><strong>Snapshot 2026.07</strong> · one-time purchase, no recurring fees. Public-domain sources (NIH DSLD + PubChem).</li>
-        </ul>
-
-        <a href="https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 22px; margin-top: 8px;">
-          <span>Buy Now · Full Snapshot · <span class="js-snapshot-price">$49</span> →</span>
-        </a>
-
-        <div style="margin-top: 20px; text-align: center; font-size: 0.7rem; color: var(--text-muted);">
-          Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · download link delivered by email after payment<br>
-          Need a company invoice or crypto payment? <a href="#support" style="text-decoration: underline;">use the contact form</a> (suppdb@dataengineered.io)
-        </div>
-      </div>
-
-      <div class="pricing-container" style="margin-top: 32px;">
-        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Tier 2 · Self-Serve Safety Layer</div>
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Tier 1 · Safety &amp; Interaction Layer</div>
         <div class="pricing-header">
           <div>
             <h2 class="font-display" style="font-size: 2rem;">Safety &amp; Interaction Layer</h2>
@@ -624,27 +618,35 @@
       </div>
 
       <div class="pricing-container" style="margin-top: 32px;">
-        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Tier 3 · Custom &amp; Fresh Data</div>
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Tier 2 · Catalog only</div>
         <div class="pricing-header">
           <div>
-            <h2 class="font-display" style="font-size: 2rem;">Custom &amp; Enterprise</h2>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Built to your spec · per engagement</p>
+            <h2 class="font-display" style="font-size: 2rem;">Catalog only — Full Snapshot</h2>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">One-time download · 17,000+ products · Snapshot 2026.07</p>
           </div>
-          <div class="price-amount" style="font-size: 1.6rem;">$99</div>
+          <div class="price-amount"><span class="js-snapshot-price">$49</span></div>
         </div>
+
         <ul class="feature-list">
-          <li><strong>Custom brand / ingredient lists:</strong> the specific brands, categories, or ingredient sets you care about.</li>
-          <li><strong>Recurring fresh snapshots:</strong> monthly or quarterly refreshes as new labels enter DSLD.</li>
-          <li><strong>Deeper enrichment:</strong> full compound synonyms, structure fields, and mappings tailored to your product.</li>
-          <li><strong>Delivery your way:</strong> flat files, a hosted API endpoint, or a schema mapped to your app, with commercial terms and support.</li>
+          <li><strong>17,000+ real supplement products</strong> from 2,000+ brands, built entirely from public-domain NIH DSLD labels.</li>
+          <li><strong>Relational SQLite + CSV + JSON:</strong> normalized tables (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), ready for AI health apps, dose comparison, and B2B integration.</li>
+          <li><strong>Normalized mg dosages</strong> across 115,000+ active-ingredient records, with 40,000+ proprietary-blend flags for undisclosed doses.</li>
+          <li><strong>NIH PubChem chemistry:</strong> CID, molecular formula, weight, SMILES, and InChIKey on 4,000+ compounds — plus InChIKey canonicalization of name variants.</li>
+          <li><strong>Full provenance:</strong> every record carries its DSLD label id and source URL — traceable and re-verifiable.</li>
+          <li><strong>Snapshot 2026.07</strong> · one-time purchase, no recurring fees. Public-domain sources (NIH DSLD + PubChem).</li>
         </ul>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">
-          This is where most of the value is — a fresh, curated feed built to your requirements, not a one-off snapshot.
-        </p>
-        <a href="#support" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 22px;" onclick="openCustomQuote(event)">
-          <span>Request a Custom Quote →</span>
+
+        <a href="https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 22px; margin-top: 8px;">
+          <span>Buy Now · Full Snapshot · <span class="js-snapshot-price">$49</span> →</span>
         </a>
+
+        <div style="margin-top: 20px; text-align: center; font-size: 0.7rem; color: var(--text-muted);">
+          Secure card checkout via Stripe · Apple&nbsp;Pay / Google&nbsp;Pay · download link delivered by email after payment<br>
+          Need a company invoice or crypto payment? <a href="#support" style="text-decoration: underline;">use the contact form</a> (suppdb@dataengineered.io)
+        </div>
       </div>
+
+      <p class="custom-line" style="margin-top:24px;text-align:center;font-size:0.85rem;color:var(--text-muted);">Custom work (subsets, recurring feeds, schema mapping): from $99 — <a href="#support" style="text-decoration:underline;">contact the desk</a></p>
     </div>
   </section>
 
@@ -783,7 +785,7 @@
         <a href="#support">Support</a>
       </div>
     </div>
-  <div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Part of the DataEngineered catalog →</a></div>
+  <div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Part of the DataEngineered catalog →</a> · <a href="https://dataengineered.io/about">About</a> · <a href="https://dataengineered.io/terms">Terms</a> · <a href="https://dataengineered.io/privacy">Privacy</a> · <a href="https://dataengineered.io/refund-policy">Refund policy</a></div>
 </footer>
 
   <script>
