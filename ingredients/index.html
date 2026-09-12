@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingredient Directory — Every Supplement Ingredient Monograph | SuppDB</title>
+  <meta name="description" content="Every supplement ingredient in SuppDB, each with its own monograph: molecular formula, weight, PubChem id, InChIKey and the commercial products it appears in." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://suppdb.dataengineered.io/ingredients/" />
+  <link rel="alternate" hreflang="en" href="https://suppdb.dataengineered.io/ingredients/" />
+  <link rel="alternate" hreflang="x-default" href="https://suppdb.dataengineered.io/ingredients/" />
+  <meta property="og:title" content="Ingredient Directory — Every Supplement Ingredient Monograph | SuppDB" />
+  <meta property="og:description" content="Every supplement ingredient in SuppDB, each with its own monograph: molecular formula, weight, PubChem id, InChIKey and the commercial products it appears in." />
+  <meta property="og:url" content="https://suppdb.dataengineered.io/ingredients/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Ingredient directory", "description": "Every supplement ingredient in SuppDB, each with its own monograph: molecular formula, weight, PubChem id, InChIKey and the commercial products it appears in.", "url": "https://suppdb.dataengineered.io/ingredients/", "isPartOf": {"@type": "WebSite", "name": "SuppDB", "url": "https://suppdb.dataengineered.io"}, "publisher": {"@type": "Organization", "name": "DataEngineered", "url": "https://suppdb.dataengineered.io"}}
+  </script>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-paper: #0b0e0f; --bg-paper-2: #121618; --text-ink: #eef1f2;
+  --text-muted: #97a1a3; --rule-color: rgba(238, 241, 242, 0.18);
+  --accent: #2fd4a3; --card-bg: #161a1d;
+}
+body { font-family: 'Outfit', system-ui, -apple-system, sans-serif; background: var(--bg-paper);
+  color: var(--text-ink); line-height: 1.6; padding-bottom: 60px; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+header { border-bottom: 1px solid var(--rule-color); padding: 20px 0;
+  background: rgba(18, 22, 24, 0.85); backdrop-filter: blur(10px); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+.nav-bar { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-size: 1.5rem; font-weight: 700; color: var(--text-ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+.btn-link { color: var(--text-ink); text-decoration: none; font-size: 0.88rem;
+  border: 1px solid var(--rule-color); padding: 8px 16px; border-radius: 6px; transition: all 0.2s; }
+.btn-link:hover { background: var(--accent); color: #0b0e0f; border-color: var(--accent); }
+.hero { padding: 44px 0; border-bottom: 1px solid var(--rule-color); }
+.badge { display: inline-block; background: rgba(47, 212, 163, 0.15); color: var(--accent);
+  padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;
+  margin-bottom: 12px; border: 1px solid rgba(47, 212, 163, 0.3); }
+h1 { font-size: 2.4rem; font-weight: 700; margin-top: 6px; letter-spacing: -0.02em; }
+.sub { color: var(--text-muted); font-size: 1.08rem; margin-top: 8px; max-width: 72ch; }
+.count { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.78rem;
+  color: var(--text-muted); margin-top: 20px; letter-spacing: 0.06em; }
+.alpha { margin-top: 34px; }
+.alpha-h { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.82rem;
+  font-weight: 700; color: var(--accent); letter-spacing: 0.12em; padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule-color); }
+.dirlist { list-style: none; margin: 14px 0 0; padding: 0; display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2px; }
+.dirlist a { display: block; padding: 9px 12px; text-decoration: none; border-radius: 6px; }
+.dirlist a:hover { background: var(--card-bg); }
+.dirlist a:hover .n { color: var(--accent); }
+.n { display: block; font-weight: 600; font-size: 0.95rem; color: var(--text-ink); }
+.d { display: block; font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
+footer { margin-top: 60px; border-top: 1px solid var(--rule-color); padding: 32px 0;
+  text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-bar">
+      <a href="/" class="brand">Supp<span>DB</span></a>
+      <div>
+        <a href="/#explorer" class="btn-link">&larr; Explorer</a>
+        <a href="/#pricing" class="btn-link" style="margin-left: 10px; background: rgba(47, 212, 163, 0.1);">Full Dataset ($49)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge mono">DIRECTORY</span>
+      <h1>Ingredient directory</h1>
+      <p class="sub">One page per ingredient. Each carries the chemical determination -- molecular formula, molecular weight, PubChem record and exact InChIKey -- alongside the commercial products that contain it and their per-serving doses.</p>
+      <p class="count">514 ingredient monographs</p>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">0-9</h2>
+      <ul class="dirlist">
+        <li><a href="5-htp"><span class="n">5-HTP</span><span class="d">Griffonia simplicifolia Seed Extract</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">A</h2>
+      <ul class="dirlist">
+        <li><a href="acacia"><span class="n">Acacia</span><span class="d">Gum Acacia</span></a></li>
+        <li><a href="acacia-fiber"><span class="n">Acacia fiber</span></a></li>
+        <li><a href="acai"><span class="n">Acai</span><span class="d">Acai extract</span></a></li>
+        <li><a href="acerola"><span class="n">Acerola</span><span class="d">Ascorbic Acid</span></a></li>
+        <li><a href="acetyl-l-carnitine"><span class="n">Acetyl L-Carnitine</span><span class="d">Acetyl L-Carnitine HCl</span></a></li>
+        <li><a href="agave"><span class="n">Agave</span><span class="d">Blue Agave</span></a></li>
+        <li><a href="agmatine"><span class="n">Agmatine</span><span class="d">Agmatine Sulfate</span></a></li>
+        <li><a href="alanine"><span class="n">Alanine</span><span class="d">L-Alanine</span></a></li>
+        <li><a href="alfalfa"><span class="n">Alfalfa</span></a></li>
+        <li><a href="aloe"><span class="n">Aloe</span><span class="d">Aloe vera Extract, Powder</span></a></li>
+        <li><a href="alpha-galactosidase"><span class="n">Alpha Galactosidase</span><span class="d">Alpha-Galactosidase</span></a></li>
+        <li><a href="alpha-gpc"><span class="n">Alpha-GPC</span><span class="d">L-Alpha-Glycerylphosphorylcholine</span></a></li>
+        <li><a href="alpha-linolenic-acid"><span class="n">Alpha-Linolenic Acid</span><span class="d">Flaxseed Oil</span></a></li>
+        <li><a href="alpha-lipoic-acid"><span class="n">Alpha-Lipoic Acid</span></a></li>
+        <li><a href="amaranth"><span class="n">Amaranth</span><span class="d">Red Spinach Extract</span></a></li>
+        <li><a href="amber"><span class="n">Amber</span><span class="d">Succinum</span></a></li>
+        <li><a href="amylase"><span class="n">Amylase</span><span class="d">Alpha Amylase</span></a></li>
+        <li><a href="apigenin"><span class="n">Apigenin</span></a></li>
+        <li><a href="apple"><span class="n">Apple</span></a></li>
+        <li><a href="apple-cider-vinegar"><span class="n">Apple Cider Vinegar</span><span class="d">Apple Cider Vinegar, Powder</span></a></li>
+        <li><a href="apple-fiber"><span class="n">Apple fiber</span><span class="d">Apple Pectin</span></a></li>
+        <li><a href="arabinogalactan"><span class="n">Arabinogalactan</span><span class="d">Larch arabinogalactan</span></a></li>
+        <li><a href="arginine"><span class="n">Arginine</span><span class="d">L-Arginine Hydrochloride</span></a></li>
+        <li><a href="arginine-alpha-ketoglutarate"><span class="n">Arginine alpha-ketoglutarate</span><span class="d">L-Arginine Alpha-Ketoglutarate</span></a></li>
+        <li><a href="artichoke"><span class="n">Artichoke</span><span class="d">Cynarin</span></a></li>
+        <li><a href="ashwagandha"><span class="n">Ashwagandha</span><span class="d">Withanolides</span></a></li>
+        <li><a href="asparagus"><span class="n">Asparagus</span><span class="d">Asparagus, Powder</span></a></li>
+        <li><a href="aspergillopepsin"><span class="n">Aspergillopepsin</span></a></li>
+        <li><a href="astragalus"><span class="n">Astragalus</span></a></li>
+        <li><a href="atractylodes"><span class="n">Atractylodes</span><span class="d">Atractylodes macrocephala</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">B</h2>
+      <ul class="dirlist">
+        <li><a href="bacillus-clausii"><span class="n">Bacillus clausii</span></a></li>
+        <li><a href="bacillus-coagulans"><span class="n">Bacillus Coagulans</span></a></li>
+        <li><a href="bacillus-subtilis"><span class="n">Bacillus Subtilis</span></a></li>
+        <li><a href="banana"><span class="n">banana</span><span class="d">Banana, Powder</span></a></li>
+        <li><a href="barberry"><span class="n">Barberry</span><span class="d">Barberry, Powder</span></a></li>
+        <li><a href="barley"><span class="n">Barley</span><span class="d">Barley grass juice</span></a></li>
+        <li><a href="basil"><span class="n">Basil</span></a></li>
+        <li><a href="batavia-cinnamon"><span class="n">Batavia cinnamon</span><span class="d">Cinnulin PF Cinnamon extract</span></a></li>
+        <li><a href="bean"><span class="n">Bean</span><span class="d">Kidney Bean Pod Glycerite Liquid Extract</span></a></li>
+        <li><a href="beet"><span class="n">Beet</span></a></li>
+        <li><a href="bentonite"><span class="n">Bentonite</span><span class="d">Calcium Bentonite Clay</span></a></li>
+        <li><a href="berberine"><span class="n">Berberine</span><span class="d">Indian Barberry bark extract</span></a></li>
+        <li><a href="beta-glucans"><span class="n">Beta Glucans</span><span class="d">Baker&#x27;s Yeast Beta-Glucan extract</span></a></li>
+        <li><a href="beta-sitosterol"><span class="n">Beta Sitosterol</span><span class="d">Wheat Germ</span></a></li>
+        <li><a href="beta-alanine"><span class="n">Beta-Alanine</span></a></li>
+        <li><a href="beta-glucanase"><span class="n">Beta-Glucanase</span></a></li>
+        <li><a href="betaine"><span class="n">Betaine</span><span class="d">Betaine Anhydrous</span></a></li>
+        <li><a href="betaine-anhydrous"><span class="n">Betaine Anhydrous</span></a></li>
+        <li><a href="betaine-hydrochloride"><span class="n">Betaine Hydrochloride</span></a></li>
+        <li><a href="bifidobacterium-animalis-lactis"><span class="n">Bifidobacterium animalis lactis</span></a></li>
+        <li><a href="bifidobacterium-bifidum"><span class="n">Bifidobacterium bifidum</span></a></li>
+        <li><a href="bifidobacterium-breve"><span class="n">Bifidobacterium breve</span></a></li>
+        <li><a href="bifidobacterium-infantis"><span class="n">Bifidobacterium infantis</span></a></li>
+        <li><a href="bifidobacterium-longum"><span class="n">Bifidobacterium longum</span></a></li>
+        <li><a href="bilberry"><span class="n">bilberry</span></a></li>
+        <li><a href="biotin"><span class="n">Biotin</span></a></li>
+        <li><a href="bitter-melon"><span class="n">Bitter Melon</span><span class="d">Momordica charantia Fruit Extract</span></a></li>
+        <li><a href="bitter-orange"><span class="n">Bitter orange</span><span class="d">Citrus aurantium Concentrate, Powder</span></a></li>
+        <li><a href="black-cohosh"><span class="n">Black Cohosh</span></a></li>
+        <li><a href="black-currant"><span class="n">Black Currant</span><span class="d">Black Currant (Ribes nigrum</span></a></li>
+        <li><a href="black-pepper"><span class="n">Black Pepper</span><span class="d">Black Pepper fruit extract</span></a></li>
+        <li><a href="black-seed-oil"><span class="n">Black Seed Oil</span><span class="d">Black Cumin Seed Oil</span></a></li>
+        <li><a href="blackberry"><span class="n">Blackberry</span></a></li>
+        <li><a href="bladderwrack"><span class="n">Bladderwrack</span><span class="d">Bladderwrack Glycerite Liquid Extract</span></a></li>
+        <li><a href="blue-green-algae"><span class="n">Blue-Green Algae</span><span class="d">Spirulina Algae powder</span></a></li>
+        <li><a href="blueberry"><span class="n">Blueberry</span></a></li>
+        <li><a href="borage-oil"><span class="n">Borage Oil</span><span class="d">Hi-GLA Borage (Borago officinalis</span></a></li>
+        <li><a href="boron"><span class="n">Boron</span><span class="d">Boron Amino Acid Chelate</span></a></li>
+        <li><a href="brewer-s-yeast"><span class="n">Brewer&#x27;s Yeast</span><span class="d">Debittered Brewer&#x27;s Yeast</span></a></li>
+        <li><a href="broccoli"><span class="n">Broccoli</span></a></li>
+        <li><a href="bromelain"><span class="n">Bromelain</span></a></li>
+        <li><a href="brussel-sprout"><span class="n">Brussel Sprout</span><span class="d">Brussels Sprouts</span></a></li>
+        <li><a href="buckthorn"><span class="n">Buckthorn</span><span class="d">Buckthorn Glycerite Liquid Extract</span></a></li>
+        <li><a href="burdock"><span class="n">Burdock</span></a></li>
+        <li><a href="butternut"><span class="n">Butternut</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">C</h2>
+      <ul class="dirlist">
+        <li><a href="cabbage"><span class="n">Cabbage</span></a></li>
+        <li><a href="caffeine"><span class="n">Caffeine</span><span class="d">Caffeine Anhydrous</span></a></li>
+        <li><a href="calcium"><span class="n">Calcium</span></a></li>
+        <li><a href="calcium-d-glucarate"><span class="n">Calcium d-Glucarate</span></a></li>
+        <li><a href="calendula"><span class="n">Calendula</span><span class="d">Calendula extract</span></a></li>
+        <li><a href="campesterol"><span class="n">Campesterol</span><span class="d">Wheat Germ</span></a></li>
+        <li><a href="camu-camu"><span class="n">Camu Camu</span></a></li>
+        <li><a href="cantaloupe"><span class="n">Cantaloupe</span><span class="d">Cantaloupe, Powder</span></a></li>
+        <li><a href="caprylic-acid"><span class="n">Caprylic Acid</span></a></li>
+        <li><a href="capsicum"><span class="n">Capsicum</span><span class="d">Cayenne, Powder</span></a></li>
+        <li><a href="carnosine"><span class="n">Carnosine</span></a></li>
+        <li><a href="carrot"><span class="n">Carrot</span></a></li>
+        <li><a href="cascara-sagrada"><span class="n">Cascara Sagrada</span><span class="d">Cascara Sagrada, Powder</span></a></li>
+        <li><a href="casein-protein"><span class="n">Casein Protein</span><span class="d">Instantized Calcium Caseinate</span></a></li>
+        <li><a href="cassia-cinnamon"><span class="n">Cassia Cinnamon</span><span class="d">Cinnamon powder</span></a></li>
+        <li><a href="cauliflower"><span class="n">Cauliflower</span></a></li>
+        <li><a href="celery"><span class="n">celery</span></a></li>
+        <li><a href="cellulase"><span class="n">Cellulase</span></a></li>
+        <li><a href="cellulose"><span class="n">Cellulose</span><span class="d">Microcrystalline Cellulose</span></a></li>
+        <li><a href="cetyl-myristoleate"><span class="n">Cetyl Myristoleate</span></a></li>
+        <li><a href="ceylon-cinnamon"><span class="n">Ceylon cinnamon</span><span class="d">Cinnamon, Powder</span></a></li>
+        <li><a href="chamomile"><span class="n">Chamomile</span><span class="d">Mexican Chamomile Extract, Powder</span></a></li>
+        <li><a href="chanca-piedra"><span class="n">Chanca Piedra</span><span class="d">Phyllanthus niruri Extract</span></a></li>
+        <li><a href="chastetree"><span class="n">Chastetree</span><span class="d">Chasteberry powder</span></a></li>
+        <li><a href="cherry-unspecified"><span class="n">cherry (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="chicory"><span class="n">chicory</span></a></li>
+        <li><a href="chinese-club-moss"><span class="n">Chinese Club Moss</span><span class="d">Huperzine A</span></a></li>
+        <li><a href="chinese-licorice"><span class="n">Chinese Licorice</span><span class="d">Glycyrrhiza uralensis</span></a></li>
+        <li><a href="chinese-thoroughwax"><span class="n">Chinese Thoroughwax</span><span class="d">Bupleurum chinese</span></a></li>
+        <li><a href="chlorella"><span class="n">Chlorella</span></a></li>
+        <li><a href="chloride"><span class="n">Chloride</span><span class="d">Sodium Chloride</span></a></li>
+        <li><a href="chokeberry"><span class="n">Chokeberry</span></a></li>
+        <li><a href="choline"><span class="n">Choline</span><span class="d">Choline Bitartrate</span></a></li>
+        <li><a href="chondroitin-sulfate"><span class="n">Chondroitin Sulfate</span><span class="d">Chicken</span></a></li>
+        <li><a href="chromium"><span class="n">Chromium</span><span class="d">Chromium Picolinate</span></a></li>
+        <li><a href="cinnamomum-burmanii"><span class="n">Cinnamomum burmanii</span><span class="d">Cinnulin PF(R</span></a></li>
+        <li><a href="cinnamon"><span class="n">Cinnamon</span><span class="d">Cinnamon extract</span></a></li>
+        <li><a href="cistanche-deserticola"><span class="n">Cistanche deserticola</span><span class="d">Cistanche deserticola Stem Extract</span></a></li>
+        <li><a href="citrulline"><span class="n">Citrulline</span><span class="d">L-Citrulline</span></a></li>
+        <li><a href="citrulline-malate"><span class="n">Citrulline malate</span></a></li>
+        <li><a href="cnidium"><span class="n">Cnidium</span><span class="d">Cnidium monnieri</span></a></li>
+        <li><a href="cocoa"><span class="n">cocoa</span><span class="d">Theobromine</span></a></li>
+        <li><a href="coconut-oil"><span class="n">coconut oil</span><span class="d">Hi-MCT Coconut (Cocos nucifera</span></a></li>
+        <li><a href="coenzyme-q-10"><span class="n">Coenzyme Q-10</span></a></li>
+        <li><a href="coleus"><span class="n">Coleus</span><span class="d">extract of Coleus forskohlii</span></a></li>
+        <li><a href="collagen"><span class="n">Collagen</span><span class="d">Chicken Sternal Cartilage Extract</span></a></li>
+        <li><a href="colostrum"><span class="n">Colostrum</span></a></li>
+        <li><a href="conjugated-linoleic-acid"><span class="n">Conjugated Linoleic Acid</span></a></li>
+        <li><a href="copper"><span class="n">Copper</span><span class="d">Copper Chelate</span></a></li>
+        <li><a href="coral"><span class="n">Coral</span><span class="d">Okinawan Fossilized Coral</span></a></li>
+        <li><a href="cordyceps"><span class="n">Cordyceps</span><span class="d">Cordyceps sinensis</span></a></li>
+        <li><a href="coriolus-mushroom"><span class="n">Coriolus Mushroom</span><span class="d">Trametes versicolor</span></a></li>
+        <li><a href="corn"><span class="n">Corn</span><span class="d">Corn Silk Glycerite Liquid Extract</span></a></li>
+        <li><a href="couch-grass"><span class="n">Couch Grass</span><span class="d">Wheat Grass powder</span></a></li>
+        <li><a href="cowhage"><span class="n">Cowhage</span><span class="d">Mucuna pruriens</span></a></li>
+        <li><a href="cranberry"><span class="n">cranberry</span></a></li>
+        <li><a href="creatine"><span class="n">Creatine</span><span class="d">Creatine Monohydrate</span></a></li>
+        <li><a href="cucumber"><span class="n">cucumber</span><span class="d">Cucumber, Powder</span></a></li>
+        <li><a href="curcumin"><span class="n">Curcumin</span><span class="d">Curcuma longa extract</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">D</h2>
+      <ul class="dirlist">
+        <li><a href="d-aspartic-acid"><span class="n">D-Aspartic Acid</span></a></li>
+        <li><a href="damiana"><span class="n">Damiana</span><span class="d">Damiana Leaf Extract</span></a></li>
+        <li><a href="dandelion"><span class="n">Dandelion</span></a></li>
+        <li><a href="deanol"><span class="n">Deanol</span><span class="d">DMAE</span></a></li>
+        <li><a href="dha-docosahexaenoic-acid"><span class="n">DHA (Docosahexaenoic Acid)</span><span class="d">Docosahexaenoic Acid</span></a></li>
+        <li><a href="dhea"><span class="n">DHEA</span><span class="d">Dehydroepiandrosterone, Micronized</span></a></li>
+        <li><a href="diindolylmethane"><span class="n">Diindolylmethane</span></a></li>
+        <li><a href="dna"><span class="n">DNA</span></a></li>
+        <li><a href="dog-rose"><span class="n">Dog Rose</span><span class="d">Rose Hips</span></a></li>
+        <li><a href="dong-quai"><span class="n">Dong Quai</span><span class="d">Angelica sinensis</span></a></li>
+        <li><a href="dunaliella-salina"><span class="n">Dunaliella salina</span><span class="d">natural Carotenoids</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">E</h2>
+      <ul class="dirlist">
+        <li><a href="echinacea-unspecified"><span class="n">Echinacea (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="echinacea-angustifolia"><span class="n">Echinacea angustifolia</span></a></li>
+        <li><a href="echinacea-purpurea"><span class="n">Echinacea purpurea</span></a></li>
+        <li><a href="egg-protein"><span class="n">Egg protein</span><span class="d">instantized Egg Protein</span></a></li>
+        <li><a href="elderberry"><span class="n">elderberry</span><span class="d">European Black Elderberry Fruit Extract</span></a></li>
+        <li><a href="elderberry-unspecified"><span class="n">Elderberry (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="eleuthero"><span class="n">Eleuthero</span></a></li>
+        <li><a href="english-lavender"><span class="n">English Lavender</span><span class="d">English Lavender extract</span></a></li>
+        <li><a href="enterococcus-faecium"><span class="n">Enterococcus faecium</span></a></li>
+        <li><a href="epa-eicosapentaenoic-acid"><span class="n">EPA (Eicosapentaenoic Acid)</span><span class="d">Eicosapentaenoic Acid</span></a></li>
+        <li><a href="epimedium"><span class="n">Epimedium</span><span class="d">Horny Goat Weed</span></a></li>
+        <li><a href="european-elder"><span class="n">European Elder</span><span class="d">Elderberry</span></a></li>
+        <li><a href="eurycoma-longifolia"><span class="n">Eurycoma Longifolia</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">F</h2>
+      <ul class="dirlist">
+        <li><a href="fadogia-agrestis"><span class="n">Fadogia agrestis</span><span class="d">Fadogia agrestis Root Extract</span></a></li>
+        <li><a href="fennel"><span class="n">Fennel</span><span class="d">Fennel, Powder</span></a></li>
+        <li><a href="fenugreek"><span class="n">Fenugreek</span></a></li>
+        <li><a href="ferulic-acid"><span class="n">Ferulic Acid</span><span class="d">Rice Bran</span></a></li>
+        <li><a href="feverfew"><span class="n">Feverfew</span></a></li>
+        <li><a href="fiber-unspecified"><span class="n">Fiber (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="fish-liver-oil"><span class="n">Fish Liver oil</span></a></li>
+        <li><a href="fish-oil"><span class="n">Fish Oil</span><span class="d">purified deep sea Fish Oil</span></a></li>
+        <li><a href="flavonoid-mixture"><span class="n">Flavonoid (mixture)</span><span class="d">mixture</span></a></li>
+        <li><a href="flax"><span class="n">Flax</span><span class="d">Hi-Omega3 Flax</span></a></li>
+        <li><a href="flaxseed-oil"><span class="n">Flaxseed Oil</span><span class="d">organic Flaxseed Oil</span></a></li>
+        <li><a href="fo-ti"><span class="n">Fo-Ti</span><span class="d">Fo-Ti Root Extract</span></a></li>
+        <li><a href="folate"><span class="n">Folate</span><span class="d">Folic Acid</span></a></li>
+        <li><a href="fructo-oligosaccharides"><span class="n">Fructo-Oligosaccharides</span><span class="d">FOS</span></a></li>
+        <li><a href="fructo-oligosaccharides-fos"><span class="n">Fructo-Oligosaccharides (FOS)</span><span class="d">FOS</span></a></li>
+        <li><a href="fructooligosaccharides-fos"><span class="n">Fructooligosaccharides (FOS)</span><span class="d">FOS</span></a></li>
+        <li><a href="fructose"><span class="n">Fructose</span></a></li>
+        <li><a href="fucosterol"><span class="n">Fucosterol</span><span class="d">Soybean</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">G</h2>
+      <ul class="dirlist">
+        <li><a href="gaba"><span class="n">GABA</span><span class="d">Gamma-Aminobutyric Acid</span></a></li>
+        <li><a href="galactooligosaccharides"><span class="n">Galactooligosaccharides</span><span class="d">Galacto-oligosaccharides</span></a></li>
+        <li><a href="galactosidase"><span class="n">Galactosidase</span></a></li>
+        <li><a href="gamma-linolenic-acid"><span class="n">Gamma Linolenic Acid</span><span class="d">Safflower Oil</span></a></li>
+        <li><a href="gamma-oryzanol"><span class="n">Gamma oryzanol</span></a></li>
+        <li><a href="gardenia"><span class="n">Gardenia</span><span class="d">Gardenia jasminoides</span></a></li>
+        <li><a href="garlic"><span class="n">Garlic</span></a></li>
+        <li><a href="gentiana-manshurica"><span class="n">Gentiana manshurica</span><span class="d">Gentiana manshurica Root Extract, Dry</span></a></li>
+        <li><a href="german-chamomile"><span class="n">German Chamomile</span><span class="d">Chamomile</span></a></li>
+        <li><a href="ginger"><span class="n">Ginger</span><span class="d">Ginger, Powder</span></a></li>
+        <li><a href="ginkgo"><span class="n">Ginkgo</span><span class="d">Ginkgo biloba</span></a></li>
+        <li><a href="ginseng"><span class="n">Ginseng</span><span class="d">Ginsenosides</span></a></li>
+        <li><a href="ginseng-unspecified"><span class="n">Ginseng (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="glucoamylase"><span class="n">Glucoamylase</span></a></li>
+        <li><a href="glucoraphanin"><span class="n">Glucoraphanin</span><span class="d">Broccoli extract</span></a></li>
+        <li><a href="glucosamine-unspecified"><span class="n">Glucosamine (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="glucosamine-hydrochloride"><span class="n">Glucosamine Hydrochloride</span><span class="d">Glucosamine HCl</span></a></li>
+        <li><a href="glucosamine-sulfate"><span class="n">Glucosamine Sulfate</span></a></li>
+        <li><a href="glucose"><span class="n">Glucose</span><span class="d">Dextrose</span></a></li>
+        <li><a href="glucosinolate"><span class="n">Glucosinolate</span><span class="d">Glucosinolates</span></a></li>
+        <li><a href="glucuronolactone"><span class="n">Glucuronolactone</span></a></li>
+        <li><a href="glutamic-acid"><span class="n">Glutamic Acid</span></a></li>
+        <li><a href="glutamine"><span class="n">Glutamine</span><span class="d">L-Glutamine</span></a></li>
+        <li><a href="glutathione"><span class="n">Glutathione</span></a></li>
+        <li><a href="gluthathione"><span class="n">Gluthathione</span><span class="d">L-Glutathione, Reduced</span></a></li>
+        <li><a href="glycine"><span class="n">Glycine</span><span class="d">L-Glycine</span></a></li>
+        <li><a href="goji"><span class="n">Goji</span><span class="d">Goji extract</span></a></li>
+        <li><a href="goldenseal"><span class="n">Goldenseal</span><span class="d">Goldenseal Root Extract</span></a></li>
+        <li><a href="gotu-kola"><span class="n">Gotu Kola</span></a></li>
+        <li><a href="grape"><span class="n">Grape</span><span class="d">Polyphenols</span></a></li>
+        <li><a href="grapefruit"><span class="n">Grapefruit</span><span class="d">Grapefruit Juice, Powder</span></a></li>
+        <li><a href="green-coffee"><span class="n">Green Coffee</span><span class="d">Chlorogenic Acid</span></a></li>
+        <li><a href="green-tea"><span class="n">Green Tea</span><span class="d">Green Tea extract</span></a></li>
+        <li><a href="guar"><span class="n">Guar</span><span class="d">Guar Gum</span></a></li>
+        <li><a href="guarana"><span class="n">Guarana</span></a></li>
+        <li><a href="guggul"><span class="n">Guggul</span><span class="d">Guggulsterones</span></a></li>
+        <li><a href="gymnema"><span class="n">Gymnema</span><span class="d">Gymnema sylvestre Leaf Extract</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">H</h2>
+      <ul class="dirlist">
+        <li><a href="hawthorn"><span class="n">Hawthorn</span><span class="d">Crataegus oxycanthus Berry Extract</span></a></li>
+        <li><a href="header"><span class="n">Header</span><span class="d">Total Probiotic Activity</span></a></li>
+        <li><a href="hemicellulase"><span class="n">Hemicellulase</span></a></li>
+        <li><a href="hemidesmus"><span class="n">Hemidesmus</span><span class="d">Hemidesmus indicus</span></a></li>
+        <li><a href="hemp"><span class="n">Hemp</span><span class="d">Broad Spectrum Hemp Extract</span></a></li>
+        <li><a href="hemp-oil"><span class="n">Hemp oil</span></a></li>
+        <li><a href="hericium-mushroom"><span class="n">Hericium mushroom</span><span class="d">Lion&#x27;s Mane Mushroom, Powder</span></a></li>
+        <li><a href="hesperidin"><span class="n">Hesperidin</span><span class="d">Hesperidin Bioflavonoid extract</span></a></li>
+        <li><a href="holy-basil"><span class="n">Holy Basil</span></a></li>
+        <li><a href="honduran-sarsaparilla"><span class="n">Honduran Sarsaparilla</span><span class="d">Sarsaparilla</span></a></li>
+        <li><a href="hops"><span class="n">Hops</span><span class="d">Hops Flower Extract</span></a></li>
+        <li><a href="horny-goat-weed"><span class="n">Horny Goat Weed</span><span class="d">Epimedium sagittatum Leaf Extract, Powder</span></a></li>
+        <li><a href="horsetail"><span class="n">Horsetail</span><span class="d">Horsetail Glycerite Liquid Extract</span></a></li>
+        <li><a href="hu-zhang"><span class="n">Hu Zhang</span><span class="d">Resveratrol</span></a></li>
+        <li><a href="hyaluronic-acid"><span class="n">Hyaluronic acid</span><span class="d">Sodium Hyaluronate</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">I</h2>
+      <ul class="dirlist">
+        <li><a href="iceland-moss"><span class="n">Iceland Moss</span></a></li>
+        <li><a href="indian-gooseberry"><span class="n">Indian Gooseberry</span><span class="d">Amla extract</span></a></li>
+        <li><a href="indian-kinotree"><span class="n">Indian Kinotree</span><span class="d">Pterocarpus marsupium heart wood extract</span></a></li>
+        <li><a href="indian-madder"><span class="n">Indian Madder</span></a></li>
+        <li><a href="inosine"><span class="n">inosine</span><span class="d">Inosine HxR</span></a></li>
+        <li><a href="inositol"><span class="n">Inositol</span></a></li>
+        <li><a href="intestine"><span class="n">Intestine</span><span class="d">Duodenal Concentrate</span></a></li>
+        <li><a href="inulin"><span class="n">Inulin</span></a></li>
+        <li><a href="iodine"><span class="n">Iodine</span><span class="d">Potassium Iodide</span></a></li>
+        <li><a href="irish-moss"><span class="n">Irish Moss</span><span class="d">Irish Moss, Powder</span></a></li>
+        <li><a href="iron"><span class="n">Iron</span><span class="d">Iron Bisglycinate</span></a></li>
+        <li><a href="isoflavone-unspecified"><span class="n">isoflavone (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="isoleucine"><span class="n">Isoleucine</span><span class="d">L-Isoleucine</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">J</h2>
+      <ul class="dirlist">
+        <li><a href="japanese-mint"><span class="n">Japanese Mint</span><span class="d">Mentha haplocalyx</span></a></li>
+        <li><a href="java-tea"><span class="n">Java Tea</span><span class="d">Java Tea Glycerite Liquid Extract</span></a></li>
+        <li><a href="jerusalem-artichoke"><span class="n">Jerusalem Artichoke</span></a></li>
+        <li><a href="jiaogulan"><span class="n">Jiaogulan</span><span class="d">Gynostemma leaf extract</span></a></li>
+        <li><a href="juniper"><span class="n">Juniper</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">K</h2>
+      <ul class="dirlist">
+        <li><a href="kale"><span class="n">Kale</span></a></li>
+        <li><a href="kelp"><span class="n">Kelp</span><span class="d">Iodine</span></a></li>
+        <li><a href="kudzu"><span class="n">Kudzu</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">L</h2>
+      <ul class="dirlist">
+        <li><a href="l-alanyl-glutamine"><span class="n">L-Alanyl-Glutamine</span><span class="d">L-Alanyl-L-Glutamine</span></a></li>
+        <li><a href="l-carnitine"><span class="n">L-Carnitine</span><span class="d">L-Carnitine Tartrate</span></a></li>
+        <li><a href="l-ornithine-l-aspartate"><span class="n">L-Ornithine-L-aspartate</span><span class="d">L-Ornithine L-Aspartate</span></a></li>
+        <li><a href="lactase"><span class="n">Lactase</span></a></li>
+        <li><a href="lactobacillus-unspecified"><span class="n">Lactobacillus (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="lactobacillus-acidophilus"><span class="n">Lactobacillus acidophilus</span><span class="d">Lactobacillus acidophilus NCFM</span></a></li>
+        <li><a href="lactobacillus-brevis"><span class="n">Lactobacillus brevis</span></a></li>
+        <li><a href="lactobacillus-bulgaricus"><span class="n">Lactobacillus bulgaricus</span><span class="d">Lactobacillus bulgaricus VP-109</span></a></li>
+        <li><a href="lactobacillus-casei"><span class="n">Lactobacillus casei</span></a></li>
+        <li><a href="lactobacillus-delbrueckii-ssp-not-specified"><span class="n">Lactobacillus delbrueckii (ssp not specified)</span><span class="d">ssp not specified</span></a></li>
+        <li><a href="lactobacillus-delbrueckii-bulgaricus"><span class="n">Lactobacillus delbrueckii bulgaricus</span><span class="d">Lactobacillus bulgaricus</span></a></li>
+        <li><a href="lactobacillus-fermentum"><span class="n">Lactobacillus fermentum</span><span class="d">Lactobacillus fermentum SD-5847</span></a></li>
+        <li><a href="lactobacillus-gasseri"><span class="n">Lactobacillus gasseri</span></a></li>
+        <li><a href="lactobacillus-helveticus"><span class="n">Lactobacillus helveticus</span></a></li>
+        <li><a href="lactobacillus-paracasei"><span class="n">Lactobacillus paracasei</span></a></li>
+        <li><a href="lactobacillus-plantarum"><span class="n">Lactobacillus plantarum</span></a></li>
+        <li><a href="lactobacillus-reuteri"><span class="n">Lactobacillus reuteri</span><span class="d">Lactobacillus reuteri SD-5865</span></a></li>
+        <li><a href="lactobacillus-rhamnosus"><span class="n">Lactobacillus rhamnosus</span></a></li>
+        <li><a href="lactobacillus-salivarius"><span class="n">Lactobacillus salivarius</span></a></li>
+        <li><a href="lactococcus-lactis"><span class="n">Lactococcus lactis</span><span class="d">Lactococcus lactis strain plasma</span></a></li>
+        <li><a href="lactococcus-rhamnosus"><span class="n">Lactococcus rhamnosus</span><span class="d">Lactobacillus rhamnosus HN001</span></a></li>
+        <li><a href="lavender"><span class="n">Lavender</span></a></li>
+        <li><a href="lecithin"><span class="n">lecithin</span></a></li>
+        <li><a href="leek"><span class="n">Leek</span></a></li>
+        <li><a href="lemon"><span class="n">Lemon</span></a></li>
+        <li><a href="lemon-balm"><span class="n">lemon balm</span></a></li>
+        <li><a href="leucine"><span class="n">Leucine</span><span class="d">L-Leucine</span></a></li>
+        <li><a href="licorice"><span class="n">Licorice</span><span class="d">Licorice, Powder</span></a></li>
+        <li><a href="lime"><span class="n">Lime</span><span class="d">Lime, Powder</span></a></li>
+        <li><a href="lipase"><span class="n">Lipase</span></a></li>
+        <li><a href="lutein"><span class="n">Lutein</span><span class="d">Lutein Esters</span></a></li>
+        <li><a href="lycopene"><span class="n">Lycopene</span></a></li>
+        <li><a href="lysine"><span class="n">Lysine</span><span class="d">L-Lysine Hydrochloride</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">M</h2>
+      <ul class="dirlist">
+        <li><a href="maca"><span class="n">Maca</span></a></li>
+        <li><a href="magnesium"><span class="n">Magnesium</span><span class="d">Magnesium Oxide</span></a></li>
+        <li><a href="magnesium-malate"><span class="n">Magnesium Malate</span><span class="d">Di-Magnesium Malate</span></a></li>
+        <li><a href="magnolia"><span class="n">Magnolia</span><span class="d">Magnolia officinalis Bark Extract</span></a></li>
+        <li><a href="maitake-mushroom"><span class="n">Maitake Mushroom</span><span class="d">Grifola frondosa</span></a></li>
+        <li><a href="malic-acid"><span class="n">Malic Acid</span></a></li>
+        <li><a href="maltodextrin"><span class="n">Maltodextrin</span></a></li>
+        <li><a href="manganese"><span class="n">Manganese</span><span class="d">Manganese Citrate</span></a></li>
+        <li><a href="mango"><span class="n">mango</span></a></li>
+        <li><a href="mangosteen"><span class="n">Mangosteen</span></a></li>
+        <li><a href="marigold-unspecified"><span class="n">Marigold (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="marshmallow"><span class="n">Marshmallow</span><span class="d">Marshmallow, Powder</span></a></li>
+        <li><a href="mate"><span class="n">Mate</span><span class="d">Caffeine</span></a></li>
+        <li><a href="medium-chain-triglycerides-mct"><span class="n">Medium chain triglycerides (MCT)</span><span class="d">MCT</span></a></li>
+        <li><a href="melatonin"><span class="n">Melatonin</span></a></li>
+        <li><a href="methionine"><span class="n">METHIONINE</span><span class="d">L-Methionine</span></a></li>
+        <li><a href="methylsulfonylmethane"><span class="n">Methylsulfonylmethane</span></a></li>
+        <li><a href="milk-protein"><span class="n">Milk Protein</span><span class="d">Milk Protein isolate</span></a></li>
+        <li><a href="milk-thistle"><span class="n">Milk Thistle</span><span class="d">Silymarin</span></a></li>
+        <li><a href="molybdenum"><span class="n">Molybdenum</span><span class="d">Molybdenum Amino Acid Chelate</span></a></li>
+        <li><a href="muira-puama"><span class="n">Muira Puama</span><span class="d">Muira Puama Bark Extract</span></a></li>
+        <li><a href="mullein"><span class="n">Mullein</span><span class="d">Mullein leaf powder</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">N</h2>
+      <ul class="dirlist">
+        <li><a href="n-acetyl-cysteine"><span class="n">N-Acetyl Cysteine</span><span class="d">N-Acetyl-L-Cysteine</span></a></li>
+        <li><a href="n-acetyl-glucosamine"><span class="n">N-Acetyl Glucosamine</span><span class="d">N-Acetyl-D-Glucosamine</span></a></li>
+        <li><a href="neem"><span class="n">Neem</span></a></li>
+        <li><a href="nettle-unspecified"><span class="n">Nettle (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="niacin"><span class="n">Niacin</span><span class="d">Vitamin B3</span></a></li>
+        <li><a href="noni"><span class="n">Noni</span><span class="d">Noni extract</span></a></li>
+        <li><a href="norvaline"><span class="n">Norvaline</span><span class="d">L-Norvaline</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">O</h2>
+      <ul class="dirlist">
+        <li><a href="oats"><span class="n">Oats</span><span class="d">Avena sativa</span></a></li>
+        <li><a href="octacosanol"><span class="n">Octacosanol</span></a></li>
+        <li><a href="oleic-acid"><span class="n">Oleic Acid</span><span class="d">Safflower Oil</span></a></li>
+        <li><a href="olive"><span class="n">Olive</span><span class="d">Olive leaf extract</span></a></li>
+        <li><a href="omega-3"><span class="n">Omega-3</span><span class="d">Omega-3 Fatty Acids</span></a></li>
+        <li><a href="onion"><span class="n">onion</span></a></li>
+        <li><a href="orange-unspecified"><span class="n">Orange (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="oregano"><span class="n">oregano</span><span class="d">Oregano Flowering Aerial Parts Extract</span></a></li>
+        <li><a href="oriental-ginseng"><span class="n">Oriental Ginseng</span><span class="d">Korean Ginseng</span></a></li>
+        <li><a href="oyster-mushroom"><span class="n">Oyster Mushroom</span><span class="d">King Trumpet</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">P</h2>
+      <ul class="dirlist">
+        <li><a href="paba"><span class="n">PABA</span></a></li>
+        <li><a href="panax-ginseng"><span class="n">Panax Ginseng</span><span class="d">Korean Ginseng Root Extract</span></a></li>
+        <li><a href="pantothenic-acid"><span class="n">Pantothenic Acid</span><span class="d">Calcium Pantothenate</span></a></li>
+        <li><a href="pantothenic-acid-vitamin-b5"><span class="n">Pantothenic Acid (Vitamin B5)</span><span class="d">Vitamin B5</span></a></li>
+        <li><a href="papain"><span class="n">Papain</span></a></li>
+        <li><a href="papaya"><span class="n">Papaya</span><span class="d">Green Papaya Juice, Powder</span></a></li>
+        <li><a href="parsley"><span class="n">Parsley</span></a></li>
+        <li><a href="pau-d-arco"><span class="n">Pau d&#x27;Arco</span><span class="d">Pau d&#x27;Arco inner bark extract</span></a></li>
+        <li><a href="pea"><span class="n">Pea</span><span class="d">Pea, Powder</span></a></li>
+        <li><a href="pea-protein"><span class="n">Pea protein</span><span class="d">Pea Protein isolate</span></a></li>
+        <li><a href="peach"><span class="n">Peach</span></a></li>
+        <li><a href="pear"><span class="n">Pear</span><span class="d">Pear Juice, Powder</span></a></li>
+        <li><a href="pectinase"><span class="n">Pectinase</span></a></li>
+        <li><a href="pepper-unspecified"><span class="n">Pepper (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="peptidase"><span class="n">Peptidase</span></a></li>
+        <li><a href="phenylalanine"><span class="n">Phenylalanine</span><span class="d">L-Phenylalanine</span></a></li>
+        <li><a href="phosphataidyl-ethanolamine"><span class="n">Phosphataidyl ethanolamine</span><span class="d">Soy</span></a></li>
+        <li><a href="phosphatidyl-inositol"><span class="n">phosphatidyl inositol</span><span class="d">Soy</span></a></li>
+        <li><a href="phosphatidylcholine"><span class="n">phosphatidylcholine</span><span class="d">Soy</span></a></li>
+        <li><a href="phosphatidylserine"><span class="n">Phosphatidylserine</span><span class="d">Soy</span></a></li>
+        <li><a href="phosphorus"><span class="n">Phosphorus</span><span class="d">Hydroxyapatite</span></a></li>
+        <li><a href="phyllanthus-unspecified"><span class="n">Phyllanthus (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="phytase"><span class="n">Phytase</span></a></li>
+        <li><a href="phytosterol-mixed"><span class="n">Phytosterol (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="pine-unspecified"><span class="n">Pine (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="pineapple"><span class="n">Pineapple</span><span class="d">Pineapple, Powder</span></a></li>
+        <li><a href="plum"><span class="n">Plum</span><span class="d">Plum, Powder</span></a></li>
+        <li><a href="polypodium-vulgare"><span class="n">Polypodium vulgare</span></a></li>
+        <li><a href="pomegranate"><span class="n">Pomegranate</span></a></li>
+        <li><a href="poria-mushroom"><span class="n">Poria mushroom</span><span class="d">Poria cocos fungus</span></a></li>
+        <li><a href="potassium"><span class="n">Potassium</span></a></li>
+        <li><a href="potassium-chloride"><span class="n">Potassium Chloride</span></a></li>
+        <li><a href="potato"><span class="n">Potato</span><span class="d">organic Potato</span></a></li>
+        <li><a href="pregnenolone"><span class="n">Pregnenolone</span></a></li>
+        <li><a href="prickly-ash-unspecified"><span class="n">Prickly Ash (Unspecified)</span><span class="d">Unspecified</span></a></li>
+        <li><a href="proanthocyanidins-unspecified"><span class="n">Proanthocyanidins (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="propolis"><span class="n">Propolis</span><span class="d">Bee Propolis</span></a></li>
+        <li><a href="proteolytic-enzymes-proteases"><span class="n">Proteolytic Enzymes (Proteases)</span><span class="d">Proteases</span></a></li>
+        <li><a href="psyllium-unspecified"><span class="n">Psyllium (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="pterolstilbene"><span class="n">Pterolstilbene</span><span class="d">Dimethylresveratrol</span></a></li>
+        <li><a href="pumpkin"><span class="n">Pumpkin</span><span class="d">Pumpkin, Powder</span></a></li>
+        <li><a href="pumpkin-seed-oil"><span class="n">Pumpkin Seed Oil</span><span class="d">Pumpkin Seed Oil Extract</span></a></li>
+        <li><a href="pygeum"><span class="n">Pygeum</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">Q</h2>
+      <ul class="dirlist">
+        <li><a href="quercetin"><span class="n">Quercetin</span><span class="d">Bio-Quercetin Phytosome</span></a></li>
+        <li><a href="quinoa"><span class="n">Quinoa</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">R</h2>
+      <ul class="dirlist">
+        <li><a href="radish"><span class="n">Radish</span></a></li>
+        <li><a href="raspberry"><span class="n">Raspberry</span><span class="d">Raspberry Juice, Powder</span></a></li>
+        <li><a href="raspberry-unspecified"><span class="n">Raspberry (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="raspberry-ketone"><span class="n">Raspberry ketone</span></a></li>
+        <li><a href="rauwolscine"><span class="n">Rauwolscine</span><span class="d">Rauwolfia vomitoria</span></a></li>
+        <li><a href="red-clover"><span class="n">Red Clover</span><span class="d">Red Clover Glycerite Liquid Extract</span></a></li>
+        <li><a href="red-raspberry"><span class="n">Red Raspberry</span><span class="d">Red Raspberry, Powder</span></a></li>
+        <li><a href="red-yeast-rice"><span class="n">Red Yeast Rice</span><span class="d">Monacolins</span></a></li>
+        <li><a href="reishi"><span class="n">Reishi</span><span class="d">Duanwood Reishi Fruiting Body Extract</span></a></li>
+        <li><a href="reishi-mushroom"><span class="n">Reishi mushroom</span><span class="d">Ganoderma lucidum</span></a></li>
+        <li><a href="resveratrol"><span class="n">Resveratrol</span></a></li>
+        <li><a href="rhodiola"><span class="n">Rhodiola</span><span class="d">Tibetan Rhodiola Root Extract</span></a></li>
+        <li><a href="rhodiola-unspecified"><span class="n">Rhodiola (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="riboflavin"><span class="n">Riboflavin</span></a></li>
+        <li><a href="rice"><span class="n">Rice</span><span class="d">organic Brown Rice</span></a></li>
+        <li><a href="rice-bran"><span class="n">Rice Bran</span><span class="d">Organic Rice Bran Soluble</span></a></li>
+        <li><a href="rice-protein"><span class="n">Rice Protein</span></a></li>
+        <li><a href="rna"><span class="n">RNA</span></a></li>
+        <li><a href="rooibos"><span class="n">Rooibos</span><span class="d">Rooibos Tea powder</span></a></li>
+        <li><a href="rose-unspecified"><span class="n">Rose (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="rose-hip"><span class="n">Rose Hip</span><span class="d">Rose Hips</span></a></li>
+        <li><a href="rosemary"><span class="n">Rosemary</span><span class="d">Carnosic Acid</span></a></li>
+        <li><a href="royal-jelly"><span class="n">Royal Jelly</span></a></li>
+        <li><a href="rutin"><span class="n">Rutin</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">S</h2>
+      <ul class="dirlist">
+        <li><a href="saccharomyces-cerevisiae"><span class="n">Saccharomyces cerevisiae</span><span class="d">S. cerevisiae</span></a></li>
+        <li><a href="saffron"><span class="n">Saffron</span><span class="d">Saffron Flower Extract</span></a></li>
+        <li><a href="sage"><span class="n">Sage</span></a></li>
+        <li><a href="same"><span class="n">SAMe</span><span class="d">S-Adenosyl-L-Methionine Disulfate Tosylate</span></a></li>
+        <li><a href="sarsaparilla"><span class="n">Sarsaparilla</span><span class="d">Sarsaparilla Glycerite Liquid Extract</span></a></li>
+        <li><a href="sarsaparilla-unspecified"><span class="n">Sarsaparilla (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="saw-palmetto"><span class="n">Saw Palmetto</span><span class="d">organic Saw Palmetto</span></a></li>
+        <li><a href="sceletium"><span class="n">Sceletium</span><span class="d">Kanna</span></a></li>
+        <li><a href="schisandra"><span class="n">Schisandra</span><span class="d">Schizandrins</span></a></li>
+        <li><a href="seaweed"><span class="n">seaweed</span><span class="d">Seaweed, Mineralized</span></a></li>
+        <li><a href="selenium"><span class="n">Selenium</span><span class="d">Se-Methyl L-Selenocysteine</span></a></li>
+        <li><a href="shiitake-mushroom"><span class="n">Shiitake Mushroom</span><span class="d">Shiitake</span></a></li>
+        <li><a href="shilajit"><span class="n">Shilajit</span><span class="d">Fulvic Acid</span></a></li>
+        <li><a href="silver-ear-fungus"><span class="n">Silver Ear Fungus</span><span class="d">Tremella fuciformis</span></a></li>
+        <li><a href="silybin"><span class="n">Silybin</span><span class="d">Milk Thistle</span></a></li>
+        <li><a href="slippery-elm"><span class="n">Slippery Elm</span><span class="d">Slippery Elm, Powder</span></a></li>
+        <li><a href="sodium"><span class="n">Sodium</span></a></li>
+        <li><a href="sodium-chloride"><span class="n">Sodium chloride</span></a></li>
+        <li><a href="sodium-citrate"><span class="n">Sodium Citrate</span></a></li>
+        <li><a href="sodium-glycerophosphate"><span class="n">Sodium glycerophosphate</span></a></li>
+        <li><a href="sour-cherry"><span class="n">Sour Cherry</span><span class="d">Tart Cherry</span></a></li>
+        <li><a href="soy"><span class="n">Soy</span><span class="d">Soybean Extract, Concentrate</span></a></li>
+        <li><a href="soy-protein"><span class="n">Soy Protein</span></a></li>
+        <li><a href="spinach"><span class="n">Spinach</span></a></li>
+        <li><a href="spirulina"><span class="n">Spirulina</span></a></li>
+        <li><a href="squash"><span class="n">Squash</span><span class="d">Yellow Squash Concentrate</span></a></li>
+        <li><a href="st-john-s-wort"><span class="n">St. John&#x27;s Wort</span></a></li>
+        <li><a href="starch"><span class="n">Starch</span><span class="d">AWM2300 cross-linked polymerized Waxy Maize</span></a></li>
+        <li><a href="sterol-mixed"><span class="n">Sterol (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="stevia"><span class="n">Stevia</span><span class="d">Stevia leaf crystals</span></a></li>
+        <li><a href="stigmasterol"><span class="n">Stigmasterol</span><span class="d">Soybean</span></a></li>
+        <li><a href="stinging-nettle"><span class="n">Stinging Nettle</span><span class="d">Stinging Nettle root extract</span></a></li>
+        <li><a href="strawberry"><span class="n">Strawberry</span><span class="d">Strawberry Juice, Powder</span></a></li>
+        <li><a href="streptococcus-salivarius"><span class="n">Streptococcus salivarius</span><span class="d">Blis K12</span></a></li>
+        <li><a href="streptococcus-thermophilus"><span class="n">Streptococcus Thermophilus</span><span class="d">Streptococcus thermophilus ST-21</span></a></li>
+        <li><a href="strontium"><span class="n">Strontium</span><span class="d">Strontium Citrate</span></a></li>
+        <li><a href="succinic-acid"><span class="n">Succinic acid</span><span class="d">Potassium Succinate</span></a></li>
+        <li><a href="sugar"><span class="n">Sugar</span><span class="d">Total Sugars</span></a></li>
+        <li><a href="sulforaphane"><span class="n">Sulforaphane</span><span class="d">Broccoli extract</span></a></li>
+        <li><a href="sulfur"><span class="n">Sulfur</span><span class="d">Sulfate</span></a></li>
+        <li><a href="sunflower-oil"><span class="n">Sunflower Oil</span><span class="d">enzyme modified Sunflower (Helianthus annuus</span></a></li>
+        <li><a href="sweet-cherry"><span class="n">Sweet Cherry</span></a></li>
+        <li><a href="sweet-potato"><span class="n">Sweet Potato</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">T</h2>
+      <ul class="dirlist">
+        <li><a href="tagetes"><span class="n">Tagetes</span><span class="d">Lutein</span></a></li>
+        <li><a href="taurine"><span class="n">Taurine</span></a></li>
+        <li><a href="tbd"><span class="n">TBD</span><span class="d">Bromelain</span></a></li>
+        <li><a href="tea-mixed"><span class="n">Tea (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="tea-unspecified"><span class="n">Tea (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="theacrine"><span class="n">Theacrine</span><span class="d">TeaCrine Theacrine</span></a></li>
+        <li><a href="theanine"><span class="n">Theanine</span><span class="d">L-Theanine</span></a></li>
+        <li><a href="theobromine"><span class="n">Theobromine</span></a></li>
+        <li><a href="thiamin"><span class="n">Thiamin</span><span class="d">Thiamine Hydrochloride</span></a></li>
+        <li><a href="threonine"><span class="n">THREONINE</span><span class="d">L-Threonine</span></a></li>
+        <li><a href="thyroid"><span class="n">Thyroid</span></a></li>
+        <li><a href="tinospora-cordifolia"><span class="n">Tinospora Cordifolia</span><span class="d">Indian Tinospora</span></a></li>
+        <li><a href="tomato"><span class="n">Tomato</span></a></li>
+        <li><a href="toothache-plant"><span class="n">Toothache Plant</span><span class="d">Spilanthes extract</span></a></li>
+        <li><a href="tree-peony"><span class="n">Tree Peony</span><span class="d">Paeonia suffruticosa</span></a></li>
+        <li><a href="tribulus"><span class="n">Tribulus</span><span class="d">Saponins</span></a></li>
+        <li><a href="turmeric"><span class="n">Turmeric</span><span class="d">Turmeric root extract</span></a></li>
+        <li><a href="tyrosine"><span class="n">Tyrosine</span><span class="d">L-Tyrosine</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">U</h2>
+      <ul class="dirlist">
+        <li><a href="usnea"><span class="n">Usnea</span><span class="d">Usnea extract</span></a></li>
+        <li><a href="uva-ursi"><span class="n">Uva Ursi</span><span class="d">Uva Ursi (Artostaphylos uva-ursi</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">V</h2>
+      <ul class="dirlist">
+        <li><a href="valerian"><span class="n">Valerian</span></a></li>
+        <li><a href="valine"><span class="n">Valine</span><span class="d">L-Valine</span></a></li>
+        <li><a href="vanadium"><span class="n">Vanadium</span><span class="d">Vanadium Amino Acid Chelate</span></a></li>
+        <li><a href="vitamin-a"><span class="n">Vitamin A</span><span class="d">Beta-Carotene</span></a></li>
+        <li><a href="vitamin-a-mixed"><span class="n">Vitamin A (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="vitamin-a-unspecified"><span class="n">Vitamin A (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="vitamin-b1-thiamine-hcl"><span class="n">Vitamin B1 (thiamine HCl)</span><span class="d">thiamine HCl</span></a></li>
+        <li><a href="vitamin-b1-thiamine"><span class="n">Vitamin B1 (Thiamine)</span><span class="d">Thiamine</span></a></li>
+        <li><a href="vitamin-b12"><span class="n">Vitamin B12</span></a></li>
+        <li><a href="vitamin-b12-adenosylcobalamin"><span class="n">Vitamin B12 (adenosylcobalamin)</span><span class="d">adenosylcobalamin</span></a></li>
+        <li><a href="vitamin-b12-methylcobalamin"><span class="n">Vitamin B12 (methylcobalamin)</span><span class="d">methylcobalamin</span></a></li>
+        <li><a href="vitamin-b12-unspecified"><span class="n">Vitamin B12 (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="vitamin-b2-mixed"><span class="n">Vitamin B2 (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="vitamin-b2-riboflavin"><span class="n">Vitamin B2 (Riboflavin)</span><span class="d">Riboflavin</span></a></li>
+        <li><a href="vitamin-b3-mixed"><span class="n">Vitamin B3 (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="vitamin-b3-niacin"><span class="n">Vitamin B3 (Niacin)</span><span class="d">Niacin</span></a></li>
+        <li><a href="vitamin-b5"><span class="n">Vitamin B5</span><span class="d">D-Calcium Pantothenate</span></a></li>
+        <li><a href="vitamin-b5-mixed"><span class="n">Vitamin B5 (mixed)</span><span class="d">mixed</span></a></li>
+        <li><a href="vitamin-b5-pantothenic-acid"><span class="n">Vitamin B5 (Pantothenic Acid)</span><span class="d">Pantothenic Acid</span></a></li>
+        <li><a href="vitamin-b6"><span class="n">Vitamin B6</span><span class="d">Pyridoxal 5-Phosphate</span></a></li>
+        <li><a href="vitamin-b6-pridoxal-5-phosphate"><span class="n">Vitamin B6 (pridoxal 5-phosphate)</span><span class="d">pridoxal 5-phosphate</span></a></li>
+        <li><a href="vitamin-b6-pyridoxal-5-phosphate"><span class="n">Vitamin B6 (pyridoxal 5-phosphate)</span><span class="d">pyridoxal 5-phosphate</span></a></li>
+        <li><a href="vitamin-b6-unspecified"><span class="n">Vitamin B6 (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="vitamin-b7-biotin"><span class="n">Vitamin B7 (biotin)</span><span class="d">biotin</span></a></li>
+        <li><a href="vitamin-b9-folate"><span class="n">Vitamin B9 (Folate)</span><span class="d">Folate</span></a></li>
+        <li><a href="vitamin-c"><span class="n">Vitamin C</span><span class="d">Ascorbyl Palmitate</span></a></li>
+        <li><a href="vitamin-c-ascorbic-acid"><span class="n">Vitamin C (ascorbic acid)</span><span class="d">ascorbic acid</span></a></li>
+        <li><a href="vitamin-c-calcium-ascorbate"><span class="n">Vitamin C (Calcium Ascorbate)</span><span class="d">Calcium Ascorbate</span></a></li>
+        <li><a href="vitamin-c-unspecified"><span class="n">Vitamin C (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="vitamin-d"><span class="n">Vitamin D</span><span class="d">Cholecalciferol</span></a></li>
+        <li><a href="vitamin-d-cholecalciferol"><span class="n">Vitamin D (cholecalciferol)</span><span class="d">cholecalciferol</span></a></li>
+        <li><a href="vitamin-e"><span class="n">Vitamin E</span><span class="d">D-Alpha-Tocopherol</span></a></li>
+        <li><a href="vitamin-e-alpha-tocopherol"><span class="n">Vitamin E (alpha tocopherol)</span><span class="d">alpha tocopherol</span></a></li>
+        <li><a href="vitamin-e-alpha-tocopheryl-acetate"><span class="n">Vitamin E (alpha tocopheryl acetate)</span><span class="d">alpha tocopheryl acetate</span></a></li>
+        <li><a href="vitamin-e-alpha-tocopheryl-succinate"><span class="n">Vitamin E (alpha-tocopheryl succinate)</span><span class="d">alpha-tocopheryl succinate</span></a></li>
+        <li><a href="vitamin-e-gamma-tocopherol"><span class="n">Vitamin E (gamma tocopherol)</span><span class="d">gamma tocopherol</span></a></li>
+        <li><a href="vitamin-e-mixed-tocopherols"><span class="n">Vitamin E (mixed tocopherols)</span><span class="d">mixed tocopherols</span></a></li>
+        <li><a href="vitamin-e-mixed-tocotrienols"><span class="n">Vitamin E (mixed tocotrienols)</span><span class="d">mixed tocotrienols</span></a></li>
+        <li><a href="vitamin-e-unspecified"><span class="n">Vitamin E (unspecified)</span><span class="d">unspecified</span></a></li>
+        <li><a href="vitamin-k"><span class="n">Vitamin K</span></a></li>
+        <li><a href="vitamin-k-menaquinone"><span class="n">Vitamin K (menaquinone)</span><span class="d">menaquinone</span></a></li>
+        <li><a href="vitamin-k-phylloquinone"><span class="n">Vitamin K (Phylloquinone)</span><span class="d">Phylloquinone</span></a></li>
+        <li><a href="vitamin-k-unspecified"><span class="n">Vitamin K (unspecified)</span><span class="d">unspecified</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">W</h2>
+      <ul class="dirlist">
+        <li><a href="watercress"><span class="n">Watercress</span><span class="d">Watercress powder</span></a></li>
+        <li><a href="watermelon"><span class="n">Watermelon</span><span class="d">Watermelon Juice, Powder</span></a></li>
+        <li><a href="wax-gourd"><span class="n">Wax Gourd</span><span class="d">Wax Gourd Seed Extract, Dry</span></a></li>
+        <li><a href="wheat"><span class="n">Wheat</span><span class="d">Wheat Germ</span></a></li>
+        <li><a href="whey-protein"><span class="n">Whey Protein</span><span class="d">Whey Protein Isolate</span></a></li>
+        <li><a href="white-peony"><span class="n">White Peony</span><span class="d">Paeonia lactiflora</span></a></li>
+        <li><a href="white-pepper"><span class="n">White Pepper</span></a></li>
+        <li><a href="wild-yam"><span class="n">Wild Yam</span><span class="d">Mexican Wild Yam/Taro</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">X</h2>
+      <ul class="dirlist">
+        <li><a href="xanthoparmelia"><span class="n">Xanthoparmelia</span><span class="d">Xanthoparmelia scabrosa</span></a></li>
+        <li><a href="xylanase"><span class="n">Xylanase</span></a></li>
+        <li><a href="xylaria-nigripes"><span class="n">Xylaria nigripes</span></a></li>
+        <li><a href="xylitol"><span class="n">Xylitol</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">Y</h2>
+      <ul class="dirlist">
+        <li><a href="yellow-dock"><span class="n">Yellow Dock</span><span class="d">Yellow Dock Root Glycerite Liquid Extract</span></a></li>
+        <li><a href="yohimbe"><span class="n">Yohimbe</span></a></li>
+        <li><a href="yohimbine"><span class="n">Yohimbine</span><span class="d">Yohimbine HCl</span></a></li>
+      </ul>
+    </section>
+
+    <section class="alpha">
+      <h2 class="alpha-h">Z</h2>
+      <ul class="dirlist">
+        <li><a href="zeaxanthin"><span class="n">Zeaxanthin</span></a></li>
+        <li><a href="zinc"><span class="n">Zinc</span><span class="d">L-OptiZinc</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      SuppDB &middot; <a href="/#pricing">Full snapshot ($49)</a> &middot; <a href="/">suppdb.dataengineered.io</a>
+    </div>
+  </footer>
+</body>
+</html>
