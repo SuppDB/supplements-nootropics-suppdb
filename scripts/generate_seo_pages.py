@@ -340,7 +340,15 @@ def main():
         one -- naming the brand is mathematically impossible in this title format. Rather
         than let that degrade to a blank "| SuppDB" title (fit_title's own last-resort
         empty-descriptor branch would otherwise fire), fall back to the product name with
-        no brand mention -- a real name beats an empty title."""
+        no brand mention -- a real name beats an empty title.
+
+        Likewise, when the brand leaves only a handful of characters for the name, a plain
+        word-boundary cut can still land mid-word (_cut's own short-room hard-cut fallback
+        chops wherever `room` lands, not at the nearest earlier space) -- e.g. "CBD Oil..."
+        cut to room=5 becomes "CBD O", not "CBD". The name must always be a whole-word
+        prefix of the real one, so that's verified explicitly below; anything narrower than
+        one whole word (or under a 4-char floor) gives up on the brand entirely rather than
+        publish a mangled fragment."""
         descriptor = f"by {brand}" + (f" ({extra})" if extra else "")
         tail = f" — {descriptor} | SuppDB"
         if len(tail) > 60:
@@ -349,6 +357,17 @@ def main():
             return fit_title(fallback_entity, "", "SuppDB")
         room = 60 - len(tail)
         entity = _strip_dangling(_cut(pname, room))
+        first_word_len = len(pname.split(" ", 1)[0]) if pname else 0
+        whole_word_prefix = (
+            bool(entity) and pname.startswith(entity)
+            and (len(entity) == len(pname) or pname[len(entity)] == " ")
+        )
+        if not whole_word_prefix or room < first_word_len or room < 4:
+            # Not enough room for even one whole word of the product name alongside the
+            # brand -- an honest brand-less title beats a mid-word fragment. `tag`, when
+            # given, still goes in as the descriptor so the guaranteed-unique round stays
+            # guaranteed unique even in this fallback.
+            return fit_title(pname, [tag] if tag else ["supplement"], "SuppDB")
         if tag:
             base = entity.rsplit(" ", 1)[0] if " " in entity else ""
             joiner = " " if base else ""

@@ -269,13 +269,17 @@ def bucket_slug(keys):
     return lo if lo == hi else "%s-%s" % (lo, hi)
 
 
-def render_dirlist(entries):
+def render_dirlist(entries, prefix=""):
+    """`prefix` is prepended to each href. Leaf entries live one directory above the range
+    hub that lists them (ingredients/5-htp, not ingredients/a/5-htp), so callers rendering
+    a range hub's own leaf list must pass prefix="../"; the top-level hub's links to the
+    range hubs are already siblings of it, so they pass no prefix."""
     items = []
     for e in entries:
         dh = ('<span class="d">%s</span>' % htmllib.escape(e["desc"])) if e["desc"] else ""
         items.append(
-            '        <li><a href="%s"><span class="n">%s</span>%s</a></li>'
-            % (htmllib.escape(e["slug"]), htmllib.escape(e["name"]), dh)
+            '        <li><a href="%s%s"><span class="n">%s</span>%s</a></li>'
+            % (prefix, htmllib.escape(e["slug"]), htmllib.escape(e["name"]), dh)
         )
     return '      <ul class="dirlist">\n%s\n      </ul>' % "\n".join(items)
 
@@ -314,7 +318,7 @@ def build_section(sec):
             base=BASE, url=bucket_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
             jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], label), lede=sec["lede"],
             label=sec["label"], n=n_b, style=STYLE, back=back,
-            groups='    <section class="alpha">\n' + render_dirlist(bucket_entries) + '\n    </section>',
+            groups='    <section class="alpha">\n' + render_dirlist(bucket_entries, prefix="../") + '\n    </section>',
         )
         bucket_dir = d / bslug
         bucket_dir.mkdir(exist_ok=True)
