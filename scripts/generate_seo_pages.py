@@ -139,8 +139,9 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
             brand_counts[b] += 1
     if brand_counts:
         top_brands = sorted(brand_counts, key=lambda b: (-brand_counts[b], b))[:3]
-        p2 = f" Sold under {'the' if len(top_brands) == 1 else ''} {_oxford([esc(b) for b in top_brands])} label{'s' if len(top_brands) > 1 else ''} in this sample."
-        p += p2
+        brand_list = _oxford([esc(b) for b in top_brands])
+        noun = "label" if len(top_brands) == 1 else "labels"
+        p += f" Sold under the {brand_list} {noun} in this sample."
     prop_n = sum(1 for r in rows if _is_prop(r.get('is_proprietary_blend')))
     if prop_n:
         total_n = len(rows)
@@ -280,32 +281,47 @@ def main():
     # with the same name from similarly-named brands), so titles are built in increasingly
     # specific rounds until every one is unique -- the last round is guaranteed unique
     # (product id / ingredient slug), so this always terminates.
-    def _dedupe_titles(ids, entity_fn, descriptor_fn, tag_fn):
-        titles = {i: fit_title(entity_fn(i, 0), descriptor_fn(i), "SuppDB") for i in ids}
+    def _dedupe_titles(ids, round_fn):
+        titles = {i: round_fn(i, 0) for i in ids}
         dupes = {t for t, c in Counter(titles.values()).items() if c > 1}
         if dupes:
             for i in ids:
                 if titles[i] in dupes:
-                    titles[i] = fit_title(entity_fn(i, 1), descriptor_fn(i), "SuppDB")
+                    titles[i] = round_fn(i, 1)
         dupes = {t for t, c in Counter(titles.values()).items() if c > 1}
         if dupes:
-            # Guaranteed-unique fallback: put the unique tag in the descriptor, not the
-            # entity -- fit_title only ever truncates the entity, never the descriptor/brand
-            # tail, so a tag placed here can never be silently dropped.
             for i in ids:
                 if titles[i] in dupes:
-                    titles[i] = fit_title(entity_fn(i, 1), [f"#{tag_fn(i)}"], "SuppDB")
+                    titles[i] = round_fn(i, 2)
         return titles
 
-    def _product_entity(pid, round_n):
-        m = product_meta[pid]
-        if round_n == 0:
-            return f"{m['pname']} by {m['brand']}"
-        return f"{m['pname']} by {m['brand']} ({m['form_type']})"
+    def _fit_title_keep_brand(combined_entity, combined_descriptors, bare_entity, brand_descriptors):
+        """Try the combined "<name> by <brand>" entity first; if truncation cropped the
+        brand off entirely (no more " by " in the result), fall back to the bare name as
+        the entity and move the brand into the descriptor instead -- fit_title only ever
+        truncates the entity, never the descriptor/brand tail, so the brand then survives
+        intact rather than being silently dropped."""
+        t = fit_title(combined_entity, combined_descriptors, "SuppDB")
+        if " by " in t:
+            return t
+        return fit_title(bare_entity, brand_descriptors, "SuppDB")
 
-    product_titles = _dedupe_titles(list(product_meta.keys()), _product_entity,
-                                     lambda pid: ["Supplement Facts", "supplement"],
-                                     lambda pid: pid)
+    def _product_title_round(pid, round_n):
+        m = product_meta[pid]
+        pname, brand, form_type = m["pname"], m["brand"], m["form_type"]
+        if round_n == 0:
+            return _fit_title_keep_brand(
+                f"{pname} by {brand}", ["Supplement Facts", "supplement"],
+                pname, [f"by {brand}", "supplement"])
+        if round_n == 1:
+            return _fit_title_keep_brand(
+                f"{pname} by {brand} ({form_type})", ["Supplement Facts", "supplement"],
+                pname, [f"by {brand} ({form_type})", f"by {brand}", "supplement"])
+        # Guaranteed-unique fallback: the tag lives in the descriptor, never the entity --
+        # never silently droppable, and pid is unique so this always terminates the loop.
+        return fit_title(f"{pname} by {brand} ({form_type})", [f"#{pid}"], "SuppDB")
+
+    product_titles = _dedupe_titles(list(product_meta.keys()), _product_title_round)
 
     ingredient_n_products = {}
     ingredient_form_display = {}
@@ -316,17 +332,16 @@ def main():
         ingredient_n_products[ing_name] = len(seen_pi) or len(rows_i)
         ingredient_form_display[ing_name] = (rows_i[0].get('ingredient_form') or '').strip() or ing_name
 
-    def _ingredient_entity(ing_name, round_n):
+    def _ingredient_title_round(ing_name, round_n):
+        descriptors = [f"in {ingredient_n_products[ing_name]} products", "supplement ingredient"]
         if round_n == 0:
-            return ing_name
-        return f"{ing_name} ({ingredient_form_display[ing_name]})"
+            return fit_title(ing_name, descriptors, "SuppDB")
+        if round_n == 1:
+            return fit_title(f"{ing_name} ({ingredient_form_display[ing_name]})", descriptors, "SuppDB")
+        return fit_title(f"{ing_name} ({ingredient_form_display[ing_name]})",
+                          [f"#{ingredient_slugs[ing_name]}"], "SuppDB")
 
-    def _ingredient_descriptors(ing_name):
-        return [f"in {ingredient_n_products[ing_name]} products", "supplement ingredient"]
-
-    ingredient_titles = _dedupe_titles(list(ingredient_slugs.keys()), _ingredient_entity,
-                                        _ingredient_descriptors,
-                                        lambda ing_name: ingredient_slugs[ing_name])
+    ingredient_titles = _dedupe_titles(list(ingredient_slugs.keys()), _ingredient_title_round)
 
     # Generate Product Monograph Pages (top products or all products in sample)
     generated_products = 0
@@ -395,8 +410,8 @@ def main():
             <td style="padding: 12px 14px;">{cid_link}</td>
           </tr>"""
 
-        page_title = product_titles[pid]
-        page_desc = product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit)
+        page_title = html.escape(product_titles[pid])
+        page_desc = html.escape(product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit))
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
@@ -600,8 +615,8 @@ def main():
         related_items.append(("../ingredients/", "All ingredient monographs", None))
         related_html = related_block(related_items, heading="Related ingredients", limit=None)
 
-        page_title = ingredient_titles[ing_name]
-        page_desc = ingredient_meta_description(ing_name, rows)
+        page_title = html.escape(ingredient_titles[ing_name])
+        page_desc = html.escape(ingredient_meta_description(ing_name, rows))
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">

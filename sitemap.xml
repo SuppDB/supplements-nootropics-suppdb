@@ -13,12 +13,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/0-9/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/5-htp</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -853,7 +847,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/d/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/d-e/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -917,12 +911,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/e/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/echinacea-angustifolia</loc>
@@ -1003,7 +991,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/f/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/f-g/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1115,12 +1103,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/g/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/gaba</loc>
@@ -1345,7 +1327,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/h/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/h-i/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1441,12 +1423,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/i/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/iceland-moss</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1525,7 +1501,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/j/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/j-l/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1559,12 +1535,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/k/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/kale</loc>
@@ -1601,12 +1571,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/l/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/lactase</loc>
@@ -1939,7 +1903,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/n/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/n-p/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1973,12 +1937,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/o/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/oats</loc>
@@ -2039,12 +1997,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/p/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/paba</loc>
@@ -2305,7 +2257,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/q/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/q-r/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2321,12 +2273,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/r/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/ingredients/radish</loc>
@@ -2737,7 +2683,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/t/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/t-u/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2851,12 +2797,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/u/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/usnea</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -2869,7 +2809,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/v/</loc>
+    <loc>https://suppdb.dataengineered.io/ingredients/v-z/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3133,12 +3073,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/w/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/watercress</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3187,12 +3121,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/x/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/xanthoparmelia</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3217,12 +3145,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/y/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/yellow-dock</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3241,12 +3163,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/ingredients/z/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/ingredients/zeaxanthin</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3263,12 +3179,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/0-9/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/1-body-probiotic-30-billion-cfu</loc>
@@ -3349,7 +3259,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/b/</loc>
+    <loc>https://suppdb.dataengineered.io/products/b-c/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3493,12 +3403,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/c/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/california-gold-nutrition-sport-whey-protein-isolate-unflavored</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3583,7 +3487,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/d/</loc>
+    <loc>https://suppdb.dataengineered.io/products/d-e/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3661,12 +3565,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/e/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/emergen-c-1-000-mg-vitamin-c-pink-lemonade</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3733,7 +3631,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/f/</loc>
+    <loc>https://suppdb.dataengineered.io/products/f-h/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3755,12 +3653,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/g/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/gaia-herbs-echinacea-supreme</loc>
@@ -3907,12 +3799,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/h/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/hard-rhino-pure-creatine-monohydrate-powder</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -4033,7 +3919,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/i/</loc>
+    <loc>https://suppdb.dataengineered.io/products/i-l/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4051,12 +3937,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/j/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/jarrow-formulas-gentle-fibers</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -4067,12 +3947,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/k/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/kal-magnesium-taurate</loc>
@@ -4109,12 +3983,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/l/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/lake-avenue-nutrition-creatine-monohydrate-750-mg</loc>
@@ -4237,7 +4105,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/n/</loc>
+    <loc>https://suppdb.dataengineered.io/products/n-o/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4507,12 +4375,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/o/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/om-mushroom-superfood-organic-oatmilk-creamer-unflavored</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -4717,7 +4579,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/q/</loc>
+    <loc>https://suppdb.dataengineered.io/products/q-s/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4727,12 +4589,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/r/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/rainbow-light-just-once</loc>
@@ -4781,12 +4637,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/s/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/seeking-health-optimal-liposomal-vitamin-c-1-000-mg-lemon-zest</loc>
@@ -4927,7 +4777,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/t/</loc>
+    <loc>https://suppdb.dataengineered.io/products/t-u/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -5065,19 +4915,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/u/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/universal-ultra-whey-pro-cookies-cream</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/v/</loc>
+    <loc>https://suppdb.dataengineered.io/products/v-z/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -5155,12 +4999,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suppdb.dataengineered.io/products/w/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://suppdb.dataengineered.io/products/windmill-natural-vitamins-chromium-picolinate-500-mcg</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -5189,12 +5027,6 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://suppdb.dataengineered.io/products/z/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suppdb.dataengineered.io/products/zahler-omega-3-platinum-3000-mg</loc>

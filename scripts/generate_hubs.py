@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Generate the /ingredients/ and /products/ directory hubs, plus a first-letter
-second level for each (spec rule 4: any hub with >100 child links gets one).
+"""Generate the /ingredients/ and /products/ directory hubs, plus a second level of
+range hubs for each (spec rule 4: any hub with >100 child links gets one, and each
+child hub should land in the 20-80 link range -- a literal per-letter split undershoots
+that badly for sparse letters like "q" or "z").
 
 Both content directories shipped with no index page, and the homepage
 linked just four ingredient pages -- through absolute .html URLs, which
@@ -16,14 +18,17 @@ the corpus can rank -- it just cannot be crawled.
 
 /ingredients/ alone has ~519 child pages, well past the 100-link rule of
 thumb, so it no longer lists every ingredient itself: it links one
-directory page per first letter (/ingredients/a/, /ingredients/b/, ...,
-/ingredients/0-9/), and each of those lists that letter's ingredients
-(the largest, "c", is 60 -- comfortably inside the 20-80 target). The
-same split applies to /products/ (301 children).
+directory page per first-letter range (/ingredients/a/, /ingredients/b/,
+/ingredients/d-f/, ...), each holding at least MIN_BUCKET (20) entries --
+`make_buckets()` walks the sorted first-letter groups and greedily merges
+consecutive ones until a bucket clears that floor, so a sparse run of
+letters (d, e, h, i, j, ... ) collapses into one range hub instead of
+several near-empty ones. "0-9" is never its own hub: it always folds into
+whichever range comes first. The same split applies to /products/.
 
-This builds the top-level hub, the letter hubs, writes the homepage
+This builds the top-level hub, the range hubs, writes the homepage
 link block between its BEGIN/END markers, and rebuilds sitemap.xml from
-scratch (homepage + both top hubs + every letter hub + every leaf) via
+scratch (homepage + both top hubs + every range hub + every leaf) via
 seo_common.write_sitemap -- this is the single place sitemap.xml gets
 written; scripts/generate_seo_pages.py only touches products/*.html and
 ingredients/*.html, so run this script after it.
@@ -208,8 +213,48 @@ def group_key(name):
     return c if c.isalpha() else "0-9"
 
 
-def letter_slug(k):
-    return "0-9" if k == "0-9" else k.lower()
+MIN_BUCKET = 20
+
+
+def make_buckets(order, groups):
+    """Walk the ordered first-character groups (as built from `order`/`groups` in
+    build_section -- "0-9" first if present, then A..Z present ones only, ascending)
+    and greedily merge consecutive ones until each bucket holds >= MIN_BUCKET entries.
+    A trailing short remainder merges into the previous bucket instead of standing alone
+    under the 20-link target. "0-9" is never its own bucket: it's always the first key
+    considered, so it silently folds into whatever the first bucket becomes."""
+    buckets = []
+    cur_keys, cur_entries = [], []
+    for k in order:
+        cur_keys.append(k)
+        cur_entries = cur_entries + groups[k]
+        if len(cur_entries) >= MIN_BUCKET:
+            buckets.append((cur_keys, cur_entries))
+            cur_keys, cur_entries = [], []
+    if cur_keys:
+        if buckets:
+            prev_keys, prev_entries = buckets[-1]
+            buckets[-1] = (prev_keys + cur_keys, prev_entries + cur_entries)
+        else:
+            buckets.append((cur_keys, cur_entries))
+    return buckets
+
+
+def bucket_label(keys):
+    """Human-facing range label, e.g. "a", "d-f". "0-9" folded in is never shown --
+    it rides along with whichever alphabetic key(s) it was merged with."""
+    alpha = [k for k in keys if k != "0-9"]
+    if not alpha:
+        return "0-9"
+    return alpha[0] if len(alpha) == 1 else "%s-%s" % (alpha[0], alpha[-1])
+
+
+def bucket_slug(keys):
+    alpha = [k for k in keys if k != "0-9"]
+    if not alpha:
+        return "0-9"
+    lo, hi = alpha[0].lower(), alpha[-1].lower()
+    return lo if lo == hi else "%s-%s" % (lo, hi)
 
 
 def render_dirlist(entries):
@@ -240,35 +285,36 @@ def build_section(sec):
             order.append(k)
         groups[k].append(e)
 
-    letters = {}
-    for k in order:
-        lslug = letter_slug(k)
-        n_letter = len(groups[k])
-        examples = ", ".join(e["name"] for e in groups[k][:3])
-        letter_url = "%s/%s/%s/" % (BASE, sec["slug"], lslug)
-        title = fit_title("%s — %s" % (sec["h1"], k), "%d %s" % (n_letter, sec["label"]), "SuppDB")
-        desc = fit_desc("%d %s beginning with %s in SuppDB's %s, including %s." %
-                         (n_letter, sec["label"], k, sec["h1"].lower(), examples))
+    buckets = make_buckets(order, groups)
+    ranges = {}
+    for keys, bucket_entries in buckets:
+        label = bucket_label(keys)
+        bslug = bucket_slug(keys)
+        n_b = len(bucket_entries)
+        examples = ", ".join(e["name"] for e in bucket_entries[:3])
+        bucket_url = "%s/%s/%s/" % (BASE, sec["slug"], bslug)
+        title = fit_title("%s — %s" % (sec["h1"], label), "%d %s" % (n_b, sec["label"]), "SuppDB")
+        desc = fit_desc("%d %s from %s in SuppDB's %s, including %s." %
+                         (n_b, sec["label"], label, sec["h1"].lower(), examples))
         back = ('<p class="back"><a href="../" class="btn-link" style="font-size:0.8rem;">'
                 '&larr; All %s</a></p>' % sec["label"])
         page = PAGE.format(
-            base=BASE, url=letter_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
-            jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], k), lede=sec["lede"],
-            label=sec["label"], n=n_letter, style=STYLE, back=back,
-            groups='    <section class="alpha">\n' + render_dirlist(groups[k]) + '\n    </section>',
+            base=BASE, url=bucket_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
+            jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], label), lede=sec["lede"],
+            label=sec["label"], n=n_b, style=STYLE, back=back,
+            groups='    <section class="alpha">\n' + render_dirlist(bucket_entries) + '\n    </section>',
         )
-        letter_dir = d / lslug
-        letter_dir.mkdir(exist_ok=True)
-        (letter_dir / "index.html").write_text(page, encoding="utf-8", newline="")
-        letters[k] = {"slug": lslug, "count": n_letter}
+        bucket_dir = d / bslug
+        bucket_dir.mkdir(exist_ok=True)
+        (bucket_dir / "index.html").write_text(page, encoding="utf-8", newline="")
+        ranges[bslug] = {"slug": bslug, "count": n_b, "label": label}
 
-    # Top-level hub: links the letter hubs (not every leaf -- that's the >100-link problem).
-    letter_items = []
-    for k in order:
-        info = letters[k]
-        letter_items.append({
+    # Top-level hub: links the range hubs (not every leaf -- that's the >100-link problem).
+    range_items = []
+    for info in ranges.values():
+        range_items.append({
             "slug": "%s/" % info["slug"],
-            "name": k,
+            "name": info["label"],
             "desc": "%d %s" % (info["count"], sec["label"]),
         })
     top_url = "%s/%s/" % (BASE, sec["slug"])
@@ -278,11 +324,11 @@ def build_section(sec):
         base=BASE, url=top_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
         jdesc=sec["desc"].replace('"', "'"), h1=sec["h1"], lede=sec["lede"], label=sec["label"],
         n=len(entries), style=STYLE, back="",
-        groups='    <section class="alpha">\n      <h2 class="alpha-h">BROWSE BY FIRST LETTER</h2>\n'
-               + render_dirlist(letter_items) + '\n    </section>',
+        groups='    <section class="alpha">\n      <h2 class="alpha-h">BROWSE BY RANGE</h2>\n'
+               + render_dirlist(range_items) + '\n    </section>',
     )
     (d / "index.html").write_text(page, encoding="utf-8", newline="")
-    return len(entries), letters
+    return len(entries), ranges
 
 
 def update_homepage(counts):
@@ -322,18 +368,18 @@ def update_homepage(counts):
     INDEX.write_text(src, encoding="utf-8", newline="")
 
 
-def rebuild_sitemap(letters_by_section):
+def rebuild_sitemap(ranges_by_section):
     """The single place sitemap.xml gets written: homepage, both top hubs, every
-    letter hub, and every leaf, all through seo_common.write_sitemap (dedupes,
+    range hub, and every leaf, all through seo_common.write_sitemap (dedupes,
     drops non-HTML, stamps lastmod from git)."""
     entries = [(BASE + "/", INDEX, "weekly", "1.0")]
     for sec in SECTIONS:
         d = ROOT / sec["slug"]
         priority = "0.9" if sec["kind"] == "ingredient" else "0.8"
         entries.append(("%s/%s/" % (BASE, sec["slug"]), d / "index.html", "weekly", "0.9"))
-        for k, info in letters_by_section[sec["slug"]].items():
-            letter_url = "%s/%s/%s/" % (BASE, sec["slug"], info["slug"])
-            entries.append((letter_url, d / info["slug"] / "index.html", "weekly", "0.7"))
+        for info in ranges_by_section[sec["slug"]].values():
+            range_url = "%s/%s/%s/" % (BASE, sec["slug"], info["slug"])
+            entries.append((range_url, d / info["slug"] / "index.html", "weekly", "0.7"))
         for p in sorted(d.glob("*.html")):
             if p.stem == "index":
                 continue
@@ -343,16 +389,16 @@ def rebuild_sitemap(letters_by_section):
 
 def main():
     counts = {}
-    letters_by_section = {}
+    ranges_by_section = {}
     for sec in SECTIONS:
-        n, letters = build_section(sec)
+        n, ranges = build_section(sec)
         counts[sec["slug"]] = n
-        letters_by_section[sec["slug"]] = letters
-        print("wrote %s/index.html -- %d entries across %d letter hubs" %
-              (sec["slug"], n, len(letters)))
+        ranges_by_section[sec["slug"]] = ranges
+        print("wrote %s/index.html -- %d entries across %d range hubs" %
+              (sec["slug"], n, len(ranges)))
     update_homepage(counts)
     print("homepage block updated; .html internal links rewritten extensionless")
-    n_urls = rebuild_sitemap(letters_by_section)
+    n_urls = rebuild_sitemap(ranges_by_section)
     print("sitemap.xml rebuilt -- %d URLs" % n_urls)
 
 
