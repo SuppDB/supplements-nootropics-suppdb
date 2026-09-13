@@ -295,6 +295,34 @@ def main():
                     titles[i] = round_fn(i, 2)
         return titles
 
+    _DANGLING_WORDS = {"by", "with", "without", "and", "of", "for", "the"}
+
+    def _strip_dangling(text):
+        """A word-boundary cut can leave a trailing preposition/conjunction dangling
+        (e.g. "... without" or "... by") that reads as a broken mid-thought; strip it
+        (repeatedly, in case more than one stacks up)."""
+        words = text.split(" ")
+        while words and words[-1].strip(" ,;:-–—()/").lower() in _DANGLING_WORDS:
+            words.pop()
+        return " ".join(words).rstrip(" ,;:-–—(/")
+
+    def _title_has_full_brand(t, brand):
+        """True only if the *entire* brand string appears intact right after " by ".
+
+        A naive `" by " in t` check is satisfied even when a word-boundary cut lands
+        right after the word "by" and drops the brand entirely -- the separator " — "
+        that follows starts with a space, so "...Iron by — supplement | SuppDB" still
+        contains the substring " by " despite the brand being completely missing. This
+        instead requires the full brand string, followed by a non-alphanumeric character
+        (the " (" of a form_type parenthetical, the " —" separator, or the " |" tail) so
+        a partially-cut brand can never pass as a match."""
+        marker = f" by {brand}"
+        idx = t.find(marker)
+        if idx == -1:
+            return False
+        end = idx + len(marker)
+        return end >= len(t) or not t[end].isalnum()
+
     def _product_forced_title(pname, brand, extra=None, tag=None):
         """Force the brand (optionally with `extra`, e.g. a form_type disambiguator) into
         the title by pre-cutting the product name to whatever room is left over, rather
@@ -305,11 +333,22 @@ def main():
 
         `tag`, for the guaranteed-unique round, replaces the cut name's last word instead
         of being appended after it -- there's no spare room to add both, and this keeps
-        the brand-bearing descriptor untouched and the result still <= 60 chars."""
+        the brand-bearing descriptor untouched and the result still <= 60 chars.
+
+        If the brand itself is so long that "by {brand} | SuppDB" alone already exceeds
+        60 chars -- i.e. there is no room for a product name at all, let alone the whole
+        one -- naming the brand is mathematically impossible in this title format. Rather
+        than let that degrade to a blank "| SuppDB" title (fit_title's own last-resort
+        empty-descriptor branch would otherwise fire), fall back to the product name with
+        no brand mention -- a real name beats an empty title."""
         descriptor = f"by {brand}" + (f" ({extra})" if extra else "")
         tail = f" — {descriptor} | SuppDB"
-        room = max(0, 60 - len(tail))
-        entity = _cut(pname, room)
+        if len(tail) > 60:
+            fallback_entity = f"{pname.rsplit(' ', 1)[0]} {tag}".strip() if tag and " " in pname \
+                else (tag or pname)
+            return fit_title(fallback_entity, "", "SuppDB")
+        room = 60 - len(tail)
+        entity = _strip_dangling(_cut(pname, room))
         if tag:
             base = entity.rsplit(" ", 1)[0] if " " in entity else ""
             joiner = " " if base else ""
@@ -317,7 +356,7 @@ def main():
             if budget < 0:
                 base, joiner = "", ""
             elif len(base) > budget:
-                base = _cut(base, budget)
+                base = _strip_dangling(_cut(base, budget))
             entity = f"{base}{joiner}{tag}"
         return fit_title(entity, descriptor, "SuppDB")
 
@@ -326,11 +365,12 @@ def main():
         pname, brand, form_type = m["pname"], m["brand"], m["form_type"]
         if round_n == 0:
             t = fit_title(f"{pname} by {brand}", ["Supplement Facts", "supplement"], "SuppDB")
-            return t if " by " in t else _product_forced_title(pname, brand)
+            return t if _title_has_full_brand(t, brand) else _product_forced_title(pname, brand)
         if round_n == 1:
             t = fit_title(f"{pname} by {brand} ({form_type})",
                            ["Supplement Facts", "supplement"], "SuppDB")
-            return t if " by " in t else _product_forced_title(pname, brand, extra=form_type)
+            return t if _title_has_full_brand(t, brand) else \
+                _product_forced_title(pname, brand, extra=form_type)
         # Guaranteed-unique fallback: pid is unique, so this always terminates the loop.
         return _product_forced_title(pname, brand, extra=form_type, tag=f"#{pid}")
 

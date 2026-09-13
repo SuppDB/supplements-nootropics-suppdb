@@ -214,20 +214,32 @@ def group_key(name):
 
 
 MIN_BUCKET = 20
+MAX_BUCKET = 80
 
 
 def make_buckets(order, groups):
     """Walk the ordered first-character groups (as built from `order`/`groups` in
     build_section -- "0-9" first if present, then A..Z present ones only, ascending)
-    and greedily merge consecutive ones until each bucket holds >= MIN_BUCKET entries.
-    A trailing short remainder merges into the previous bucket instead of standing alone
-    under the 20-link target. "0-9" is never its own bucket: it's always the first key
-    considered, so it silently folds into whatever the first bucket becomes."""
+    and greedily merge consecutive ones until each bucket holds >= MIN_BUCKET entries,
+    starting a new bucket instead whenever the current one already clears MIN_BUCKET and
+    the next group would push it past MAX_BUCKET. A trailing short remainder merges into
+    the previous bucket instead of standing alone under the 20-link target. "0-9" is
+    never its own bucket: it's always the first key considered, so it silently folds into
+    whatever the first bucket becomes.
+
+    A bucket still under MIN_BUCKET always takes the next group regardless of the
+    resulting size -- there's no way to split a single first-letter group further in
+    this scheme, so a bucket can only end up over MAX_BUCKET if one letter's own count
+    already exceeds it (not the case for this dataset; the largest single letter is 60)."""
     buckets = []
     cur_keys, cur_entries = [], []
     for k in order:
+        group = groups[k]
+        if cur_keys and len(cur_entries) >= MIN_BUCKET and len(cur_entries) + len(group) > MAX_BUCKET:
+            buckets.append((cur_keys, cur_entries))
+            cur_keys, cur_entries = [], []
         cur_keys.append(k)
-        cur_entries = cur_entries + groups[k]
+        cur_entries = cur_entries + group
         if len(cur_entries) >= MIN_BUCKET:
             buckets.append((cur_keys, cur_entries))
             cur_keys, cur_entries = [], []
