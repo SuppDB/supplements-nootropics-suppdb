@@ -6,7 +6,7 @@ import html
 from collections import defaultdict, Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from seo_common import fit_title, fit_desc, related_block
+from seo_common import fit_title, fit_desc, related_block, _cut
 
 def slugify(text):
     if not text:
@@ -295,31 +295,44 @@ def main():
                     titles[i] = round_fn(i, 2)
         return titles
 
-    def _fit_title_keep_brand(combined_entity, combined_descriptors, bare_entity, brand_descriptors):
-        """Try the combined "<name> by <brand>" entity first; if truncation cropped the
-        brand off entirely (no more " by " in the result), fall back to the bare name as
-        the entity and move the brand into the descriptor instead -- fit_title only ever
-        truncates the entity, never the descriptor/brand tail, so the brand then survives
-        intact rather than being silently dropped."""
-        t = fit_title(combined_entity, combined_descriptors, "SuppDB")
-        if " by " in t:
-            return t
-        return fit_title(bare_entity, brand_descriptors, "SuppDB")
+    def _product_forced_title(pname, brand, extra=None, tag=None):
+        """Force the brand (optionally with `extra`, e.g. a form_type disambiguator) into
+        the title by pre-cutting the product name to whatever room is left over, rather
+        than handing fit_title the combined "<name> by <brand>" entity -- fit_title tries
+        the bare, untruncated entity before it tries truncating, so a long name would
+        otherwise win over the brand and the brand would vanish silently. Cutting the name
+        ourselves first makes the brand non-negotiable.
+
+        `tag`, for the guaranteed-unique round, replaces the cut name's last word instead
+        of being appended after it -- there's no spare room to add both, and this keeps
+        the brand-bearing descriptor untouched and the result still <= 60 chars."""
+        descriptor = f"by {brand}" + (f" ({extra})" if extra else "")
+        tail = f" — {descriptor} | SuppDB"
+        room = max(0, 60 - len(tail))
+        entity = _cut(pname, room)
+        if tag:
+            base = entity.rsplit(" ", 1)[0] if " " in entity else ""
+            joiner = " " if base else ""
+            budget = room - len(tag) - len(joiner)
+            if budget < 0:
+                base, joiner = "", ""
+            elif len(base) > budget:
+                base = _cut(base, budget)
+            entity = f"{base}{joiner}{tag}"
+        return fit_title(entity, descriptor, "SuppDB")
 
     def _product_title_round(pid, round_n):
         m = product_meta[pid]
         pname, brand, form_type = m["pname"], m["brand"], m["form_type"]
         if round_n == 0:
-            return _fit_title_keep_brand(
-                f"{pname} by {brand}", ["Supplement Facts", "supplement"],
-                pname, [f"by {brand}", "supplement"])
+            t = fit_title(f"{pname} by {brand}", ["Supplement Facts", "supplement"], "SuppDB")
+            return t if " by " in t else _product_forced_title(pname, brand)
         if round_n == 1:
-            return _fit_title_keep_brand(
-                f"{pname} by {brand} ({form_type})", ["Supplement Facts", "supplement"],
-                pname, [f"by {brand} ({form_type})", f"by {brand}", "supplement"])
-        # Guaranteed-unique fallback: the tag lives in the descriptor, never the entity --
-        # never silently droppable, and pid is unique so this always terminates the loop.
-        return fit_title(f"{pname} by {brand} ({form_type})", [f"#{pid}"], "SuppDB")
+            t = fit_title(f"{pname} by {brand} ({form_type})",
+                           ["Supplement Facts", "supplement"], "SuppDB")
+            return t if " by " in t else _product_forced_title(pname, brand, extra=form_type)
+        # Guaranteed-unique fallback: pid is unique, so this always terminates the loop.
+        return _product_forced_title(pname, brand, extra=form_type, tag=f"#{pid}")
 
     product_titles = _dedupe_titles(list(product_meta.keys()), _product_title_round)
 
