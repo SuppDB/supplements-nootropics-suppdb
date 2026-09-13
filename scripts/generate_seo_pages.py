@@ -1,9 +1,12 @@
 import csv
 import os
 import re
-import datetime
+import sys
 import html
 from collections import defaultdict, Counter
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from seo_common import fit_title, fit_desc, related_block
 
 def slugify(text):
     if not text:
@@ -101,7 +104,8 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
     if category:
         p += f" It is catalogued as a {esc(category)} ingredient"
         if forms:
-            p += ", supplied in forms such as " + _oxford([esc(f) for f, _ in forms.most_common(3)])
+            top_forms = sorted(forms, key=lambda f: (-forms[f], f))[:3]
+            p += ", supplied in forms such as " + _oxford([esc(f) for f in top_forms])
         p += "."
     chem = []
     if formula and formula != 'N/A':
@@ -120,7 +124,86 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
         refs.append(f"an upper safety limit up to {_mg(max(ul))} mg")
     if refs:
         p += " Label reference values in the sample record " + _oxford(refs) + "."
+    # Built from `rows` (a stable list), never from the `prods` set: set iteration order
+    # is hash-randomized per process, which would make a most_common() tie-break --
+    # and this generated sentence -- non-deterministic between runs.
+    brand_counts = Counter()
+    _seen_bp = set()
+    for r in rows:
+        b = (r.get('brand') or '').strip()
+        pn = (r.get('product_name') or '').strip()
+        if not pn or (b, pn) in _seen_bp:
+            continue
+        _seen_bp.add((b, pn))
+        if b:
+            brand_counts[b] += 1
+    if brand_counts:
+        top_brands = sorted(brand_counts, key=lambda b: (-brand_counts[b], b))[:3]
+        p2 = f" Sold under {'the' if len(top_brands) == 1 else ''} {_oxford([esc(b) for b in top_brands])} label{'s' if len(top_brands) > 1 else ''} in this sample."
+        p += p2
+    prop_n = sum(1 for r in rows if _is_prop(r.get('is_proprietary_blend')))
+    if prop_n:
+        total_n = len(rows)
+        p += f" In {prop_n} of {total_n} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own."
     return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{p}</p>'
+
+def product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit):
+    """First sentence = the product's most distinctive fact: form, serving, top-dosed ingredient."""
+    n = len(rows)
+    doses = [(r.get('ingredient', '').strip(), _num(r.get('amount_per_serving_mg'))) for r in rows]
+    doses = [(nm, d) for nm, d in doses if nm and d and d > 0]
+    if doses:
+        top_name, top_mg = max(doses, key=lambda t: t[1])
+        lead = (f"{pname} is a {form_type} supplement from {brand} at {serving_count} {serving_unit} "
+                f"per serving, led by {top_name} at {_mg(top_mg)} mg.")
+    else:
+        lead = (f"{pname} is a {form_type} supplement from {brand} at {serving_count} {serving_unit} "
+                f"per serving across {n} ingredients.")
+    lead += f" Normalized supplement facts for all {n} ingredients with NIH PubChem cross-references."
+    return fit_desc(lead)
+
+def ingredient_meta_description(ing_name, rows):
+    """First sentence = the ingredient's most distinctive fact: product count, forms, dosage range."""
+    prods, forms, doses = set(), Counter(), []
+    for r in rows:
+        b = (r.get('brand') or '').strip()
+        pn = (r.get('product_name') or '').strip()
+        if pn:
+            prods.add((b, pn))
+        fm = (r.get('ingredient_form') or '').strip()
+        if fm:
+            forms[fm] += 1
+        d = _num(r.get('amount_per_serving_mg'))
+        if d and d > 0:
+            doses.append(d)
+    n = len(prods) or len(rows)
+    lead = f"{ing_name} appears in {n} SuppDB {'product' if n == 1 else 'products'}"
+    if forms:
+        top_forms = sorted(forms, key=lambda f: (-forms[f], f))[:2]
+        lead += f", most often as {_oxford(top_forms)}"
+    lead += "."
+    if doses:
+        lo, hi = min(doses), max(doses)
+        lead += (f" Per-serving dose is {_mg(lo)} mg." if lo == hi
+                 else f" Per-serving doses range {_mg(lo)}–{_mg(hi)} mg.")
+    return fit_desc(lead)
+
+def _neighbour_fill(idx, ordered, exclude, need):
+    """Pick up to `need` items from ordered[] around idx, skipping anything in exclude."""
+    picked = []
+    n = len(ordered)
+    offset = 1
+    while len(picked) < need and offset <= n:
+        for cand_idx in (idx - offset, idx + offset):
+            if 0 <= cand_idx < n:
+                cand = ordered[cand_idx]
+                if cand not in exclude:
+                    picked.append(cand)
+                    exclude.add(cand)
+                    if len(picked) >= need:
+                        break
+        offset += 1
+    return picked
 
 def main():
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -148,31 +231,143 @@ def main():
 
     print(f"Loaded {len(products)} distinct products and {len(ingredients)} unique active ingredients from CSV.")
 
-    sitemap_urls = [
-        ("https://suppdb.dataengineered.io/", "1.0", "weekly")
-    ]
-
-    # Generate Product Monograph Pages (top products or all products in sample)
-    generated_products = 0
+    # --- Precompute cross-record metadata used for related-links (siblings, co-occurrence) ---
+    product_meta = {}
     for pid, rows in products.items():
         if not rows:
             continue
         first = rows[0]
         brand = first.get('brand', 'Unknown Brand').strip()
         pname = first.get('product_name', 'Unnamed Supplement').strip()
-        upc = first.get('upc_barcode', '').strip()
         form_type = first.get('form_type', 'Capsule').strip()
+        slug = slugify(f"{brand}-{pname}")
+        if not slug or len(slug) < 3:
+            continue
+        product_meta[pid] = {"slug": slug, "pname": pname, "brand": brand, "form_type": form_type}
+
+    by_brand, by_form = defaultdict(list), defaultdict(list)
+    for pid, m in product_meta.items():
+        by_brand[m["brand"]].append(pid)
+        by_form[m["form_type"]].append(pid)
+    name_sorted_pids = sorted(product_meta.keys(), key=lambda pid: product_meta[pid]["pname"].lower())
+    pid_index = {pid: i for i, pid in enumerate(name_sorted_pids)}
+
+    def _ing_valid(name):
+        s = slugify(name)
+        return bool(name) and len(name) > 1 and bool(s) and len(s) >= 2 and s not in ('unspecified', 'other')
+
+    ingredient_slugs = {}
+    for ing_name in ingredients:
+        s = slugify(ing_name)
+        if not s or len(s) < 2 or s in ('unspecified', 'other'):
+            continue
+        ingredient_slugs[ing_name] = s
+    name_sorted_ings = sorted(ingredient_slugs.keys(), key=lambda n: n.lower())
+    ing_index = {n: i for i, n in enumerate(name_sorted_ings)}
+
+    co_occ = defaultdict(Counter)
+    for pid, rows in products.items():
+        names = sorted({r.get('ingredient', '').strip() for r in rows
+                         if _ing_valid(r.get('ingredient', '').strip())})
+        for i in range(len(names)):
+            for j in range(i + 1, len(names)):
+                if names[i] in ingredient_slugs and names[j] in ingredient_slugs:
+                    co_occ[names[i]][names[j]] += 1
+                    co_occ[names[j]][names[i]] += 1
+
+    # --- Title dedup: <title> must be unique across the whole site. Truncation to fit
+    # 60 chars can collapse two distinct entities onto the same string (e.g. two products
+    # with the same name from similarly-named brands), so titles are built in increasingly
+    # specific rounds until every one is unique -- the last round is guaranteed unique
+    # (product id / ingredient slug), so this always terminates.
+    def _dedupe_titles(ids, entity_fn, descriptor_fn, tag_fn):
+        titles = {i: fit_title(entity_fn(i, 0), descriptor_fn(i), "SuppDB") for i in ids}
+        dupes = {t for t, c in Counter(titles.values()).items() if c > 1}
+        if dupes:
+            for i in ids:
+                if titles[i] in dupes:
+                    titles[i] = fit_title(entity_fn(i, 1), descriptor_fn(i), "SuppDB")
+        dupes = {t for t, c in Counter(titles.values()).items() if c > 1}
+        if dupes:
+            # Guaranteed-unique fallback: put the unique tag in the descriptor, not the
+            # entity -- fit_title only ever truncates the entity, never the descriptor/brand
+            # tail, so a tag placed here can never be silently dropped.
+            for i in ids:
+                if titles[i] in dupes:
+                    titles[i] = fit_title(entity_fn(i, 1), [f"#{tag_fn(i)}"], "SuppDB")
+        return titles
+
+    def _product_entity(pid, round_n):
+        m = product_meta[pid]
+        if round_n == 0:
+            return f"{m['pname']} by {m['brand']}"
+        return f"{m['pname']} by {m['brand']} ({m['form_type']})"
+
+    product_titles = _dedupe_titles(list(product_meta.keys()), _product_entity,
+                                     lambda pid: ["Supplement Facts", "supplement"],
+                                     lambda pid: pid)
+
+    ingredient_n_products = {}
+    ingredient_form_display = {}
+    for ing_name in ingredient_slugs:
+        rows_i = ingredients[ing_name]
+        seen_pi = {slugify(f"{r.get('brand', '').strip()}-{r.get('product_name', '').strip()}")
+                   for r in rows_i if r.get('product_name', '').strip()}
+        ingredient_n_products[ing_name] = len(seen_pi) or len(rows_i)
+        ingredient_form_display[ing_name] = (rows_i[0].get('ingredient_form') or '').strip() or ing_name
+
+    def _ingredient_entity(ing_name, round_n):
+        if round_n == 0:
+            return ing_name
+        return f"{ing_name} ({ingredient_form_display[ing_name]})"
+
+    def _ingredient_descriptors(ing_name):
+        return [f"in {ingredient_n_products[ing_name]} products", "supplement ingredient"]
+
+    ingredient_titles = _dedupe_titles(list(ingredient_slugs.keys()), _ingredient_entity,
+                                        _ingredient_descriptors,
+                                        lambda ing_name: ingredient_slugs[ing_name])
+
+    # Generate Product Monograph Pages (top products or all products in sample)
+    generated_products = 0
+    for pid, rows in products.items():
+        if pid not in product_meta:
+            continue
+        m = product_meta[pid]
+        first = rows[0]
+        brand = m["brand"]
+        pname = m["pname"]
+        form_type = m["form_type"]
         serving_count = first.get('serving_size_count', '1').strip()
         serving_unit = first.get('serving_size_unit', 'Capsule(s)').strip()
         dsld_id = first.get('dsld_label_id', '').strip()
         source_url = first.get('source_url', 'https://dsld.od.nih.gov/').strip()
 
-        slug = slugify(f"{brand}-{pname}")
-        if not slug or len(slug) < 3:
-            continue
+        slug = m["slug"]
         page_url = f"https://suppdb.dataengineered.io/products/{slug}"
-        sitemap_urls.append((page_url, "0.8", "monthly"))
         generated_products += 1
+
+        # Related products: 2 same-brand + 2 same-form (name-order neighbours fill any gap), + hub.
+        _used = {pid}
+        _sibs = []
+        for p in by_brand.get(brand, []):
+            if p != pid and p not in _used and len(_sibs) < 2:
+                _used.add(p)
+                _sibs.append(("brand", p))
+        for p in by_form.get(form_type, []):
+            if p != pid and p not in _used and len([s for s in _sibs if s[0] == "form"]) < 2:
+                _used.add(p)
+                _sibs.append(("form", p))
+        if len(_sibs) < 2:
+            for p in _neighbour_fill(pid_index[pid], name_sorted_pids, _used, 2 - len(_sibs)):
+                _sibs.append(("neighbour", p))
+        related_items = []
+        for kind, p in _sibs:
+            pm = product_meta[p]
+            reason = {"brand": f"same brand — {brand}", "form": f"same form — {form_type}"}.get(kind)
+            related_items.append((f"../products/{pm['slug']}", pm['pname'], reason))
+        related_items.append(("../products/", "All product labels", None))
+        related_html = related_block(related_items, heading="Related products", limit=None)
 
         # Table of ingredients
         ing_rows_html = ""
@@ -200,14 +395,16 @@ def main():
             <td style="padding: 12px 14px;">{cid_link}</td>
           </tr>"""
 
+        page_title = product_titles[pid]
+        page_desc = product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit)
+
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{pname} by {brand} — Supplement Facts &amp; Normalized mg Dosages — SuppDB</title>
-  <meta name="description" content="Complete supplement facts for {pname} by {brand} ({form_type}, {serving_count} {serving_unit} serving). Exact mg ingredient normalization, proprietary blend flags, and NIH PubChem chemical CIDs." />
-  <meta name="keywords" content="{pname}, {brand}, supplement facts, {form_type}, mg dosage, proprietary blend, NIH DSLD {dsld_id}" />
+  <title>{page_title}</title>
+  <meta name="description" content="{page_desc}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{page_url}" />
   <link rel="alternate" hreflang="en" href="{page_url}" />
@@ -270,6 +467,13 @@ def main():
     .card {{ background: var(--card-bg); border: 1px solid var(--rule-color); padding: 28px; border-radius: 10px; margin-top: 32px; }}
     table {{ width: 100%; border-collapse: collapse; text-align: left; margin-top: 16px; }}
     th {{ padding: 12px 14px; border-bottom: 2px solid var(--rule-color); color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; }}
+    .related {{ margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule-color); }}
+    .related h2 {{ font-size: 1.1rem; color: var(--accent); margin-bottom: 10px; }}
+    .related ul {{ list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px; }}
+    .related li {{ font-size: 0.92rem; }}
+    .related a {{ color: var(--text-ink); text-decoration: none; }}
+    .related a:hover {{ color: var(--accent); }}
+    .related-why {{ color: var(--text-muted); font-size: 0.8rem; }}
     footer {{ margin-top: 60px; border-top: 1px solid var(--rule-color); padding: 32px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }}
   </style>
 </head>
@@ -314,6 +518,7 @@ def main():
         </table>
       </div>
     </div>
+    {related_html}
   </main>
 
   <footer>
@@ -345,12 +550,12 @@ def main():
         smiles = first.get('canonical_smiles', '').strip() or 'N/A'
 
         page_url = f"https://suppdb.dataengineered.io/ingredients/{slug}"
-        sitemap_urls.append((page_url, "0.9", "monthly"))
         generated_ingredients += 1
 
-        # Matching products
+        # Matching products (every one -- this is the full reciprocal list back to each product)
         prod_links_html = ""
         seen_p = set()
+        prod_candidates = []
         for r in rows:
             p_brand = r.get('brand', '').strip()
             p_name = r.get('product_name', '').strip()
@@ -367,17 +572,44 @@ def main():
             </div>
             <span class="mono" style="color:var(--accent); font-weight:600;">{amt} mg</span>
           </div>"""
+            prod_candidates.append((_num(amt) or 0, p_name, p_slug))
 
         cid_display = f'<a href="https://pubchem.ncbi.nlm.nih.gov/compound/{cid.split(".")[0]}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:none;">CID {cid.split(".")[0]} ↗</a>' if (cid and cid.replace('.','',1).isdigit()) else 'Not assigned / Complex botanical extract'
+
+        # Related: top 6 products by dose (full list already lives in the panel above),
+        # 2 most-co-occurring ingredients, name-order neighbours to fill any gap, + hub.
+        top6 = sorted(prod_candidates, key=lambda t: (-t[0], t[1].lower()))[:6]
+        related_items = [(f"../products/{p_slug_}", p_name_, None) for _, p_name_, p_slug_ in top6]
+        _used_ing = {ing_name}
+        picked = 0
+        _partners = co_occ.get(ing_name, Counter())
+        for partner_name in sorted(_partners, key=lambda n: (-_partners[n], n.lower())):
+            cnt = _partners[partner_name]
+            if partner_name in _used_ing or partner_name not in ingredient_slugs:
+                continue
+            _used_ing.add(partner_name)
+            related_items.append((f"../ingredients/{ingredient_slugs[partner_name]}", partner_name,
+                                   f"co-occurs in {cnt} product{'s' if cnt != 1 else ''}"))
+            picked += 1
+            if picked >= 2:
+                break
+        if len(related_items) < 2:
+            for partner_name in _neighbour_fill(ing_index[ing_name], name_sorted_ings, _used_ing,
+                                                 2 - len(related_items)):
+                related_items.append((f"../ingredients/{ingredient_slugs[partner_name]}", partner_name, None))
+        related_items.append(("../ingredients/", "All ingredient monographs", None))
+        related_html = related_block(related_items, heading="Related ingredients", limit=None)
+
+        page_title = ingredient_titles[ing_name]
+        page_desc = ingredient_meta_description(ing_name, rows)
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{ing_name} ({ing_form}) Supplement Facts &amp; PubChem Monograph — SuppDB</title>
-  <meta name="description" content="Chemical determination &amp; supplement facts for {ing_name} ({category}): formula {formula}, weight {weight} g/mol, PubChem {cid.split('.')[0] if cid else 'verified'}, exact InChIKey, and commercial product dosages." />
-  <meta name="keywords" content="{ing_name}, {ing_form}, {formula}, PubChem {cid.split('.')[0] if cid else ''}, nootropics dosage, supplement chemistry" />
+  <title>{page_title}</title>
+  <meta name="description" content="{page_desc}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{page_url}" />
   <link rel="alternate" hreflang="en" href="{page_url}" />
@@ -443,6 +675,13 @@ def main():
     .card {{ background: var(--card-bg); border: 1px solid var(--rule-color); padding: 28px; border-radius: 10px; }}
     .metric-row {{ display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(238,241,242,0.12); padding: 12px 0; font-size:0.92rem; }}
     .metric-row:last-child {{ border-bottom: none; }}
+    .related {{ margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule-color); }}
+    .related h2 {{ font-size: 1.1rem; color: var(--accent); margin-bottom: 10px; }}
+    .related ul {{ list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px; }}
+    .related li {{ font-size: 0.92rem; }}
+    .related a {{ color: var(--text-ink); text-decoration: none; }}
+    .related a:hover {{ color: var(--accent); }}
+    .related-why {{ color: var(--text-muted); font-size: 0.8rem; }}
     footer {{ margin-top: 60px; border-top: 1px solid var(--rule-color); padding: 32px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }}
   </style>
 </head>
@@ -496,6 +735,7 @@ def main():
         </div>
       </div>
     </div>
+    {related_html}
   </main>
 
   <footer>
@@ -508,18 +748,11 @@ def main():
         with open(os.path.join(ingredients_dir, f"{slug}.html"), mode='w', encoding='utf-8') as f_out:
             f_out.write(html_content)
 
-    # Generate updated sitemap.xml
-    sitemap_path = os.path.join(root_dir, 'sitemap.xml')
-    today_str = datetime.date.today().isoformat()
-    sitemap_xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for loc, prio, freq in sitemap_urls:
-        sitemap_xml.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today_str}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>")
-    sitemap_xml.append('</urlset>')
-
-    with open(sitemap_path, mode='w', encoding='utf-8') as f_sitemap:
-        f_sitemap.write("\n".join(sitemap_xml) + "\n")
-
-    print(f"Successfully generated {generated_products} product monographs (`products/*.html`), {generated_ingredients} chemical monographs (`ingredients/*.html`), and updated sitemap.xml with {len(sitemap_urls)} URLs!")
+    # sitemap.xml is owned by scripts/generate_hubs.py (it runs after this script and also
+    # knows about the /ingredients/, /products/ and letter-hub pages) -- run that next.
+    print(f"Successfully generated {generated_products} product monographs (`products/*.html`) and "
+          f"{generated_ingredients} chemical monographs (`ingredients/*.html`). "
+          f"Run scripts/generate_hubs.py next to rebuild the hubs and sitemap.xml.")
 
 if __name__ == '__main__':
     main()

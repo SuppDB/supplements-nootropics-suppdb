@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate the /ingredients/ and /products/ directory hubs.
+"""Generate the /ingredients/ and /products/ directory hubs, plus a first-letter
+second level for each (spec rule 4: any hub with >100 child links gets one).
 
 Both content directories shipped with no index page, and the homepage
 linked just four ingredient pages -- through absolute .html URLs, which
@@ -13,11 +14,21 @@ only orphaned pages in the portfolio that have actually drawn
 impressions (/ingredients/creatine 25, /ingredients/vitamin-d 17), so
 the corpus can rank -- it just cannot be crawled.
 
-This builds one directory page per content type, writes the homepage
-link block between its BEGIN/END markers, and adds both hubs to the
-sitemap.
+/ingredients/ alone has ~519 child pages, well past the 100-link rule of
+thumb, so it no longer lists every ingredient itself: it links one
+directory page per first letter (/ingredients/a/, /ingredients/b/, ...,
+/ingredients/0-9/), and each of those lists that letter's ingredients
+(the largest, "c", is 60 -- comfortably inside the 20-80 target). The
+same split applies to /products/ (301 children).
 
-Every label is taken from the target page's own <h1> and <title>, so the
+This builds the top-level hub, the letter hubs, writes the homepage
+link block between its BEGIN/END markers, and rebuilds sitemap.xml from
+scratch (homepage + both top hubs + every letter hub + every leaf) via
+seo_common.write_sitemap -- this is the single place sitemap.xml gets
+written; scripts/generate_seo_pages.py only touches products/*.html and
+ingredients/*.html, so run this script after it.
+
+Every leaf's label is taken from the page's own <h1> and <title>, so the
 hubs restate what those pages already say.
 
 Run from the repo root:  python scripts/generate_hubs.py
@@ -28,9 +39,11 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_common import fit_title, fit_desc, write_sitemap
+
 ROOT = Path(__file__).resolve().parent.parent
 INDEX = ROOT / "index.html"
-SITEMAP = ROOT / "sitemap.xml"
 BASE = "https://suppdb.dataengineered.io"
 
 BEGIN = "<!-- BEGIN:hub-browse -->"
@@ -40,7 +53,6 @@ SECTIONS = [
     {
         "slug": "ingredients",
         "h1": "Ingredient directory",
-        "title": "Ingredient Directory — Every Supplement Ingredient Monograph | SuppDB",
         "desc": ("Every supplement ingredient in SuppDB, each with its own monograph: "
                  "molecular formula, weight, PubChem id, InChIKey and the commercial "
                  "products it appears in."),
@@ -53,7 +65,6 @@ SECTIONS = [
     {
         "slug": "products",
         "h1": "Product directory",
-        "title": "Product Directory — Every Supplement Product Label | SuppDB",
         "desc": ("Every commercial supplement product in SuppDB, each with its normalised "
                  "per-serving ingredient doses in mg."),
         "lede": ("One page per commercial product, with its label panel normalised to "
@@ -90,6 +101,7 @@ h1 { font-size: 2.4rem; font-weight: 700; margin-top: 6px; letter-spacing: -0.02
 .sub { color: var(--text-muted); font-size: 1.08rem; margin-top: 8px; max-width: 72ch; }
 .count { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.78rem;
   color: var(--text-muted); margin-top: 20px; letter-spacing: 0.06em; }
+.back { margin-bottom: 18px; }
 .alpha { margin-top: 34px; }
 .alpha-h { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.82rem;
   font-weight: 700; color: var(--accent); letter-spacing: 0.12em; padding-bottom: 8px;
@@ -114,18 +126,18 @@ PAGE = """<!DOCTYPE html>
   <title>{title}</title>
   <meta name="description" content="{desc}" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="{base}/{slug}/" />
-  <link rel="alternate" hreflang="en" href="{base}/{slug}/" />
-  <link rel="alternate" hreflang="x-default" href="{base}/{slug}/" />
+  <link rel="canonical" href="{url}" />
+  <link rel="alternate" hreflang="en" href="{url}" />
+  <link rel="alternate" hreflang="x-default" href="{url}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{desc}" />
-  <meta property="og:url" content="{base}/{slug}/" />
+  <meta property="og:url" content="{url}" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
-  {{"@context": "https://schema.org", "@type": "CollectionPage", "name": "{h1}", "description": "{jdesc}", "url": "{base}/{slug}/", "isPartOf": {{"@type": "WebSite", "name": "SuppDB", "url": "{base}"}}, "publisher": {{"@type": "Organization", "name": "DataEngineered", "url": "{base}"}}}}
+  {{"@context": "https://schema.org", "@type": "CollectionPage", "name": "{h1}", "description": "{jdesc}", "url": "{url}", "isPartOf": {{"@type": "WebSite", "name": "SuppDB", "url": "{base}"}}, "publisher": {{"@type": "Organization", "name": "DataEngineered", "url": "{base}"}}}}
   </script>
   <style>
 {style}
@@ -143,6 +155,7 @@ PAGE = """<!DOCTYPE html>
   </header>
 
   <main class="container">
+    {back}
     <section class="hero">
       <span class="badge mono">DIRECTORY</span>
       <h1>{h1}</h1>
@@ -176,12 +189,12 @@ def read_entry(path, kind):
     title = text_of(r"<title[^>]*>(.*?)</title>", src)
     desc = ""
     if kind == "ingredient":
-        # "<Name> (<Form>) Supplement Facts ..." -> the parenthetical form
-        m = re.match(r"^\s*.*?\((.+?)\)", title)
+        # "<Name> — in <n> products | SuppDB" -> the descriptor
+        m = re.match(r"^\s*.*?\s[—-]\s(.+?)\s\|\s", title)
         if m:
             desc = m.group(1).strip()
     else:
-        # "<Product> by <Brand> — ..." -> the brand
+        # "<Product> by <Brand> — ... | SuppDB" -> the brand
         m = re.match(r"^\s*.*?\sby\s+(.+?)\s+[—-]\s", title)
         if m:
             desc = m.group(1).strip()
@@ -193,6 +206,21 @@ def read_entry(path, kind):
 def group_key(name):
     c = name[:1].upper()
     return c if c.isalpha() else "0-9"
+
+
+def letter_slug(k):
+    return "0-9" if k == "0-9" else k.lower()
+
+
+def render_dirlist(entries):
+    items = []
+    for e in entries:
+        dh = ('<span class="d">%s</span>' % htmllib.escape(e["desc"])) if e["desc"] else ""
+        items.append(
+            '        <li><a href="%s"><span class="n">%s</span>%s</a></li>'
+            % (htmllib.escape(e["slug"]), htmllib.escape(e["name"]), dh)
+        )
+    return '      <ul class="dirlist">\n%s\n      </ul>' % "\n".join(items)
 
 
 def build_section(sec):
@@ -212,39 +240,58 @@ def build_section(sec):
             order.append(k)
         groups[k].append(e)
 
-    blocks = []
+    letters = {}
     for k in order:
-        items = []
-        for e in groups[k]:
-            dh = ('<span class="d">%s</span>' % htmllib.escape(e["desc"])) if e["desc"] else ""
-            items.append(
-                '        <li><a href="%s"><span class="n">%s</span>%s</a></li>'
-                % (htmllib.escape(e["slug"]), htmllib.escape(e["name"]), dh)
-            )
-        blocks.append(
-            '    <section class="alpha">\n'
-            '      <h2 class="alpha-h">%s</h2>\n'
-            '      <ul class="dirlist">\n%s\n      </ul>\n'
-            '    </section>' % (htmllib.escape(k), "\n".join(items))
+        lslug = letter_slug(k)
+        n_letter = len(groups[k])
+        examples = ", ".join(e["name"] for e in groups[k][:3])
+        letter_url = "%s/%s/%s/" % (BASE, sec["slug"], lslug)
+        title = fit_title("%s — %s" % (sec["h1"], k), "%d %s" % (n_letter, sec["label"]), "SuppDB")
+        desc = fit_desc("%d %s beginning with %s in SuppDB's %s, including %s." %
+                         (n_letter, sec["label"], k, sec["h1"].lower(), examples))
+        back = ('<p class="back"><a href="../" class="btn-link" style="font-size:0.8rem;">'
+                '&larr; All %s</a></p>' % sec["label"])
+        page = PAGE.format(
+            base=BASE, url=letter_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
+            jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], k), lede=sec["lede"],
+            label=sec["label"], n=n_letter, style=STYLE, back=back,
+            groups='    <section class="alpha">\n' + render_dirlist(groups[k]) + '\n    </section>',
         )
+        letter_dir = d / lslug
+        letter_dir.mkdir(exist_ok=True)
+        (letter_dir / "index.html").write_text(page, encoding="utf-8", newline="")
+        letters[k] = {"slug": lslug, "count": n_letter}
 
+    # Top-level hub: links the letter hubs (not every leaf -- that's the >100-link problem).
+    letter_items = []
+    for k in order:
+        info = letters[k]
+        letter_items.append({
+            "slug": "%s/" % info["slug"],
+            "name": k,
+            "desc": "%d %s" % (info["count"], sec["label"]),
+        })
+    top_url = "%s/%s/" % (BASE, sec["slug"])
+    title = fit_title(sec["h1"], "%d %s" % (len(entries), sec["label"]), "SuppDB")
+    desc = fit_desc(sec["desc"])
     page = PAGE.format(
-        base=BASE, slug=sec["slug"],
-        title=htmllib.escape(sec["title"]), desc=htmllib.escape(sec["desc"]),
-        jdesc=sec["desc"].replace('"', "'"),
-        h1=sec["h1"], lede=sec["lede"], label=sec["label"],
-        n=len(entries), style=STYLE, groups="\n\n".join(blocks),
+        base=BASE, url=top_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
+        jdesc=sec["desc"].replace('"', "'"), h1=sec["h1"], lede=sec["lede"], label=sec["label"],
+        n=len(entries), style=STYLE, back="",
+        groups='    <section class="alpha">\n      <h2 class="alpha-h">BROWSE BY FIRST LETTER</h2>\n'
+               + render_dirlist(letter_items) + '\n    </section>',
     )
     (d / "index.html").write_text(page, encoding="utf-8", newline="")
-    return len(entries)
+    return len(entries), letters
 
 
 def update_homepage(counts):
-    """Link both directories from the end of the explorer section.
+    """Link both top-level directories from the end of the explorer section.
 
     The explorer is where the page already invites browsing, but it is a
     static sample table behind a JS filter -- these are the links that
-    actually lead anywhere.
+    actually lead anywhere. (The letter hubs are one hop further, linked
+    from each top-level directory page itself.)
     """
     src = INDEX.read_text(encoding="utf-8")
     block = (
@@ -275,31 +322,38 @@ def update_homepage(counts):
     INDEX.write_text(src, encoding="utf-8", newline="")
 
 
-def update_sitemap(counts):
-    src = SITEMAP.read_text(encoding="utf-8")
-    added = []
-    for slug in ("ingredients", "products"):
-        loc = "%s/%s/" % (BASE, slug)
-        if "<loc>%s</loc>" % loc in src:
-            continue
-        entry = ("  <url>\n    <loc>%s</loc>\n    <changefreq>weekly</changefreq>\n"
-                 "    <priority>0.9</priority>\n  </url>\n" % loc)
-        src = src.replace("</urlset>", entry + "</urlset>", 1)
-        added.append(slug)
-    if added:
-        SITEMAP.write_text(src, encoding="utf-8", newline="")
-    return added
+def rebuild_sitemap(letters_by_section):
+    """The single place sitemap.xml gets written: homepage, both top hubs, every
+    letter hub, and every leaf, all through seo_common.write_sitemap (dedupes,
+    drops non-HTML, stamps lastmod from git)."""
+    entries = [(BASE + "/", INDEX, "weekly", "1.0")]
+    for sec in SECTIONS:
+        d = ROOT / sec["slug"]
+        priority = "0.9" if sec["kind"] == "ingredient" else "0.8"
+        entries.append(("%s/%s/" % (BASE, sec["slug"]), d / "index.html", "weekly", "0.9"))
+        for k, info in letters_by_section[sec["slug"]].items():
+            letter_url = "%s/%s/%s/" % (BASE, sec["slug"], info["slug"])
+            entries.append((letter_url, d / info["slug"] / "index.html", "weekly", "0.7"))
+        for p in sorted(d.glob("*.html")):
+            if p.stem == "index":
+                continue
+            entries.append(("%s/%s/%s" % (BASE, sec["slug"], p.stem), p, "monthly", priority))
+    return write_sitemap(ROOT, entries)
 
 
 def main():
     counts = {}
+    letters_by_section = {}
     for sec in SECTIONS:
-        counts[sec["slug"]] = build_section(sec)
-        print("wrote %s/index.html -- %d entries" % (sec["slug"], counts[sec["slug"]]))
+        n, letters = build_section(sec)
+        counts[sec["slug"]] = n
+        letters_by_section[sec["slug"]] = letters
+        print("wrote %s/index.html -- %d entries across %d letter hubs" %
+              (sec["slug"], n, len(letters)))
     update_homepage(counts)
     print("homepage block updated; .html internal links rewritten extensionless")
-    added = update_sitemap(counts)
-    print("sitemap: %s" % (", ".join(added) if added else "already present"))
+    n_urls = rebuild_sitemap(letters_by_section)
+    print("sitemap.xml rebuilt -- %d URLs" % n_urls)
 
 
 if __name__ == "__main__":
