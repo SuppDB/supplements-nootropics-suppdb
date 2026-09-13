@@ -230,7 +230,16 @@ def make_buckets(order, groups):
     A bucket still under MIN_BUCKET always takes the next group regardless of the
     resulting size -- there's no way to split a single first-letter group further in
     this scheme, so a bucket can only end up over MAX_BUCKET if one letter's own count
-    already exceeds it (not the case for this dataset; the largest single letter is 60)."""
+    already exceeds it (not the case for this dataset; the largest single letter is 60).
+
+    The trailing remainder (whatever's left in cur_entries once `order` is exhausted)
+    normally merges into the previous bucket -- but only if that merge doesn't push
+    the previous bucket past MAX_BUCKET. When it would, the remainder stands alone as
+    its own final bucket instead of overflowing the one before it. That standalone
+    remainder is necessarily under MIN_BUCKET (that's exactly why it never finalized
+    into a bucket of its own during the loop above), so it's the one bucket exempted
+    from the floor in the hard assertion below -- every bucket, remainder included,
+    still respects the MAX_BUCKET ceiling."""
     buckets = []
     cur_keys, cur_entries = [], []
     for k in order:
@@ -243,12 +252,22 @@ def make_buckets(order, groups):
         if len(cur_entries) >= MIN_BUCKET:
             buckets.append((cur_keys, cur_entries))
             cur_keys, cur_entries = [], []
+
+    is_remainder_bucket = False
     if cur_keys:
-        if buckets:
+        if buckets and len(buckets[-1][1]) + len(cur_entries) <= MAX_BUCKET:
             prev_keys, prev_entries = buckets[-1]
             buckets[-1] = (prev_keys + cur_keys, prev_entries + cur_entries)
         else:
             buckets.append((cur_keys, cur_entries))
+            is_remainder_bucket = True
+
+    for i, (keys, entries) in enumerate(buckets):
+        n = len(entries)
+        is_exempt_remainder = is_remainder_bucket and i == len(buckets) - 1
+        assert n <= MAX_BUCKET, f"bucket {keys!r} has {n} entries, over MAX_BUCKET={MAX_BUCKET}"
+        assert n >= MIN_BUCKET or is_exempt_remainder, (
+            f"bucket {keys!r} has {n} entries, under MIN_BUCKET={MIN_BUCKET}")
     return buckets
 
 
