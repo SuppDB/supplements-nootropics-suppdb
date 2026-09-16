@@ -1,0 +1,17 @@
+{
+  "_note": "Tokens that stay verbatim in every language (i18n_common.py: a segment made only of these needs no translation). The ingredient names are the homepage ItemList JSON-LD entries, which are data but cannot carry translate=\"no\".",
+  "keep": [
+    "SUPPDB",
+    "NIH",
+    "DSLD",
+    "InChIKey",
+    "Alpha",
+    "Lipoic",
+    "Acid",
+    "Biotin",
+    "Quercetin",
+    "Phytosome",
+    "Chromium",
+    "Picolinate"
+  ]
+}
