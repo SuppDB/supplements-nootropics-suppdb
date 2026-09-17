@@ -163,7 +163,7 @@ PAGE = """<!DOCTYPE html>
     {back}
     <section class="hero">
       <span class="badge mono">DIRECTORY</span>
-      <h1>{h1}</h1>
+      <h1>{h1_html}</h1>
       <p class="sub">{lede}</p>
       <p class="count">{n} {label}</p>
     </section>
@@ -289,16 +289,21 @@ def bucket_slug(keys):
     return lo if lo == hi else "%s-%s" % (lo, hi)
 
 
-def render_dirlist(entries, prefix=""):
+def render_dirlist(entries, prefix="", data_desc=False):
     """`prefix` is prepended to each href. Leaf entries live one directory above the range
     hub that lists them (ingredients/5-htp, not ingredients/a/5-htp), so callers rendering
     a range hub's own leaf list must pass prefix="../"; the top-level hub's links to the
-    range hubs are already siblings of it, so they pass no prefix."""
+    range hubs are already siblings of it, so they pass no prefix.
+
+    Entry names (ingredient/product names, range labels) carry translate="no" for
+    scripts/i18n_common.py; so does the descriptor when it is data (a product's brand,
+    `data_desc=True`) rather than copy ("in 12 products"). Rendering is unchanged."""
     items = []
     for e in entries:
-        dh = ('<span class="d">%s</span>' % htmllib.escape(e["desc"])) if e["desc"] else ""
+        tn = ' translate="no"' if data_desc else ""
+        dh = ('<span class="d"%s>%s</span>' % (tn, htmllib.escape(e["desc"]))) if e["desc"] else ""
         items.append(
-            '        <li><a href="%s%s"><span class="n">%s</span>%s</a></li>'
+            '        <li><a href="%s%s"><span class="n" translate="no">%s</span>%s</a></li>'
             % (prefix, htmllib.escape(e["slug"]), htmllib.escape(e["name"]), dh)
         )
     return '      <ul class="dirlist">\n%s\n      </ul>' % "\n".join(items)
@@ -336,9 +341,10 @@ def build_section(sec):
                 '&larr; All %s</a></p>' % sec["label"])
         page = PAGE.format(
             base=BASE, url=bucket_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
-            jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], label), lede=sec["lede"],
+            jdesc=desc.replace('"', "'"), h1="%s: %s" % (sec["h1"], label),
+            h1_html='%s: <span translate="no">%s</span>' % (sec["h1"], label), lede=sec["lede"],
             label=sec["label"], n=n_b, style=STYLE, back=back,
-            groups='    <section class="alpha">\n' + render_dirlist(bucket_entries, prefix="../") + '\n    </section>',
+            groups='    <section class="alpha">\n' + render_dirlist(bucket_entries, prefix="../", data_desc=sec["kind"] == "product") + '\n    </section>',
         )
         bucket_dir = d / bslug
         bucket_dir.mkdir(exist_ok=True)
@@ -358,7 +364,8 @@ def build_section(sec):
     desc = fit_desc(sec["desc"])
     page = PAGE.format(
         base=BASE, url=top_url, title=htmllib.escape(title), desc=htmllib.escape(desc),
-        jdesc=sec["desc"].replace('"', "'"), h1=sec["h1"], lede=sec["lede"], label=sec["label"],
+        jdesc=sec["desc"].replace('"', "'"), h1=sec["h1"], h1_html=sec["h1"], lede=sec["lede"],
+        label=sec["label"],
         n=len(entries), style=STYLE, back="",
         groups='    <section class="alpha">\n      <h2 class="alpha-h">BROWSE BY RANGE</h2>\n'
                + render_dirlist(range_items) + '\n    </section>',

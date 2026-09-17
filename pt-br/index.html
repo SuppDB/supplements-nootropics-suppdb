@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SuppDB — Dados de suplementos &amp; nootrópicos (NIH DSLD)</title>
+<meta content="17.000+ suplementos normalizados em mg com química NIH PubChem, mais uma camada de segurança: 8.800+ interações medicamentosas, limites superiores &amp; contraindicações." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="2VE0Ll5xPaIkGjSTkvTenDhcKRLJGPFgVqekvGOIw-4" name="google-site-verification"/>
+<link href="https://suppdb.dataengineered.io/pt-br/" rel="canonical"/>
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://suppdb.dataengineered.io/">
+<link rel="alternate" hreflang="es" href="https://suppdb.dataengineered.io/es/">
+<link rel="alternate" hreflang="de" href="https://suppdb.dataengineered.io/de/">
+<link rel="alternate" hreflang="fr" href="https://suppdb.dataengineered.io/fr/">
+<link rel="alternate" hreflang="pt-BR" href="https://suppdb.dataengineered.io/pt-br/">
+<link rel="alternate" hreflang="x-default" href="https://suppdb.dataengineered.io/">
+<style>th,td{overflow-wrap:anywhere;hyphens:auto}h1,h2,h3,h4,button,.btn{overflow-wrap:break-word}</style>
+<style>.i18n-menu{position:relative;display:inline-block;align-self:center;font-size:.85rem;line-height:1;font-weight:500;text-transform:none;letter-spacing:normal}.i18n-menu.i18n-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .65rem;border:1px solid currentColor;border-color:color-mix(in srgb,currentColor 40%,transparent);border-radius:999px;white-space:nowrap;user-select:none;color:inherit;background:transparent}.i18n-menu>summary::-webkit-details-marker{display:none}.i18n-menu>summary:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}.i18n-menu.i18n-menu>ul{display:block;position:absolute;right:0;top:calc(100% + 6px);z-index:2147482000;min-width:10rem;margin:0;padding:.35rem;list-style:none;background:#111827;border:1px solid #374151;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-align:left}.i18n-menu.i18n-menu li{display:block;margin:0;padding:0;list-style:none}.i18n-menu.i18n-menu li>a,.i18n-menu.i18n-menu li>span{display:block;padding:.5rem .75rem;border-radius:6px;color:#f9fafb;background:transparent;text-decoration:none;white-space:nowrap;font-size:.9rem;font-weight:400;line-height:1.2;border:0;box-shadow:none}.i18n-menu.i18n-menu li>a:hover,.i18n-menu.i18n-menu li>a:focus-visible{background:#1f2937;color:#fff}.i18n-menu.i18n-menu li>span{font-weight:600;color:#93c5fd}.i18n-menu--row{margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row){margin-left:auto}:is(nav,a,button):has(+ .i18n-menu--row)+.i18n-menu--row{margin-left:.75rem}.i18n-menu--float{position:absolute;top:14px;right:16px;z-index:2147481000;color:#e5e7eb}</style>
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<script src="/i18n/i18n.js?v=5" defer></script>
+<!-- /i18n:alternates -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<!-- Open Graph / Social Meta -->
+<meta content="SuppDB — conjunto de dados de suplementos &amp; nootrópicos (NIH DSLD + PubChem)" property="og:title"/>
+<meta content="17.000+ suplementos reais de 2.000+ marcas, doses normalizadas em mg com química NIH PubChem — mais camada de segurança: 8.800+ interações medicamentosas, % do limite superior, contraindicações e doping WADA." property="og:description"/>
+<meta content="https://suppdb.dataengineered.io/pt-br/" property="og:url"/>
+<meta content="SuppDB — conjunto de dados de suplementos &amp; nootrópicos" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="https://suppdb.dataengineered.io/og-image.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="SuppDB — conjunto de dados de suplementos &amp; nootrópicos (NIH DSLD + PubChem)" name="twitter:title"/>
+<meta content="Dados estruturados de rótulos de suplementos: doses em mg, misturas proprietárias, química PubChem — mais uma camada de segurança com interações medicamentosas, limites superiores e contraindicações." name="twitter:description"/>
+<meta content="https://suppdb.dataengineered.io/og-image.png" name="twitter:image"/>
+<!-- JSON-LD Structured Data Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SuppDB",
+  "url": "https://suppdb.dataengineered.io/pt-br/",
+  "email": "suppdb@dataengineered.io",
+  "description": "Fornecedor de conjunto de dados de suplementos & nootrópicos — rótulos reais do NIH DSLD normalizados em doses em mg com química NIH PubChem, mais uma camada de segurança com interações medicamentosas, percentuais do limite superior tolerável e contraindicações."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SuppDB — conjunto de dados de suplementos & nootrópicos",
+  "url": "https://suppdb.dataengineered.io/pt-br/",
+  "description": "Conjunto de dados estruturado de suplementos: 17.000+ produtos reais de 2.000+ marcas, doses normalizadas em mg, misturas proprietárias sinalizadas, enriquecido com química NIH PubChem.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://suppdb.dataengineered.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "image": "https://suppdb.dataengineered.io/og-image.png",
+  "name": "SuppDB — conjunto de dados de suplementos & nootrópicos — Snapshot completo",
+  "description": "Conjunto de dados estruturado de suplementos: 17.000+ produtos reais de 2.000+ marcas, todas as doses normalizadas em mg, misturas proprietárias sinalizadas, enriquecido com química NIH PubChem (CID, fórmula, SMILES, InChIKey) e ingestões de referência NIH DRI, com procedência completa da fonte. SQLite relacional mais CSV e JSON.",
+  "brand": {
+    "@type": "Brand",
+    "name": "SuppDB"
+  },
+  "category": "Software > Data & Databases",
+  "offers": {
+    "@type": "Offer",
+    "price": "49.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://suppdb.dataengineered.io/pt-br/#pricing",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": [
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "AU"
+        }
+      ],
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "image": "https://suppdb.dataengineered.io/og-image.png",
+  "name": "Camada de segurança & interações do SuppDB",
+  "description": "Camada de segurança para suplementos: 8.800+ interações suplemento × medicamento com grau de evidência, % do limite superior tolerável por produto com sinalização de excesso, contraindicações por condição e sinalizações WADA, entregues em SQLite relacional + CSV + JSON.",
+  "brand": {
+    "@type": "Brand",
+    "name": "SuppDB"
+  },
+  "category": "Software > Data & Databases",
+  "offers": {
+    "@type": "Offer",
+    "price": "199.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://suppdb.dataengineered.io/pt-br/#pricing",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": [
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "CA"
+        },
+        {
+          "@type": "DefinedRegion",
+          "addressCountry": "AU"
+        }
+      ],
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SuppDB — conjunto de dados de suplementos & nootrópicos",
+  "description": "Conjunto de dados normalizado de informação nutricional de suplementos com 17.000+ produtos reais de 2.000+ marcas, com conversões exatas de dose em mg, sinalizações booleanas de mistura proprietária e enriquecimento químico NIH PubChem.",
+  "url": "https://suppdb.dataengineered.io/pt-br/",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "banco de dados de suplementos",
+    "conjunto de dados de nootrópicos",
+    "NIH DSLD",
+    "informação nutricional de suplementos",
+    "química PubChem",
+    "normalização de doses em mg"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "SuppDB",
+    "url": "https://suppdb.dataengineered.io/pt-br/"
+  },
+  "variableMeasured": [
+    "amount_per_serving_mg",
+    "is_proprietary_blend",
+    "pubchem_cid",
+    "canonical_smiles",
+    "inchikey",
+    "dsld_label_id",
+    "serving_size_count"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://suppdb.dataengineered.io/samples/suppdb_sample.csv"
+    }
+  ],
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como as misturas proprietárias são tratadas no conjunto de dados SuppDB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada registro de ingrediente tem uma sinalização booleana explícita (`is_proprietary_blend`). Quando um produto lista uma mistura proprietária, a massa total da mistura é registrada, e os ingredientes que a compõem são vinculados sob a hierarquia comum da mistura, sem fabricar doses individuais não verificadas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso obter PubChem CIDs e InChIKeys do NIH para cada ingrediente de suplemento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim! Cruzamos cada composto botânico e químico ativo normalizado com o NIH PubChem, enriquecendo os registros com PubChem CIDs exatos, massas moleculares, SMILES canônicos e InChIKeys únicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Em que formato o conjunto de dados é entregue quando compro o snapshot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O snapshot completo do conjunto de dados ($49) é entregue por e-mail em até 24 h como um banco de dados SQLite relacional e limpo (`suppdb.sqlite`), junto com tabelas CSV normalizadas (`products.csv`, `ingredients.csv` e `brands.csv`) e exportações JSON."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso baixar uma amostra gratuita antes de licenciar o conjunto de dados completo de 17.000+ produtos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Com certeza. Você pode baixar nossa amostra aberta e verificada em CSV de 2.250+ linhas (`samples/suppdb_sample.csv`) diretamente da nossa página inicial ou do repositório no GitHub, sob uma licença Creative Commons."
+      }
+    }
+  ],
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Ingredientes ativos em destaque & índice de monografias",
+  "description": "Entidades químicas de alta pureza e compostos nootrópicos padronizados indexados no SuppDB.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Alpha Lipoic Acid",
+      "url": "https://suppdb.dataengineered.io/pt-br/ingredients/alpha-lipoic-acid"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Biotin",
+      "url": "https://suppdb.dataengineered.io/pt-br/ingredients/biotin"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Quercetin Phytosome",
+      "url": "https://suppdb.dataengineered.io/pt-br/ingredients/quercetin"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Chromium Picolinate",
+      "url": "https://suppdb.dataengineered.io/pt-br/ingredients/chromium"
+    }
+  ],
+  "inLanguage": "pt-BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://suppdb.dataengineered.io/pt-br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Explorador de amostra",
+      "item": "https://suppdb.dataengineered.io/pt-br/#explorer"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Preços & licenciamento",
+      "item": "https://suppdb.dataengineered.io/pt-br/#pricing"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+<style>
+    :root {
+      --bg-paper: #f7f8f9;
+      --bg-paper-2: #eef1f2;
+      --text-ink: #14181a;
+      --text-muted: #5f6a6d;
+      --rule-color: rgba(20, 24, 26, 0.15);
+      --rule-dim: rgba(20, 24, 26, 0.08);
+      --accent: #0d9c74;
+      --card-bg: #ffffff;
+      --card-border: #14181a;
+    }
+
+    html.dark {
+      --bg-paper: #0b0e0f;
+      --bg-paper-2: #121618;
+      --text-ink: #eef1f2;
+      --text-muted: #97a1a3;
+      --rule-color: rgba(238, 241, 242, 0.18);
+      --rule-dim: rgba(238, 241, 242, 0.08);
+      --accent: #2fd4a3;
+      --card-bg: #121618;
+      --card-border: #eef1f2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-paper);
+      color: var(--text-ink);
+      font-family: 'JetBrains Mono', monospace;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .font-display { font-family: 'Outfit', sans-serif; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bg-paper);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule-color);
+    }
+
+    .header-inner {
+      max-width: 1440px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 32px;
+    }
+
+    .brand {
+      display: flex; align-items: center; gap: 16px;
+      font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em;
+    }
+
+    .brand-tag {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em;
+      opacity: 0.6; border-left: 1px solid var(--rule-color); padding-left: 16px;
+    }
+
+    nav {
+      display: flex; align-items: center; gap: 28px;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .theme-toggle {
+      background: none; border: 1px solid var(--rule-color); color: var(--text-ink);
+      padding: 6px 12px; font-family: inherit; font-size: 0.7rem; text-transform: uppercase;
+      cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    .section { border-bottom: 1px solid var(--rule-color); padding: 72px 32px; }
+    .section-alt { background-color: var(--bg-paper-2); }
+    .container { max-width: 1440px; margin: 0 auto; }
+
+    .section-header {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.18em;
+      opacity: 0.75; margin-bottom: 36px;
+    }
+    .section-diamond { width: 8px; height: 8px; background-color: var(--accent); transform: rotate(45deg); }
+    .section-line { flex: 1; height: 1px; background-color: var(--rule-dim); }
+
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; }
+    @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    h1 { font-size: clamp(2.8rem, 5.5vw, 4.8rem); line-height: 0.98; font-weight: 600; letter-spacing: -0.03em; }
+
+    .hero-abstract { margin-top: 28px; display: grid; grid-template-columns: auto 1fr; gap: 24px; max-width: 600px; }
+    .abstract-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.55; padding-top: 4px; }
+    .abstract-text { font-size: 0.9rem; color: var(--text-muted); }
+
+    .cta-group { margin-top: 36px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: space-between;
+      padding: 18px 24px; font-family: inherit; font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.1em; border: 1px solid var(--text-ink); cursor: pointer; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--text-ink); color: var(--bg-paper); }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text-ink); }
+    .btn-outline:hover { background: var(--rule-dim); }
+
+    .stat-card { border: 1px solid var(--rule-color); background: var(--bg-paper-2); padding: 40px; position: relative; }
+    .stat-number { font-size: 3rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.7; margin-top: 12px; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; border-top: 1px solid var(--rule-color); padding-top: 28px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; }
+    .form-input, .form-select {
+      width: 100%; padding: 14px 16px; background: var(--bg-paper); border: 1px solid var(--rule-color);
+      color: var(--text-ink); font-family: inherit; font-size: 0.85rem; transition: border-color 0.2s;
+    }
+    .form-input:focus, .form-select:focus { outline: none; border-color: var(--accent); }
+
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+
+    .pricing-container {
+      max-width: 720px; margin: 0 auto; border: 1px solid var(--card-border); background: var(--card-bg);
+      padding: 56px; position: relative; box-shadow: 12px 12px 0px rgba(0,0,0,0.25);
+    }
+    html.dark .pricing-container { box-shadow: 12px 12px 0px rgba(47, 212, 163, 0.15); }
+
+    .pricing-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule-color); padding-bottom: 24px; margin-bottom: 32px; }
+    .price-amount { font-family: 'Outfit', sans-serif; font-size: 4rem; font-weight: 700; color: var(--accent); line-height: 1; }
+
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; font-size: 0.85rem; }
+    .feature-list li { display: flex; align-items: center; gap: 12px; }
+    .feature-list li::before { content: "✦"; color: var(--accent); }
+
+    .table-wrapper { overflow-x: auto; border: 1px solid var(--rule-color); margin-top: 24px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left; }
+    th, td { padding: 16px 20px; border-bottom: 1px solid var(--rule-dim); }
+    th { background: var(--bg-paper-2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.75; }
+    tr:hover { background: var(--rule-dim); }
+
+    .search-input {
+      width: 100%; padding: 14px 20px; background: transparent; border: 1px solid var(--rule-color);
+      color: var(--text-ink); font-family: inherit; font-size: 0.85rem; margin-bottom: 16px;
+    }
+    .search-input:focus { outline: none; border-color: var(--accent); }
+
+    footer { border-top: 1px solid var(--rule-color); padding: 48px 32px; font-size: 0.75rem; opacity: 0.6; }
+  </style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a class="brand font-display" href="#">
+        SUPPDB <span class="brand-tag">Conjunto de dados de suplementos &amp; nootrópicos</span>
+</a>
+<nav>
+<a href="#overview">Visão geral</a>
+<a href="#metrics">Métricas principais</a>
+<a href="#explorer">Explorador ao vivo</a>
+<a href="#pricing">Preços</a>
+<button class="theme-toggle" onclick="toggleTheme()">
+<span id="theme-label">Modo claro</span>
+</button>
+<!-- i18n:header --><details class="i18n-menu i18n-menu--nav" translate="no"><summary aria-label="Idioma: Português" title="Idioma: Português"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>PT</span></summary><ul><li><a href="/" hreflang="en" lang="en" data-i18n-lang="en">English</a></li><li><a href="/es/" hreflang="es" lang="es" data-i18n-lang="es">Español</a></li><li><a href="/de/" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a></li><li><span aria-current="true" lang="pt-BR">Português</span></li></ul></details><!-- /i18n:header --></nav>
+</div>
+</header>
+<section class="section" id="overview">
+<div class="container">
+<div class="section-header">
+<span class="section-diamond"></span>
+<span>§ 00 · Rótulos reais · Doses normalizadas · Química PubChem</span>
+<div class="section-line"></div>
+</div>
+<div class="hero-grid">
+<div>
+<h1 class="font-display">
+            Rótulos reais<br/>de suplementos,<br/> <em style="font-style: italic; font-weight: 300;">normalizados</em><span style="color: var(--accent)">.</span>
+</h1>
+<div class="hero-abstract">
+<span class="abstract-label">Resumo</span>
+<p class="abstract-text">
+              O SuppDB começa pela sua Camada de segurança &amp; interações — 8.800+ interações suplemento × medicamento, % do limite superior tolerável por produto, contraindicações por condição e sinalizações WADA — sobre um catálogo estruturado de 17.000+ produtos reais de suplementos &amp; nootrópicos de 2.000+ marcas, construído exclusivamente a partir do banco de dados público NIH Dietary Supplement Label Database (DSLD). Todo ingrediente ativo é normalizado em miligramas, misturas proprietárias são sinalizadas quando a dose é ocultada, e cada composto é enriquecido com química NIH PubChem — com a URL do rótulo de origem em todos os registros, para que qualquer fato possa ser verificado novamente. Uma <strong>camada de segurança</strong> separada se apoia nas doses normalizadas: 8.800+ interações suplemento–medicamento, percentual do limite superior tolerável por produto, contraindicações por condição e sinalizações de doping WADA — cada interação citada com sua fonte de domínio público.
+            </p>
+</div>
+<div class="cta-group">
+<a class="btn btn-primary" href="#pricing" onclick="resetCheckout()">
+<span>Obter o conjunto de dados</span>
+<span style="font-size: 1.2rem;">↗</span>
+</a>
+<a class="btn btn-outline" href="#explorer">
+<span>↓ Explorador de amostra</span>
+<span>115.000+ linhas</span>
+</a>
+</div>
+<p style="margin-top: 16px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.55;">
+            Pagamento único · CSV / SQLite / JSON entregues por e-mail em até 24 h · Fontes de domínio público
+          </p>
+</div>
+<div>
+<div class="stat-card">
+<div class="stat-number">17.000+</div>
+<div class="stat-label">Suplementos reais · 2.000+ marcas</div>
+<div style="margin: 24px 0; height: 1px; background: var(--rule-color);"></div>
+<div class="stat-number" style="font-size: 2.2rem;">115.000+</div>
+<div class="stat-label">Registros de ingredientes ativos (dose normalizada em mg)</div>
+<div style="margin: 24px 0; height: 1px; background: var(--rule-color);"></div>
+<div style="font-size: 0.8rem; color: var(--text-muted);">
+<strong>Cobertura:</strong> UPC 86% · Porções 85% · Sinalização de mistura proprietária em 40.000+ linhas de ingredientes · Química PubChem em 4.000+ compostos · URL de origem em todos os registros. Cobertura real dos campos publicada de antemão.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt" id="metrics">
+<div class="container">
+<div class="section-header">
+<span class="section-diamond"></span>
+<span>§ 01 · Métricas principais · Fontes de domínio público</span>
+<div class="section-line"></div>
+<span>NIH DSLD + PubChem</span>
+</div>
+<div class="metrics-grid">
+<div class="stat-card" style="background: var(--bg-paper);">
+<div class="stat-number" style="font-size: 2.4rem;">NIH DSLD</div>
+<div class="stat-label">Fonte de rótulos de domínio público</div>
+<p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-muted);">
+            Construído inteiramente a partir do NIH Dietary Supplement Label Database — marcas, UPCs, formas, porções e painéis de ingredientes reais. Sem scraping, sem linhas sintéticas; todo registro remete ao id do seu rótulo DSLD.
+          </p>
+</div>
+<div class="stat-card" style="background: var(--bg-paper);">
+<div class="stat-number" style="font-size: 2.4rem;">Norm. mg</div>
+<div class="stat-label">Normalização de doses + sinalização de misturas</div>
+<p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-muted);">
+            Todas as doses convertidas em miligramas — <code>mcg</code>, <code>g</code> e <code>IU</code> específico de cada substância tratados corretamente. Doses não divulgadas de misturas proprietárias são sinalizadas, não descartadas em silêncio.
+          </p>
+</div>
+<div class="stat-card" style="background: var(--bg-paper);">
+<div class="stat-number" style="font-size: 2.4rem;">PubChem</div>
+<div class="stat-label">Química + canonização por InChIKey</div>
+<p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-muted);">
+            CID, fórmula molecular, massa, SMILES e InChIKey por composto. Linhas com o mesmo InChIKey são a mesma molécula com nomes diferentes (<code>Vitamin C</code> = <code>Ascorbic Acid</code>) — canonize de forma determinística.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="explorer">
+<div class="container">
+<div class="section-header">
+<span class="section-diamond"></span>
+<span>§ 02 · Prévia do explorador de ingredientes ao vivo</span>
+<div class="section-line"></div>
+<span>Snapshot de amostra gratuita</span>
+</div>
+<input class="search-input" id="searchBox" onkeyup="filterTable()" placeholder="Filtrar por marca, produto ou ingrediente (ex.: Thorne, Magnesium, Creatine)..." type="text"/>
+<div class="table-wrapper">
+<table id="suppTable">
+<thead>
+<tr>
+<th>Marca</th>
+<th>Produto</th>
+<th>Forma</th>
+<th>Ingrediente</th>
+<th>Dose / porção</th>
+<th>Categoria</th>
+<th>PubChem</th>
+</tr>
+</thead>
+<tbody id="tableBody">
+<tr>
+<td translate="no"><strong>Thorne</strong></td>
+<td translate="no">Magnesium Bisglycinate</td>
+<td translate="no">Powder</td>
+<td translate="no">Magnesium</td>
+<td><span style="color: var(--accent); font-weight: bold;">200 mg</span></td>
+<td>mineral</td>
+<td><code>CID 5462224</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>Nordic Naturals</strong></td>
+<td translate="no">Ultimate Omega 2X</td>
+<td translate="no">Softgel</td>
+<td translate="no">Omega-3</td>
+<td><span style="color: var(--accent); font-weight: bold;">2.150 mg</span></td>
+<td>ácido graxo</td>
+<td><code>CID 56842239</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>NOW Sports</strong></td>
+<td translate="no">Creatine Monohydrate</td>
+<td translate="no">Powder</td>
+<td translate="no">Creatine</td>
+<td><span style="color: var(--accent); font-weight: bold;">5.000 mg</span></td>
+<td>ergogênico</td>
+<td><code>CID 586</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>Life Extension</strong></td>
+<td translate="no">Neuro-Mag Magnesium L-Threonate</td>
+<td translate="no">Capsule</td>
+<td translate="no">Magnesium</td>
+<td><span style="color: var(--accent); font-weight: bold;">144 mg</span></td>
+<td>mineral</td>
+<td><code>CID 5462224</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>Bulletproof</strong></td>
+<td translate="no">Sleep Mode</td>
+<td translate="no">Softgel</td>
+<td translate="no">Melatonin</td>
+<td><span style="color: var(--accent); font-weight: bold;">0.3 mg</span></td>
+<td>hormônio</td>
+<td><code>CID 896</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>Thorne</strong></td>
+<td translate="no">Curcumin Phytosome 500 mg</td>
+<td translate="no">Capsule</td>
+<td translate="no">Curcumin</td>
+<td><span style="color: var(--accent); font-weight: bold;">500 mg</span></td>
+<td>botânico</td>
+<td><code>CID 969516</code></td>
+</tr>
+<tr>
+<td translate="no"><strong>NutraBio</strong></td>
+<td translate="no">Ashwagandha KSM-66 600 mg</td>
+<td translate="no">Capsule</td>
+<td translate="no">Ashwagandha</td>
+<td><span style="color: var(--accent); font-weight: bold;">600 mg</span></td>
+<td>botânico</td>
+<td><span style="opacity:0.5;">— (botânico)</span></td>
+</tr>
+<tr>
+<td translate="no"><strong>Nature's Way</strong></td>
+<td translate="no">Alive! Whole Food Energizer</td>
+<td translate="no">Tablet</td>
+<td translate="no">Proprietary Blend</td>
+<td><span style="opacity:0.7;">não divulgada <em>(sinalizada)</em></span></td>
+<td>mistura</td>
+<td><span style="opacity:0.5;">—</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="margin-top: 16px; font-size: 0.72rem; color: var(--text-muted);">
+        Linhas reais da amostra gratuita. Observe a última linha: uma mistura proprietária cuja dose por ingrediente <em>não é divulgada no rótulo</em> — sinalizada, e não descartada.
+      </p>
+<p style="text-align: center; margin-top: 24px; font-size: 0.85rem; color: var(--text-muted);">
+        Quer se aprofundar? <a href="https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers" rel="noopener" style="color: var(--accent); text-decoration: underline; font-weight: 600;" target="_blank">Experimente o Sample Explorer interativo no 🤗 Hugging Face →</a> ou <a href="https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample" rel="noopener" style="color: var(--accent); text-decoration: underline; font-weight: 600;" target="_blank">baixe a amostra gratuita do conjunto de dados com 300 produtos</a>.
+      </p>
+<!-- BEGIN:hub-browse -->
+<p style="text-align: center; margin-top: 18px; font-size: 0.95rem;">
+        Navegue por todas as páginas: <a href="/pt-br/ingredients/" style="color: var(--accent); text-decoration: underline; font-weight: 600;">514 monografias de ingredientes</a> · <a href="/pt-br/products/" style="color: var(--accent); text-decoration: underline; font-weight: 600;">300 rótulos de produtos</a>
+</p>
+<!-- END:hub-browse -->
+</div>
+</section>
+<section class="section section-alt" id="pricing">
+<div class="container">
+<div class="section-header">
+<span class="section-diamond"></span>
+<span>§ 03 · Três formas de obter os dados</span>
+<div class="section-line"></div>
+<span>Segurança · Catálogo · Personalizado</span>
+</div>
+<div class="pricing-container">
+<div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Nível 1 · Camada de segurança &amp; interações</div>
+<div class="pricing-header">
+<div>
+<h2 class="font-display" style="font-size: 2rem;">Camada de segurança &amp; interações</h2>
+<p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Entregue por e-mail em até 24 h · interações · % do limite superior · contraindicações</p>
+</div>
+<div class="price-amount">$199</div>
+</div>
+<ul class="feature-list">
+<li><strong>8.800+ interações suplemento × medicamento / suplemento</strong> — um núcleo verificado manualmente mais entradas extraídas automaticamente de bulas da FDA, cada uma com grau de evidência e o trecho da fonte, para que você possa filtrar o conjunto revisado (NIH ODS, DailyMed, MedlinePlus).</li>
+<li><strong>% do limite superior tolerável por produto</strong> com sinalização de excesso — calculado a partir das doses normalizadas em mg em relação aos limites NIH DRI; sinaliza os 1.300+ produtos que ultrapassam um teto seguro.</li>
+<li><strong>Contraindicações por condição</strong> (gravidez, anticoagulação, insuficiência renal, pré-operatório e mais).</li>
+<li><strong>Sinalização de doping WADA</strong> para compostos proibidos/monitorados, mais uma pontuação de transparência na divulgação de doses por produto.</li>
+<li><strong>SQLite relacional + CSV + JSON</strong>, com junções próprias via um índice enxuto de compostos — integra-se direto a apps de farmácia, telessaúde e acompanhamento de suplementação.</li>
+<li><strong>Entregue por e-mail em até 24 h</strong> após o pagamento · pagamento único · fontes de domínio público.</li>
+</ul>
+<a class="btn btn-primary" href="https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 22px; margin-top: 8px;">
+<span>Comprar agora · Camada de segurança · $199 →</span>
+</a>
+<div style="margin-top: 20px; text-align: center; font-size: 0.7rem; color: var(--text-muted);">
+          Entregue por e-mail em até 24 h · pagamento seguro via Stripe · Apple Pay / Google Pay<br/> Não é aconselhamento médico — dados de rótulos e referências de interações citadas; confirme com um profissional de saúde.
+        </div>
+</div>
+<div class="pricing-container" style="margin-top: 32px;">
+<div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 10px;">Nível 2 · Somente catálogo</div>
+<div class="pricing-header">
+<div>
+<h2 class="font-display" style="font-size: 2rem;">Somente catálogo — Snapshot completo</h2>
+<p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Download único · 17.000+ produtos · Snapshot 2026.07</p>
+</div>
+<div class="price-amount"><span class="js-snapshot-price">$49</span></div>
+</div>
+<ul class="feature-list">
+<li><strong>17.000+ suplementos reais</strong> de 2.000+ marcas, construído inteiramente a partir de rótulos do NIH DSLD em domínio público.</li>
+<li><strong>SQLite relacional + CSV + JSON:</strong> tabelas normalizadas (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), prontas para apps de saúde com IA, comparação de doses e integração com B2B.</li>
+<li><strong>Doses normalizadas em mg</strong> em 115.000+ registros de ingredientes ativos, com 40.000+ sinalizações de mistura proprietária para doses não divulgadas.</li>
+<li><strong>Química NIH PubChem:</strong> CID, fórmula molecular, massa, SMILES e InChIKey em 4.000+ compostos — mais canonização por InChIKey das variantes de nome.</li>
+<li><strong>Procedência completa:</strong> todo registro traz o id do rótulo DSLD e a URL de origem — rastreável e verificável novamente.</li>
+<li><strong>Snapshot 2026.07</strong> · pagamento único, sem cobranças recorrentes. Fontes de domínio público (NIH DSLD + PubChem).</li>
+</ul>
+<a class="btn btn-primary" href="https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406" style="width: 100%; justify-content: center; font-size: 0.9rem; padding: 22px; margin-top: 8px;">
+<span>Comprar agora · Snapshot completo · <span class="js-snapshot-price">$49</span> →</span>
+</a>
+<div style="margin-top: 20px; text-align: center; font-size: 0.7rem; color: var(--text-muted);">
+          Pagamento seguro com cartão via Stripe · Apple Pay / Google Pay · link de download enviado por e-mail após o pagamento<br/> Precisa de nota fiscal para empresa ou pagamento em cripto? <a href="#support" style="text-decoration: underline;">use o formulário de contato</a> (suppdb@dataengineered.io)
+        </div>
+</div>
+<p class="custom-line" style="margin-top:24px;text-align:center;font-size:0.85rem;color:var(--text-muted);">Trabalho personalizado (subconjuntos, feeds recorrentes, mapeamento de esquema): a partir de $99 — <a href="#support" style="text-decoration:underline;">fale com a equipe</a></p>
+</div>
+</section>
+<script>
+    // ── Snapshot price lives here (single source of truth). If you change it,
+    //    also update the JSON-LD Product offer "price" near the top of this file. ──
+    const SNAPSHOT_PRICE = "$49";
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".js-snapshot-price").forEach(function (el) {
+        el.textContent = SNAPSHOT_PRICE;
+      });
+    });
+  </script>
+<section class="section" id="faq" style="border-top: 1px solid var(--rule-dim); border-bottom: 1px solid var(--rule-dim); background: var(--bg-paper-2);">
+<div class="container" style="max-width: 900px;">
+<div class="section-header">
+<span class="section-diamond"></span>
+<span>§ FAQ · Perguntas frequentes</span>
+<div class="section-line"></div>
+</div>
+<h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 24px;">FAQ técnico do conjunto de dados de suplementos &amp; nootrópicos</h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+<div style="background: var(--card-bg); border: 1px solid var(--rule-color); padding: 24px; border-radius: 6px;">
+<h4 class="font-display" style="font-size: 1.15rem; color: var(--accent); margin-bottom: 8px;">Como as misturas proprietárias são tratadas no conjunto de dados SuppDB?</h4>
+<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Cada registro de ingrediente tem uma sinalização booleana explícita (<code style="color: var(--text-ink);">is_proprietary_blend</code>). Quando um produto lista uma mistura proprietária, a massa total da mistura é registrada, e os ingredientes que a compõem são vinculados sob a hierarquia comum da mistura, sem fabricar doses individuais não verificadas.
+          </p>
+</div>
+<div style="background: var(--card-bg); border: 1px solid var(--rule-color); padding: 24px; border-radius: 6px;">
+<h4 class="font-display" style="font-size: 1.15rem; color: var(--accent); margin-bottom: 8px;">Posso obter PubChem CIDs e InChIKeys do NIH para cada ingrediente de suplemento?</h4>
+<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Sim! Cruzamos cada composto botânico e químico ativo normalizado com o NIH PubChem, enriquecendo os registros com PubChem CIDs exatos, massas moleculares, SMILES canônicos e InChIKeys únicos.
+          </p>
+</div>
+<div style="background: var(--card-bg); border: 1px solid var(--rule-color); padding: 24px; border-radius: 6px;">
+<h4 class="font-display" style="font-size: 1.15rem; color: var(--accent); margin-bottom: 8px;">Em que formato o conjunto de dados é entregue quando compro o snapshot?</h4>
+<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            O snapshot completo do conjunto de dados ($49) é entregue por e-mail em até 24 h como um banco de dados SQLite relacional e limpo (<code style="color: var(--text-ink);">suppdb.sqlite</code>), junto com tabelas CSV normalizadas (<code style="color: var(--text-ink);">products.csv</code>, <code style="color: var(--text-ink);">ingredients.csv</code> e <code style="color: var(--text-ink);">brands.csv</code>) e exportações JSON.
+          </p>
+</div>
+<div style="background: var(--card-bg); border: 1px solid var(--rule-color); padding: 24px; border-radius: 6px;">
+<h4 class="font-display" style="font-size: 1.15rem; color: var(--accent); margin-bottom: 8px;">Posso baixar uma amostra gratuita antes de licenciar o conjunto de dados completo de 17.000+ produtos?</h4>
+<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Com certeza. Você pode baixar nossa amostra aberta e verificada em CSV de 2.250+ linhas (<code style="color: var(--text-ink);">samples/suppdb_sample.csv</code>) diretamente da nossa página inicial ou do repositório no GitHub, sob uma licença Creative Commons.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="support">
+<div class="container" style="max-width: 720px; text-align: center;">
+<div class="section-header" style="justify-content: center;">
+<span class="section-diamond"></span>
+<span>§ 04 · Suporte direto de engenharia &amp; dados</span>
+<div class="section-line"></div>
+</div>
+<h3 class="font-display" style="font-size: 1.8rem;">Dúvidas ou precisa de dados personalizados?</h3>
+<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">
+        Se você precisa de formatos de esquema personalizados, acesso via API ou faturamento corporativo, fale diretamente com nossa equipe em <code>suppdb@dataengineered.io</code>.
+      </p>
+<button class="btn btn-outline" onclick="toggleSupportForm()" style="margin-top: 24px; padding: 16px 32px; font-weight: 600;" type="button">
+<span id="supportBtnText">💬 Abrir formulário de contato do suporte</span>
+</button>
+<div id="supportFormContainer" style="display: none; margin-top: 32px; text-align: left; border: 1px solid var(--rule-color); background: var(--bg-paper-2); padding: 40px;">
+<form action="https://api.web3forms.com/submit" class="contact-form" id="supportForm" method="POST" onsubmit="handleSupport(event)" style="margin-top: 0; border-top: none; padding-top: 0;"><input name="lang" type="hidden" value="pt-BR"/>
+<input name="access_key" type="hidden" value="bf34ff48-fcc6-4823-b386-9ae3d0712797"/>
+<input name="subject" type="hidden" value="New Support Inquiry for SuppDB!"/>
+<input name="from_name" type="hidden" value="SuppDB Contact Form"/>
+<div class="form-group">
+<label class="form-label" for="suppName">Seu nome / empresa *</label>
+<input class="form-input" id="suppName" name="name" placeholder="ex.: Ana Souza" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="suppEmail">Seu endereço de e-mail *</label>
+<input class="form-input" id="suppEmail" name="email" placeholder="alex@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="suppTopic">Assunto *</label>
+<select class="form-select" id="suppTopic" name="topic" required="">
+<option value="Dataset Question / Sample Inquiry">Dúvida sobre o conjunto de dados / pedido de amostra</option>
+<option value="Payment / Crypto / Invoicing Support">Suporte a pagamento / cripto / faturamento</option>
+<option value="Custom Data / Enterprise Integration">Dados personalizados / integração corporativa</option>
+<option value="Bug Report / Data Quality Feedback">Relatório de bug / feedback sobre qualidade dos dados</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="suppMsg">Mensagem *</label>
+<textarea class="form-input" id="suppMsg" name="message" placeholder="Descreva sua pergunta ou requisito personalizado..." required="" rows="4" style="resize: vertical;"></textarea>
+</div>
+<button class="btn btn-primary" style="width: 100%; justify-content: center; padding: 18px; margin-top: 8px;" type="submit">
+<span>Enviar mensagem para suppdb@dataengineered.io ➔</span>
+</button>
+</form>
+<div id="supportSuccess" style="display: none; padding: 24px; border: 1px solid var(--accent); background: var(--bg-paper); text-align: center;">
+<div style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--accent);">
+            ✦ Solicitação de suporte enviada!
+          </div>
+<p style="margin-top: 8px; font-size: 0.85rem;">
+            Sua mensagem foi enviada diretamente para <code>suppdb@dataengineered.io</code>. Nossa equipe costuma responder em até 2–4 horas úteis.
+          </p>
+<button class="btn btn-outline" onclick="resetSupport()" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" type="button">
+<span>↻ Enviar outra mensagem</span>
+</button>
+</div>
+</div>
+<p style="margin-top: 28px; font-size: 0.68rem; color: var(--text-muted);">
+        O SuppDB é um dado de referência factual compilado a partir de rótulos públicos do NIH DSLD — <strong>não é aconselhamento médico</strong>. Sempre confira com o rótulo físico atual do produto.
+      </p>
+</div>
+</section>
+<footer>
+<div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+<div>
+<strong>SUPPDB</strong> — Conjunto de dados de suplementos &amp; nootrópicos © 2026
+      </div>
+<div>
+<a href="https://github.com/SuppDB/supplements-nootropics-suppdb" style="text-decoration: underline;">Repositório no GitHub</a> ·
+        <a href="#overview">Documentação</a> ·
+        <a href="#pricing">Preços</a> ·
+        <a href="#support">Suporte</a>
+</div>
+</div>
+<div class="catalog-line" style="text-align:center; margin-top:14px; font-size:0.85rem; opacity:0.85;"><a href="https://dataengineered.io/">Parte do catálogo DataEngineered →</a> · <a href="https://dataengineered.io/about">Sobre</a> · <a href="https://dataengineered.io/terms">Termos</a> · <a href="https://dataengineered.io/privacy">Privacidade</a> · <a href="https://dataengineered.io/refund-policy">Política de reembolso</a></div>
+<!-- i18n:switcher --><nav class="i18n-switch" translate="no" aria-label="Idioma" style="text-align:center;margin:14px auto;font-size:0.85rem;opacity:0.85;"><a href="/" hreflang="en" lang="en" data-i18n-lang="en">English</a> · <a href="/es/" hreflang="es" lang="es" data-i18n-lang="es">Español</a> · <a href="/de/" hreflang="de" lang="de" data-i18n-lang="de">Deutsch</a> · <a href="/fr/" hreflang="fr" lang="fr" data-i18n-lang="fr">Français</a> · <span aria-current="true" style="font-weight:600">Português</span></nav><!-- /i18n:switcher --></footer>
+<script data-i18n="" id="i18n-strings" type="application/json">
+{
+  "themeDark": "Modo escuro",
+  "themeLight": "Modo claro",
+  "supportOpen": "💬 Abrir formulário de contato do suporte",
+  "supportClose": "✕ Fechar formulário de contato do suporte",
+  "gatewayTitle": "✦ Gateway de formulários indisponível",
+  "gatewayCheckout": "Nosso gateway de formulários não respondeu. Envie um e-mail para suppdb@dataengineered.io com seu nome, forma de pagamento e caso de uso — respondemos em até 1 dia útil.",
+  "gatewaySupport": "Nosso gateway de formulários não respondeu. Envie um e-mail para suppdb@dataengineered.io com sua mensagem — respondemos em até 1 dia útil.",
+  "sendAnotherRequest": "↻ Enviar outra solicitação",
+  "sendAnotherMessage": "↻ Enviar outra mensagem"
+}
+</script>
+<script>
+    // UI text set at runtime lives in #i18n-strings (translated per locale by scripts/i18n_common.py)
+    const I18N = JSON.parse(document.getElementById('i18n-strings').textContent);
+    const DESK_EMAIL = 'suppdb@dataengineered.io';
+    function escHtml(t) {
+      return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    // the desk address inside a message is shown as <code>, as before
+    function withCodeEmail(t) {
+      return escHtml(t).split(DESK_EMAIL).join('<code>' + DESK_EMAIL + '</code>');
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const label = document.getElementById('theme-label');
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        label.innerText = I18N.themeDark;
+      } else {
+        html.classList.add('dark');
+        label.innerText = I18N.themeLight;
+      }
+    }
+
+    function filterTable() {
+      const input = document.getElementById('searchBox');
+      const filter = input.value.toUpperCase();
+      const table = document.getElementById('suppTable');
+      const tr = table.getElementsByTagName('tr');
+      for (let i = 1; i < tr.length; i++) {
+        const rowText = tr[i].textContent || tr[i].innerText;
+        tr[i].style.display = rowText.toUpperCase().indexOf(filter) > -1 ? '' : 'none';
+      }
+    }
+
+    function handleCheckout(event) {
+      event.preventDefault();
+      const form = document.getElementById('checkoutForm');
+      const email = document.getElementById('userEmail').value;
+      const name = document.getElementById('userName').value;
+      const payMethod = document.getElementById('payMethod').value;
+      const useCase = document.getElementById('useCase').value;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'bf34ff48-fcc6-4823-b386-9ae3d0712797',
+          subject: 'New SuppDB Snapshot Dataset Request: ' + name,
+          from_name: 'SuppDB Contact Form',
+          Name: name, email: email, PaymentMethod: payMethod, UseCase: useCase
+        }),
+        signal: controller.signal
+      }).then(response => {
+        clearTimeout(timeoutId);
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        if (!data || data.success !== true) throw new Error('Form provider did not confirm delivery');
+        form.style.display = 'none';
+        document.getElementById('checkoutSuccess').style.display = 'block';
+      })
+      .catch(err => {
+        clearTimeout(timeoutId);
+        console.warn('Form provider AJAX error, triggering pre-filled mailto client fallback:', err);
+        if (submitBtn) submitBtn.disabled = false;
+        const subject = encodeURIComponent('New SuppDB Snapshot Dataset Request: ' + name);
+        const bodyText = encodeURIComponent(
+          `Hello SuppDB Team,\n\nI would like to purchase the full SuppDB dataset snapshot ($49).\n\nDetails:\nName: ${name}\nEmail: ${email}\nPayment Method: ${payMethod}\nUse Case: ${useCase}\n\nPlease reply with our download link and payment confirmation.\n\nThank you!`
+        );
+        form.style.display = 'none';
+        const successEl = document.getElementById('checkoutSuccess');
+        if (successEl) {
+          successEl.innerHTML = `
+            <div style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--accent);">
+              ${escHtml(I18N.gatewayTitle)}
+            </div>
+            <p style="margin-top: 8px; font-size: 0.85rem;">
+              ${withCodeEmail(I18N.gatewayCheckout)}
+            </p>
+            <button type="button" class="btn btn-outline" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" onclick="resetCheckout()">
+              <span>${escHtml(I18N.sendAnotherRequest)}</span>
+            </button>`;
+          successEl.style.display = 'block';
+        }
+      });
+    }
+
+    function resetCheckout() {
+      const success = document.getElementById('checkoutSuccess');
+      if (!success || success.style.display === 'none' || success.style.display === '') return;
+      const form = document.getElementById('checkoutForm');
+      form.reset();
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = false;
+      form.style.display = '';
+      success.style.display = 'none';
+    }
+
+    function resetSupport() {
+      const form = document.getElementById('supportForm');
+      form.reset();
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = false;
+      form.style.display = '';
+      document.getElementById('supportSuccess').style.display = 'none';
+    }
+
+    function toggleSupportForm() {
+      const container = document.getElementById('supportFormContainer');
+      const btnText = document.getElementById('supportBtnText');
+      if (container.style.display === 'none') {
+        if (document.getElementById('supportSuccess').style.display !== 'none') resetSupport();
+        container.style.display = 'block';
+        btnText.innerText = I18N.supportClose;
+        container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        container.style.display = 'none';
+        btnText.innerText = I18N.supportOpen;
+      }
+    }
+
+    function openCustomQuote(event) {
+      if (event) event.preventDefault();
+      if (document.getElementById('supportSuccess').style.display !== 'none') resetSupport();
+      const topic = document.getElementById('suppTopic');
+      if (topic) topic.value = 'Custom Data / Enterprise Integration';
+      const container = document.getElementById('supportFormContainer');
+      const btnText = document.getElementById('supportBtnText');
+      container.style.display = 'block';
+      if (btnText) btnText.innerText = I18N.supportClose;
+      container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function handleSupport(event) {
+      event.preventDefault();
+      const form = document.getElementById('supportForm');
+      const name = document.getElementById('suppName').value;
+      const email = document.getElementById('suppEmail').value;
+      const topic = document.getElementById('suppTopic').value;
+      const message = document.getElementById('suppMsg').value;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'bf34ff48-fcc6-4823-b386-9ae3d0712797',
+          subject: 'SuppDB Support: ' + topic + ' (' + name + ')',
+          from_name: 'SuppDB Contact Form',
+          Name: name, email: email, Topic: topic, Message: message
+        }),
+        signal: controller.signal
+      }).then(response => {
+        clearTimeout(timeoutId);
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        if (!data || data.success !== true) throw new Error('Form provider did not confirm delivery');
+        form.style.display = 'none';
+        document.getElementById('supportSuccess').style.display = 'block';
+      })
+      .catch(err => {
+        clearTimeout(timeoutId);
+        console.warn('Form provider AJAX error, triggering pre-filled mailto client fallback:', err);
+        if (submitBtn) submitBtn.disabled = false;
+        const subject = encodeURIComponent('SuppDB Support: ' + topic + ' (' + name + ')');
+        const bodyText = encodeURIComponent(
+          `Hello SuppDB Support Desk,\n\nInquiry Topic: ${topic}\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nThank you!`
+        );
+        form.style.display = 'none';
+        const successEl = document.getElementById('supportSuccess');
+        if (successEl) {
+          successEl.innerHTML = `
+            <div style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--accent);">
+              ${escHtml(I18N.gatewayTitle)}
+            </div>
+            <p style="margin-top: 8px; font-size: 0.85rem;">
+              ${withCodeEmail(I18N.gatewaySupport)}
+            </p>
+            <button type="button" class="btn btn-outline" style="margin-top: 18px; padding: 12px 24px; font-size: 0.8rem; font-weight: 600;" onclick="resetSupport()">
+              <span>${escHtml(I18N.sendAnotherMessage)}</span>
+            </button>`;
+          successEl.style.display = 'block';
+        }
+      });
+    }
+  </script>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SuppDB PWA ServiceWorker registered with scope:', reg.scope))
+          .catch(err => console.warn('SuppDB PWA ServiceWorker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

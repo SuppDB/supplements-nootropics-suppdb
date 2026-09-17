@@ -1,0 +1,1922 @@
+{
+ "01c9b9a4a9a74139": {
+  "src": "§ FAQ · Frequently Asked Questions",
+  "t": "§ FAQ · Questions fréquentes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "02315acc06cb72e1": {
+  "src": "One page per commercial product, with its label panel normalised to per-serving milligrams. Proprietary blends whose per-ingredient dose is undisclosed are flagged rather than dropped.",
+  "t": "Une page par produit commercial, avec son tableau d'étiquette normalisé en milligrammes par portion. Les mélanges exclusifs dont la dose par ingrédient n'est pas communiquée sont signalés plutôt qu'écartés.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "024c9777e0bdf5ca": {
+  "src": "Buy Now · Safety Layer · {0} →",
+  "t": "Acheter maintenant · Couche sécurité · {0} →",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "02bd4fc96f44c4cd": {
+  "src": "Dataset Question / Sample Inquiry",
+  "t": "Question sur le jeu de données / demande d'échantillon",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "03396b8f5079d78c": {
+  "src": "N/A g/mol",
+  "t": "N/D g/mol",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "040ff2fec29f4ae2": {
+  "src": "{0} ingredient monographs from A in SuppDB's ingredient directory, including {1}, {2}, {3}.",
+  "t": "{0} monographies d'ingrédients de la section A du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "04270607c73d4ae7": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "045808a932f388bd": {
+  "src": "Related products",
+  "t": "Produits associés",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "046fddfd83638201": {
+  "src": "alex@company.com",
+  "t": "camille@entreprise.fr",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "051402828ee9e1aa": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2}. Per-serving doses range {3} mg.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2}. Doses par portion : {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "05198cf9b2d76c7c": {
+  "src": "e.g. Alex Smith",
+  "t": "ex. Camille Martin",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0714a401bba3ac0f": {
+  "src": "↻ Send another message",
+  "t": "↻ Envoyer un autre message",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "08c9dabe9ccbb1ed": {
+  "src": "Live Explorer",
+  "t": "Explorateur en direct",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0c107a6323ebd488": {
+  "src": "Send Message to suppdb@dataengineered.io ➔",
+  "t": "Envoyer le message à suppdb@dataengineered.io ➔",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0cac679506f47fb8": {
+  "src": "{0} is a {1} supplement from {2} at {3} mL per serving across {4} ingredients. Normalized supplement facts for all {5} ingredients…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mL par portion, avec {4} ingrédients. Composition normalisée des {5} ingrédients…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0d95eb82f0e80c19": {
+  "src": "<0>Coverage:</0> UPC {1} · Servings {2} · Proprietary-blend flags on {3} ingredient rows · PubChem chemistry on {4} compounds · Source URL on every record. Honest field coverage published up front.",
+  "t": "<0>Couverture :</0> UPC {1} · portions {2} · indicateurs de mélange exclusif sur {3} lignes d'ingrédients · chimie PubChem sur {4} composés · URL source sur chaque fiche. Couverture réelle des champs publiée d'emblée.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0efc2e6be4c23b9a": {
+  "src": "Overview",
+  "t": "Aperçu",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "0fc7f2ad29936821": {
+  "src": "Pricing &amp; Licensing",
+  "t": "Tarifs &amp; licences",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1168cc144b8493aa": {
+  "src": "Every dose converted to milligrams — {0}, {1}, and substance-specific {2} handled correctly. Undisclosed proprietary-blend doses are flagged, not silently dropped.",
+  "t": "Chaque dose convertie en milligrammes — {0}, {1} et {2} propres à chaque substance traités correctement. Les doses non communiquées des mélanges exclusifs sont signalées, jamais écartées en silence.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1206f413a95fab76": {
+  "src": "Real Supplement{0}Labels,{1} <2>normalized</2><3>.</3>",
+  "t": "Étiquettes réelles{0}de compléments,{1} <2>normalisées</2><3>.</3>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "127e306424179f77": {
+  "src": "PubChem CID",
+  "t": "CID PubChem",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "128ee3f2170bd0fa": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2}.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "129678faf3772a04": {
+  "src": "fatty acid",
+  "t": "acide gras",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "12d0058fcbe93c73": {
+  "src": "Filter by brand, product, or ingredient (e.g. {0}, {1}, {2})...",
+  "t": "Filtrer par marque, produit ou ingrédient (ex. {0}, {1}, {2})...",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "151f299a516165a4": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all {6}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée des {6}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1798c339a133346d": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg.",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "17a506fa0ca36939": {
+  "src": "Want to dig deeper? <0>Try the interactive Sample Explorer on 🤗 Hugging Face →</0> or <1>download the free {2}-product sample dataset</1>.",
+  "t": "Envie d'aller plus loin ? <0>Essayez l'explorateur d'échantillon interactif sur 🤗 Hugging Face →</0> ou <1>téléchargez l'échantillon gratuit de {2} produits</1>.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "17e5eca1cffde6fd": {
+  "src": "Your message has been sent directly to {0}. Our team typically responds within {1} business hours.",
+  "t": "Votre message a été envoyé directement à {0}. Notre équipe répond généralement sous {1} heures ouvrées.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1835e31d170e2f16": {
+  "src": "§ {0} · Headline Metrics · Public-Domain Sources",
+  "t": "§ {0} · Indicateurs clés · Sources du domaine public",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "19106ea7317011b9": {
+  "src": "← Explorer",
+  "t": "← Explorateur",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1945a53b4f2a1e3e": {
+  "src": "Active-Ingredient Records (dose normalized to mg)",
+  "t": "Fiches d'ingrédients actifs (dose normalisée en mg)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1950ec5fc195cff9": {
+  "src": "{0} ingredient monographs",
+  "t": "{0} monographies d'ingrédients",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "19547c0939dc911d": {
+  "src": "↓ Sample Explorer",
+  "t": "↓ Explorateur d'échantillon",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1b566aa70e4b636f": {
+  "src": "NIH PubChem Chemistry",
+  "t": "Chimie NIH PubChem",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1b97d070d0b66d1e": {
+  "src": "{0} rows",
+  "t": "{0} lignes",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1c0fdedfdc0745a3": {
+  "src": "{0} supplement products normalized to mg with NIH PubChem chemistry, plus a Safety layer: {1} drug interactions, upper-limit scores &amp; contraindications.",
+  "t": "{0} compléments alimentaires normalisés en mg avec chimie NIH PubChem, plus une couche Sécurité : {1} interactions médicamenteuses, scores de limite supérieure &amp; contre-indications.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1d302a354c8eeb21": {
+  "src": "<0>Full provenance:</0> every record carries its DSLD label id and source URL — traceable and re-verifiable.",
+  "t": "<0>Provenance complète :</0> chaque fiche porte son identifiant d'étiquette DSLD et son URL source — traçable et revérifiable.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1d698baf44082d83": {
+  "src": "nootropics dataset",
+  "t": "jeu de données nootropiques",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "1f9aec85676e843b": {
+  "src": "{0} — in {1} products | SuppDB",
+  "t": "{0} — dans {1} produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "20778fc2e70afe2d": {
+  "src": "{0} product labels from P in SuppDB's product directory, including {1}, {2}, {3}.",
+  "t": "{0} étiquettes de produits de la section P du répertoire des produits de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "20793049abe64811": {
+  "src": "{0} by {1} — supplement | SuppDB",
+  "t": "{0} de {1} — complément | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "233e417df913a957": {
+  "src": "✦ Support Inquiry Dispatched!",
+  "t": "✦ Demande de support envoyée !",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "259823a42aefbc2d": {
+  "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}. Per-serving dose is…",
+  "t": "{0} figure dans {1} produit SuppDB, le plus souvent sous forme de {2} et {3}. Dose par portion…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "25c8c5f371cbcda7": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all {6} ingredients…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée des {6} ingrédients…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "27116244008c45b1": {
+  "src": "Dose / serving",
+  "t": "Dose / portion",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "28aafac9ae4123e5": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "28f73d7b366f073f": {
+  "src": "{0} is a {1} supplement from DC at {2} {3} per serving, led by {4} at {5} mg. Normalized supplement facts…",
+  "t": "{0} est un complément de type {1} de DC, à {2} {3} par portion, principalement {4} à {5} mg. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2954f963153da9f3": {
+  "src": "Catalog only — Full Snapshot",
+  "t": "Catalogue seul — Snapshot complet",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2cc956decdd00a0d": {
+  "src": "Ingredient directory: M",
+  "t": "Répertoire des ingrédients : M",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2e0190109745c366": {
+  "src": "Product directory — A — {0} product labels | SuppDB",
+  "t": "Répertoire des produits — A — {0} étiquettes de produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2ea4a10ec46496c9": {
+  "src": "{0} sit inside a proprietary blend where the label withholds the exact split.",
+  "t": "{0} font partie d'un mélange exclusif dont l'étiquette ne détaille pas la répartition exacte.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "2f13f1ec13b69fe1": {
+  "src": "{0} ingredient monographs from C in SuppDB's ingredient directory, including {1}, {2}, {3}.",
+  "t": "{0} monographies d'ingrédients de la section C du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "30d8215676a84eb1": {
+  "src": "{0} is a {1} supplement from {2} at {3} mg per serving, led by {4} at {5} mg. Normalized supplement facts for all {6}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mg par portion, principalement {4} à {5} mg. Composition normalisée des {6}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "311078c1a01c2bdf": {
+  "src": "Your Name / Company *",
+  "t": "Votre nom / entreprise *",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "31e7bc198f6e6b8f": {
+  "src": "Headline Metrics",
+  "t": "Indicateurs clés",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "328691e73f4f3f68": {
+  "src": "Normalized supplement facts record for {0}: {1}, {2} mg serving size, verified against NIH DSLD label {3}.",
+  "t": "Fiche de composition normalisée pour {0} : {1}, portion de {2} mg, vérifiée sur l'étiquette NIH DSLD {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3341b351f45f6eab": {
+  "src": "High-purity chemical entities and standardized nootropic compounds indexed inside SuppDB.",
+  "t": "Entités chimiques de haute pureté et composés nootropiques standardisés indexés dans SuppDB.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "33f3e4ac96fb71bb": {
+  "src": "SUPPDB <0>Supplements &amp; Nootropics Dataset</0>",
+  "t": "SUPPDB <0>Jeu de données compléments alimentaires &amp; nootropiques</0>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "34ac37f56e147bf6": {
+  "src": "Back to home",
+  "t": "Retour à l'accueil",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "356be0df3702e44b": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients.",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3671b002703d3d2d": {
+  "src": "Tier {0} · Catalog only",
+  "t": "Niveau {0} · Catalogue seul",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "378469c1d455f5d8": {
+  "src": "Chemistry + InChIKey Canonicalization",
+  "t": "Chimie + canonicalisation par InChIKey",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "38711d855941680b": {
+  "src": "Label reference values in the sample record a recommended intake of {0} mg.",
+  "t": "Les valeurs de référence des étiquettes de l'échantillon indiquent un apport recommandé de {0} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3c01fb3c5edaa5fb": {
+  "src": "Our form gateway did not respond. Please email suppdb@dataengineered.io with your name, payment method and use case — we reply within {0} business day.",
+  "t": "Notre passerelle de formulaire n'a pas répondu. Veuillez écrire à suppdb@dataengineered.io en indiquant votre nom, votre moyen de paiement et votre cas d'usage — nous répondons sous {0} jour ouvré.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3c3fe3a18d8708b5": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5}…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5}…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3c749dafc325c261": {
+  "src": "Ingredients Index",
+  "t": "Index des ingrédients",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3c8de225b7ed52cd": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement facts for all {7}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée des {7}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "3ecbd287fe55b668": {
+  "src": "<0>Per-product % of the Tolerable Upper Limit</0> with over-limit flags — computed from mg-normalized doses against NIH DRI limits; flags the {1} products that exceed a safe ceiling.",
+  "t": "<0>Pourcentage de la limite supérieure tolérable par produit</0> avec indicateurs de dépassement — calculé à partir des doses normalisées en mg par rapport aux limites NIH DRI ; signale les {1} produits qui dépassent un plafond de sécurité.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "408d6771c49efe7c": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "441ef6fcf59ad84a": {
+  "src": "BROWSE BY RANGE",
+  "t": "PARCOURIR PAR PLAGE",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4434abd5bc86fae4": {
+  "src": "Normalized supplement facts record for {0}: {1}, {2} mL serving size, verified against NIH DSLD label {3}.",
+  "t": "Fiche de composition normalisée pour {0} : {1}, portion de {2} mL, vérifiée sur l'étiquette NIH DSLD {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4495be1965ae86be": {
+  "src": "— same form — {0}",
+  "t": "— même forme — {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "44fd951804fd33eb": {
+  "src": "Buy Now · Full Snapshot · <0>{1}</0> →",
+  "t": "Acheter maintenant · Snapshot complet · <0>{1}</0> →",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "455ad8ee89ec476d": {
+  "src": "The full dataset snapshot ({0}) is delivered by email within {1} h as a clean, relational SQLite database ({2}) alongside normalized CSV tables ({3}, {4}, and {5}) and JSON dumps.",
+  "t": "Le snapshot complet du jeu de données ({0}) est livré par e-mail sous {1} h sous forme de base de données SQLite relationnelle propre ({2}), accompagnée de tables CSV normalisées ({3}, {4} et {5}) et d'exports JSON.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4571360a7e9c26ed": {
+  "src": "{0} is a {1} supplement from {2} at {3} mg per serving, led by {4} at {5} mg. Normalized supplement…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mg par portion, principalement {4} à {5} mg. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "475258a41c47a724": {
+  "src": "Not assigned / Complex botanical extract",
+  "t": "Non attribué / extrait botanique complexe",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "475cd926d326108a": {
+  "src": "Proprietary Blend?",
+  "t": "Mélange exclusif ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "47bfd7086883b0c2": {
+  "src": "Whether you need custom schema formats, API access, or enterprise invoicing, reach out directly to our desk at {0}.",
+  "t": "Que vous ayez besoin de formats de schéma personnalisés, d'un accès API ou d'une facturation entreprise, contactez directement notre équipe à {0}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "49fc2ca365bc32cf": {
+  "src": "All dosage quantities standardized to exact milligrams (mg). Chemical identifiers cross-referenced via NIH PubChem.",
+  "t": "Toutes les quantités sont standardisées en milligrammes exacts (mg). Identifiants chimiques croisés avec NIH PubChem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4b6357edddbf514e": {
+  "src": "§ {0} · Live Ingredient Explorer Preview",
+  "t": "§ {0} · Aperçu de l'explorateur d'ingrédients en direct",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4b6a38b6a1cb0d4a": {
+  "src": "Normalized supplement facts record for {0}: {1}, {2} {3} serving size, verified against NIH DSLD label {4}.",
+  "t": "Fiche de composition normalisée pour {0} : {1}, portion de {2} {3}, vérifiée sur l'étiquette NIH DSLD {4}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4ce501266562020e": {
+  "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}.",
+  "t": "{0} figure dans {1} produit SuppDB, le plus souvent sous forme de {2} et {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4d468fc18b5c3a9f": {
+  "src": "supplement facts",
+  "t": "composition des compléments alimentaires",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4d75cbc437154c88": {
+  "src": "Structured supplement dataset: {0} real products from {1} brands, every dose normalized to mg, proprietary blends flagged, enriched with NIH PubChem chemistry (CID, formula, SMILES, InChIKey) and NIH DRI reference intakes, with full source provenance. Relational SQLite plus CSV and JSON.",
+  "t": "Jeu de données structuré sur les compléments alimentaires : {0} produits réels de {1} marques, chaque dose normalisée en mg, mélanges exclusifs signalés, enrichi avec la chimie NIH PubChem (CID, formule, SMILES, InChIKey) et les apports de référence NIH DRI, avec provenance complète des sources. SQLite relationnel plus CSV et JSON.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4d7e7623f3580af3": {
+  "src": "Full Dataset ({0})",
+  "t": "Jeu de données complet ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4e0c81c262ba8856": {
+  "src": "{0} appears in {1} SuppDB product, most often as {2}. Per-serving dose is {3} mg.",
+  "t": "{0} figure dans {1} produit SuppDB, le plus souvent sous forme de {2}. Dose par portion : {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4e50ab00926ab912": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "4fb31a2c034aae1b": {
+  "src": "Sample Explorer",
+  "t": "Explorateur d'échantillon",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "502c2aa8b6f9b6d4": {
+  "src": "Ingredient directory: B",
+  "t": "Répertoire des ingrédients : B",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "507a57909f99b7ef": {
+  "src": "Commercial Product Dosages",
+  "t": "Dosages dans les produits commerciaux",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5084f07d674b9c26": {
+  "src": "{0} ingredient is cross-referenced to NIH PubChem chemistry.",
+  "t": "{0} ingrédient est croisé avec la chimie NIH PubChem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5109d21eef6e4458": {
+  "src": "Supplements &amp; nootropics dataset provider — real NIH DSLD labels normalized to mg dosages with NIH PubChem chemistry, plus a safety layer of drug interactions, tolerable-upper-limit scores and contraindications.",
+  "t": "Fournisseur de jeux de données sur les compléments alimentaires &amp; nootropiques — étiquettes NIH DSLD réelles normalisées en dosages mg avec chimie NIH PubChem, plus une couche de sécurité : interactions médicamenteuses, scores de limite supérieure tolérable et contre-indications.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "525206052b4f2c76": {
+  "src": "{0} by {1} | SuppDB",
+  "t": "{0} de {1} | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "52f4af89bf979ad7": {
+  "src": "Browse every page: <0>{1} ingredient monographs</0> · <2>{3} product labels</2>",
+  "t": "Parcourir toutes les pages : <0>{1} monographies d'ingrédients</0> · <2>{3} étiquettes de produits</2>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5382dbc62591a9eb": {
+  "src": "<0>WADA doping flags</0> for banned/monitored compounds, plus a dose-disclosure transparency score per product.",
+  "t": "<0>Indicateurs de dopage AMA</0> pour les composés interdits ou surveillés, plus un score de transparence sur la communication des doses par produit.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5397e0583f14f6c8": {
+  "src": "Yes",
+  "t": "Oui",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "54d37cd1fd36cb82": {
+  "src": "Structured supplement dataset: {0} real products from {1} brands, doses normalized to mg, proprietary blends flagged, enriched with NIH PubChem chemistry.",
+  "t": "Jeu de données structuré sur les compléments alimentaires : {0} produits réels de {1} marques, doses normalisées en mg, mélanges exclusifs signalés, enrichi avec la chimie NIH PubChem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "558bbd18fe02f130": {
+  "src": "{0} appears in {1} commercial supplement products across {2} brand in this SuppDB sample.",
+  "t": "{0} figure dans {1} compléments alimentaires commercialisés, de {2} marque, dans cet échantillon SuppDB.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "558d9ebff7a15b16": {
+  "src": "mineral",
+  "t": "minéral",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "56821e62e2543af8": {
+  "src": "SuppDB is factual reference data compiled from public NIH DSLD labels — <0>not medical advice</0>. Always verify against the current physical product label.",
+  "t": "SuppDB est une base de données de référence factuelle compilée à partir des étiquettes publiques NIH DSLD — <0>pas un avis médical</0>. Vérifiez toujours avec l'étiquette physique actuelle du produit.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "57903b562c9f698d": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2}. Per-serving dose is {3} mg.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2}. Dose par portion : {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "57bda1092d15e703": {
+  "src": "Product directory — P — {0} product labels | SuppDB",
+  "t": "Répertoire des produits — P — {0} étiquettes de produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "588a8163713e39e9": {
+  "src": "Delivered by email within {0} h · interactions · upper-limit % · contraindications",
+  "t": "Livré par e-mail sous {0} h · interactions · % de limite supérieure · contre-indications",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "59450bbf408b2875": {
+  "src": "Label reference values in the sample record an upper safety limit up to {0} mg.",
+  "t": "Les valeurs de référence des étiquettes de l'échantillon indiquent une limite supérieure de sécurité allant jusqu'à {0} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "59c539e85ddc0bdf": {
+  "src": "What format is the dataset delivered in when I purchase the snapshot?",
+  "t": "Sous quel format le jeu de données est-il livré lorsque j'achète le snapshot ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5ac261177daf21ef": {
+  "src": "{0} appears in {1} commercial supplement product across {2} brand in this SuppDB sample, at a per-serving dose of {3} mg.",
+  "t": "{0} figure dans {1} complément alimentaire commercialisé, de {2} marque, dans cet échantillon SuppDB, avec une dose par portion de {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5b8d2481ae4f0b44": {
+  "src": "Part of the DataEngineered catalog →",
+  "t": "Fait partie du catalogue DataEngineered →",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5d2e5886de41b746": {
+  "src": "Bug Report / Data Quality Feedback",
+  "t": "Signalement de bug / retour sur la qualité des données",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5d573e8da831bfcb": {
+  "src": "Normalized supplement facts record for {0}: {1}, {2} oz serving size, verified against NIH DSLD label {3}.",
+  "t": "Fiche de composition normalisée pour {0} : {1}, portion de {2} oz, vérifiée sur l'étiquette NIH DSLD {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5db916fc8fc07d6b": {
+  "src": "Every commercial supplement product in SuppDB, each with its normalised per-serving ingredient doses in mg.",
+  "t": "Tous les compléments alimentaires commercialisés de SuppDB, chacun avec ses doses d'ingrédients normalisées par portion en mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5e1993be7d6c9c87": {
+  "src": "SuppDB Safety &amp; Interaction Layer",
+  "t": "Couche Sécurité &amp; interactions SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5e1fbda3f800f492": {
+  "src": "✕ Close Support Contact Form",
+  "t": "✕ Fermer le formulaire de contact support",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "5ffec519b0f69761": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving doses range…",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}. Doses par portion…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "602a13949ced6d53": {
+  "src": "CHEMICAL MONOGRAPH · {0}",
+  "t": "MONOGRAPHIE CHIMIQUE · {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "62b4aa574f708ad2": {
+  "src": "Brand",
+  "t": "Marque",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "630a82fd6e5c1784": {
+  "src": "Featured Active Ingredients &amp; Monograph Index",
+  "t": "Ingrédients actifs mis en avant &amp; index des monographies",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "63f4b2402b33b120": {
+  "src": "Safety &amp; Interaction Layer",
+  "t": "Couche Sécurité &amp; interactions",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6403e93dc73426dd": {
+  "src": "{0} product labels from {1} in SuppDB's product directory, including {2}, {3}, Nite Nite Very…",
+  "t": "{0} étiquettes de produits de la section {1} du répertoire des produits de SuppDB, dont {2}, {3}, Nite Nite Very…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "65ff49590072022c": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "66a1c7d07c651c7c": {
+  "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample, at per-serving doses ranging {3} mg.",
+  "t": "{0} figure dans {1} compléments alimentaires commercialisés, de {2} marques, dans cet échantillon SuppDB, avec des doses par portion de {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "67f8d025b5a8499c": {
+  "src": "Ingredient directory — B — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — B — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "68250fda6ec67130": {
+  "src": "{0} ingredient monographs from {1} in SuppDB's ingredient directory, including {2}, {3}, {4}.",
+  "t": "{0} monographies d'ingrédients de la section {1} du répertoire des ingrédients de SuppDB, dont {2}, {3}, {4}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "68a043701a34a4be": {
+  "src": "Formula: {0} · Weight: {1} · InChIKey: {2}",
+  "t": "Formule : {0} · Masse : {1} · InChIKey : {2}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6b21fb791ac05170": {
+  "src": "About",
+  "t": "À propos",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6b264cecf5037aa1": {
+  "src": "{0} appears in {1} SuppDB product, most often as {2}.",
+  "t": "{0} figure dans {1} produit SuppDB, le plus souvent sous forme de {2}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6b2b07ce80a9d2bb": {
+  "src": "Supp<0>DB</0>",
+  "t": "Supp<0>DB</0>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6c265db37ec56695": {
+  "src": "{0} ingredient monographs from M in SuppDB's ingredient directory, including {1}, {2}, {3}.",
+  "t": "{0} monographies d'ingrédients de la section M du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6c4f544d2e48f8ec": {
+  "src": "Its NIH PubChem record lists molecular formula {0}, a molecular weight of {1} g/mol, and InChIKey {2}.",
+  "t": "Sa fiche NIH PubChem indique la formule moléculaire {0}, une masse moléculaire de {1} g/mol et l'InChIKey {2}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6d52be4e8f58a20e": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6d62201d77fc48cd": {
+  "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg.",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mL par portion, principalement {4} à {5} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6d756541034b5fe5": {
+  "src": "mg / Serving",
+  "t": "mg / portion",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6de42c187c85df3b": {
+  "src": "This SuppDB record normalizes {0} active ingredient from {1}'s {2} label as a {3} supplement at {4} {5} per serving.",
+  "t": "Cette fiche SuppDB normalise {0} ingrédient actif de l'étiquette {2} de {1}, un complément de type {3} à {4} {5} par portion.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6e9a4590408c61cf": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving dose is…",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}. Dose par portion…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "6ecdf44ea48783f7": {
+  "src": "Normalized Supplement Facts &amp; Chemistry",
+  "t": "Composition normalisée &amp; chimie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "703824b939213eed": {
+  "src": "Ingredient directory",
+  "t": "Répertoire des ingrédients",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "70b446aac42c10f3": {
+  "src": "hormone",
+  "t": "hormone",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "70f8bb9a8a5393ef": {
+  "src": "Home",
+  "t": "Accueil",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7254366580183767": {
+  "src": "{0} product labels from M in SuppDB's product directory, including {1}, {2}, {3}.",
+  "t": "{0} étiquettes de produits de la section M du répertoire des produits de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "737133f7311248c1": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving doses range {4} mg.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}. Doses par portion : {4} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "73b110bbd82e422e": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "74e1a1ea4178b62d": {
+  "src": "Secure card checkout via Stripe · Apple Pay / Google Pay · download link delivered by email after payment{0} Need a company invoice or crypto payment? <1>use the contact form</1> (suppdb@dataengineered.io)",
+  "t": "Paiement sécurisé par carte via Stripe · Apple Pay / Google Pay · lien de téléchargement envoyé par e-mail après paiement{0} Besoin d'une facture d'entreprise ou d'un paiement en crypto ? <1>utilisez le formulaire de contact</1> (suppdb@dataengineered.io)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "763ed62b897e691b": {
+  "src": "{0} by DC",
+  "t": "{0} de DC",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "765be669ee12f9d4": {
+  "src": "Safety layer for supplement products: {0} evidence-graded supplement × drug interactions, per-product % of the tolerable upper limit with over-limit flags, condition contraindications and WADA flags, delivered as relational SQLite + CSV + JSON.",
+  "t": "Couche de sécurité pour les compléments alimentaires : {0} interactions complément × médicament classées par niveau de preuve, pourcentage par produit de la limite supérieure tolérable avec indicateurs de dépassement, contre-indications liées à des pathologies et indicateurs AMA, livrés en SQLite relationnel + CSV + JSON.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "775ecf82874c62e8": {
+  "src": "mg Norm.",
+  "t": "Norm. mg",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "776386e54362fe09": {
+  "src": "Dosage Normalization + Blend Flags",
+  "t": "Normalisation des dosages + indicateurs de mélange",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7773a5f0ff5245f5": {
+  "src": "Ingredient directory — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "77dc3ba0003a0db0": {
+  "src": "Light Mode",
+  "t": "Mode clair",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "781683c345ae5e6a": {
+  "src": "SuppDB leads with its Safety &amp; Interaction Layer — {0} supplement × drug interactions, per-product % of the tolerable upper limit, condition contraindications and WADA flags — on top of a structured catalog of {1} real supplement &amp; nootropic products from {2} brands, built exclusively from the public NIH Dietary Supplement Label Database (DSLD). Every active ingredient is normalized to milligrams, proprietary blends are flagged where the dose is hidden, and each compound is enriched with NIH PubChem chemistry — with a source label URL on every record so any fact can be re-verified. A separate <3>Safety layer</3> builds on the normalized doses: {4} supplement–drug interactions, per-product percentage of the tolerable upper limit, condition contraindications, and WADA doping flags — every interaction cited to its public-domain source.",
+  "t": "SuppDB met en avant sa couche Sécurité &amp; interactions — {0} interactions complément × médicament, pourcentage par produit de la limite supérieure tolérable, contre-indications liées à des pathologies et indicateurs AMA — en complément d'un catalogue structuré de {1} compléments alimentaires &amp; nootropiques réels de {2} marques, construit exclusivement à partir de la base publique NIH Dietary Supplement Label Database (DSLD). Chaque ingrédient actif est normalisé en milligrammes, les mélanges exclusifs sont signalés lorsque la dose est masquée, et chaque composé est enrichi avec la chimie NIH PubChem — avec une URL d'étiquette source sur chaque fiche pour que tout fait puisse être revérifié. Une <3>couche Sécurité</3> distincte s'appuie sur les doses normalisées : {4} interactions complément–médicament, pourcentage par produit de la limite supérieure tolérable, contre-indications liées à des pathologies et indicateurs de dopage AMA — chaque interaction étant citée avec sa source du domaine public.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "78baac28b26fc383": {
+  "src": "Public-Domain Label Source",
+  "t": "Source d'étiquettes du domaine public",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "797b0605472de18f": {
+  "src": "License Snapshot ({0})",
+  "t": "Licence du snapshot ({0})",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7a181cd3794de5a0": {
+  "src": "mg dosage normalization",
+  "t": "normalisation des dosages en mg",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7ab6b7e48cec6ce4": {
+  "src": "Get the Dataset",
+  "t": "Obtenir le jeu de données",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7b5fbb291618eb17": {
+  "src": "Sold under the {0} and {1} labels in this sample.",
+  "t": "Vendu sous les marques {0} et {1} dans cet échantillon.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7ddfd264324fe590": {
+  "src": "Ingredient",
+  "t": "Ingrédient",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7dea65f8bc1182d8": {
+  "src": "Ingredient directory: C",
+  "t": "Répertoire des ingrédients : C",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7eb1e1ba314ab936": {
+  "src": "Safety · Catalog · Custom",
+  "t": "Sécurité · Catalogue · Sur mesure",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7eb71c961ff2e202": {
+  "src": "SuppDB · <0>Full snapshot ({1})</0> · <2>suppdb.dataengineered.io</2>",
+  "t": "SuppDB · <0>Snapshot complet ({1})</0> · <2>suppdb.dataengineered.io</2>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7f37b81d6b0d1aa9": {
+  "src": "This SuppDB record normalizes {0} active ingredient from {1}'s {2} label as a {3} supplement at {4} {5} per serving, {6} servings per container.",
+  "t": "Cette fiche SuppDB normalise {0} ingrédient actif de l'étiquette {2} de {1}, un complément de type {3} à {4} {5} par portion, {6} portions par contenant.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "7fd018a0b17b270f": {
+  "src": "Ingredient directory — S — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — S — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8010958986486b38": {
+  "src": "🔬 Verify on NIH DSLD ↗",
+  "t": "🔬 Vérifier sur NIH DSLD ↗",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "80446347ede53cf9": {
+  "src": "Form",
+  "t": "Forme",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "80ecc62c9c593645": {
+  "src": "{0} product labels",
+  "t": "{0} étiquettes de produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "816c52fd2bdd94a6": {
+  "src": "No",
+  "t": "Non",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8344778bd78030ce": {
+  "src": "<0>Relational SQLite + CSV + JSON:</0> normalized tables (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), ready for AI health apps, dose comparison, and {1} integration.",
+  "t": "<0>SQLite relationnel + CSV + JSON :</0> tables normalisées (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), prêtes pour les applications santé à base d'IA, la comparaison de doses et l'intégration {1}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8563af9b27be1c0c": {
+  "src": "Custom Data / Enterprise Integration",
+  "t": "Données sur mesure / intégration entreprise",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "87f2709ae4368c51": {
+  "src": "Ingredient directory: S",
+  "t": "Répertoire des ingrédients : S",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "88dfbfc29bf4b22e": {
+  "src": "Get the dataset",
+  "t": "Obtenir le jeu de données",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "88f941e78398d3a7": {
+  "src": "Exact mg ingredient dosages, chemical formulations, and NIH DSLD verification record for {0}.",
+  "t": "Doses exactes en mg par ingrédient, formulations chimiques et fiche de vérification NIH DSLD pour {0}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8a4a7964112b072c": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8addb891254ad8a1": {
+  "src": "Message *",
+  "t": "Message *",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8b79c7aba12e0759": {
+  "src": "{0} ingredients are cross-referenced to NIH PubChem chemistry.",
+  "t": "{0} ingrédients sont croisés avec la chimie NIH PubChem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8bc8539d1e93bd4d": {
+  "src": "<0>Relational SQLite + CSV + JSON</0>, self-joinable via a slim compound index — drops straight into pharmacy, telehealth, and stack-tracker apps.",
+  "t": "<0>SQLite relationnel + CSV + JSON</0>, auto-joignable via un index de composés allégé — s'intègre directement dans les applications de pharmacie, de télésanté et de suivi de compléments.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8bccb72a5125e91f": {
+  "src": "{0} is a {1} supplement from {2} at {3} oz per serving, led by {4} at {5} mg. Normalized…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} oz par portion, principalement {4} à {5} mg. Composition…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8c021a3559daa891": {
+  "src": "Label reference values in the sample record a recommended intake of {0} mg and an upper safety limit up to {1} mg.",
+  "t": "Les valeurs de référence des étiquettes de l'échantillon indiquent un apport recommandé de {0} mg et une limite supérieure de sécurité allant jusqu'à {1} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8c6da456e4e98a71": {
+  "src": "Chemical determination, molecular structure, and commercial supplement product occurrences.",
+  "t": "Identification chimique, structure moléculaire et présence dans les compléments alimentaires commercialisés.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8d49be2d64db9340": {
+  "src": "Structured supplement-label data: mg doses, proprietary blends, PubChem chemistry — plus a Safety layer of drug interactions, upper-limit scores and contraindications.",
+  "t": "Données structurées d'étiquettes de compléments : doses en mg, mélanges exclusifs, chimie PubChem — plus une couche Sécurité : interactions médicamenteuses, limites supérieures, contre-indications.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8dfb5b830d1909c8": {
+  "src": "Molecular Weight",
+  "t": "Masse moléculaire",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "8e072025366d8304": {
+  "src": "Refund policy",
+  "t": "Politique de remboursement",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "912c279c6eea462b": {
+  "src": "NIH DSLD LABEL {0} · {1}",
+  "t": "ÉTIQUETTE NIH DSLD {0} · {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "913d688fdafd31f0": {
+  "src": "§ {0} · Real Labels · Normalized Dosages · PubChem Chemistry",
+  "t": "§ {0} · Étiquettes réelles · Dosages normalisés · Chimie PubChem",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "91583081509160ef": {
+  "src": "Every supplement ingredient in SuppDB, each with its own monograph: molecular formula, weight, PubChem id, InChIKey and the commercial products it…",
+  "t": "Tous les ingrédients de compléments de SuppDB, chacun avec sa monographie : formule moléculaire, masse, identifiant PubChem, InChIKey et les produits commerciaux qui…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9425b22ba9c0d9c7": {
+  "src": "Technical Supplement &amp; Nootropic Dataset FAQ",
+  "t": "FAQ technique sur le jeu de données compléments &amp; nootropiques",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "94c42d9f82491aba": {
+  "src": "One page per ingredient. Each carries the chemical determination -- molecular formula, molecular weight, PubChem record and exact InChIKey -- alongside the commercial products that contain it and their per-serving doses.",
+  "t": "Une page par ingrédient. Chacune présente l'identification chimique -- formule moléculaire, masse moléculaire, fiche PubChem et InChIKey exact -- ainsi que les produits commerciaux qui le contiennent et leurs doses par portion.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9616e8f10b549760": {
+  "src": "Can I get NIH PubChem CIDs and InChIKeys with every supplement ingredient?",
+  "t": "Puis-je obtenir les CID NIH PubChem et les InChIKey de chaque ingrédient de complément ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "97629611e54e8352": {
+  "src": "SuppDB — Supplements &amp; Nootropics Dataset (NIH DSLD)",
+  "t": "SuppDB — Données compléments &amp; nootropiques (NIH DSLD)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "97661f5e0fe16704": {
+  "src": "This SuppDB record normalizes {0} active ingredients from {1}'s {2} label as a {3} supplement at {4} {5} per serving.",
+  "t": "Cette fiche SuppDB normalise {0} ingrédients actifs de l'étiquette {2} de {1}, un complément de type {3} à {4} {5} par portion.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "979b8b4c675f409b": {
+  "src": "CID, molecular formula, weight, SMILES, and InChIKey per compound. Rows sharing an InChIKey are the same molecule under different names ({0} = {1}) — canonicalize deterministically.",
+  "t": "CID, formule moléculaire, masse, SMILES et InChIKey par composé. Les lignes partageant un InChIKey correspondent à la même molécule sous des noms différents ({0} = {1}) — canonicalisez de manière déterministe.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9a07bf1c56177b42": {
+  "src": "Your Email Address *",
+  "t": "Votre adresse e-mail *",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9aa67383e789dfdd": {
+  "src": "<0>SUPPDB</0> — Supplements &amp; Nootropics Dataset © {1}",
+  "t": "<0>SUPPDB</0> — Jeu de données compléments alimentaires &amp; nootropiques © {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9b037124af06f144": {
+  "src": "↻ Send another request",
+  "t": "↻ Envoyer une autre demande",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9b174eaf344c00fa": {
+  "src": "<0>Snapshot {1}</0> · one-time purchase, no recurring fees. Public-domain sources (NIH DSLD + PubChem).",
+  "t": "<0>Snapshot {1}</0> · paiement unique, sans frais récurrents. Sources du domaine public (NIH DSLD + PubChem).",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9c360298c9af6f75": {
+  "src": "— same brand — {0}",
+  "t": "— même marque — {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9c9548c74c0abb91": {
+  "src": "It is catalogued as a {0} ingredient, supplied in forms such as {1}, {2}, and {3}.",
+  "t": "Il est classé comme ingrédient de type {0}, proposé sous des formes telles que {1}, {2} et {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9e372345009564d6": {
+  "src": "Yes! We cross-reference every normalized active botanical and chemical compound against NIH PubChem, enriching records with exact PubChem CIDs, molecular weights, canonical SMILES, and unique InChIKeys.",
+  "t": "Oui ! Nous croisons chaque composé botanique et chimique actif normalisé avec NIH PubChem, en enrichissant les fiches avec les CID PubChem exacts, les masses moléculaires, les SMILES canoniques et les InChIKey uniques.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9e9cf3221a302462": {
+  "src": "Documentation",
+  "t": "Documentation",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "9ff481076ecafc68": {
+  "src": "— (botanical)",
+  "t": "— (botanique)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a0d9bbad5f932ea5": {
+  "src": "Pricing",
+  "t": "Tarifs",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a13a80d23796e43c": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement facts…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a1a250ea25df2fce": {
+  "src": "{0} ingredient monographs from B in SuppDB's ingredient directory, including {1}, {2}, {3}.",
+  "t": "{0} monographies d'ingrédients de la section B du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a203e3f75fa74465": {
+  "src": "In {0} of {1} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own.",
+  "t": "Dans {0} des {1} mentions sur étiquette, il est intégré à un mélange exclusif non détaillé au lieu d'être dosé séparément.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a3c686e711e4720f": {
+  "src": "Category",
+  "t": "Catégorie",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a46f7a6fe4c90219": {
+  "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample.",
+  "t": "{0} figure dans {1} compléments alimentaires commercialisés, de {2} marques, dans cet échantillon SuppDB.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a4921f3ee38c23b3": {
+  "src": "Related ingredients",
+  "t": "Ingrédients associés",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a4a75cd5665596ad": {
+  "src": "Describe your question or custom requirement...",
+  "t": "Décrivez votre question ou votre besoin spécifique...",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a55a275aa676930d": {
+  "src": "Terms",
+  "t": "Conditions",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a5d310900a7f53e2": {
+  "src": "Payment / Crypto / Invoicing Support",
+  "t": "Paiement / crypto / facturation",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a642a9617edd7d1d": {
+  "src": "Manufactured by {0} · Serving Size: {1} {2}",
+  "t": "Fabriqué par {0} · Portion : {1} {2}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a7d4d437027dfd3b": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a82919c466199e0b": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving dose is {4} mg.",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}. Dose par portion : {4} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a851ec68518c56de": {
+  "src": "Tier {0} · Safety &amp; Interaction Layer",
+  "t": "Niveau {0} · Couche Sécurité &amp; interactions",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a8e12b7f022b28f8": {
+  "src": "Every ingredient record features an explicit boolean flag ({0}). When a product lists a proprietary blend, the total blend mass is recorded, and constituent ingredients are linked under the shared blend hierarchy without fabricating unverified individual dosages.",
+  "t": "Chaque fiche d'ingrédient comporte un indicateur booléen explicite ({0}). Lorsqu'un produit mentionne un mélange exclusif, la masse totale du mélange est enregistrée et les ingrédients qui le composent sont rattachés à la hiérarchie commune du mélange, sans inventer de dosages individuels non vérifiés.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a959dc79d436da65": {
+  "src": "Absolutely. You can download our verified {0} row open sample CSV ({1}) directly from our landing page or GitHub repository under a Creative Commons license.",
+  "t": "Absolument. Vous pouvez télécharger notre échantillon CSV ouvert et vérifié de {0} lignes ({1}) directement depuis notre page d'accueil ou notre dépôt GitHub, sous licence Creative Commons.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "a9722dccc2ad7f51": {
+  "src": "— co-occurs in {0} product",
+  "t": "— présent conjointement dans {0} produit",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ab5e4a6e03613667": {
+  "src": "Have Questions or Need Custom Data?",
+  "t": "Des questions ou besoin de données sur mesure ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "abf1425f5b442542": {
+  "src": "Can I download a free sample before licensing the full {0} product dataset?",
+  "t": "Puis-je télécharger un échantillon gratuit avant d'acheter la licence du jeu de données complet de {0} produits ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ada2a40dcce35640": {
+  "src": "Page not found — SuppDB",
+  "t": "Page introuvable — SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ae1e30fa33906100": {
+  "src": "Custom work (subsets, recurring feeds, schema mapping): from {0} — <1>contact the desk</1>",
+  "t": "Travaux sur mesure (sous-ensembles, flux récurrents, mappage de schéma) : à partir de {0} — <1>contactez l'équipe</1>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aea42889857117e4": {
+  "src": "Ingredient directory — M — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — M — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "aeee596b682c7df0": {
+  "src": "Topic *",
+  "t": "Sujet *",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "afb0126b9be76a3e": {
+  "src": "Absolutely. You can download our verified {0} row open sample CSV (`samples/suppdb_sample.csv`) directly from our landing page or GitHub repository under a Creative Commons license.",
+  "t": "Absolument. Vous pouvez télécharger notre échantillon CSV ouvert et vérifié de {0} lignes (`samples/suppdb_sample.csv`) directement depuis notre page d'accueil ou notre dépôt GitHub, sous licence Creative Commons.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "afe6beb232eba7e7": {
+  "src": "in {0} products",
+  "t": "dans {0} produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b037f4aada30ed5d": {
+  "src": "The full dataset snapshot ({0}) is delivered by email within {1} h as a clean, relational SQLite database (`suppdb.sqlite`) alongside normalized CSV tables (`products.csv`, `ingredients.csv`, and `brands.csv`) and JSON dumps.",
+  "t": "Le snapshot complet du jeu de données ({0}) est livré par e-mail sous {1} h sous forme de base de données SQLite relationnelle propre (`suppdb.sqlite`), accompagnée de tables CSV normalisées (`products.csv`, `ingredients.csv` et `brands.csv`) et d'exports JSON.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b0e234bae1df06e0": {
+  "src": "Product directory — {0} — {1} product labels | SuppDB",
+  "t": "Répertoire des produits — {0} — {1} étiquettes de produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b148bb1db4ab72e9": {
+  "src": "Product directory — {0} product labels | SuppDB",
+  "t": "Répertoire des produits — {0} étiquettes de produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b155129262db8aa0": {
+  "src": "Ingredient / Chemical Form",
+  "t": "Ingrédient / forme chimique",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b16431f13ccb0c12": {
+  "src": "<0>NIH PubChem chemistry:</0> CID, molecular formula, weight, SMILES, and InChIKey on {1} compounds — plus InChIKey canonicalization of name variants.",
+  "t": "<0>Chimie NIH PubChem :</0> CID, formule moléculaire, masse, SMILES et InChIKey pour {1} composés — plus canonicalisation des variantes de noms par InChIKey.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b1c403b3a5717b97": {
+  "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}. Per-serving dose is {4} mg.",
+  "t": "{0} figure dans {1} produit SuppDB, le plus souvent sous forme de {2} et {3}. Dose par portion : {4} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b4c85a9c717ad656": {
+  "src": "<0>Normalized mg dosages</0> across {1} active-ingredient records, with {2} proprietary-blend flags for undisclosed doses.",
+  "t": "<0>Dosages normalisés en mg</0> sur {1} fiches d'ingrédients actifs, avec {2} indicateurs de mélange exclusif pour les doses non communiquées.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b52363ec025f74ee": {
+  "src": "§ {0} · Direct Engineering &amp; Dataset Support",
+  "t": "§ {0} · Support technique direct &amp; assistance sur le jeu de données",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b688c419270da192": {
+  "src": "SuppDB Supplements &amp; Nootropics Dataset",
+  "t": "SuppDB — Jeu de données compléments alimentaires &amp; nootropiques",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "b6d9926948a837e9": {
+  "src": "💬 Open Support Contact Form",
+  "t": "💬 Ouvrir le formulaire de contact support",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bc3023b36063a768": {
+  "src": "Page not found",
+  "t": "Page introuvable",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bc9a8cfebffb3556": {
+  "src": "Free Sample Snapshot",
+  "t": "Snapshot d'échantillon gratuit",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bd0459532cb62a74": {
+  "src": "{0} by {1}",
+  "t": "{0} de {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bd53e73478ee501b": {
+  "src": "Normalized supplement facts dataset containing {0} real products from {1} brands, with exact mg dosage conversions, proprietary blend boolean flags, and NIH PubChem chemical enrichment.",
+  "t": "Jeu de données de compositions normalisées de compléments alimentaires contenant {0} produits réels de {1} marques, avec conversions exactes des dosages en mg, indicateurs booléens de mélange exclusif et enrichissement chimique NIH PubChem.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "becb1fa10a7622b9": {
+  "src": "Our form gateway did not respond. Please email suppdb@dataengineered.io with your message — we reply within {0} business day.",
+  "t": "Notre passerelle de formulaire n'a pas répondu. Veuillez écrire à suppdb@dataengineered.io avec votre message — nous répondons sous {0} jour ouvré.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "bfa7e707ba363cee": {
+  "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg. Normalized supplement facts for all {6} ingredients…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mL par portion, principalement {4} à {5} mg. Composition normalisée des {6} ingrédients…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c01e3c8f93de4bb3": {
+  "src": "SuppDB — Supplements &amp; Nootropics Normalized Dataset · <0>Download Complete {1} Product Snapshot ({2})</0>",
+  "t": "SuppDB — Jeu de données normalisé de compléments alimentaires &amp; nootropiques · <0>Télécharger le snapshot complet de {1} produits ({2})</0>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c0727caec1acdcae": {
+  "src": "{0} of {1} ingredients carry an exact per-serving dose, together totalling {2} mg.",
+  "t": "{0} des {1} ingrédients ont une dose exacte par portion, pour un total de {2} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c22497394781792b": {
+  "src": "{0} appears in {1} commercial supplement product across {2} brand in this SuppDB sample.",
+  "t": "{0} figure dans {1} complément alimentaire commercialisé, de {2} marque, dans cet échantillon SuppDB.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c605fa14d66f968a": {
+  "src": "The page you're looking for doesn't exist or may have moved.",
+  "t": "La page que vous cherchez n'existe pas ou a peut-être été déplacée.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c714a226e70cb7ca": {
+  "src": "One-time download · {0} products · Snapshot {1}",
+  "t": "Téléchargement unique · {0} produits · Snapshot {1}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c7c475daa3a37ca8": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement facts for all…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée de tous…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "c9378df53c9f8a45": {
+  "src": "{0} product labels from A in SuppDB's product directory, including {1}, {2}, {3}",
+  "t": "{0} étiquettes de produits de la section A du répertoire des produits de SuppDB, dont {1}, {2}, {3}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ca4dda25a2a8c359": {
+  "src": "{0} is a {1} supplement from {2} at {3} mg per serving, led by {4} at {5} mg. Normalized…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mg par portion, principalement {4} à {5} mg. Composition…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ca973ffe8c6b1273": {
+  "src": "Real rows from the free sample. Note the last row: a proprietary blend whose per-ingredient dose is <0>undisclosed on the label</0> — flagged rather than dropped.",
+  "t": "Lignes réelles issues de l'échantillon gratuit. Notez la dernière ligne : un mélange exclusif dont la dose par ingrédient est <0>non communiquée sur l'étiquette</0> — signalé plutôt qu'écarté.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cc0b26e1e6a3f136": {
+  "src": "{0} g/mol",
+  "t": "{0} g/mol",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cc1c610143ae953a": {
+  "src": "{0} mg",
+  "t": "{0} mg",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cd9408de50c9b334": {
+  "src": "Every supplement ingredient in SuppDB, each with its own monograph: molecular formula, weight, PubChem id, InChIKey and the commercial products it appears in.",
+  "t": "Tous les ingrédients de compléments de SuppDB, chacun avec sa monographie : formule moléculaire, masse, identifiant PubChem, InChIKey et les produits commerciaux qui le contiennent.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cda3003899bbd610": {
+  "src": "<0>Delivered by email within {1} h</0> of payment · one-time purchase · public-domain sources.",
+  "t": "<0>Livré par e-mail sous {1} h</0> après paiement · paiement unique · sources du domaine public.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cec70b4a6031e757": {
+  "src": "PubChem chemistry",
+  "t": "chimie PubChem",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cf01481f626d5127": {
+  "src": "Privacy",
+  "t": "Confidentialité",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "cf743b3a0e3cec82": {
+  "src": "{0} ({1}) Chemical &amp; Dosage Monograph — SuppDB",
+  "t": "{0} ({1}) — monographie chimique et posologique — SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d06cb9cf0c79a6ed": {
+  "src": "Real Supplement Products · {0} Brands",
+  "t": "Compléments alimentaires réels · {0} marques",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d1c074f58b16dde5": {
+  "src": "ergogenic",
+  "t": "ergogène",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d269c8a52bd07be7": {
+  "src": "Product directory: M",
+  "t": "Répertoire des produits : M",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d406e22e9b088d8e": {
+  "src": "Ingredient directory — C — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — C — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d79da395b5d7a09c": {
+  "src": "Abstract",
+  "t": "Résumé",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d861c8323c5fc4d2": {
+  "src": "Ingredient directory — A — {0} ingredient monographs | SuppDB",
+  "t": "Répertoire des ingrédients — A — {0} monographies d'ingrédients | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d8a7c4239732c528": {
+  "src": "Built entirely from the NIH Dietary Supplement Label Database — real brands, UPCs, forms, servings, and ingredient panels. No scraping, no synthetic rows; every record links back to its DSLD label id.",
+  "t": "Construit entièrement à partir de la NIH Dietary Supplement Label Database — marques, UPC, formes, portions et tableaux d'ingrédients réels. Aucun scraping, aucune ligne synthétique ; chaque fiche renvoie à son identifiant d'étiquette DSLD.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d8c79ce265b4b344": {
+  "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample, at a per-serving dose of {3} mg.",
+  "t": "{0} figure dans {1} compléments alimentaires commercialisés, de {2} marques, dans cet échantillon SuppDB, avec une dose par portion de {3} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d8ce3b6174acf380": {
+  "src": "Ingredient directory — {0} | SuppDB",
+  "t": "Répertoire des ingrédients — {0} | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "d9570282450de79b": {
+  "src": "Sold under the {0} label in this sample.",
+  "t": "Vendu sous la marque {0} dans cet échantillon.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "da826a65f2d2b5fa": {
+  "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg. Normalized supplement facts for all {6}",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mL par portion, principalement {4} à {5} mg. Composition normalisée des {6}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "db33ef01eb92f1f6": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée de tous…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "db4dc20a7323a6f7": {
+  "src": "All product labels",
+  "t": "Toutes les étiquettes de produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dc6a5f1a7e871e9e": {
+  "src": "§ {0} · Three Ways to Get the Data",
+  "t": "§ {0} · Trois façons d'obtenir les données",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dd3b86d1ef21b9fb": {
+  "src": "Product",
+  "t": "Produit",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "de52a0bbb67ea2d4": {
+  "src": "One-time purchase · CSV / SQLite / JSON delivered by email within {0} h · Public-domain sources",
+  "t": "Paiement unique · CSV / SQLite / JSON livrés par e-mail sous {0} h · Sources du domaine public",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "de8ab76b03456887": {
+  "src": "Product directory: {0}",
+  "t": "Répertoire des produits : {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "deab16d6d49c295d": {
+  "src": "Sold under the {0}, {1}, and {2} labels in this sample.",
+  "t": "Vendu sous les marques {0}, {1} et {2} dans cet échantillon.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "df3ec144bf6496e2": {
+  "src": "{0} by DC — Supplement Facts | SuppDB",
+  "t": "{0} de DC — Composition | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "dfe2466dd0676696": {
+  "src": "Product directory: A",
+  "t": "Répertoire des produits : A",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e084b9884bc942a6": {
+  "src": "DIRECTORY",
+  "t": "RÉPERTOIRE",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e15afc8fc1493cee": {
+  "src": "{0} real supplement products from {1} brands, doses normalized to mg with NIH PubChem chemistry — plus a Safety layer of {2} drug interactions, % of upper-limit scores, contraindications and WADA doping flags.",
+  "t": "{0} compléments réels de {1} marques, doses en mg avec chimie NIH PubChem — plus une couche Sécurité : {2} interactions médicamenteuses, % de limite supérieure, contre-indications et indicateurs AMA.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e181c07820088cd2": {
+  "src": "Ingredient directory: {0}",
+  "t": "Répertoire des ingrédients : {0}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e182ca1c6f998cee": {
+  "src": "Delivered by email within {0} h · secure Stripe checkout · Apple Pay / Google Pay{1} Not medical advice — label facts and cited interaction references; verify with a clinician.",
+  "t": "Livré par e-mail sous {0} h · paiement Stripe sécurisé · Apple Pay / Google Pay{1} Pas un avis médical — informations d'étiquette et références d'interactions citées ; vérifiez auprès d'un professionnel de santé.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e48952d17285893d": {
+  "src": "{0} by DC — Normalized Supplement Facts",
+  "t": "{0} de DC — composition normalisée",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5531adae3c84603": {
+  "src": "GitHub Repository",
+  "t": "Dépôt GitHub",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5882789f9187a1c": {
+  "src": "Every ingredient record features an explicit boolean flag (`is_proprietary_blend`). When a product lists a proprietary blend, the total blend mass is recorded, and constituent ingredients are linked under the shared blend hierarchy without fabricating unverified individual dosages.",
+  "t": "Chaque fiche d'ingrédient comporte un indicateur booléen explicite (`is_proprietary_blend`). Lorsqu'un produit mentionne un mélange exclusif, la masse totale du mélange est enregistrée et les ingrédients qui le composent sont rattachés à la hiérarchie commune du mélange, sans inventer de dosages individuels non vérifiés.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e588d0b0326423fb": {
+  "src": "SuppDB — Supplements &amp; Nootropics Dataset (NIH DSLD + PubChem)",
+  "t": "SuppDB — Jeu de données compléments alimentaires &amp; nootropiques (NIH DSLD + PubChem)",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e5f9afb8b366327c": {
+  "src": "Molecular Formula",
+  "t": "Formule moléculaire",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e62e93cd1296615d": {
+  "src": "undisclosed <0>(flagged)</0>",
+  "t": "non communiquée <0>(signalée)</0>",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e677ecfc2a4c12a1": {
+  "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving doses range {4}",
+  "t": "{0} figure dans {1} produits SuppDB, le plus souvent sous forme de {2} et {3}. Doses par portion : {4}",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e6948be75cbd2559": {
+  "src": "← All ingredient monographs",
+  "t": "← Toutes les monographies d'ingrédients",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e7f8b9dcdb12a0a6": {
+  "src": "Dark Mode",
+  "t": "Mode sombre",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e889748706e4620b": {
+  "src": "✦ Form gateway unavailable",
+  "t": "✦ Passerelle de formulaire indisponible",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e976693a48c6bbb0": {
+  "src": "<0>{1} supplement × drug / supplement interactions</0> — a hand-verified core plus label-cited entries auto-extracted from FDA drug labels, each evidence-graded with its source snippet so you can filter to the vetted set (NIH ODS, DailyMed, MedlinePlus).",
+  "t": "<0>{1} interactions complément × médicament / complément</0> — un noyau vérifié manuellement plus des entrées citées d'après les étiquettes, extraites automatiquement des notices de médicaments de la FDA, chacune classée par niveau de preuve avec l'extrait de sa source afin que vous puissiez filtrer sur l'ensemble validé (NIH ODS, DailyMed, MedlinePlus).",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "e9d46f5bcaff1082": {
+  "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement facts for all {7} ingredients…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée des {7} ingrédients…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "eb1bc5fcc875f7c0": {
+  "src": "<0>Condition contraindications</0> (pregnancy, anticoagulation, renal impairment, pre-surgery, and more).",
+  "t": "<0>Contre-indications liées à des pathologies</0> (grossesse, traitement anticoagulant, insuffisance rénale, période préopératoire, etc.).",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "eb61df56e33be042": {
+  "src": "It is catalogued as a {0} ingredient, supplied in forms such as {1} and {2}.",
+  "t": "Il est classé comme ingrédient de type {0}, proposé sous des formes telles que {1} et {2}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ec62cea90fc2cf08": {
+  "src": "Product directory",
+  "t": "Répertoire des produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ee794fb9fcf3d444": {
+  "src": "SuppDB Supplements &amp; Nootropics Dataset — Full Snapshot",
+  "t": "SuppDB Jeu de données compléments alimentaires &amp; nootropiques — Snapshot complet",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ee902fdbd48904a4": {
+  "src": "{0} ingredient monographs from S in SuppDB's ingredient directory, including {1}, {2}, {3}.",
+  "t": "{0} monographies d'ingrédients de la section S du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "eec56bd5995b76c5": {
+  "src": "{0} by {1} — Normalized Supplement Facts",
+  "t": "{0} de {1} — composition normalisée",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "eee64ec80fc9c975": {
+  "src": "All ingredient monographs",
+  "t": "Toutes les monographies d'ingrédients",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ef58a448216e2360": {
+  "src": "Ingredient directory: A",
+  "t": "Répertoire des ingrédients : A",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f09b7db52892fff3": {
+  "src": "Canonical SMILES",
+  "t": "SMILES canonique",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f0e5d7676f5c308a": {
+  "src": "This SuppDB record normalizes {0} active ingredients from {1}'s {2} label as a {3} supplement at {4} {5} per serving, {6} servings per container.",
+  "t": "Cette fiche SuppDB normalise {0} ingrédients actifs de l'étiquette {2} de {1}, un complément de type {3} à {4} {5} par portion, {6} portions par contenant.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f32d5a3b17e61429": {
+  "src": "Support",
+  "t": "Support",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f36209442af3dd9f": {
+  "src": "supplement database",
+  "t": "base de données de compléments alimentaires",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f41d8fda1b53dea1": {
+  "src": "— co-occurs in {0} products",
+  "t": "— présent conjointement dans {0} produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f507d3c6a15c6971": {
+  "src": "Product directory: P",
+  "t": "Répertoire des produits : P",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f50e5b1b3fa4585e": {
+  "src": "It is catalogued as a {0} ingredient.",
+  "t": "Il est classé comme ingrédient de type {0}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f5aec191db1602d1": {
+  "src": "PubChem Record",
+  "t": "Fiche PubChem",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f62feca2a4612cad": {
+  "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg. Normalized supplement facts…",
+  "t": "{0} est un complément de type {1} de {2}, à {3} mL par portion, principalement {4} à {5} mg. Composition normalisée…",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f6eba6435bca2f49": {
+  "src": "{0} by {1} — Supplement Facts | SuppDB",
+  "t": "{0} de {1} — Composition | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f702c5380f8a2aed": {
+  "src": "{0} product labels from {1} in SuppDB's product directory, including {2}, {3}, {4}.",
+  "t": "{0} étiquettes de produits de la section {1} du répertoire des produits de SuppDB, dont {2}, {3}, {4}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f78896e236e3fdfe": {
+  "src": "CID {0} ↗",
+  "t": "CID {0} ↗",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f8171b5e10836c90": {
+  "src": "{0} sits inside a proprietary blend where the label withholds the exact split.",
+  "t": "{0} fait partie d'un mélange exclusif dont l'étiquette ne détaille pas la répartition exacte.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f91a050672e97dc0": {
+  "src": "Product directory — M — {0} product labels | SuppDB",
+  "t": "Répertoire des produits — M — {0} étiquettes de produits | SuppDB",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f9b1cd1ec91a928e": {
+  "src": "blend",
+  "t": "mélange",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "f9b24b2844fadb02": {
+  "src": "SuppDB — Supplements &amp; Nootropics Dataset",
+  "t": "SuppDB — Jeu de données compléments alimentaires &amp; nootropiques",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fa9d67ec196182f5": {
+  "src": "botanical",
+  "t": "botanique",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fb5ab752845c1e1d": {
+  "src": "It is catalogued as a {0} ingredient, supplied in forms such as {1}.",
+  "t": "Il est classé comme ingrédient de type {0}, proposé sous des formes telles que {1}.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fca79a68299fe3dc": {
+  "src": "<0>{1} real supplement products</0> from {2} brands, built entirely from public-domain NIH DSLD labels.",
+  "t": "<0>{1} compléments alimentaires réels</0> de {2} marques, construits entièrement à partir des étiquettes NIH DSLD du domaine public.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fd8325c863330bef": {
+  "src": "How are proprietary blends handled in the SuppDB dataset?",
+  "t": "Comment les mélanges exclusifs sont-ils traités dans le jeu de données SuppDB ?",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fe5165e6cc602b52": {
+  "src": "{0} of {1} ingredient carry an exact per-serving dose, together totalling {2} mg.",
+  "t": "{0} des {1} ingrédients a une dose exacte par portion, pour un total de {2} mg.",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "fe5f565f4d495960": {
+  "src": "Products Index",
+  "t": "Index des produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ },
+ "ffa06583db52c9bb": {
+  "src": "← All product labels",
+  "t": "← Toutes les étiquettes de produits",
+  "by": "claude-opus-5",
+  "at": "2026-09-17"
+ }
+}

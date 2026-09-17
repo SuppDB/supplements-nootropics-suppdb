@@ -42,6 +42,16 @@ def _cid_ok(v):
     v = str(v or '').strip()
     return v.replace('.', '', 1).isdigit()
 
+# Data values carry translate="no" (see scripts/i18n_common.py): localized copies keep them
+# verbatim and translate only the sentence around them. Rendering is unchanged.
+def _data(value):
+    return f'<span translate="no">{html.escape(str(value))}</span>'
+
+def _sentences(sentences):
+    # one <span> per sentence: each optional clause is its own translation segment
+    # instead of every combination of clauses being a different paragraph
+    return " ".join(f"<span>{s}</span>" for s in sentences)
+
 def product_profile(rows, brand, pname, form_type, serving_count, serving_unit):
     """Unique, data-derived formulation summary for a product page."""
     esc = html.escape
@@ -52,20 +62,23 @@ def product_profile(rows, brand, pname, form_type, serving_count, serving_unit):
     prop = sum(1 for r in rows if _is_prop(r.get('is_proprietary_blend')))
     with_cid = sum(1 for r in rows if _cid_ok(r.get('pubchem_cid')))
     spc = (rows[0].get('servings_per_container') or '').strip()
-    p = (f"This SuppDB record normalizes {n} active {ing} from {esc(brand)}'s {esc(pname)} label "
-         f"as a {esc(form_type)} supplement at {esc(str(serving_count))} {esc(serving_unit)} per serving")
+    sentences = []
+    s = (f"This SuppDB record normalizes {n} active {ing} from {_data(brand)}'s {_data(pname)} label "
+         f"as a {_data(form_type)} supplement at {esc(str(serving_count))} {_data(serving_unit)} per serving")
     if spc and spc not in ('', '0', '0.0'):
-        p += f", {esc(spc)} servings per container"
-    p += "."
+        s += f", {esc(spc)} servings per container"
+    s += "."
+    sentences.append(s)
     if doses:
-        p += f" {len(doses)} of {n} {ing} carry an exact per-serving dose"
-        p += f", together totalling {_mg(total)} mg." if total else "."
+        s = f"{len(doses)} of {n} {ing} carry an exact per-serving dose"
+        s += f", together totalling {_mg(total)} mg." if total else "."
+        sentences.append(s)
     if prop:
-        p += f" {prop} {'sits' if prop == 1 else 'sit'} inside a proprietary blend where the label withholds the exact split."
+        sentences.append(f"{prop} {'sits' if prop == 1 else 'sit'} inside a proprietary blend where the label withholds the exact split.")
     if with_cid:
         iw = "ingredient" if with_cid == 1 else "ingredients"
-        p += f" {with_cid} {iw} {'is' if with_cid == 1 else 'are'} cross-referenced to NIH PubChem chemistry."
-    return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{p}</p>'
+        sentences.append(f"{with_cid} {iw} {'is' if with_cid == 1 else 'are'} cross-referenced to NIH PubChem chemistry.")
+    return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{_sentences(sentences)}</p>'
 
 def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
     """Unique, data-derived occurrence + chemistry summary for an ingredient page."""
@@ -92,7 +105,8 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
             ul.append(u)
     np_ = len(prods) or len(rows)
     nb = len(brands)
-    p = f"{esc(ing_name)} appears in {np_} commercial supplement {'product' if np_ == 1 else 'products'}"
+    sentences = []
+    p = f"{_data(ing_name)} appears in {np_} commercial supplement {'product' if np_ == 1 else 'products'}"
     if nb:
         p += f" across {nb} {'brand' if nb == 1 else 'brands'}"
     p += " in this SuppDB sample"
@@ -101,21 +115,23 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
         p += (f", at a per-serving dose of {_mg(lo)} mg" if lo == hi
               else f", at per-serving doses ranging {_mg(lo)}–{_mg(hi)} mg")
     p += "."
+    sentences.append(p)
     if category:
-        p += f" It is catalogued as a {esc(category)} ingredient"
+        p = f"It is catalogued as a {_data(category)} ingredient"
         if forms:
             top_forms = sorted(forms, key=lambda f: (-forms[f], f))[:3]
-            p += ", supplied in forms such as " + _oxford([esc(f) for f in top_forms])
+            p += ", supplied in forms such as " + _oxford([_data(f) for f in top_forms])
         p += "."
+        sentences.append(p)
     chem = []
     if formula and formula != 'N/A':
-        chem.append(f"molecular formula {esc(formula)}")
+        chem.append(f"molecular formula {_data(formula)}")
     if weight and weight != 'N/A':
         chem.append(f"a molecular weight of {esc(str(weight))} g/mol")
     if inchikey and inchikey != 'N/A':
-        chem.append(f"InChIKey {esc(inchikey)}")
+        chem.append(f"InChIKey {_data(inchikey)}")
     if chem:
-        p += " Its NIH PubChem record lists " + _oxford(chem) + "."
+        sentences.append("Its NIH PubChem record lists " + _oxford(chem) + ".")
     refs = []
     if rec:
         refs.append(f"a recommended intake of {_mg(min(rec))} mg" if min(rec) == max(rec)
@@ -123,7 +139,7 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
     if ul:
         refs.append(f"an upper safety limit up to {_mg(max(ul))} mg")
     if refs:
-        p += " Label reference values in the sample record " + _oxford(refs) + "."
+        sentences.append("Label reference values in the sample record " + _oxford(refs) + ".")
     # Built from `rows` (a stable list), never from the `prods` set: set iteration order
     # is hash-randomized per process, which would make a most_common() tie-break --
     # and this generated sentence -- non-deterministic between runs.
@@ -139,14 +155,14 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
             brand_counts[b] += 1
     if brand_counts:
         top_brands = sorted(brand_counts, key=lambda b: (-brand_counts[b], b))[:3]
-        brand_list = _oxford([esc(b) for b in top_brands])
+        brand_list = _oxford([_data(b) for b in top_brands])
         noun = "label" if len(top_brands) == 1 else "labels"
-        p += f" Sold under the {brand_list} {noun} in this sample."
+        sentences.append(f"Sold under the {brand_list} {noun} in this sample.")
     prop_n = sum(1 for r in rows if _is_prop(r.get('is_proprietary_blend')))
     if prop_n:
         total_n = len(rows)
-        p += f" In {prop_n} of {total_n} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own."
-    return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{p}</p>'
+        sentences.append(f"In {prop_n} of {total_n} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own.")
+    return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{_sentences(sentences)}</p>'
 
 def product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit):
     """First sentence = the product's most distinctive fact: form, serving, top-dosed ingredient."""
@@ -188,6 +204,24 @@ def ingredient_meta_description(ing_name, rows):
         lead += (f" Per-serving dose is {_mg(lo)} mg." if lo == hi
                  else f" Per-serving doses range {_mg(lo)}–{_mg(hi)} mg.")
     return fit_desc(lead)
+
+def _meta_shows_only_page_data(ing_name, rows, category, ing_form):
+    """(og:title ok, description ok): True when every data value those <meta> strings
+    carry (ingredient form names) is also shown on the page inside a translate="no"
+    element, so i18n_common.py can placeholder it. Otherwise the tag gets translate="no"
+    and stays English rather than becoming a one-page, data-bearing translation segment."""
+    all_forms, shown_forms = Counter(), Counter()
+    for r in rows:
+        fm = (r.get('ingredient_form') or '').strip()
+        if fm:
+            all_forms[fm] += 1
+            if fm.lower() != (ing_name or '').lower():
+                shown_forms[fm] += 1
+    shown = {ing_name}
+    if category:  # ingredient_profile lists forms only in its category sentence
+        shown |= set(sorted(shown_forms, key=lambda f: (-shown_forms[f], f))[:3])
+    desc_forms = set(sorted(all_forms, key=lambda f: (-all_forms[f], f))[:2])
+    return ing_form in shown, desc_forms <= shown
 
 def _neighbour_fill(idx, ordered, exclude, need):
     """Pick up to `need` items from ordered[] around idx, skipping anything in exclude."""
@@ -452,9 +486,14 @@ def main():
         for kind, p in _sibs:
             pm = product_meta[p]
             reason = {"brand": f"same brand — {brand}", "form": f"same form — {form_type}"}.get(kind)
-            related_items.append((f"../products/{pm['slug']}", pm['pname'], reason))
+            related_items.append((f"../products/{pm['slug']}", pm['pname'], reason, False))
         related_items.append(("../products/", "All product labels", None))
         related_html = related_block(related_items, heading="Related products", limit=None)
+        # the brand / form inside a "same brand — X" reason is data: mark it for i18n_common.py
+        for _why, _val in (("same brand", brand), ("same form", form_type)):
+            related_html = related_html.replace(
+                f'— {_why} — {html.escape(_val)}</span>',
+                f'— {_why} — <span translate="no">{html.escape(_val)}</span></span>')
 
         # Table of ingredients
         ing_rows_html = ""
@@ -471,27 +510,39 @@ def main():
             else:
                 cid_link = '—'
 
-            ing_link = f'<a href="../ingredients/{ing_slug}" style="color:var(--text-ink); font-weight:600; text-decoration:none;">{ing_name}</a>'
+            ing_link = f'<a href="../ingredients/{ing_slug}" translate="no" style="color:var(--text-ink); font-weight:600; text-decoration:none;">{ing_name}</a>'
             amount_display = f"{amount} mg" if amount else "Blend / Variable"
 
             ing_rows_html += f"""
           <tr style="border-bottom: 1px solid var(--rule-color);">
-            <td style="padding: 12px 14px;">{ing_link}<br><span style="font-size:0.8rem; color:var(--text-muted);">{ing_form}</span></td>
+            <td style="padding: 12px 14px;">{ing_link}<br><span translate="no" style="font-size:0.8rem; color:var(--text-muted);">{ing_form}</span></td>
             <td style="padding: 12px 14px; font-family:'JetBrains Mono', monospace; font-weight:600; color:var(--accent);">{amount_display}</td>
             <td style="padding: 12px 14px; text-align:center;">{is_prop}</td>
             <td style="padding: 12px 14px;">{cid_link}</td>
           </tr>"""
 
         page_title = html.escape(product_titles[pid])
-        page_desc = html.escape(product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit))
+        # A title that had to cut the product name (or drop the brand) carries a name
+        # fragment no translate="no" element on the page repeats: keep it English rather
+        # than turn it into a one-page, data-bearing translation segment.
+        title_tn = "" if (pname in product_titles[pid] and brand in product_titles[pid]) else ' translate="no"'
+        _desc = product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit)
+        page_desc = html.escape(_desc)
+        # fit_desc cut through the lead ingredient's name ("led by Vitamin…"): that fragment
+        # is data no translate="no" element repeats, so the tag stays English.
+        _led = re.search(r" led by (.*)$", _desc)
+        _top = [(r.get('ingredient', '').strip(), _num(r.get('amount_per_serving_mg'))) for r in rows]
+        _top = [t for t in _top if t[0] and t[1] and t[1] > 0]
+        _top_name = max(_top, key=lambda t: t[1])[0] if _top else ""
+        desc_tn = ' translate="no"' if (_led and not re.match(re.escape(_top_name) + r"(?: at |…$)", _led.group(1))) else ""
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{page_title}</title>
-  <meta name="description" content="{page_desc}" />
+  <title{title_tn}>{page_title}</title>
+  <meta name="description" content="{page_desc}"{desc_tn} />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{page_url}" />
   <link rel="alternate" hreflang="en" href="{page_url}" />
@@ -577,9 +628,9 @@ def main():
 
   <main class="container">
     <section class="hero">
-      <span class="badge mono">NIH DSLD LABEL #{dsld_id or '1001'} · {form_type.upper()}</span>
-      <h1 style="font-size: 2.4rem; font-weight: 700; margin-top: 6px;">{pname}</h1>
-      <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 6px;">Manufactured by <strong style="color: var(--text-ink);">{brand}</strong> · Serving Size: {serving_count} {serving_unit}</p>
+      <span class="badge mono">NIH DSLD LABEL #{dsld_id or '1001'} · <span translate="no">{form_type.upper()}</span></span>
+      <h1 translate="no" style="font-size: 2.4rem; font-weight: 700; margin-top: 6px;">{pname}</h1>
+      <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 6px;">Manufactured by <strong translate="no" style="color: var(--text-ink);">{brand}</strong> · Serving Size: {serving_count} <span translate="no">{serving_unit}</span></p>
     </section>
     {product_profile(rows, brand, pname, form_type, serving_count, serving_unit)}
     <div class="card">
@@ -655,8 +706,8 @@ def main():
             prod_links_html += f"""
           <div style="padding: 14px 0; border-bottom: 1px dashed var(--rule-color); display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <a href="../products/{p_slug}" style="color:var(--text-ink); font-weight:600; text-decoration:none; font-size:1rem;">{p_name}</a>
-              <div style="font-size:0.82rem; color:var(--text-muted);">{p_brand}</div>
+              <a href="../products/{p_slug}" translate="no" style="color:var(--text-ink); font-weight:600; text-decoration:none; font-size:1rem;">{p_name}</a>
+              <div translate="no" style="font-size:0.82rem; color:var(--text-muted);">{p_brand}</div>
             </div>
             <span class="mono" style="color:var(--accent); font-weight:600;">{amt} mg</span>
           </div>"""
@@ -667,7 +718,7 @@ def main():
         # Related: top 6 products by dose (full list already lives in the panel above),
         # 2 most-co-occurring ingredients, name-order neighbours to fill any gap, + hub.
         top6 = sorted(prod_candidates, key=lambda t: (-t[0], t[1].lower()))[:6]
-        related_items = [(f"../products/{p_slug_}", p_name_, None) for _, p_name_, p_slug_ in top6]
+        related_items = [(f"../products/{p_slug_}", p_name_, None, False) for _, p_name_, p_slug_ in top6]
         _used_ing = {ing_name}
         picked = 0
         _partners = co_occ.get(ing_name, Counter())
@@ -677,19 +728,25 @@ def main():
                 continue
             _used_ing.add(partner_name)
             related_items.append((f"../ingredients/{ingredient_slugs[partner_name]}", partner_name,
-                                   f"co-occurs in {cnt} product{'s' if cnt != 1 else ''}"))
+                                   f"co-occurs in {cnt} product{'s' if cnt != 1 else ''}", False))
             picked += 1
             if picked >= 2:
                 break
         if len(related_items) < 2:
             for partner_name in _neighbour_fill(ing_index[ing_name], name_sorted_ings, _used_ing,
                                                  2 - len(related_items)):
-                related_items.append((f"../ingredients/{ingredient_slugs[partner_name]}", partner_name, None))
+                related_items.append((f"../ingredients/{ingredient_slugs[partner_name]}", partner_name, None, False))
         related_items.append(("../ingredients/", "All ingredient monographs", None))
         related_html = related_block(related_items, heading="Related ingredients", limit=None)
 
         page_title = html.escape(ingredient_titles[ing_name])
         page_desc = html.escape(ingredient_meta_description(ing_name, rows))
+        _og_ok, _desc_ok = _meta_shows_only_page_data(ing_name, rows, category, ing_form)
+        og_title_tn = "" if _og_ok else ' translate="no"'
+        desc_tn = "" if _desc_ok else ' translate="no"'
+        # i18n_common.py only placeholders translate="no" texts of 3+ characters, so an
+        # element-symbol formula ("Ca", "B") would leak into a one-page segment
+        og_desc_tn = ' translate="no"' if (formula != 'N/A' and len(formula) < 3 and not any(ch.isdigit() for ch in formula)) else ""
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
@@ -697,14 +754,14 @@ def main():
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{page_title}</title>
-  <meta name="description" content="{page_desc}" />
+  <meta name="description" content="{page_desc}"{desc_tn} />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{page_url}" />
   <link rel="alternate" hreflang="en" href="{page_url}" />
   <link rel="alternate" hreflang="x-default" href="{page_url}" />
 
-  <meta property="og:title" content="{ing_name} ({ing_form}) Chemical &amp; Dosage Monograph — SuppDB" />
-  <meta property="og:description" content="Formula: {formula} · Weight: {weight} · InChIKey: {inchikey}" />
+  <meta property="og:title" content="{ing_name} ({ing_form}) Chemical &amp; Dosage Monograph — SuppDB"{og_title_tn} />
+  <meta property="og:description" content="Formula: {formula} · Weight: {weight} · InChIKey: {inchikey}"{og_desc_tn} />
   <meta property="og:url" content="{page_url}" />
   <meta property="og:type" content="article" />
 
@@ -786,8 +843,8 @@ def main():
 
   <main class="container">
     <section class="hero">
-      <span class="badge mono">CHEMICAL MONOGRAPH · {category.upper()}</span>
-      <h1 style="font-size: 2.4rem; font-weight: 700; margin-top: 6px;">{ing_name}</h1>
+      <span class="badge mono">CHEMICAL MONOGRAPH · <span translate="no">{category.upper()}</span></span>
+      <h1 translate="no" style="font-size: 2.4rem; font-weight: 700; margin-top: 6px;">{ing_name}</h1>
       <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 6px;">Chemical determination, molecular structure, and commercial supplement product occurrences.</p>
     </section>
     {ingredient_profile(ing_name, rows, category, formula, weight, inchikey)}
@@ -800,7 +857,7 @@ def main():
         </div>
         <div class="metric-row">
           <span style="color:var(--text-muted);">Molecular Formula</span>
-          <span class="mono" style="font-weight:600;">{formula}</span>
+          <span class="mono" translate="no" style="font-weight:600;">{formula}</span>
         </div>
         <div class="metric-row">
           <span style="color:var(--text-muted);">Molecular Weight</span>
@@ -808,11 +865,11 @@ def main():
         </div>
         <div class="metric-row" style="flex-direction:column; gap:4px;">
           <span style="color:var(--text-muted);">InChIKey</span>
-          <span class="mono" style="font-size:0.78rem; word-break:break-all; color:var(--accent);">{inchikey}</span>
+          <span class="mono" translate="no" style="font-size:0.78rem; word-break:break-all; color:var(--accent);">{inchikey}</span>
         </div>
         <div class="metric-row" style="flex-direction:column; gap:4px;">
           <span style="color:var(--text-muted);">Canonical SMILES</span>
-          <span class="mono" style="font-size:0.75rem; word-break:break-all; color:var(--text-muted);">{smiles}</span>
+          <span class="mono" translate="no" style="font-size:0.75rem; word-break:break-all; color:var(--text-muted);">{smiles}</span>
         </div>
       </div>
 

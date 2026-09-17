@@ -1,0 +1,22 @@
+{
+  "base_url": "https://suppdb.dataengineered.io",
+  "locales": [
+    "es",
+    "de",
+    "fr",
+    "pt-br"
+  ],
+  "include": [
+    "index.html",
+    "404.html",
+    "ingredients/*.html",
+    "ingredients/*/index.html",
+    "products/*.html",
+    "products/*/index.html"
+  ],
+  "exclude": [],
+  "not_found": "404.html",
+  "sitemap": "sitemap.xml",
+  "min_coverage": 0.9,
+  "notranslate": []
+}
