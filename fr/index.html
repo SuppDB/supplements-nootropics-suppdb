@@ -505,6 +505,27 @@
     .search-input:focus { outline: none; border-color: var(--accent); }
 
     footer { border-top: 1px solid var(--rule-color); padding: 48px 32px; font-size: 0.75rem; opacity: 0.6; }
+
+    /* phones: let the header, nav and pricing header wrap instead of widening the page */
+    @media (max-width: 760px) {
+      .header-inner { flex-wrap: wrap; gap: 12px; padding: 14px 16px; }
+      .brand { flex-wrap: wrap; gap: 4px 12px; }
+      nav { flex-wrap: wrap; gap: 10px 16px; }
+      .pricing-container { padding: 32px 20px; }
+      .pricing-header { flex-wrap: wrap; gap: 16px; }
+      /* long translated words (de/fr) must not stretch the hero column */
+      .hero-grid > * { min-width: 0; }
+      h1, .pricing-header h2 { hyphens: auto; overflow-wrap: break-word; }
+      .pricing-header > * { min-width: 0; }
+      /* a flex li makes <strong> and the text after it two side-by-side items; use a block with a hanging mark */
+      .feature-list li { display: block; position: relative; padding-left: 24px; }
+      .feature-list li::before { position: absolute; left: 0; }
+    }
+    @media (max-width: 480px) {
+      .cta-group { grid-template-columns: 1fr; }
+      /* stack the abstract label over its text: German compounds are wider than a side column */
+      .hero-abstract { grid-template-columns: 1fr; gap: 8px; }
+    }
   </style>
 </head>
 <body>
