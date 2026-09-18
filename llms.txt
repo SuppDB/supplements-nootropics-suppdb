@@ -1,6 +1,6 @@
 # SuppDB — Supplements & Nootropics Dataset (NIH DSLD + PubChem)
 
-> SuppDB is a structured catalog of 17,000+ real supplement & nootropic products from 2,000+ brands, built exclusively from the public-domain NIH Dietary Supplement Label Database (DSLD). Every active ingredient (115,000+ records) is normalized to milligrams, proprietary blends are flagged where the label hides the dose (40,000+ flags), and 4,000+ compounds are enriched with NIH PubChem chemistry (CID, molecular formula, SMILES, InChIKey). A source label ID and URL on every record means any fact can be re-verified against the original NIH DSLD label.
+> SuppDB is a structured catalog of 18,000+ real supplement & nootropic products from 2,000+ brands, built exclusively from the public-domain NIH Dietary Supplement Label Database (DSLD). Every active ingredient (115,000+ records) is normalized to milligrams, proprietary blends are flagged where the label hides the dose (40,000+ flags), and 4,000+ compounds are enriched with NIH PubChem chemistry (CID, molecular formula, SMILES, InChIKey). A source label ID and URL on every record means any fact can be re-verified against the original NIH DSLD label.
 
 ## Key Links & Documentation
 - [Landing Page](https://suppdb.dataengineered.io/)
@@ -16,5 +16,5 @@
 - **Licensing Tiers:**
   - Free Sample — ~300 products, flat CSV — free ([sample CSV](https://suppdb.dataengineered.io/samples/suppdb_sample.csv))
   - Safety & Interaction Layer — 8,800+ interactions, upper-limit %, contraindications, WADA flags — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
-  - Catalog only (Full Snapshot) — 17,000+ products, SQLite + CSV + JSON — $49 one-time ([Stripe checkout](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406))
+  - Catalog only (Full Snapshot) — 18,000+ products, SQLite + CSV + JSON — $49 one-time ([Stripe checkout](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406))
   - Custom work — subsets, recurring refreshes, schema mapping: from $99, quoted per engagement ([contact form](https://suppdb.dataengineered.io/#support))
