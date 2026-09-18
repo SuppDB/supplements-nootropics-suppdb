@@ -1,6 +1,6 @@
 # SuppDB — Data Dictionary
 
-Field reference for the SuppDB supplements & nootropics dataset (snapshot `2026.07`).
+Field reference for the SuppDB supplements & nootropics dataset (snapshot `2026.09`).
 The free sample (`samples/suppdb_sample.csv`) is a **flat, one-row-per-active-ingredient**
 table using the columns below. The full dataset ships the same fields in CSV and JSON,
 plus a relational SQLite build.
@@ -31,9 +31,9 @@ plus a relational SQLite build.
 | `inchikey` | string | PubChem InChIKey — a canonical chemical key (same molecule → same key) | ~25% |
 | `dsld_label_id` | string | NIH DSLD label identifier (provenance) | 100% |
 | `source_url` | string | Exact NIH DSLD label URL the record was extracted from | 100% |
-| `dataset_version` | string | Snapshot id, e.g. `2026.07` | 100% |
+| `dataset_version` | string | Snapshot id, e.g. `2026.09` | 100% |
 
-\* Share of the full dataset (17,000+ products / 115,000+ ingredient rows) with a non-empty value.
+\* Share of the full dataset (18,000+ products / 144,000+ ingredient rows) with a non-empty value.
 † `upc_barcode` is present on 100% of rows; 86% are real barcodes, the rest use a `DSLD-<id>` placeholder for labels with no printed UPC.
 ‡ `amount_per_serving_mg` is `0` where the ingredient sits inside a **proprietary blend** (dose undisclosed); flagged by `is_proprietary_blend = 1`.
 

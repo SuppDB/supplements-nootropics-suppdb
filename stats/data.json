@@ -2,218 +2,218 @@
  "dataset": "SuppDB",
  "page": "https://suppdb.dataengineered.io/stats/",
  "generated": "2026-09-18",
- "snapshot": "2026-07-07",
+ "snapshot": "2026-09-18",
  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) - attribute with a link to the page; label facts are NIH DSLD, public domain",
  "totals": {
-  "products": 17625,
-  "brands": 2194,
-  "rows": 115051,
-  "compounds": 16566,
-  "compounds_total": 16566,
-  "pubchem_compounds": 4111,
-  "pubchem_rows": 58463
+  "products": 18480,
+  "brands": 2257,
+  "rows": 144108,
+  "compounds": 17693,
+  "compounds_total": 17693,
+  "pubchem_compounds": 4433,
+  "pubchem_rows": 75405
  },
  "top_ingredients": [
   {
    "ingredient": "Vitamin C",
-   "products": 3283,
-   "share_pct": 18.6
+   "products": 3973,
+   "share_pct": 21.5
   },
   {
    "ingredient": "Calcium",
-   "products": 2936,
-   "share_pct": 16.7
-  },
-  {
-   "ingredient": "Magnesium",
-   "products": 2926,
-   "share_pct": 16.6
+   "products": 3472,
+   "share_pct": 18.8
   },
   {
    "ingredient": "Vitamin D",
-   "products": 2841,
-   "share_pct": 16.1
+   "products": 3451,
+   "share_pct": 18.7
+  },
+  {
+   "ingredient": "Magnesium",
+   "products": 3441,
+   "share_pct": 18.6
   },
   {
    "ingredient": "Zinc",
-   "products": 2715,
-   "share_pct": 15.4
+   "products": 3336,
+   "share_pct": 18.1
   },
   {
    "ingredient": "Sodium",
-   "products": 2207,
-   "share_pct": 12.5
+   "products": 2464,
+   "share_pct": 13.3
   },
   {
    "ingredient": "Vitamin B6",
-   "products": 1815,
-   "share_pct": 10.3
+   "products": 2453,
+   "share_pct": 13.3
   },
   {
    "ingredient": "Vitamin B12",
-   "products": 1778,
-   "share_pct": 10.1
-  },
-  {
-   "ingredient": "Potassium",
-   "products": 1633,
-   "share_pct": 9.3
-  },
-  {
-   "ingredient": "Niacin",
-   "products": 1415,
-   "share_pct": 8.0
-  },
-  {
-   "ingredient": "Ashwagandha",
-   "products": 1408,
-   "share_pct": 8.0
+   "products": 2443,
+   "share_pct": 13.2
   },
   {
    "ingredient": "Vitamin E",
-   "products": 1379,
-   "share_pct": 7.8
+   "products": 1987,
+   "share_pct": 10.8
+  },
+  {
+   "ingredient": "Niacin",
+   "products": 1937,
+   "share_pct": 10.5
+  },
+  {
+   "ingredient": "Potassium",
+   "products": 1914,
+   "share_pct": 10.4
   },
   {
    "ingredient": "Thiamin",
-   "products": 1275,
-   "share_pct": 7.2
+   "products": 1803,
+   "share_pct": 9.8
   },
   {
    "ingredient": "Riboflavin",
-   "products": 1215,
-   "share_pct": 6.9
+   "products": 1739,
+   "share_pct": 9.4
   },
   {
    "ingredient": "Biotin",
-   "products": 1117,
-   "share_pct": 6.3
-  },
-  {
-   "ingredient": "Creatine",
-   "products": 1110,
-   "share_pct": 6.3
+   "products": 1707,
+   "share_pct": 9.2
   },
   {
    "ingredient": "Chromium",
-   "products": 1091,
-   "share_pct": 6.2
-  },
-  {
-   "ingredient": "Manganese",
-   "products": 1072,
-   "share_pct": 6.1
+   "products": 1518,
+   "share_pct": 8.2
   },
   {
    "ingredient": "Selenium",
-   "products": 1050,
-   "share_pct": 6.0
+   "products": 1509,
+   "share_pct": 8.2
   },
   {
-   "ingredient": "Fish Oil",
-   "products": 949,
-   "share_pct": 5.4
+   "ingredient": "Manganese",
+   "products": 1508,
+   "share_pct": 8.2
+  },
+  {
+   "ingredient": "Vitamin A",
+   "products": 1426,
+   "share_pct": 7.7
+  },
+  {
+   "ingredient": "Ashwagandha",
+   "products": 1425,
+   "share_pct": 7.7
+  },
+  {
+   "ingredient": "Iodine",
+   "products": 1375,
+   "share_pct": 7.4
   }
  ],
  "ingredient_types": [
   {
    "type": "Botanical",
-   "products": 7362,
-   "share_pct": 41.8
+   "products": 7808,
+   "share_pct": 42.3
   },
   {
    "type": "Vitamin",
-   "products": 6988,
-   "share_pct": 39.6
+   "products": 7761,
+   "share_pct": 42.0
   },
   {
    "type": "Mineral",
-   "products": 6954,
-   "share_pct": 39.5
+   "products": 7756,
+   "share_pct": 42.0
   },
   {
    "type": "Non-nutrient, non-botanical",
-   "products": 5027,
-   "share_pct": 28.5
+   "products": 5606,
+   "share_pct": 30.3
   },
   {
    "type": "Amino acid",
-   "products": 1783,
-   "share_pct": 10.1
+   "products": 1976,
+   "share_pct": 10.7
   },
   {
    "type": "Fat",
-   "products": 1761,
-   "share_pct": 10.0
+   "products": 1835,
+   "share_pct": 9.9
   },
   {
    "type": "Bacteria",
-   "products": 1434,
-   "share_pct": 8.1
+   "products": 1516,
+   "share_pct": 8.2
   },
   {
    "type": "Other",
-   "products": 1061,
-   "share_pct": 6.0
+   "products": 1194,
+   "share_pct": 6.5
   },
   {
    "type": "Fiber",
-   "products": 897,
+   "products": 941,
    "share_pct": 5.1
   },
   {
    "type": "Enzyme",
-   "products": 701,
-   "share_pct": 4.0
+   "products": 819,
+   "share_pct": 4.4
   },
   {
    "type": "Fatty acid",
-   "products": 681,
+   "products": 712,
    "share_pct": 3.9
   },
   {
    "type": "Protein",
-   "products": 386,
-   "share_pct": 2.2
+   "products": 428,
+   "share_pct": 2.3
   }
  ],
  "proprietary_blends": {
-  "products": 4330,
-  "products_pct": 24.6,
-  "listings": 43083,
-  "listings_pct": 37.4,
-  "listings_without_amount": 43425,
-  "listings_without_amount_pct": 37.7,
+  "products": 4757,
+  "products_pct": 25.7,
+  "listings": 54709,
+  "listings_pct": 38.0,
+  "listings_without_amount": 55074,
+  "listings_without_amount_pct": 38.2,
   "by_form": [
    {
     "form": "Liquid",
-    "products": 1721,
-    "with_blend": 537,
-    "share_pct": 31.2
-   },
-   {
-    "form": "Capsule",
-    "products": 6204,
-    "with_blend": 1815,
-    "share_pct": 29.3
-   },
-   {
-    "form": "Powder",
-    "products": 3401,
-    "with_blend": 978,
-    "share_pct": 28.8
+    "products": 1747,
+    "with_blend": 552,
+    "share_pct": 31.6
    },
    {
     "form": "Other (e.g. tea bag)",
-    "products": 529,
-    "with_blend": 146,
-    "share_pct": 27.6
+    "products": 583,
+    "with_blend": 183,
+    "share_pct": 31.4
+   },
+   {
+    "form": "Powder",
+    "products": 3632,
+    "with_blend": 1112,
+    "share_pct": 30.6
+   },
+   {
+    "form": "Capsule",
+    "products": 6328,
+    "with_blend": 1884,
+    "share_pct": 29.8
    },
    {
     "form": "Tablet or Pill",
-    "products": 2766,
-    "with_blend": 546,
-    "share_pct": 19.7
+    "products": 3065,
+    "with_blend": 696,
+    "share_pct": 22.7
    },
    {
     "form": "Lozenge",
@@ -223,14 +223,14 @@
    },
    {
     "form": "Gummy or Jelly",
-    "products": 637,
-    "with_blend": 97,
-    "share_pct": 15.2
+    "products": 760,
+    "with_blend": 117,
+    "share_pct": 15.4
    },
    {
     "form": "Softgel Capsule",
-    "products": 2173,
-    "with_blend": 175,
+    "products": 2169,
+    "with_blend": 176,
     "share_pct": 8.1
    }
   ]
@@ -240,154 +240,154 @@
   "above_daily_reference": [
    {
     "nutrient": "Vitamin B12",
-    "listings": 1797,
-    "above": 1651,
-    "share_pct": 91.9,
+    "listings": 2486,
+    "above": 2265,
+    "share_pct": 91.1,
     "reference_mg": 0.0024
    },
    {
     "nutrient": "Vitamin B6",
-    "listings": 1820,
-    "above": 1617,
-    "share_pct": 88.8,
+    "listings": 2463,
+    "above": 2161,
+    "share_pct": 87.7,
     "reference_mg": 1.3
    },
    {
     "nutrient": "Biotin",
-    "listings": 1117,
-    "above": 942,
-    "share_pct": 84.3,
+    "listings": 1701,
+    "above": 1393,
+    "share_pct": 81.9,
     "reference_mg": 0.03
    },
    {
-    "nutrient": "Pantothenic Acid",
-    "listings": 293,
-    "above": 238,
-    "share_pct": 81.2,
-    "reference_mg": 5
-   },
-   {
     "nutrient": "Chromium",
-    "listings": 1133,
-    "above": 918,
-    "share_pct": 81.0,
+    "listings": 1615,
+    "above": 1321,
+    "share_pct": 81.8,
     "reference_mg": 0.035
    },
    {
-    "nutrient": "Vitamin C",
-    "listings": 3308,
-    "above": 2262,
-    "share_pct": 68.4,
-    "reference_mg": 90
+    "nutrient": "Pantothenic Acid",
+    "listings": 359,
+    "above": 293,
+    "share_pct": 81.6,
+    "reference_mg": 5
    },
    {
     "nutrient": "Niacin",
-    "listings": 1428,
-    "above": 973,
-    "share_pct": 68.1,
+    "listings": 1959,
+    "above": 1341,
+    "share_pct": 68.5,
     "reference_mg": 16
    },
    {
+    "nutrient": "Vitamin C",
+    "listings": 4008,
+    "above": 2605,
+    "share_pct": 65.0,
+    "reference_mg": 90
+   },
+   {
     "nutrient": "Molybdenum",
-    "listings": 649,
-    "above": 429,
-    "share_pct": 66.1,
+    "listings": 1055,
+    "above": 672,
+    "share_pct": 63.7,
     "reference_mg": 0.045
    },
    {
     "nutrient": "Copper",
-    "listings": 947,
-    "above": 565,
-    "share_pct": 59.7,
+    "listings": 1410,
+    "above": 823,
+    "share_pct": 58.4,
     "reference_mg": 0.9
    },
    {
-    "nutrient": "Zinc",
-    "listings": 2842,
-    "above": 1630,
-    "share_pct": 57.4,
-    "reference_mg": 11
-   },
-   {
     "nutrient": "Vitamin E",
-    "listings": 1456,
-    "above": 829,
-    "share_pct": 56.9,
+    "listings": 2125,
+    "above": 1198,
+    "share_pct": 56.4,
     "reference_mg": 15
    },
    {
     "nutrient": "Selenium",
-    "listings": 1061,
-    "above": 589,
-    "share_pct": 55.5,
+    "listings": 1564,
+    "above": 871,
+    "share_pct": 55.7,
     "reference_mg": 0.055
    },
    {
+    "nutrient": "Zinc",
+    "listings": 3489,
+    "above": 1935,
+    "share_pct": 55.5,
+    "reference_mg": 11
+   },
+   {
     "nutrient": "Vitamin A",
-    "listings": 919,
-    "above": 499,
-    "share_pct": 54.3,
+    "listings": 1453,
+    "above": 796,
+    "share_pct": 54.8,
     "reference_mg": 0.9
    },
    {
     "nutrient": "Manganese",
-    "listings": 1094,
-    "above": 368,
-    "share_pct": 33.6,
+    "listings": 1570,
+    "above": 482,
+    "share_pct": 30.7,
     "reference_mg": 2.3
    },
    {
     "nutrient": "Folate",
-    "listings": 883,
-    "above": 214,
-    "share_pct": 24.2,
+    "listings": 1194,
+    "above": 277,
+    "share_pct": 23.2,
     "reference_mg": 0.4
    },
    {
     "nutrient": "Iodine",
-    "listings": 846,
-    "above": 184,
-    "share_pct": 21.7,
+    "listings": 1399,
+    "above": 219,
+    "share_pct": 15.7,
     "reference_mg": 0.15
    },
    {
     "nutrient": "Iron",
-    "listings": 849,
-    "above": 119,
-    "share_pct": 14.0,
+    "listings": 1127,
+    "above": 159,
+    "share_pct": 14.1,
     "reference_mg": 18
    },
    {
     "nutrient": "Magnesium",
-    "listings": 3047,
-    "above": 359,
-    "share_pct": 11.8,
+    "listings": 3605,
+    "above": 362,
+    "share_pct": 10.0,
     "reference_mg": 400
    },
    {
     "nutrient": "Calcium",
-    "listings": 2986,
-    "above": 122,
-    "share_pct": 4.1,
+    "listings": 3570,
+    "above": 123,
+    "share_pct": 3.4,
     "reference_mg": 1000
    },
    {
     "nutrient": "Choline",
-    "listings": 598,
-    "above": 7,
-    "share_pct": 1.2,
+    "listings": 870,
+    "above": 10,
+    "share_pct": 1.1,
     "reference_mg": 550
    },
    {
     "nutrient": "Sodium",
-    "listings": 2091,
-    "above": 5,
-    "share_pct": 0.2,
+    "listings": 2345,
+    "above": 6,
+    "share_pct": 0.3,
     "reference_mg": 1500
    },
    {
     "nutrient": "Potassium",
-    "listings": 1613,
+    "listings": 1916,
     "above": 1,
     "share_pct": 0.1,
     "reference_mg": 3400
@@ -396,160 +396,160 @@
   "above_upper_limit": [
    {
     "nutrient": "Niacin",
-    "listings": 1428,
-    "above": 430,
-    "share_pct": 30.1,
+    "listings": 1959,
+    "above": 541,
+    "share_pct": 27.6,
     "ul_mg": 35
    },
    {
     "nutrient": "Magnesium",
-    "listings": 3047,
-    "above": 595,
-    "share_pct": 19.5,
+    "listings": 3605,
+    "above": 598,
+    "share_pct": 16.6,
     "ul_mg": 350
    },
    {
     "nutrient": "Zinc",
-    "listings": 2842,
-    "above": 277,
-    "share_pct": 9.7,
+    "listings": 3489,
+    "above": 280,
+    "share_pct": 8.0,
     "ul_mg": 40
    },
    {
     "nutrient": "Vitamin A",
-    "listings": 919,
-    "above": 80,
-    "share_pct": 8.7,
+    "listings": 1453,
+    "above": 93,
+    "share_pct": 6.4,
     "ul_mg": 3
    },
    {
     "nutrient": "Manganese",
-    "listings": 1094,
+    "listings": 1570,
     "above": 35,
-    "share_pct": 3.2,
+    "share_pct": 2.2,
     "ul_mg": 11
    },
    {
     "nutrient": "Iron",
-    "listings": 849,
-    "above": 18,
-    "share_pct": 2.1,
+    "listings": 1127,
+    "above": 19,
+    "share_pct": 1.7,
     "ul_mg": 45
    },
    {
     "nutrient": "Folate",
-    "listings": 883,
-    "above": 17,
-    "share_pct": 1.9,
+    "listings": 1194,
+    "above": 13,
+    "share_pct": 1.1,
     "ul_mg": 1
    },
    {
-    "nutrient": "Iodine",
-    "listings": 846,
-    "above": 15,
-    "share_pct": 1.8,
-    "ul_mg": 1.1
-   },
-   {
     "nutrient": "Vitamin B6",
-    "listings": 1820,
-    "above": 21,
-    "share_pct": 1.2,
+    "listings": 2463,
+    "above": 22,
+    "share_pct": 0.9,
     "ul_mg": 100
    },
    {
     "nutrient": "Vitamin C",
-    "listings": 3308,
+    "listings": 4008,
     "above": 38,
-    "share_pct": 1.1,
+    "share_pct": 0.9,
     "ul_mg": 2000
    },
    {
-    "nutrient": "Selenium",
-    "listings": 1061,
-    "above": 9,
-    "share_pct": 0.8,
-    "ul_mg": 0.4
-   },
-   {
     "nutrient": "Boron",
-    "listings": 633,
-    "above": 4,
-    "share_pct": 0.6,
+    "listings": 835,
+    "above": 7,
+    "share_pct": 0.8,
     "ul_mg": 20
    },
    {
-    "nutrient": "Molybdenum",
-    "listings": 649,
-    "above": 4,
+    "nutrient": "Iodine",
+    "listings": 1399,
+    "above": 8,
     "share_pct": 0.6,
-    "ul_mg": 2
+    "ul_mg": 1.1
    },
    {
     "nutrient": "Calcium",
-    "listings": 2986,
-    "above": 8,
+    "listings": 3570,
+    "above": 9,
     "share_pct": 0.3,
     "ul_mg": 2500
    },
    {
+    "nutrient": "Selenium",
+    "listings": 1564,
+    "above": 4,
+    "share_pct": 0.3,
+    "ul_mg": 0.4
+   },
+   {
     "nutrient": "Copper",
-    "listings": 947,
-    "above": 1,
+    "listings": 1410,
+    "above": 2,
     "share_pct": 0.1,
     "ul_mg": 10
    },
    {
-    "nutrient": "Vitamin E",
-    "listings": 1456,
-    "above": 1,
-    "share_pct": 0.1,
-    "ul_mg": 1000
-   },
-   {
     "nutrient": "Choline",
-    "listings": 598,
+    "listings": 870,
     "above": 0,
     "share_pct": 0.0,
     "ul_mg": 3500
+   },
+   {
+    "nutrient": "Molybdenum",
+    "listings": 1055,
+    "above": 0,
+    "share_pct": 0.0,
+    "ul_mg": 2
+   },
+   {
+    "nutrient": "Vitamin E",
+    "listings": 2125,
+    "above": 1,
+    "share_pct": 0.0,
+    "ul_mg": 1000
    }
   ]
  },
  "forms": [
   {
    "form": "Capsule",
-   "products": 6204,
-   "share_pct": 35.2
+   "products": 6328,
+   "share_pct": 34.2
   },
   {
    "form": "Powder",
-   "products": 3401,
-   "share_pct": 19.3
+   "products": 3632,
+   "share_pct": 19.7
   },
   {
    "form": "Tablet or Pill",
-   "products": 2766,
-   "share_pct": 15.7
+   "products": 3065,
+   "share_pct": 16.6
   },
   {
    "form": "Softgel Capsule",
-   "products": 2173,
-   "share_pct": 12.3
+   "products": 2169,
+   "share_pct": 11.7
   },
   {
    "form": "Liquid",
-   "products": 1721,
-   "share_pct": 9.8
+   "products": 1747,
+   "share_pct": 9.5
   },
   {
    "form": "Gummy or Jelly",
-   "products": 637,
-   "share_pct": 3.6
+   "products": 760,
+   "share_pct": 4.1
   },
   {
    "form": "Other (e.g. tea bag)",
-   "products": 529,
-   "share_pct": 3.0
+   "products": 583,
+   "share_pct": 3.2
   },
   {
    "form": "Lozenge",
@@ -558,104 +558,104 @@
   },
   {
    "form": "Unknown",
-   "products": 33,
+   "products": 35,
    "share_pct": 0.2
   }
  ],
  "actives_per_product": {
-  "median": 2,
-  "mean": 6.5,
-  "max": 206,
+  "median": 3,
+  "mean": 7.8,
+  "max": 229,
   "buckets": [
    {
     "bucket": "1",
-    "products": 6420,
-    "share_pct": 36.4
+    "products": 6429,
+    "share_pct": 34.8
    },
    {
     "bucket": "2 to 3",
-    "products": 3825,
-    "share_pct": 21.7
+    "products": 3836,
+    "share_pct": 20.8
    },
    {
     "bucket": "4 to 6",
-    "products": 2413,
-    "share_pct": 13.7
+    "products": 2438,
+    "share_pct": 13.2
    },
    {
     "bucket": "7 to 10",
-    "products": 1802,
-    "share_pct": 10.2
+    "products": 1855,
+    "share_pct": 10.0
    },
    {
     "bucket": "11 to 20",
-    "products": 1871,
-    "share_pct": 10.6
+    "products": 2104,
+    "share_pct": 11.4
    },
    {
     "bucket": "21 or more",
-    "products": 1294,
-    "share_pct": 7.3
+    "products": 1818,
+    "share_pct": 9.8
    }
   ]
  },
  "servings_per_container": {
-  "products": 14948,
+  "products": 15714,
   "median": 50,
   "p25": 30,
   "p75": 90
  },
  "magnesium_forms": {
-  "listings": 3177,
+  "listings": 3753,
   "rows": [
    {
     "form": "Magnesium Oxide",
-    "listings": 506,
-    "share_pct": 15.9
+    "listings": 691,
+    "share_pct": 18.4
    },
    {
     "form": "Magnesium",
-    "listings": 456,
-    "share_pct": 14.4
+    "listings": 577,
+    "share_pct": 15.4
    },
    {
     "form": "Magnesium Citrate",
-    "listings": 453,
-    "share_pct": 14.3
+    "listings": 491,
+    "share_pct": 13.1
    },
    {
     "form": "Magnesium Glycinate",
-    "listings": 241,
-    "share_pct": 7.6
+    "listings": 244,
+    "share_pct": 6.5
    },
    {
     "form": "Magnesium Aspartate",
-    "listings": 188,
-    "share_pct": 5.9
+    "listings": 201,
+    "share_pct": 5.4
    },
    {
     "form": "Magnesium Carbonate",
-    "listings": 129,
-    "share_pct": 4.1
+    "listings": 138,
+    "share_pct": 3.7
    },
    {
     "form": "Magnesium Amino Acid Chelate",
-    "listings": 105,
-    "share_pct": 3.3
+    "listings": 117,
+    "share_pct": 3.1
    },
    {
     "form": "Magnesium Ascorbate",
-    "listings": 76,
-    "share_pct": 2.4
+    "listings": 92,
+    "share_pct": 2.5
    }
   ]
  },
  "caffeine_mg_per_serving": {
-  "products": 240,
-  "mean": 163,
+  "products": 262,
+  "mean": 170,
   "median": 150,
   "max": 400,
-  "over_200": 56
+  "over_200": 67
  },
  "top_brands": [
   {
@@ -668,39 +668,39 @@
   },
   {
    "brand": "NOW",
-   "products": 379
+   "products": 380
   },
   {
    "brand": "Hawaii Pharm",
    "products": 311
   },
   {
+   "brand": "Nature's Way",
+   "products": 253
+  },
+  {
    "brand": "Douglas Laboratories",
-   "products": 228
+   "products": 233
   },
   {
    "brand": "Puritan's Pride",
-   "products": 217
+   "products": 218
   },
   {
    "brand": "Source Naturals",
    "products": 194
   },
   {
-   "brand": "Nature's Way",
-   "products": 187
-  },
-  {
    "brand": "Pure Encapsulations",
-   "products": 179
-  },
-  {
-   "brand": "Nature Made",
-   "products": 171
+   "products": 189
   },
   {
    "brand": "The Vitamin Shoppe",
-   "products": 169
+   "products": 173
+  },
+  {
+   "brand": "Nature Made",
+   "products": 172
   },
   {
    "brand": "Bluebonnet",
@@ -708,11 +708,11 @@
   },
   {
    "brand": "Country Life",
-   "products": 159
+   "products": 163
   },
   {
    "brand": "Good 'N Natural",
-   "products": 145
+   "products": 146
   },
   {
    "brand": "Solgar",

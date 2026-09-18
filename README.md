@@ -4,14 +4,14 @@
 
 # 💊 SuppDB — Supplements & Nootropics Dataset
 
-**17,000+ real supplement products · 2,000+ brands · normalized mg dosages · proprietary-blend flags · NIH PubChem chemistry · drug-interaction & upper-limit safety layer**
+**18,000+ real supplement products · 2,000+ brands · normalized mg dosages · proprietary-blend flags · NIH PubChem chemistry · drug-interaction & upper-limit safety layer**
 
 [![Sample: 300 products](https://img.shields.io/badge/Free%20Sample-300%20products-brightgreen.svg)](samples/suppdb_sample.csv)
 [![🤗 Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-sample%20dataset-ffd21e.svg)](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)
 [![🤗 Explorer](https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-sample%20explorer-ffd21e.svg)](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers)
 [![Brands: 2,000+](https://img.shields.io/badge/Brands-2%2C000%2B-4c8bf5.svg)](#whats-inside)
 [![Source: NIH DSLD](https://img.shields.io/badge/Source-NIH%20DSLD%20%2B%20PubChem-2fb389.svg)](#provenance)
-[![Snapshot: 2026.07](https://img.shields.io/badge/Snapshot-2026.07-blue.svg)](CHANGELOG.md)
+[![Snapshot: 2026.09](https://img.shields.io/badge/Snapshot-2026.09-blue.svg)](CHANGELOG.md)
 [![Safety layer: 8,800+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C800%2B%20interactions-e11d48.svg)](#safety-layer)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.dataengineered.io-10b981.svg)](https://suppdb.dataengineered.io)
 
@@ -33,7 +33,7 @@ This is a **label-facts + chemistry** dataset — think *INCIDecoder for supplem
 
 | | Full dataset | Free sample |
 | :--- | ---: | ---: |
-| Supplement products | **17,000+** | 300 |
+| Supplement products | **18,000+** | 300 |
 | Brands | **2,000+** | 218 |
 | Active-ingredient records | **115,000+** | 2,249 |
 | Proprietary-blend flags | **40,000+** | 883 |
@@ -48,7 +48,7 @@ Each sample product also carries a **[Safety layer](#safety-layer) teaser** — 
 
 ## Field coverage (the honest numbers)
 
-Measured across all 17,000+ products. Published up front so you can decide if the fields you need are covered — supplement labels don't all publish every attribute, and reference/chemistry data only exists for some compounds.
+Measured across all 18,000+ products. Published up front so you can decide if the fields you need are covered — supplement labels don't all publish every attribute, and reference/chemistry data only exists for some compounds.
 
 | Field | Coverage | | Field | Coverage |
 | :--- | ---: | --- | :--- | ---: |
@@ -94,7 +94,7 @@ Every record is traceable and re-verifiable:
 | `brand` | Brand / manufacturer as printed on the label |
 | `source_url` | Exact NIH DSLD label page the data came from |
 | `dsld_label_id` | DSLD label identifier |
-| `dataset_version` | Snapshot id (`2026.07`) |
+| `dataset_version` | Snapshot id (`2026.09`) |
 
 Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.S. Government **public domain**. See [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md) for every field.
 
@@ -104,7 +104,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | :--- | :--- | :--- |
 | **Sample** | ~300 products, flat CSV (this repo) | Free |
 | **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
-| **Catalog only (Snapshot)** | Full 17,000+ products · SQLite + CSV + JSON | **$49** one-time |
+| **Catalog only (Snapshot)** | Full 18,000+ products · SQLite + CSV + JSON | **$49** one-time |
 | **Custom work** | Subsets, recurring refreshes, schema mapping — quoted per engagement | from $99, via the [contact form](https://suppdb.dataengineered.io/#support) |
 
 **[→ Get it at suppdb.dataengineered.io](https://suppdb.dataengineered.io)** · or use the [contact form](https://suppdb.dataengineered.io/#support) (suppdb@dataengineered.io) for custom work.
