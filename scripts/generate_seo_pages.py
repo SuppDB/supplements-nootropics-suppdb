@@ -164,19 +164,26 @@ def ingredient_profile(ing_name, rows, category, formula, weight, inchikey):
         sentences.append(f"In {prop_n} of {total_n} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own.")
     return f'<p style="color:var(--text-muted); font-size:1.02rem; margin-top:20px; max-width:72ch;">{_sentences(sentences)}</p>'
 
+# Product <title> descriptors in preference order (see _product_title_round).
+PRODUCT_DESCRIPTORS = ["Ingredients & Supplement Facts", "Ingredients", "supplement"]
+
+
 def product_meta_description(rows, brand, pname, form_type, serving_count, serving_unit):
-    """First sentence = the product's most distinctive fact: form, serving, top-dosed ingredient."""
+    """First sentence = the product's most distinctive fact: ingredient count, form,
+    serving, top-dosed ingredient. Opens with "Ingredients of" for the same reason
+    the title does (see _product_title_round)."""
     n = len(rows)
+    ing = "ingredient" if n == 1 else "ingredients"
     doses = [(r.get('ingredient', '').strip(), _num(r.get('amount_per_serving_mg'))) for r in rows]
     doses = [(nm, d) for nm, d in doses if nm and d and d > 0]
+    lead = (f"Ingredients of {pname}, a {form_type} supplement from {brand}: {n} {ing} "
+            f"at {serving_count} {serving_unit} per serving")
     if doses:
         top_name, top_mg = max(doses, key=lambda t: t[1])
-        lead = (f"{pname} is a {form_type} supplement from {brand} at {serving_count} {serving_unit} "
-                f"per serving, led by {top_name} at {_mg(top_mg)} mg.")
+        lead += f", led by {top_name} at {_mg(top_mg)} mg."
     else:
-        lead = (f"{pname} is a {form_type} supplement from {brand} at {serving_count} {serving_unit} "
-                f"per serving across {n} ingredients.")
-    lead += f" Normalized supplement facts for all {n} ingredients with NIH PubChem cross-references."
+        lead += "."
+    lead += " Normalized supplement facts with NIH PubChem cross-references."
     return fit_desc(lead)
 
 def ingredient_meta_description(ing_name, rows):
@@ -416,12 +423,15 @@ def main():
     def _product_title_round(pid, round_n):
         m = product_meta[pid]
         pname, brand, form_type = m["pname"], m["brand"], m["form_type"]
+        # "Ingredients" leads the descriptor: Search Console (2026-09-18) showed
+        # the product pages surfacing for "<product> ingredients" queries
+        # ("extenze ingredients", "vayacog ingredients", "life extension
+        # two-per-day ingredients") with titles that never said the word.
         if round_n == 0:
-            t = fit_title(f"{pname} by {brand}", ["Supplement Facts", "supplement"], "SuppDB")
+            t = fit_title(f"{pname} by {brand}", PRODUCT_DESCRIPTORS, "SuppDB")
             return t if _title_has_full_brand(t, brand) else _product_forced_title(pname, brand)
         if round_n == 1:
-            t = fit_title(f"{pname} by {brand} ({form_type})",
-                           ["Supplement Facts", "supplement"], "SuppDB")
+            t = fit_title(f"{pname} by {brand} ({form_type})", PRODUCT_DESCRIPTORS, "SuppDB")
             return t if _title_has_full_brand(t, brand) else \
                 _product_forced_title(pname, brand, extra=form_type)
         # Guaranteed-unique fallback: pid is unique, so this always terminates the loop.
@@ -548,7 +558,7 @@ def main():
   <link rel="alternate" hreflang="en" href="{page_url}" />
   <link rel="alternate" hreflang="x-default" href="{page_url}" />
 
-  <meta property="og:title" content="{pname} by {brand} — Normalized Supplement Facts" />
+  <meta property="og:title" content="{pname} by {brand} — Ingredients &amp; Supplement Facts" />
   <meta property="og:description" content="Exact mg ingredient dosages, chemical formulations, and NIH DSLD verification record for {pname}." />
   <meta property="og:url" content="{page_url}" />
   <meta property="og:type" content="article" />
@@ -635,7 +645,7 @@ def main():
     {product_profile(rows, brand, pname, form_type, serving_count, serving_unit)}
     <div class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <h3 style="font-size: 1.35rem; color: var(--accent);">Normalized Supplement Facts &amp; Chemistry</h3>
+        <h2 style="font-size: 1.35rem; color: var(--accent);">Ingredients &amp; Supplement Facts ({len(rows)})</h2>
         <a href="{source_url}" target="_blank" rel="noopener noreferrer" class="btn-link" style="font-size:0.8rem;">🔬 Verify on NIH DSLD ↗</a>
       </div>
       <p style="color:var(--text-muted); font-size:0.88rem; margin-top:6px;">All dosage quantities standardized to exact milligrams (mg). Chemical identifiers cross-referenced via NIH PubChem.</p>
