@@ -12,7 +12,8 @@
     "ingredients/*.html",
     "ingredients/*/index.html",
     "products/*.html",
-    "products/*/index.html"
+    "products/*/index.html",
+    "stats/index.html"
   ],
   "exclude": [],
   "not_found": "404.html",

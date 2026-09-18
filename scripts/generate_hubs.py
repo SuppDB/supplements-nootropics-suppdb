@@ -416,6 +416,8 @@ def rebuild_sitemap(ranges_by_section):
     range hub, and every leaf, all through seo_common.write_sitemap (dedupes,
     drops non-HTML, stamps lastmod from git)."""
     entries = [(BASE + "/", INDEX, "weekly", "1.0")]
+    if (ROOT / "stats" / "index.html").exists():  # scripts/generate_stats.py -- citable, embeddable asset
+        entries.append((BASE + "/stats/", ROOT / "stats" / "index.html", "monthly", "0.9"))
     for sec in SECTIONS:
         d = ROOT / sec["slug"]
         priority = "0.9" if sec["kind"] == "ingredient" else "0.8"

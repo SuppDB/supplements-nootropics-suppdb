@@ -79,6 +79,12 @@ Beyond the catalog, an optional **Safety layer** turns the normalized doses into
 
 Delivered as relational SQLite + CSV + JSON, self-joinable via a slim compound index. Sources are public-domain (NIH ODS, DailyMed, MedlinePlus, WADA). Available at **[suppdb.dataengineered.io](https://suppdb.dataengineered.io)** as a one-time download. **Not medical advice** — every row cites its source; verify with a clinician.
 
+## Statistics page (`/stats/`)
+
+[suppdb.dataengineered.io/stats/](https://suppdb.dataengineered.io/stats/) publishes aggregate statistics computed from the **full** catalogue — the most common ingredients, ingredient types, the share of products using proprietary blends, doses versus the NIH daily reference intake and the tolerable upper limit, forms, magnesium forms, caffeine per serving, top brands — as a citable page with embeddable SVG charts and a machine-readable `stats/data.json`. The figures and charts are **CC BY 4.0**: reuse them with a link to the page. Only aggregates are published; the row-level catalogue stays in the commercial dataset.
+
+`scripts/generate_stats.py` regenerates `stats/` from the private pipeline's master SQLite after each local refresh (see the private repo's RELEASING.md); follow it with `generate_hubs.py` (sitemap) and the i18n `build` + `check`.
+
 ## Provenance
 
 Every record is traceable and re-verifiable:
