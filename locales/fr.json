@@ -1,4 +1,10 @@
 {
+ "00ac9f56156e9a3a": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mg per serving, led by {5}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mg par portion, en tête {5}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "01c9b9a4a9a74139": {
   "src": "§ FAQ · Frequently Asked Questions",
   "t": "§ FAQ · Questions fréquentes",
@@ -71,6 +77,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "07a3c91c95a1b4c0": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "07ab1c609991ed0c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized supplement facts with NIH PubChem…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion. Composition normalisée avec références croisées NIH PubChem…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "08c9dabe9ccbb1ed": {
   "src": "Live Explorer",
   "t": "Explorateur en direct",
@@ -106,6 +124,18 @@
   "t": "Tarifs &amp; licences",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1002c0e87c9eccad": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving. Normalized supplement facts with NIH…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} mL par portion. Composition normalisée avec références croisées NIH…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "10939934a4475953": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6} at {7} mg.",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête {6} à {7} mg.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "1168cc144b8493aa": {
   "src": "Every dose converted to milligrams — {0}, {1}, and substance-specific {2} handled correctly. Undisclosed proprietary-blend doses are flagged, not silently dropped.",
@@ -148,6 +178,18 @@
   "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée des {6}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1753612786da42d1": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4}",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "17721916adc91f8b": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "1798c339a133346d": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg.",
@@ -245,6 +287,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "21555523365003aa": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "233e417df913a957": {
   "src": "✦ Support Inquiry Dispatched!",
   "t": "✦ Demande de support envoyée !",
@@ -286,6 +334,12 @@
   "t": "Catalogue seul — Snapshot complet",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "2c9a5f0d05a03880": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "2cc956decdd00a0d": {
   "src": "Ingredient directory: M",
@@ -407,6 +461,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "3ef8e57aab5f7b5c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6} at {7} mg. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête {6} à {7} mg. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "40457fe3b4e6446c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4}",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "408d6771c49efe7c": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts…",
   "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, avec {5} ingrédients. Composition normalisée…",
@@ -449,6 +515,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "4669fd401650f5df": {
+  "src": "Ingredients &amp; Supplement Facts ({0})",
+  "t": "Ingrédients &amp; composition ({0})",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "475258a41c47a724": {
   "src": "Not assigned / Complex botanical extract",
   "t": "Non attribué / extrait botanique complexe",
@@ -484,6 +556,12 @@
   "t": "Fiche de composition normalisée pour {0} : {1}, portion de {2} {3}, vérifiée sur l'étiquette NIH DSLD {4}.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4c8d2d3436654937": {
+  "src": "Ingredients of {0}, a {1} supplement from DC: {2} ingredients at {3} {4} per serving, led by {5} at {6} mg.",
+  "t": "Ingrédients de {0}, un complément {1} de DC : {2} ingrédients pour {3} {4} par portion, en tête {5} à {6} mg.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "4ce501266562020e": {
   "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}.",
@@ -557,6 +635,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "5298935d597de81c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mL per serving, led by {5} at {6} mg. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mL par portion, en tête {5} à {6} mg. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "52f4af89bf979ad7": {
   "src": "Browse every page: <0>{1} ingredient monographs</0> · <2>{3} product labels</2>",
   "t": "Parcourir toutes les pages : <0>{1} monographies d'ingrédients</0> · <2>{3} étiquettes de produits</2>",
@@ -580,6 +664,12 @@
   "t": "Jeu de données structuré sur les compléments alimentaires : {0} produits réels de {1} marques, doses normalisées en mg, mélanges exclusifs signalés, enrichi avec la chimie NIH PubChem.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "54e88426a4a8e4bc": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mL per serving, led by {5} at {6} mg. Normalized supplement…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mL par portion, en tête {5} à {6} mg. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "558bbd18fe02f130": {
   "src": "{0} appears in {1} commercial supplement products across {2} brand in this SuppDB sample.",
@@ -641,6 +731,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "5c1e867385ac3475": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "5d2e5886de41b746": {
   "src": "Bug Report / Data Quality Feedback",
   "t": "Signalement de bug / retour sur la qualité des données",
@@ -695,6 +791,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "63d991ab8316a1ca": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6} at {7} mg. Normalized supplement…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête {6} à {7} mg. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "63f4b2402b33b120": {
   "src": "Safety &amp; Interaction Layer",
   "t": "Couche Sécurité &amp; interactions",
@@ -707,11 +809,29 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "641af982a1ef1a80": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "65ff49590072022c": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized supplement…",
   "t": "{0} est un complément de type {1} de {2}, à {3} {4} par portion, principalement {5} à {6} mg. Composition normalisée…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "6638c325d6f0d62c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6} at {7} mg. Normalized supplement…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête {6} à {7} mg. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "66a02ddbd3b429af": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mL per serving, led by {5} at {6} mg.",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mL par portion, en tête {5} à {6} mg.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "66a1c7d07c651c7c": {
   "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample, at per-serving doses ranging {3} mg.",
@@ -766,6 +886,12 @@
   "t": "Sa fiche NIH PubChem indique la formule moléculaire {0}, une masse moléculaire de {1} g/mol et l'InChIKey {2}.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "6d0b94c18cf8dceb": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving. Normalized supplement…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "6d52be4e8f58a20e": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized…",
@@ -917,6 +1043,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "7cfc4b4e719d1069": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving. Normalized supplement facts with NIH…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion. Composition normalisée avec références croisées NIH…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "7ddfd264324fe590": {
   "src": "Ingredient",
   "t": "Ingrédient",
@@ -977,17 +1109,41 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "8272833f264a6097": {
+  "src": "{0} by {1} — Ingredients | SuppDB",
+  "t": "{0} de {1} — Ingrédients | SuppDB",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "8344778bd78030ce": {
   "src": "<0>Relational SQLite + CSV + JSON:</0> normalized tables (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), ready for AI health apps, dose comparison, and {1} integration.",
   "t": "<0>SQLite relationnel + CSV + JSON :</0> tables normalisées (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), prêtes pour les applications santé à base d'IA, la comparaison de doses et l'intégration {1}.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "8560ddf9b814a7a7": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} mL par portion…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "8563af9b27be1c0c": {
   "src": "Custom Data / Enterprise Integration",
   "t": "Données sur mesure / intégration entreprise",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "86ca5a4be1003ebc": {
+  "src": "{0} by {1} — Ingredients &amp; Supplement Facts | SuppDB",
+  "t": "{0} de {1} — Ingrédients &amp; composition | SuppDB",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "879da5ff4e87094a": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving.",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "87f2709ae4368c51": {
   "src": "Ingredient directory: S",
@@ -1018,6 +1174,12 @@
   "t": "Message *",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8afbc76feb324c34": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving. Normalized supplement facts with NIH PubChem…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} mL par portion. Composition normalisée avec références croisées NIH PubChem…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "8b79c7aba12e0759": {
   "src": "{0} ingredients are cross-referenced to NIH PubChem chemistry.",
@@ -1054,6 +1216,12 @@
   "t": "Données structurées d'étiquettes de compléments : doses en mg, mélanges exclusifs, chimie PubChem — plus une couche Sécurité : interactions médicamenteuses, limites supérieures, contre-indications.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8dd3bf00b3e031d5": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving, led by {5} at {6} mg. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} mL par portion, en tête {5} à {6} mg. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "8dfb5b830d1909c8": {
   "src": "Molecular Weight",
@@ -1169,11 +1337,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9f33ad847c64eac0": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6} at {7} mg. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête {6} à {7} mg. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "9ff481076ecafc68": {
   "src": "— (botanical)",
   "t": "— (botanique)",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a09ab25d0ba23989": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6} at {7}",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête {6} à {7}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "a0d9bbad5f932ea5": {
   "src": "Pricing",
@@ -1193,6 +1373,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a1c316919163e603": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6} at {7}",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête {6} à {7}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "a203e3f75fa74465": {
   "src": "In {0} of {1} label listings it is folded into an undisclosed proprietary blend rather than dosed on its own.",
   "t": "Dans {0} des {1} mentions sur étiquette, il est intégré à un mélange exclusif non détaillé au lieu d'être dosé séparément.",
@@ -1204,6 +1390,12 @@
   "t": "Catégorie",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a3d9d08164c22618": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized supplement…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "a46f7a6fe4c90219": {
   "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample.",
@@ -1373,6 +1565,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "b5ff48ef90571016": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6} at {7} mg.",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête {6} à {7} mg.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "b688c419270da192": {
   "src": "SuppDB Supplements &amp; Nootropics Dataset",
   "t": "SuppDB — Jeu de données compléments alimentaires &amp; nootropiques",
@@ -1451,11 +1649,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c2b80aff638bb717": {
+  "src": "{0} by DC — Ingredients | SuppDB",
+  "t": "{0} de DC — Ingrédients | SuppDB",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "c605fa14d66f968a": {
   "src": "The page you're looking for doesn't exist or may have moved.",
   "t": "La page que vous cherchez n'existe pas ou a peut-être été déplacée.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "c69389ef1a266028": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mg per serving, led by {5} at {6}",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mg par portion, en tête {5} à {6}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "c714a226e70cb7ca": {
   "src": "One-time download · {0} products · Snapshot {1}",
@@ -1511,6 +1721,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "cdada13252c60fd0": {
+  "src": "{0} by {1} — Ingredients &amp; Supplement Facts",
+  "t": "{0} de {1} — Ingrédients &amp; composition",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "cec70b4a6031e757": {
   "src": "PubChem chemistry",
   "t": "chimie PubChem",
@@ -1547,11 +1763,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d2d33ccceeafdeb5": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} mg per serving, led by {5} at {6} mg. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} mg par portion, en tête {5} à {6} mg. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "d406e22e9b088d8e": {
   "src": "Ingredient directory — C — {0} ingredient monographs | SuppDB",
   "t": "Répertoire des ingrédients — C — {0} monographies d'ingrédients | SuppDB",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "d577dbafd5d541cc": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized supplement facts with NIH…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion. Composition normalisée avec références croisées NIH…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "d79da395b5d7a09c": {
   "src": "Abstract",
@@ -1685,6 +1913,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e570b9449648532c": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "e5882789f9187a1c": {
   "src": "Every ingredient record features an explicit boolean flag (`is_proprietary_blend`). When a product lists a proprietary blend, the total blend mass is recorded, and constituent ingredients are linked under the shared blend hierarchy without fabricating unverified individual dosages.",
   "t": "Chaque fiche d'ingrédient comporte un indicateur booléen explicite (`is_proprietary_blend`). Lorsqu'un produit mentionne un mélange exclusif, la masse totale du mélange est enregistrée et les ingrédients qui le composent sont rattachés à la hiérarchie commune du mélange, sans inventer de dosages individuels non vérifiés.",
@@ -1702,6 +1936,12 @@
   "t": "Formule moléculaire",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "e5faf04f084dd690": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} Chewable…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} Chewable…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "e62e93cd1296615d": {
   "src": "undisclosed <0>(flagged)</0>",
@@ -1763,6 +2003,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ed0b2c4e0ce9a414": {
+  "src": "{0} by DC — Ingredients &amp; Supplement Facts",
+  "t": "{0} de DC — Ingrédients &amp; composition",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "ee794fb9fcf3d444": {
   "src": "SuppDB Supplements &amp; Nootropics Dataset — Full Snapshot",
   "t": "SuppDB Jeu de données compléments alimentaires &amp; nootropiques — Snapshot complet",
@@ -1774,6 +2020,12 @@
   "t": "{0} monographies d'ingrédients de la section S du répertoire des ingrédients de SuppDB, dont {1}, {2}, {3}.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ee9e91d4906dbb0f": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "eec56bd5995b76c5": {
   "src": "{0} by {1} — Normalized Supplement Facts",
@@ -1805,6 +2057,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f15884760a462339": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion, en tête {6}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
+ "f1e75cc9630208f9": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving, led by {5} at {6} mg.",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} mL par portion, en tête {5} à {6} mg.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "f32d5a3b17e61429": {
   "src": "Support",
   "t": "Support",
@@ -1816,6 +2080,12 @@
   "t": "base de données de compléments alimentaires",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f3e6fde07237b28b": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédient pour {4} {5} par portion, en tête {6}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "f41d8fda1b53dea1": {
   "src": "— co-occurs in {0} products",
@@ -1840,6 +2110,12 @@
   "t": "Fiche PubChem",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f61e778be6930da3": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion. Composition…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "f62feca2a4612cad": {
   "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg. Normalized supplement facts…",
@@ -1870,6 +2146,12 @@
   "t": "{0} fait partie d'un mélange exclusif dont l'étiquette ne détaille pas la répartition exacte.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f830349849afd3dc": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized supplement facts…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} {5} par portion. Composition normalisée…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "f91a050672e97dc0": {
   "src": "Product directory — M — {0} product labels | SuppDB",
@@ -1906,6 +2188,12 @@
   "t": "<0>{1} compléments alimentaires réels</0> de {2} marques, construits entièrement à partir des étiquettes NIH DSLD du domaine public.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "fd3ab9a3f34bdd4a": {
+  "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} oz per serving, led by {5}…",
+  "t": "Ingrédients de {0}, un complément {1} de {2} : {3} ingrédients pour {4} oz par portion, en tête {5}…",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "fd8325c863330bef": {
   "src": "How are proprietary blends handled in the SuppDB dataset?",
