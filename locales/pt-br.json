@@ -1409,6 +1409,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "be763e9aba2af6b8": {
+  "src": "Stats",
+  "t": "Estatísticas",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
+ },
  "becb1fa10a7622b9": {
   "src": "Our form gateway did not respond. Please email suppdb@dataengineered.io with your message — we reply within {0} business day.",
   "t": "Nosso gateway de formulários não respondeu. Envie um e-mail para suppdb@dataengineered.io com sua mensagem — respondemos em até {0} dia útil.",
@@ -1432,6 +1438,12 @@
   "t": "{0} de {1} ingredientes têm dose exata por porção, somando {2} mg no total.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "c093275cbf8435fe": {
+  "src": "Supplement statistics",
+  "t": "Estatísticas de suplementos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-18"
  },
  "c22497394781792b": {
   "src": "{0} appears in {1} commercial supplement product across {2} brand in this SuppDB sample.",
