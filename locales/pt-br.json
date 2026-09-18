@@ -95,11 +95,29 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "09ca55ca52d207f2": {
+  "src": "Share",
+  "t": "Participação",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "0b42db8842c0f799": {
+  "src": "top {0} of {1} brands",
+  "t": "as {0} primeiras de {1} marcas",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "0c107a6323ebd488": {
   "src": "Send Message to suppdb@dataengineered.io ➔",
   "t": "Enviar mensagem para suppdb@dataengineered.io ➔",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "0c4a4c9df43ca0c6": {
+  "src": "The most common supplement ingredients",
+  "t": "Os ingredientes de suplementos mais comuns",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "0cac679506f47fb8": {
   "src": "{0} is a {1} supplement from {2} at {3} mL per serving across {4} ingredients. Normalized supplement facts for all {5} ingredients…",
@@ -173,11 +191,29 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "138a0c5dff155b9d": {
+  "src": "Dietary supplements in numbers",
+  "t": "Suplementos alimentares em números",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "14423cb82315e5be": {
+  "src": "{0} labels with a stated form",
+  "t": "{0} rótulos com forma declarada",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "151f299a516165a4": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all {6}",
   "t": "{0} é um suplemento no formato {1} de {2}, com {3} {4} por porção e {5} ingredientes. Informação nutricional normalizada de todos os {6}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "158d56fde1442fb0": {
+  "src": "<0>Reuse.</0> The figures and charts on this page are published under <1>CC BY {2}</1>: use them in articles, slides and posts with a link to {3}. The machine-readable version is <4>data.json</4>. The underlying row-level catalogue is a separate <5>commercial product</5>; a free sample is in the <6>public repository</6>.",
+  "t": "<0>Reutilização.</0> Os números e gráficos desta página são publicados sob <1>CC BY {2}</1>: use-os em artigos, slides e publicações com um link para {3}. A versão legível por máquina é <4>data.json</4>. O catálogo linha a linha subjacente é um <5>produto comercial</5> separado; uma amostra gratuita está no <6>repositório público</6>.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "1753612786da42d1": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4}",
@@ -215,6 +251,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "183aa47d5a19a884": {
+  "src": "Above daily reference",
+  "t": "Acima da referência diária",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "19106ea7317011b9": {
   "src": "← Explorer",
   "t": "← Explorador",
@@ -238,6 +280,12 @@
   "t": "↓ Explorador de amostra",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "1a555634dab2bac1": {
+  "src": "Share of products",
+  "t": "Participação de produtos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "1b566aa70e4b636f": {
   "src": "NIH PubChem Chemistry",
@@ -287,17 +335,35 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "2086b21f8f492741": {
+  "src": "Statistics",
+  "t": "Estatísticas",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "21555523365003aa": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving…",
   "t": "Ingredientes de {0}, um suplemento {1} de {2}: {3} ingredientes a {4} {5} por porção…",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
  },
+ "230b7757ef81efcd": {
+  "src": "Paste the snippet into your post. It links the chart back to this page, which is the only attribution we ask for.",
+  "t": "Cole o trecho na sua publicação. Ele vincula o gráfico a esta página, a única atribuição que pedimos.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "233e417df913a957": {
   "src": "✦ Support Inquiry Dispatched!",
   "t": "✦ Solicitação de suporte enviada!",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "23ef0a35b0dfc2a1": {
+  "src": "{0} has the most labels on file with <1>{2}</1>, ahead of {3} ({4}) and {5} ({6}). The catalogue spans {7} brands; most have a handful of products.",
+  "t": "{0} tem mais rótulos registrados, com <1>{2}</1>, à frente de {3} ({4}) e {5} ({6}). O catálogo abrange {7} marcas; a maioria tem um punhado de produtos.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "259823a42aefbc2d": {
   "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}. Per-serving dose is…",
@@ -317,6 +383,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "275942d62eb7293a": {
+  "src": "Two ingredients up close: magnesium and caffeine",
+  "t": "Dois ingredientes de perto: magnésio e cafeína",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "28aafac9ae4123e5": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led by {5} at {6} mg. Normalized…",
   "t": "{0} é um suplemento no formato {1} de {2}, com {3} {4} por porção, liderado por {5} com {6} mg. Normalizado…",
@@ -334,6 +406,12 @@
   "t": "Somente catálogo — Snapshot completo",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "2bb84e1a8b85b81d": {
+  "src": "<0>Source.</0> The full SuppDB snapshot of {1} product labels from the <2>NIH Dietary Supplement Label Database</2> (U.S. Government, public domain), each with its DSLD label ID and URL. Active ingredients are normalised to milligrams per serving; chemistry for {3} of {4} distinct ingredients comes from NIH PubChem.",
+  "t": "<0>Fonte.</0> O snapshot completo do SuppDB com {1} rótulos de produtos da <2>NIH Dietary Supplement Label Database</2> (Governo dos EUA, domínio público), cada um com seu ID de rótulo DSLD e URL. Os ingredientes ativos são normalizados em miligramas por porção; a química de {3} dos {4} ingredientes distintos vem do NIH PubChem.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "2c9a5f0d05a03880": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led…",
@@ -358,6 +436,12 @@
   "t": "{0} estão dentro de uma mistura proprietária cujo rótulo não informa a divisão exata.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "2f11971e4e2fbd52": {
+  "src": "Reference values are the NIH Office of Dietary Supplements adult RDA or AI and tolerable upper intake level (UL), stored per nutrient in milligrams. Comparisons are per labelled serving, not per day, and only listings with a stated amount are counted. Exceeding the RDA is common and often intended; the UL for magnesium applies to supplemental intake only and the UL for niacin to nicotinic acid, so read these as label facts, not as a safety verdict. Some products are formulated for use under medical supervision.",
+  "t": "Os valores de referência são a RDA ou AI para adultos e o limite máximo de ingestão tolerável (UL) do NIH Office of Dietary Supplements, armazenados por nutriente em miligramas. As comparações são por porção rotulada, não por dia, e só registros com quantidade declarada são contados. Exceder a RDA é comum e muitas vezes intencional; o UL do magnésio se aplica apenas à ingestão suplementar e o UL da niacina ao ácido nicotínico, então leia esses números como fatos de rótulo, não como um veredito de segurança. Alguns produtos são formulados para uso sob supervisão médica.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "2f13f1ec13b69fe1": {
   "src": "{0} ingredient monographs from C in SuppDB's ingredient directory, including {1}, {2}, {3}.",
@@ -395,6 +479,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "33805c79b58bc525": {
+  "src": "Above the tolerable upper intake level",
+  "t": "Acima do limite máximo de ingestão tolerável",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "33f3e4ac96fb71bb": {
   "src": "SUPPDB <0>Supplements &amp; Nootropics Dataset</0>",
   "t": "SUPPDB <0>Conjunto de dados de suplementos &amp; nootrópicos</0>",
@@ -424,6 +514,12 @@
   "t": "Química + canonização por InChIKey",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "3806e1dc9b43abbe": {
+  "src": "Reference (mg per day)",
+  "t": "Referência (mg por dia)",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "38711d855941680b": {
   "src": "Label reference values in the sample record a recommended intake of {0} mg.",
@@ -478,6 +574,18 @@
   "t": "{0} é um suplemento no formato {1} de {2}, com {3} {4} por porção e {5} ingredientes. Informação nutricional normalizada…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "411c394548e6bd69": {
+  "src": "{0} labels",
+  "t": "{0} rótulos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "421d2ee9aa067d19": {
+  "src": "Ingredient type",
+  "t": "Tipo de ingrediente",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "441ef6fcf59ad84a": {
   "src": "BROWSE BY RANGE",
@@ -539,6 +647,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "4982104e672f2af2": {
+  "src": "Proprietary blends",
+  "t": "Blends proprietários",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "49fc2ca365bc32cf": {
   "src": "All dosage quantities standardized to exact milligrams (mg). Chemical identifiers cross-referenced via NIH PubChem.",
   "t": "Todas as quantidades de dose padronizadas em miligramas exatos (mg). Identificadores químicos cruzados com o NIH PubChem.",
@@ -557,11 +671,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "4c0cfee8e200757f": {
+  "src": "Above UL",
+  "t": "Acima do UL",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "4c8d2d3436654937": {
   "src": "Ingredients of {0}, a {1} supplement from DC: {2} ingredients at {3} {4} per serving, led by {5} at {6} mg.",
   "t": "Ingredientes de {0}, um suplemento {1} de DC: {2} ingredientes a {3} {4} por porção, liderado por {5} com {6} mg.",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
+ },
+ "4ce30b80c103df64": {
+  "src": "What kinds of ingredients supplements contain",
+  "t": "Que tipos de ingredientes os suplementos contêm",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "4ce501266562020e": {
   "src": "{0} appears in {1} SuppDB product, most often as {2} and {3}.",
@@ -598,6 +724,12 @@
   "t": "{0} é um suplemento no formato {1} de {2}, com {3} {4} por porção e {5} ingredientes. Informação nutricional…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "4e651e79024052ed": {
+  "src": "Brand names are as printed on the label and recorded by NIH DSLD. Counts reflect how many of a brand's labels are in the database, not its market share.",
+  "t": "Os nomes de marca são os impressos no rótulo e registrados pelo NIH DSLD. As contagens refletem quantos rótulos de uma marca estão no banco de dados, não sua participação de mercado.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "4fb31a2c034aae1b": {
   "src": "Sample Explorer",
@@ -707,6 +839,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "591775f269eeb780": {
+  "src": "Form is the label's own dosage form as recorded by NIH DSLD. Servings per container are stated on {0} of {1} labels (interquartile range {2} to {3}).",
+  "t": "A forma é a forma de dosagem do próprio rótulo, conforme registrada pelo NIH DSLD. As porções por embalagem são declaradas em {0} de {1} rótulos (intervalo interquartil de {2} a {3}).",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "59450bbf408b2875": {
   "src": "Label reference values in the sample record an upper safety limit up to {0} mg.",
   "t": "Os valores de referência dos rótulos na amostra registram um limite superior de segurança de até {0} mg.",
@@ -767,6 +905,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "5ed44477575a5e74": {
+  "src": "Supplements in numbers from {0} NIH DSLD labels: the most common ingredients, share of products using proprietary blends, doses versus the daily reference intake and the upper limit, forms, magnesium forms, caffeine per serving. Free to cite and embed.",
+  "t": "Suplementos em números a partir de {0} rótulos NIH DSLD: os ingredientes mais comuns, participação de produtos com blends proprietários, doses versus a ingestão diária de referência e o limite máximo, formas, formas de magnésio, cafeína por porção. Livre para citar e incorporar.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "5ffec519b0f69761": {
   "src": "{0} appears in {1} SuppDB products, most often as {2} and {3}. Per-serving doses range…",
   "t": "{0} aparece em {1} produtos do SuppDB, mais frequentemente como {2} e {3}. Doses por porção na faixa de…",
@@ -790,6 +934,12 @@
   "t": "Ingredientes ativos em destaque &amp; índice de monografias",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "637f764d8f6f6aa3": {
+  "src": "Every label with its ingredients, milligram doses, blend flags, forms, serving counts and PubChem chemistry, as SQLite, CSV and JSON.",
+  "t": "Cada rótulo com seus ingredientes, doses em miligramas, indicadores de blend, formas, número de porções e química do PubChem, em SQLite, CSV e JSON.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "63d991ab8316a1ca": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6} at {7} mg. Normalized supplement…",
@@ -947,6 +1097,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "71411bd2e0fcb1d5": {
+  "src": "How doses compare with reference intakes",
+  "t": "Como as doses se comparam às ingestões de referência",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "71777f1db0997966": {
+  "src": "<0>Nothing is estimated.</0> Amounts, forms, blend flags and serving counts are the label's own values as recorded by DSLD. Where a label states no amount the listing is excluded from dose figures, and every section states its denominator.",
+  "t": "<0>Nada é estimado.</0> Quantidades, formas, indicadores de blend e número de porções são os valores do próprio rótulo, conforme registrados pelo DSLD. Quando um rótulo não declara quantidade, o registro fica excluído dos números de dose, e cada seção indica seu denominador.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "7254366580183767": {
   "src": "{0} product labels from M in SuppDB's product directory, including {1}, {2}, {3}.",
   "t": "{0} rótulos de produtos com M no diretório de produtos do SuppDB, incluindo {1}, {2}, {3}.",
@@ -958,6 +1120,12 @@
   "t": "{0} aparece em {1} produtos do SuppDB, mais frequentemente como {2} e {3}. Doses por porção na faixa de {4} mg.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "73835fa3ee51efba": {
+  "src": "Actives per product",
+  "t": "Ativos por produto",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "73b110bbd82e422e": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving, led…",
@@ -1061,6 +1229,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "7e439c353ec807e1": {
+  "src": "On this page",
+  "t": "Nesta página",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "7eb1e1ba314ab936": {
   "src": "Safety · Catalog · Custom",
   "t": "Segurança · Catálogo · Personalizado",
@@ -1078,6 +1252,12 @@
   "t": "Este registro do SuppDB normaliza {0} ingrediente ativo do rótulo {2} de {1} como suplemento no formato {3}, com {4} {5} por porção e {6} porções por embalagem.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "7f94cf2c21c09182": {
+  "src": "{0} magnesium listings",
+  "t": "{0} registros de magnésio",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "7fd018a0b17b270f": {
   "src": "Ingredient directory — S — {0} ingredient monographs | SuppDB",
@@ -1097,11 +1277,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "806e9f2414b7564c": {
+  "src": "Ingredient type is the NIH DSLD ingredient group of each active. A product counts once per type it contains, so shares sum to more than {0}.",
+  "t": "O tipo de ingrediente é o grupo de ingrediente do NIH DSLD de cada ativo. Um produto conta uma vez por tipo que contém, então as participações somam mais de {0}.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "80ecc62c9c593645": {
   "src": "{0} product labels",
   "t": "{0} rótulos de produtos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8136c8a9949066ac": {
+  "src": "{0} products",
+  "t": "{0} produtos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "816c52fd2bdd94a6": {
   "src": "No",
@@ -1109,11 +1301,35 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "81f5deeb08264fb2": {
+  "src": "Get the full dataset ({0}) →",
+  "t": "Obter o conjunto de dados completo ({0}) →",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "81f9cdbf8901f4cb": {
+  "src": "Most common ingredients",
+  "t": "Ingredientes mais comuns",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "8272833f264a6097": {
   "src": "{0} by {1} — Ingredients | SuppDB",
   "t": "{0}, de {1} — Ingredientes | SuppDB",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
+ },
+ "828e724b036d5c47": {
+  "src": "Brands with the most products on file",
+  "t": "Marcas com mais produtos registrados",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "82edd4fcc2bc76ba": {
+  "src": "Product form",
+  "t": "Forma do produto",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "8344778bd78030ce": {
   "src": "<0>Relational SQLite + CSV + JSON:</0> normalized tables (`supplement_products`, `active_compounds`, `product_compounds`, `compound_synonyms`, `data_sources`), ready for AI health apps, dose comparison, and {1} integration.",
@@ -1168,6 +1384,12 @@
   "t": "{0} é um suplemento no formato {1} de {2}, com {3} {4} por porção, liderado por {5} com {6}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "8a746f4a7ad04b17": {
+  "src": "Dietary supplements in numbers: statistics from the SuppDB label database",
+  "t": "Suplementos alimentares em números: estatísticas do banco de dados de rótulos SuppDB",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "8addb891254ad8a1": {
   "src": "Message *",
@@ -1235,6 +1457,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9095d47959acc469": {
+  "src": "Dosed listings",
+  "t": "Registros com dose",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "912c279c6eea462b": {
   "src": "NIH DSLD LABEL {0} · {1}",
   "t": "RÓTULO NIH DSLD {0} · {1}",
@@ -1252,6 +1480,12 @@
   "t": "Todos os ingredientes de suplementos do SuppDB, cada um com sua monografia: fórmula molecular, massa, id PubChem, InChIKey e os produtos comerciais em que…",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "9297913eea881537": {
+  "src": "Copy snippet",
+  "t": "Copiar trecho",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "9425b22ba9c0d9c7": {
   "src": "Technical Supplement &amp; Nootropic Dataset FAQ",
@@ -1289,6 +1523,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "99e9bb22192cd5ee": {
+  "src": "<0>Refresh.</0> SuppDB is rebuilt from the DSLD manifest on a monthly cadence; this page and its charts are regenerated with each snapshot, so figures move. Cite the snapshot date.",
+  "t": "<0>Atualização.</0> O SuppDB é reconstruído a partir do manifesto DSLD em cadência mensal; esta página e seus gráficos são regenerados a cada snapshot, então os números mudam. Cite a data do snapshot.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "9a07bf1c56177b42": {
   "src": "Your Email Address *",
   "t": "Seu endereço de e-mail *",
@@ -1300,6 +1540,12 @@
   "t": "<0>SUPPDB</0> — Conjunto de dados de suplementos &amp; nootrópicos © {1}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "9ab5beed41c54957": {
+  "src": "<0>Labels, not sales.</0> DSLD holds labels submitted or collected by NIH, so shares describe what is on the market's labels, not what is sold or consumed, and reference-intake comparisons are per serving as labelled.",
+  "t": "<0>Rótulos, não vendas.</0> O DSLD contém rótulos enviados ou coletados pelo NIH, então as participações descrevem o que está nos rótulos do mercado, não o que é vendido ou consumido, e as comparações com a ingestão de referência são por porção conforme rotulada.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "9b037124af06f144": {
   "src": "↻ Send another request",
@@ -1325,6 +1571,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "9dbcb8b076356548": {
+  "src": "<0>{1}</0> of supplement labels use a proprietary blend, which lists ingredients without their individual amounts. As a result <2>{3}</2> of all {4} ingredient listings carry no per-ingredient dose. {5} products hide doses most often ({6}), {7} least ({8}).",
+  "t": "<0>{1}</0> dos rótulos de suplementos usam um blend proprietário, que lista os ingredientes sem suas quantidades individuais. Como resultado, <2>{3}</2> de todos os {4} registros de ingrediente não têm dose por ingrediente. Produtos {5} ocultam doses com mais frequência ({6}), {7} com menos ({8}).",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "9e372345009564d6": {
   "src": "Yes! We cross-reference every normalized active botanical and chemical compound against NIH PubChem, enriching records with exact PubChem CIDs, molecular weights, canonical SMILES, and unique InChIKeys.",
   "t": "Sim! Cruzamos cada composto botânico e químico ativo normalizado com o NIH PubChem, enriquecendo os registros com PubChem CIDs exatos, massas moleculares, SMILES canônicos e InChIKeys únicos.",
@@ -1342,6 +1594,12 @@
   "t": "Ingredientes de {0}, um suplemento {1} de {2}: {3} ingredientes a {4} {5} por porção, liderado por {6} com {7} mg. Informação nutricional normalizada…",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
+ },
+ "9f9e914614e1d620": {
+  "src": "Nutrient",
+  "t": "Nutriente",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "9ff481076ecafc68": {
   "src": "— (botanical)",
@@ -1409,6 +1667,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a49d453278dda6f1": {
+  "src": "Aggregate statistics computed from the full SuppDB catalogue: {0} supplement and nootropic labels from the NIH Dietary Supplement Label Database, {1} active-ingredient listings normalised to milligrams, with a label ID and URL on every record. Snapshot of {2}. Every figure is free to cite, quote and embed with a link to this page.",
+  "t": "Estatísticas agregadas calculadas a partir do catálogo completo do SuppDB: {0} rótulos de suplementos e nootrópicos da NIH Dietary Supplement Label Database, {1} registros de ingrediente ativo normalizados em miligramas, com ID de rótulo e URL em cada registro. Snapshot de {2}. Cada número é livre para citar, reproduzir e incorporar com um link para esta página.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "a4a75cd5665596ad": {
   "src": "Describe your question or custom requirement...",
   "t": "Descreva sua pergunta ou requisito personalizado...",
@@ -1426,6 +1690,12 @@
   "t": "Suporte a pagamento / cripto / faturamento",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a62411377620ab33": {
+  "src": "| Market statistics",
+  "t": "| Estatísticas de mercado",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "a642a9617edd7d1d": {
   "src": "Manufactured by {0} · Serving Size: {1} {2}",
@@ -1457,6 +1727,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "a92e8f5c249f90ac": {
+  "src": "How often the dose is hidden",
+  "t": "Com que frequência a dose é ocultada",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "a959dc79d436da65": {
   "src": "Absolutely. You can download our verified {0} row open sample CSV ({1}) directly from our landing page or GitHub repository under a Creative Commons license.",
   "t": "Com certeza. Você pode baixar nossa amostra aberta e verificada em CSV de {0} linhas ({1}) diretamente da nossa página inicial ou do repositório no GitHub, sob uma licença Creative Commons.",
@@ -1468,6 +1744,18 @@
   "t": "— aparece junto em {0} produto",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "a9fe441cc1849e08": {
+  "src": "Distinct ingredients",
+  "t": "Ingredientes distintos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "aa8bc0f9242849dc": {
+  "src": "Forms and formula size",
+  "t": "Formas e tamanho da fórmula",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "ab5e4a6e03613667": {
   "src": "Have Questions or Need Custom Data?",
@@ -1505,6 +1793,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "af0906586da08d75": {
+  "src": "Supplements in numbers — SuppDB statistics {0}",
+  "t": "Suplementos em números — estatísticas SuppDB {0}",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "afb0126b9be76a3e": {
   "src": "Absolutely. You can download our verified {0} row open sample CSV (`samples/suppdb_sample.csv`) directly from our landing page or GitHub repository under a Creative Commons license.",
   "t": "Com certeza. Você pode baixar nossa amostra aberta e verificada em CSV de {0} linhas (`samples/suppdb_sample.csv`) diretamente da nossa página inicial ou do repositório no GitHub, sob uma licença Creative Commons.",
@@ -1522,6 +1816,12 @@
   "t": "O snapshot completo do conjunto de dados ({0}) é entregue por e-mail em até {1} h como um banco de dados SQLite relacional e limpo (`suppdb.sqlite`), junto com tabelas CSV normalizadas (`products.csv`, `ingredients.csv` e `brands.csv`) e exportações JSON.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "b08ae37ed0218a85": {
+  "src": "Snapshot",
+  "t": "Snapshot",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "b0e234bae1df06e0": {
   "src": "Product directory — {0} — {1} product labels | SuppDB",
@@ -1552,6 +1852,12 @@
   "t": "{0} aparece em {1} produto do SuppDB, mais frequentemente como {2} e {3}. Dose por porção: {4} mg.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "b361c10007bb4fb9": {
+  "src": "← Back to Main Explorer",
+  "t": "← Voltar ao explorador principal",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "b4c85a9c717ad656": {
   "src": "<0>Normalized mg dosages</0> across {1} active-ingredient records, with {2} proprietary-blend flags for undisclosed doses.",
@@ -1625,6 +1931,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "bfb17b95ad4862cc": {
+  "src": "{0} is on <1>{2}</1> of supplement labels, {3} on {4} and {5} on {6}. The most common botanical is {7} at {8}.",
+  "t": "{0} está em <1>{2}</1> dos rótulos de suplementos, {3} em {4} e {5} em {6}. O botânico mais comum é {7}, com {8}.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "c01e3c8f93de4bb3": {
   "src": "SuppDB — Supplements &amp; Nootropics Normalized Dataset · <0>Download Complete {1} Product Snapshot ({2})</0>",
   "t": "SuppDB — Conjunto de dados normalizado de suplementos &amp; nootrópicos · <0>Baixar o Snapshot completo de {1} produtos ({2})</0>",
@@ -1649,11 +1961,35 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c2918662fef456c7": {
+  "src": "<0>{1}</0> of products are {2}, {3} {4} and {5} {6}. <7>{8}</7> of products contain a single active ingredient; the median product has {9}, the mean {10}, and the most complex formula lists {11}. A container holds a median of {12} servings.",
+  "t": "<0>{1}</0> dos produtos são {2}, {3} {4} e {5} {6}. <7>{8}</7> dos produtos contêm um único ingrediente ativo; o produto mediano tem {9}, a média é {10} e a fórmula mais complexa lista {11}. Uma embalagem contém uma mediana de {12} porções.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "c2b80aff638bb717": {
   "src": "{0} by DC — Ingredients | SuppDB",
   "t": "{0}, de DC — Ingredientes | SuppDB",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
+ },
+ "c34e1af2fef9bc56": {
+  "src": "Download SVG",
+  "t": "Baixar SVG",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "c35745b8ec2fd50c": {
+  "src": "Magnesium form",
+  "t": "Forma de magnésio",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "c4a708da4c354079": {
+  "src": "{0} nutrients with an adult UL",
+  "t": "{0} nutrientes com UL para adultos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "c605fa14d66f968a": {
   "src": "The page you're looking for doesn't exist or may have moved.",
@@ -1679,6 +2015,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "c7db751cc7262f77": {
+  "src": "Supplement Statistics {0} — Most Common Ingredients, Proprietary Blends, Doses vs RDA | SuppDB",
+  "t": "Estatísticas de suplementos {0} — ingredientes mais comuns, blends proprietários, doses vs RDA | SuppDB",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "c9378df53c9f8a45": {
   "src": "{0} product labels from A in SuppDB's product directory, including {1}, {2}, {3}",
   "t": "{0} rótulos de produtos com A no diretório de produtos do SuppDB, incluindo {1}, {2}, {3}",
@@ -1696,6 +2038,12 @@
   "t": "Linhas reais da amostra gratuita. Observe a última linha: uma mistura proprietária cuja dose por ingrediente <0>não é divulgada no rótulo</0> — sinalizada, e não descartada.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "cb7771237673a80b": {
+  "src": "Per serving, <0>{1}</0> of {2} listings exceed the adult daily reference intake, as do {3} of {4} and {5} of {6} listings. Against the tolerable upper intake level, the line most often crossed is {7}: <8>{9}</8> of its dosed listings exceed the adult UL per serving, followed by {10} ({11}) and {12} ({13}).",
+  "t": "Por porção, <0>{1}</0> dos registros de {2} excedem a ingestão diária de referência para adultos, assim como {3} dos de {4} e {5} dos de {6}. Em relação ao limite máximo de ingestão tolerável, a linha mais cruzada é a de {7}: <8>{9}</8> dos seus registros com dose excedem o UL para adultos por porção, seguidos por {10} ({11}) e {12} ({13}).",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "cc0b26e1e6a3f136": {
   "src": "{0} g/mol",
@@ -1727,6 +2075,12 @@
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
  },
+ "cec3e9678ff0a30c": {
+  "src": "Embed this chart",
+  "t": "Incorporar este gráfico",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "cec70b4a6031e757": {
   "src": "PubChem chemistry",
   "t": "química PubChem",
@@ -1738,6 +2092,12 @@
   "t": "Privacidade",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "cf34dc73b41e84df": {
+  "src": "Ingredient listings",
+  "t": "Registros de ingrediente",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "cf743b3a0e3cec82": {
   "src": "{0} ({1}) Chemical &amp; Dosage Monograph — SuppDB",
@@ -1775,6 +2135,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d556292d846a1999": {
+  "src": "<0>{1}</0> of labels list at least one {2} ingredient, {3} a {4} and {5} a {6}. Probiotic bacteria appear on {7} of labels.",
+  "t": "<0>{1}</0> dos rótulos listam pelo menos um ingrediente {2}, {3} um {4} e {5} um {6}. Bactérias probióticas aparecem em {7} dos rótulos.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "d577dbafd5d541cc": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized supplement facts with NIH…",
   "t": "Ingredientes de {0}, um suplemento {1} de {2}: {3} ingredientes a {4} {5} por porção. Informação nutricional normalizada com referências cruzadas do NIH…",
@@ -1799,6 +2165,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "d8b0e57049c7dec6": {
+  "src": "Ingredient types",
+  "t": "Tipos de ingrediente",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "d8c79ce265b4b344": {
   "src": "{0} appears in {1} commercial supplement products across {2} brands in this SuppDB sample, at a per-serving dose of {3} mg.",
   "t": "{0} aparece em {1} suplementos comerciais de {2} marcas nesta amostra do SuppDB, com dose por porção de {3} mg.",
@@ -1816,6 +2188,12 @@
   "t": "Vendido sob a marca {0} nesta amostra.",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "d96fbed934876133": {
+  "src": "Suggested citation.",
+  "t": "Citação sugerida.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "da826a65f2d2b5fa": {
   "src": "{0} is a {1} supplement from {2} at {3} mL per serving, led by {4} at {5} mg. Normalized supplement facts for all {6}",
@@ -1835,6 +2213,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "dbf8b4b1afdd2fc8": {
+  "src": "A listing is flagged as a proprietary blend when the label groups it under a blend total instead of stating its own amount; the blend flag and the missing amount are both taken from the NIH DSLD label record. Forms with fewer than {0} products are omitted.",
+  "t": "Um registro é marcado como blend proprietário quando o rótulo o agrupa sob um total de blend em vez de declarar sua própria quantidade; o indicador de blend e a quantidade ausente vêm ambos do registro de rótulo do NIH DSLD. Formas com menos de {0} produtos são omitidas.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "dc6a5f1a7e871e9e": {
   "src": "§ {0} · Three Ways to Get the Data",
   "t": "§ {0} · Três formas de obter os dados",
@@ -1846,6 +2230,18 @@
   "t": "Produto",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "de2127044e908725": {
+  "src": "Magnesium form is the specific ingredient named on the label; a label that lists the element without a salt is shown as Magnesium. Caffeine figures use listings with a stated amount, whether from caffeine anhydrous or a caffeine-standardised extract.",
+  "t": "A forma de magnésio é o ingrediente específico nomeado no rótulo; um rótulo que lista o elemento sem um sal aparece como Magnesium. Os números de cafeína usam registros com quantidade declarada, seja de cafeína anidra ou de um extrato padronizado em cafeína.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "de39f4653e0c7009": {
+  "src": "Method, reuse and citation",
+  "t": "Método, reutilização e citação",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "de52a0bbb67ea2d4": {
   "src": "One-time purchase · CSV / SQLite / JSON delivered by email within {0} h · Public-domain sources",
@@ -1901,11 +2297,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e188bffe75de0478": {
+  "src": "{0} is the most common magnesium form at <1>{2}</1> of magnesium listings, ahead of {3} ({4}) and {5} ({6}); {7} of listings name no salt at all. Caffeine is dosed on {8} labels at a median of <9>{10} mg</9> per serving (mean {11} mg, maximum {12} mg); {13} of them exceed {14} mg in one serving.",
+  "t": "{0} é a forma de magnésio mais comum, com <1>{2}</1> dos registros de magnésio, à frente de {3} ({4}) e {5} ({6}); {7} dos registros não nomeiam sal algum. A cafeína é dosada em {8} rótulos com mediana de <9>{10} mg</9> por porção (média {11} mg, máximo {12} mg); {13} deles excedem {14} mg em uma porção.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "e48952d17285893d": {
   "src": "{0} by DC — Normalized Supplement Facts",
   "t": "{0}, da DC — informação nutricional normalizada",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "e539f597db1f90ad": {
+  "src": "Listings",
+  "t": "Registros",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "e5531adae3c84603": {
   "src": "GitHub Repository",
@@ -1967,6 +2375,18 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e84ab0fc3b8e460d": {
+  "src": "UL (mg per day)",
+  "t": "UL (mg por dia)",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "e860a4431cae91da": {
+  "src": "Supplement labels",
+  "t": "Rótulos de suplementos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "e889748706e4620b": {
   "src": "✦ Form gateway unavailable",
   "t": "✦ Gateway de formulários indisponível",
@@ -1985,6 +2405,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ea8abcca9a66884d": {
+  "src": "Doses vs reference intakes",
+  "t": "Doses vs ingestões de referência",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "eb1bc5fcc875f7c0": {
   "src": "<0>Condition contraindications</0> (pregnancy, anticoagulation, renal impairment, pre-surgery, and more).",
   "t": "<0>Contraindicações por condição</0> (gravidez, anticoagulação, insuficiência renal, pré-operatório e mais).",
@@ -1997,11 +2423,23 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "ec5ce0bd0d52a4ca": {
+  "src": "Need the row-level catalogue behind these numbers?",
+  "t": "Precisa do catálogo linha a linha por trás desses números?",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "ec62cea90fc2cf08": {
   "src": "Product directory",
   "t": "Diretório de produtos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ecd05348c2a55557": {
+  "src": "Brands",
+  "t": "Marcas",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "ed0b2c4e0ce9a414": {
   "src": "{0} by DC — Ingredients &amp; Supplement Facts",
@@ -2057,11 +2495,29 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f13a33c01a318ea5": {
+  "src": "Actives",
+  "t": "Ativos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
+ "f154cc2a50abaa76": {
+  "src": "Magnesium and caffeine",
+  "t": "Magnésio e cafeína",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "f15884760a462339": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving, led by {6}…",
   "t": "Ingredientes de {0}, um suplemento {1} de {2}: {3} ingredientes a {4} {5} por porção, liderado por {6}…",
   "by": "claude-fable-5-1",
   "at": "2026-09-18"
+ },
+ "f18b22ae5c4ca25c": {
+  "src": "With a proprietary blend",
+  "t": "Com blend proprietário",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "f1e75cc9630208f9": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} mL per serving, led by {5} at {6} mg.",
@@ -2080,6 +2536,12 @@
   "t": "banco de dados de suplementos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f3791c55716d8407": {
+  "src": "<0>Questions or corrections:</0> <1>contact form</1> or suppdb@dataengineered.io.",
+  "t": "<0>Dúvidas ou correções:</0> <1>formulário de contato</1> ou suppdb@dataengineered.io.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "f3e6fde07237b28b": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredient at {4} {5} per serving, led by {6}…",
@@ -2110,6 +2572,12 @@
   "t": "Registro no PubChem",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "f5cbdf6bfb51439b": {
+  "src": "Contents",
+  "t": "Conteúdo",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  },
  "f61e778be6930da3": {
   "src": "Ingredients of {0}, a {1} supplement from {2}: {3} ingredients at {4} {5} per serving. Normalized…",
@@ -2159,6 +2627,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "f93adceca8d4690e": {
+  "src": "Share of labels listing the ingredient as an active (Supplement Facts panel), counted once per product whatever the specific form; Vitamin D covers cholecalciferol and ergocalciferol, Magnesium every salt. Excipients and other ingredients are not counted.",
+  "t": "Participação de rótulos que listam o ingrediente como ativo (painel Supplement Facts), contada uma vez por produto seja qual for a forma específica; Vitamin D cobre colecalciferol e ergocalciferol, Magnesium todos os sais. Excipientes e outros ingredientes não são contados.",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "f9b1cd1ec91a928e": {
   "src": "blend",
   "t": "mistura",
@@ -2201,6 +2675,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "fe0a091fdbfb3e9c": {
+  "src": "Products",
+  "t": "Produtos",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
+ },
  "fe5165e6cc602b52": {
   "src": "{0} of {1} ingredient carry an exact per-serving dose, together totalling {2} mg.",
   "t": "{0} de {1} ingrediente tem dose exata por porção, somando {2} mg no total.",
@@ -2218,5 +2698,11 @@
   "t": "← Todos os rótulos de produtos",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "ffeec1fe0b369b13": {
+  "src": "{0} dosed listings with a reference value",
+  "t": "{0} registros com dose e valor de referência",
+  "by": "claude-fable-5-1",
+  "at": "2026-09-19"
  }
 }
