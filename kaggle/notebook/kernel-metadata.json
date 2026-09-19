@@ -1,5 +1,5 @@
 {
-  "id": "ahtiticheamine/suppdb-starter-load-explore-supplement-labels",
+  "id": "dataengineered/suppdb-starter-load-explore-supplement-labels",
   "title": "SuppDB Starter: Load & Explore Supplement Labels",
   "code_file": "suppdb-starter-notebook.ipynb",
   "language": "python",
@@ -8,7 +8,7 @@
   "enable_gpu": false,
   "enable_tpu": false,
   "enable_internet": false,
-  "dataset_sources": ["ahtiticheamine/suppdb-supplements-sample"],
+  "dataset_sources": ["dataengineered/suppdb-supplements-sample"],
   "competition_sources": [],
   "kernel_sources": [],
   "model_sources": []

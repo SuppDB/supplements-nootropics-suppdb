@@ -19,7 +19,7 @@
 
 **Free sample:** [300 products](samples/suppdb_sample.csv) · **Safety & Interaction Layer: $199 one-time** → [Buy on Stripe](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e) · **Catalog only: $49 one-time** → [Buy on Stripe](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406)
 
-**Same sample on [Hugging Face](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)** · **[Kaggle](https://www.kaggle.com/datasets/ahtiticheamine/suppdb-supplements-sample)**
+**Same sample on [Hugging Face](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)** · **[Kaggle](https://www.kaggle.com/datasets/dataengineered/suppdb-supplements-sample)**
 
 </div>
 
