@@ -6,6 +6,10 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-09-20
+
+- **Sale attribution**: every Stripe buy link carries `?client_reference_id=<brand>_<lang>_<surface>` (`home` / `landing`); the i18n build swaps the language token per locale and the delivery worker prints the id in the order email. Stripe does not store UTM parameters, so this is the only per-page attribution that reaches the order record (2026-09-20).
+
 ## 2026.09 — 2026-09-18
 
 - Manifest grown to 26,500 NIH DSLD labels (25,631 ingested; 841 skipped for having no active ingredients, 28 refused for an unknown IU→mg factor); **18,000+** products from **2,200+** brands after de-duplication.
