@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 462" width="720" height="462" role="img" aria-labelledby="t d" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Share of listings above the tolerable upper intake level</title><desc id="d">Nutrients with 100+ dosed listings; per serving, adult UL</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 462" width="720" height="462" role="img" aria-labelledby="t-above-upper-limit d-above-upper-limit" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-above-upper-limit">Share of listings above the tolerable upper intake level</title><desc id="d-above-upper-limit">Nutrients with 100+ dosed listings; per serving, adult UL</desc>
 <rect width="720" height="462" fill="#0b0e0f"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#eef1f2">Share of listings above the tolerable upper intake level</text>
 <text x="20" y="44" font-size="12" fill="#97a1a3">Nutrients with 100+ dosed listings; per serving, adult UL</text>

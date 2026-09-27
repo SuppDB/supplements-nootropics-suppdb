@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 342" width="720" height="342" role="img" aria-labelledby="t d" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Proprietary blends by product form</title><desc id="d">Share of labels that hide at least one dose inside a proprietary blend</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 342" width="720" height="342" role="img" aria-labelledby="t-proprietary-blends d-proprietary-blends" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-proprietary-blends">Proprietary blends by product form</title><desc id="d-proprietary-blends">Share of labels that hide at least one dose inside a proprietary blend</desc>
 <rect width="720" height="342" fill="#0b0e0f"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#eef1f2">Proprietary blends by product form</text>
 <text x="20" y="44" font-size="12" fill="#97a1a3">Share of labels that hide at least one dose inside a proprietary blend</text>

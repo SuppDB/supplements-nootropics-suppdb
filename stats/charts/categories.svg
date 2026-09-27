@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 462" width="720" height="462" role="img" aria-labelledby="t d" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Ingredient types by share of products</title><desc id="d">Share of 18,480 labels listing at least one ingredient of the type</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 462" width="720" height="462" role="img" aria-labelledby="t-categories d-categories" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-categories">Ingredient types by share of products</title><desc id="d-categories">Share of 18,480 labels listing at least one ingredient of the type</desc>
 <rect width="720" height="462" fill="#0b0e0f"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#eef1f2">Ingredient types by share of products</text>
 <text x="20" y="44" font-size="12" fill="#97a1a3">Share of 18,480 labels listing at least one ingredient of the type</text>
