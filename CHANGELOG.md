@@ -9,6 +9,7 @@ All notable changes to the SuppDB dataset snapshots.
 ## Site update — 2026-09-27
 
 - **Translated Dataset markup**: on the Spanish, German, French and Portuguese pages the Dataset structured data now names its English original in `sameAs` (next to any existing `sameAs` links), so dataset search can tie the language copies to one canonical entry. English pages and all visible text are unchanged (2026-09-27).
+- **Section links**: the homepage (English + 4 languages) and the `/stats/` pages carry the shared portfolio section-links snippet (`scripts/section_links.py`). It sets `scroll-padding-top` to the sticky header's live height, so `#metrics`, `#explorer`, `#pricing` and the other sections are no longer hidden under the header on arrival (desktop and phones). On a fresh navigation it also lands the visitor on the section again after the web fonts swap in. The "Embed this chart" snippets on `/stats/` now link each chart's own anchor `#fig-<slug>`. Before, 8 of the 9 charts' `#<slug>` matched no element, and `#forms` hit the section rather than the chart. `scripts/stats_common.py` was re-copied from the portfolio, which added `scripts/section_links.py`; the stats page was patched in place, not regenerated, so no figures or dates changed. Visible text is unchanged (2026-09-27).
 
 ## Site update — 2026-09-20
 
