@@ -6,6 +6,10 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-09-28
+
+- **Safety layer claim corrected to 8,300+ interactions (was 8,800+)** on the homepage (English + 4 languages), README and `llms.txt`. The Safety download buyers receive (Snapshot 2026.09, built 2026-09-20) holds 8,364 interaction rows: 2,678 hand-verified, 4,360 cited from FDA (DailyMed) drug labels and 1,326 extracted from NIH ODS fact sheets. 2026.08 held 8,827; 2026.09 drew its label-cited rows from 300 FDA drug labels instead of 500. The 7,038 rows in the 2026.09 entry below describe the 2026-09-18 build; the Safety download comes from the 2026-09-20 rebuild. No other figure changed (2026-09-28).
+
 ## Site update — 2026-09-27
 
 - **Translated Dataset markup**: on the Spanish, German, French and Portuguese pages the Dataset structured data now names its English original in `sameAs` (next to any existing `sameAs` links), so dataset search can tie the language copies to one canonical entry. English pages and all visible text are unchanged (2026-09-27).

@@ -12,7 +12,7 @@
 [![Brands: 2,000+](https://img.shields.io/badge/Brands-2%2C000%2B-4c8bf5.svg)](#whats-inside)
 [![Source: NIH DSLD](https://img.shields.io/badge/Source-NIH%20DSLD%20%2B%20PubChem-2fb389.svg)](#provenance)
 [![Snapshot: 2026.09](https://img.shields.io/badge/Snapshot-2026.09-blue.svg)](CHANGELOG.md)
-[![Safety layer: 8,800+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C800%2B%20interactions-e11d48.svg)](#safety-layer)
+[![Safety layer: 8,300+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C300%2B%20interactions-e11d48.svg)](#safety-layer)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.dataengineered.io-10b981.svg)](https://suppdb.dataengineered.io)
 
 **[→ Get the full dataset at suppdb.dataengineered.io](https://suppdb.dataengineered.io)**
@@ -38,13 +38,13 @@ This is a **label-facts + chemistry** dataset — think *INCIDecoder for supplem
 | Active-ingredient records | **115,000+** | 2,249 |
 | Proprietary-blend flags | **40,000+** | 883 |
 | Compounds w/ PubChem chemistry | **4,000+** | 50% of rows |
-| Interactions *(Safety layer)* | **8,800+** | 30 examples |
+| Interactions *(Safety layer)* | **8,300+** | 30 examples |
 | Products over an upper limit *(Safety layer)* | **1,300+** | 26 |
 | Formats | SQLite · CSV · JSON | CSV |
 
 The free [`samples/suppdb_sample.csv`](samples/suppdb_sample.csv) is a flat, one-row-per-ingredient table — **2,249 ingredient records across 300 real products from 218 brands** — a true taste of the schema and quality. Explore it interactively in the [🤗 Sample Explorer](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers), or load it straight from the [🤗 sample dataset](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample). The full dataset is available at **[suppdb.dataengineered.io](https://suppdb.dataengineered.io)**.
 
-Each sample product also carries a **[Safety layer](#safety-layer) teaser** — `product_max_pct_ul`, `product_over_ul_flag`, and `product_interaction_count` — and [`samples/interactions_sample.csv`](samples/interactions_sample.csv) shows 30 example interactions. The full 8,800+-interaction Safety layer (with per-compound detail, contraindications, and WADA flags) is the paid add-on.
+Each sample product also carries a **[Safety layer](#safety-layer) teaser** — `product_max_pct_ul`, `product_over_ul_flag`, and `product_interaction_count` — and [`samples/interactions_sample.csv`](samples/interactions_sample.csv) shows 30 example interactions. The full 8,300+-interaction Safety layer (with per-compound detail, contraindications, and WADA flags) is the paid add-on.
 
 ## Field coverage (the honest numbers)
 
@@ -72,7 +72,7 @@ Measured across all 18,000+ products. Published up front so you can decide if th
 
 Beyond the catalog, an optional **Safety layer** turns the normalized doses into a decision layer — the part health apps, pharmacies, and telehealth teams can't easily reproduce:
 
-- **8,800+ interactions** — supplement × drug / drug-class / supplement, each with severity, mechanism, effect and a **cited public-domain source**. A hand-verified core plus label-cited entries auto-extracted from FDA (DailyMed) drug labels, **evidence-graded** so you can filter to the vetted set.
+- **8,300+ interactions** — supplement × drug / drug-class / supplement, each with severity, mechanism, effect and a **cited public-domain source**. A hand-verified core plus label-cited entries auto-extracted from FDA (DailyMed) drug labels, **evidence-graded** so you can filter to the vetted set.
 - **% of the Tolerable Upper Limit** per product, with over-limit flags — computed from the mg-normalized doses against NIH DRI limits.
 - **Condition contraindications** (pregnancy, anticoagulation, renal impairment, pre-surgery, …) and **WADA doping flags** for banned / monitored compounds.
 - **Transparency score** per product from dose disclosure + brand quality flags.
@@ -103,7 +103,7 @@ Underlying data: **NIH DSLD** (labels) + **NIH PubChem** (chemistry) — both U.
 | Tier | What | Price |
 | :--- | :--- | :--- |
 | **Sample** | ~300 products, flat CSV (this repo) | Free |
-| **Safety layer** | 8,800+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
+| **Safety layer** | 8,300+ interactions · %-of-upper-limit · contraindications · WADA flags | **$199** one-time |
 | **Catalog only (Snapshot)** | Full 18,000+ products · SQLite + CSV + JSON | **$49** one-time |
 | **Custom work** | Subsets, recurring refreshes, schema mapping — quoted per engagement | from $99, via the [contact form](https://suppdb.dataengineered.io/#support) |
 

@@ -15,6 +15,6 @@
 - **Attribution:** Sample data & docs licensed CC-BY-NC-4.0 (free to use with attribution, non-commercial); the full dataset is a commercial license covering SuppDB's curated, normalized compilation. The underlying facts (NIH DSLD + PubChem) are public domain.
 - **Licensing Tiers:**
   - Free Sample — ~300 products, flat CSV — free ([sample CSV](https://suppdb.dataengineered.io/samples/suppdb_sample.csv))
-  - Safety & Interaction Layer — 8,800+ interactions, upper-limit %, contraindications, WADA flags — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
+  - Safety & Interaction Layer — 8,300+ interactions, upper-limit %, contraindications, WADA flags — $199 one-time ([Stripe checkout](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e))
   - Catalog only (Full Snapshot) — 18,000+ products, SQLite + CSV + JSON — $49 one-time ([Stripe checkout](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406))
   - Custom work — subsets, recurring refreshes, schema mapping: from $99, quoted per engagement ([contact form](https://suppdb.dataengineered.io/#support))
