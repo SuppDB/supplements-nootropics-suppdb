@@ -72,7 +72,7 @@ Measured across all 18,000+ products. Published up front so you can decide if th
 
 Beyond the catalog, an optional **Safety layer** turns the normalized doses into a decision layer — the part health apps, pharmacies, and telehealth teams can't easily reproduce:
 
-- **8,300+ interactions** — supplement × drug / drug-class / supplement, each with severity, mechanism, effect and a **cited public-domain source**. A hand-verified core plus label-cited entries auto-extracted from FDA (DailyMed) drug labels, **evidence-graded** so you can filter to the vetted set.
+- **8,300+ interactions** — supplement × drug / drug-class / supplement, each with severity, effect and a **cited public-domain source**. A hand-verified core (which also names the mechanism) plus entries auto-extracted from FDA (DailyMed) drug labels and NIH ODS fact sheets, **evidence-graded** so you can filter to the vetted set.
 - **% of the Tolerable Upper Limit** per product, with over-limit flags — computed from the mg-normalized doses against NIH DRI limits.
 - **Condition contraindications** (pregnancy, anticoagulation, renal impairment, pre-surgery, …) and **WADA doping flags** for banned / monitored compounds.
 - **Transparency score** per product from dose disclosure + brand quality flags.

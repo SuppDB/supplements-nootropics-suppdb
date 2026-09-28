@@ -6,6 +6,10 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-09-29
+
+- **Safety layer description names all its automated sources**: the homepage (English + 4 languages) and README now say the hand-verified core is joined by entries auto-extracted from FDA drug labels **and NIH ODS fact sheets**. The current Safety download (Snapshot 2026.09) holds 1,326 fact-sheet rows that the description did not mention. The README no longer says every interaction names a mechanism: the hand-verified core does, the automated rows leave it empty. In the 2026.09 download the fact-sheet rows share the `clinical` evidence grade with the hand-verified core, so filter on a non-empty `mechanism` to get the hand-verified set there. No figure changed (2026-09-29).
+
 ## Site update — 2026-09-28
 
 - **Repository files off the website**: the translation catalogs (`/locales/`), the build scripts (`/scripts/`), `i18n.config.json`, `README.md`, `vercel.json` and the dotfiles belong to this repository, not to the website, but the site served them as plain files. They now answer the site's normal 404 page (also when requested as `/locales%2Fes.json` or `//locales/es.json`) and stay available here on GitHub. Pages, data files, samples, `llms.txt` and the sitemap are unchanged (2026-09-28).
