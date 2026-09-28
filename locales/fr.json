@@ -2393,6 +2393,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e8f8b0b21a0d4cf5": {
+  "src": "<0>{1} supplement × drug / supplement interactions</0> — a hand-verified core plus entries auto-extracted from FDA drug labels and NIH ODS fact sheets, each evidence-graded with its source snippet so you can filter to the vetted set (NIH ODS, DailyMed, MedlinePlus).",
+  "t": "<0>{1} interactions complément × médicament / complément</0> — un noyau vérifié manuellement plus des entrées extraites automatiquement des notices de médicaments de la FDA et des fiches d'information du NIH ODS, chacune classée par niveau de preuve avec l'extrait de sa source afin que vous puissiez filtrer sur l'ensemble validé (NIH ODS, DailyMed, MedlinePlus).",
+  "by": "claude-opus-5-5",
+  "at": "2026-09-29"
+ },
  "e976693a48c6bbb0": {
   "src": "<0>{1} supplement × drug / supplement interactions</0> — a hand-verified core plus label-cited entries auto-extracted from FDA drug labels, each evidence-graded with its source snippet so you can filter to the vetted set (NIH ODS, DailyMed, MedlinePlus).",
   "t": "<0>{1} interactions complément × médicament / complément</0> — un noyau vérifié manuellement plus des entrées citées d'après les étiquettes, extraites automatiquement des notices de médicaments de la FDA, chacune classée par niveau de preuve avec l'extrait de sa source afin que vous puissiez filtrer sur l'ensemble validé (NIH ODS, DailyMed, MedlinePlus).",

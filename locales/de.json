@@ -2393,6 +2393,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "e8f8b0b21a0d4cf5": {
+  "src": "<0>{1} supplement × drug / supplement interactions</0> — a hand-verified core plus entries auto-extracted from FDA drug labels and NIH ODS fact sheets, each evidence-graded with its source snippet so you can filter to the vetted set (NIH ODS, DailyMed, MedlinePlus).",
+  "t": "<0>{1} Wechselwirkungen zwischen Supplements und Arzneimitteln bzw. Supplements</0> — ein von Hand verifizierter Kern plus automatisch aus FDA-Arzneimittelinformationen und den Fact Sheets des NIH ODS extrahierte Einträge, jeweils nach Evidenz bewertet und mit Quellauszug, sodass Sie auf den geprüften Bestand filtern können (NIH ODS, DailyMed, MedlinePlus).",
+  "by": "claude-opus-5-5",
+  "at": "2026-09-29"
+ },
  "e976693a48c6bbb0": {
   "src": "<0>{1} supplement × drug / supplement interactions</0> — a hand-verified core plus label-cited entries auto-extracted from FDA drug labels, each evidence-graded with its source snippet so you can filter to the vetted set (NIH ODS, DailyMed, MedlinePlus).",
   "t": "<0>{1} Wechselwirkungen zwischen Supplements und Arzneimitteln bzw. Supplements</0> — ein von Hand verifizierter Kern plus automatisch aus FDA-Arzneimittelinformationen extrahierte, belegte Einträge, jeweils nach Evidenz bewertet und mit Quellauszug, sodass Sie auf den geprüften Bestand filtern können (NIH ODS, DailyMed, MedlinePlus).",
