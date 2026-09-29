@@ -6,7 +6,7 @@ We take the integrity and privacy of the SuppDB data seriously. If you discover
 any of the following, please report it privately:
 
 - A security vulnerability in the site
-  ([suppdb.net](https://suppdb.dataengineered.io)) or in anything
+  ([suppdb.dataengineered.io](https://suppdb.dataengineered.io)) or in anything
   published in this repository (e.g. the starter notebook).
 - A data-quality or safety concern — a dosage, ingredient, or label mapping that
   looks wrong and could mislead.
