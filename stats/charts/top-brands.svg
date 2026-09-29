@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t d" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Brands with the most products on file</title><desc id="d">Products per brand, top 15 of 2,257 brands</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 552" width="720" height="552" role="img" aria-labelledby="t-top-brands d-top-brands" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-top-brands">Brands with the most products on file</title><desc id="d-top-brands">Products per brand, top 15 of 2,257 brands</desc>
 <rect width="720" height="552" fill="#0b0e0f"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#eef1f2">Brands with the most products on file</text>
 <text x="20" y="44" font-size="12" fill="#97a1a3">Products per brand, top 15 of 2,257 brands</text>

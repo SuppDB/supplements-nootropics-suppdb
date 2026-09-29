@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" role="img" aria-labelledby="t d" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title id="t">Supplement forms</title><desc id="d">Share of 18,480 products by labelled form</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" role="img" aria-labelledby="t-forms d-forms" font-family="'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title id="t-forms">Supplement forms</title><desc id="d-forms">Share of 18,480 products by labelled form</desc>
 <rect width="720" height="372" fill="#0b0e0f"/>
 <text x="20" y="26" font-size="15" font-weight="600" fill="#eef1f2">Supplement forms</text>
 <text x="20" y="44" font-size="12" fill="#97a1a3">Share of 18,480 products by labelled form</text>
