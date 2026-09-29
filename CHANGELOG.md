@@ -8,6 +8,7 @@ All notable changes to the SuppDB dataset snapshots.
 
 ## Site update — 2026-09-29
 
+- **Site name**: the licence attribution, the Kaggle dataset description and starter notebook, and `assets/README.md` now name `suppdb.dataengineered.io` instead of `suppdb.net`. No page or data change (2026-09-29).
 - **Security policy link**: `SECURITY.md` showed the site link as `suppdb.net`; it now shows `suppdb.dataengineered.io`, the address the link already pointed to (2026-09-29).
 - **Visit counts**: Cloudflare Web Analytics adds its cookie-free page-view beacon to every page. The beacon loaded, but the Content-Security-Policy in `_headers` did not list the address it reports to, so browsers blocked every report and no visits were counted since Web Analytics was switched on (2026-09-05). `connect-src` now also allows `https://cloudflareinsights.com`. No other source is added.
 - **Safety layer description names all its automated sources**: the homepage (English + 4 languages) and README now say the hand-verified core is joined by entries auto-extracted from FDA drug labels **and NIH ODS fact sheets**. The current Safety download (Snapshot 2026.09) holds 1,326 fact-sheet rows that the description did not mention. The README no longer says every interaction names a mechanism: the hand-verified core does, the automated rows leave it empty. In the 2026.09 download the fact-sheet rows share the `clinical` evidence grade with the hand-verified core, so filter on a non-empty `mechanism` to get the hand-verified set there. No figure changed (2026-09-29).
@@ -44,4 +45,4 @@ All notable changes to the SuppDB dataset snapshots.
 - **NIH DRI reference intakes** (RDA / upper limit) where an official value exists; NULL otherwise.
 - Built exclusively from public-domain **NIH DSLD** labels; per-record provenance via `dsld_label_id`, `source_url`, `dataset_version`.
 
-Full dataset & updates: [suppdb.net](https://suppdb.dataengineered.io)
+Full dataset & updates: [suppdb.dataengineered.io](https://suppdb.dataengineered.io)
