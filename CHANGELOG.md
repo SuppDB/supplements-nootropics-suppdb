@@ -6,9 +6,16 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-09-29
+
+- **Visit counts**: Cloudflare Web Analytics adds its cookie-free page-view beacon to every page. The beacon loaded, but the Content-Security-Policy in `_headers` did not list the address it reports to, so browsers blocked every report and no visits were counted since Web Analytics was switched on (2026-09-05). `connect-src` now also allows `https://cloudflareinsights.com`. No other source is added.
+- **Safety layer description names all its automated sources**: the homepage (English + 4 languages) and README now say the hand-verified core is joined by entries auto-extracted from FDA drug labels **and NIH ODS fact sheets**. The current Safety download (Snapshot 2026.09) holds 1,326 fact-sheet rows that the description did not mention. The README no longer says every interaction names a mechanism: the hand-verified core does, the automated rows leave it empty. In the 2026.09 download the fact-sheet rows share the `clinical` evidence grade with the hand-verified core, so filter on a non-empty `mechanism` to get the hand-verified set there. No figure changed (2026-09-29).
+
 ## Site update — 2026-09-28
 
 - **Chart titles on `/stats/`**: every chart's built-in title and description (what a screen reader announces for the chart) used the same two ids, `t` and `d`, repeated once per chart, so the page had duplicate ids and every chart was announced with the first chart's title. The ids now carry the chart's name (`t-top-ingredients` / `d-top-ingredients`, and so on) on the page and in the downloadable SVGs under `/stats/charts/`. `scripts/stats_common.py` is the current portfolio copy, which writes them on the next regeneration; the committed page and SVGs were patched to exactly what it writes, without regenerating (no figure, date or `data.json` changes).
+- **Repository files off the website**: the translation catalogs (`/locales/`), the build scripts (`/scripts/`), `i18n.config.json`, `README.md`, `vercel.json` and the dotfiles belong to this repository, not to the website, but the site served them as plain files. They now answer the site's normal 404 page (also when requested as `/locales%2Fes.json` or `//locales/es.json`) and stay available here on GitHub. Pages, data files, samples, `llms.txt` and the sitemap are unchanged (2026-09-28).
+- **Safety layer claim corrected to 8,300+ interactions (was 8,800+)** on the homepage (English + 4 languages), README and `llms.txt`. The Safety download buyers receive (Snapshot 2026.09, built 2026-09-20) holds 8,364 interaction rows: 2,678 hand-verified, 4,360 cited from FDA (DailyMed) drug labels and 1,326 extracted from NIH ODS fact sheets. 2026.08 held 8,827; 2026.09 drew its label-cited rows from 300 FDA drug labels instead of 500. The 7,038 rows in the 2026.09 entry below describe the 2026-09-18 build; the Safety download comes from the 2026-09-20 rebuild. No other figure changed (2026-09-28).
 
 ## Site update — 2026-09-27
 
