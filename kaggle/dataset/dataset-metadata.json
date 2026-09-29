@@ -1,6 +1,6 @@
 {
   "title": "SuppDB - Supplements & Nootropics (Sample)",
-  "subtitle": "Real supplement labels: mg doses, proprietary blends, PubChem chemistry",
+  "subtitle": "Supplement labels: mg doses, PubChem chemistry + drug-interaction teaser",
   "id": "dataengineered/suppdb-supplements-sample",
   "licenses": [
     {
@@ -8,13 +8,15 @@
     }
   ],
   "keywords": [
-    "health",
-    "medicine",
-    "chemistry",
     "nutrition",
-    "biology"
+    "biology",
+    "chemistry",
+    "health",
+    "medicine"
   ],
-  "description": "# SuppDB - Supplements & Nootropics Dataset (Free Sample)\n\n> **Full dataset:** [suppdb.dataengineered.io](https://suppdb.dataengineered.io/) · **$49 one-time** snapshot · **$199** Safety & Interaction Layer → [Buy snapshot](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406) · [Buy safety layer](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e) · the same sample on [Hugging Face](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)\nA structured dataset of real supplement & nootropic products, built **exclusively from the public [NIH Dietary Supplement Label Database (DSLD)](https://dsld.od.nih.gov/)** - every active ingredient normalized to **milligrams**, proprietary blends flagged where the dose is undisclosed, and each compound enriched with **NIH PubChem** chemical identity. A **source label ID + URL on every record** means any fact can be re-verified.\n\nThink *INCIDecoder for supplements*: **one row per active ingredient**, with its dose, form, safety reference, and molecular identity. Built only from **public-domain U.S. Government data** (NIH DSLD + PubChem).\n\nThis Kaggle dataset is the **free sample - 2,249 ingredient records across 300 real products from 218 brands**. The full dataset - **17,000+ products from 2,000+ brands, 115,000+ active-ingredient records** - is available at [suppdb.dataengineered.io](https://suppdb.dataengineered.io).\n\n## What makes it useful\n\n- **Normalized mg dosages** - `mcg`, `g`, and substance-specific `IU` handled correctly (Vitamin D 1,000 IU -> 0.025 mg, not a bogus flat factor).\n- **Proprietary-blend transparency** - ingredients whose dose is hidden on the label are flagged `is_proprietary_blend = 1` with `amount = 0`; you can see the hidden-dose ingredients, not just miss them.\n- **PubChem chemistry + canonicalization** - `pubchem_cid`, `molecular_formula`, `molecular_weight`, `canonical_smiles`, `inchikey`. Rows sharing an InChIKey are the same molecule under different names (e.g. Vitamin C / Ascorbic Acid), so you can canonicalize deterministically.\n- **NIH DRI reference intakes** - `recommended_daily_mg` / `upper_safety_limit_mg` from authoritative NIH DRIs, NULL where none exists (never invented).\n- **Honest, uneven coverage** - botanicals and blends legitimately lack chemistry/reference values. NULL means no established value, not missing.\n\n## Field coverage (full dataset)\n\n| Field | Coverage | | Field | Coverage |\n| :--- | ---: | --- | :--- | ---: |\n| Brand / product / ingredient | 100% | | Proprietary-blend flag | 37% of rows |\n| UPC barcode | 86% | | RDA / upper limit (NIH DRI) | ~9% |\n| Dose normalized to mg | 100% | | PubChem CID / formula / weight | ~25% |\n| Servings per container | 85% | | SMILES / InChIKey | ~25% |\n\n## Columns\n\nSee the column descriptions tab - every field is documented. A starter notebook demonstrating loading, tabular preview, dose & proprietary-blend analysis, and chemistry/provenance is attached.\n\n## License & attribution\n\nThe **sample** is shared under **CC-BY-NC-4.0** (attribution, non-commercial). The **full commercial dataset** is licensed separately via [suppdb.dataengineered.io](https://suppdb.dataengineered.io). Underlying facts are public-domain (NIH DSLD + PubChem). **Not medical advice** - verify against the current physical label.\n\n**Full dataset & updates:** https://suppdb.dataengineered.io",
+  "description": "# SuppDB - Supplements & Nootropics Dataset (Free Sample)\n\n> **Full dataset:** [suppdb.dataengineered.io](https://suppdb.dataengineered.io/) · **$49 one-time** snapshot · **$199** Safety & Interaction Layer → [Buy snapshot](https://buy.stripe.com/9B69AU5t63QOfUfeqQ38406) · [Buy safety layer](https://buy.stripe.com/6oUaEY6xa0EC37tfuU3840e) · the same sample on [Hugging Face](https://huggingface.co/datasets/Ichlibitiche/suppdb-supplements-sample)\nA structured dataset of real supplement & nootropic products, built **exclusively from the public [NIH Dietary Supplement Label Database (DSLD)](https://dsld.od.nih.gov/)** - every active ingredient normalized to **milligrams**, proprietary blends flagged where the dose is undisclosed, and each compound enriched with **NIH PubChem** chemical identity. A **source label ID + URL on every record** means any fact can be re-verified.\n\nThink *INCIDecoder for supplements*: **one row per active ingredient**, with its dose, form, safety reference, and molecular identity. Built only from **public-domain U.S. Government data** (NIH DSLD + PubChem).\n\nThis Kaggle dataset is the **free sample - 2,249 ingredient records across 300 real products from 218 brands**. The full dataset - **17,000+ products from 2,000+ brands, 115,000+ active-ingredient records** - is available at [suppdb.dataengineered.io](https://suppdb.dataengineered.io).\n\n## What makes it useful\n\n- **Normalized mg dosages** - `mcg`, `g`, and substance-specific `IU` handled correctly (Vitamin D 1,000 IU -> 0.025 mg, not a bogus flat factor).\n- **Proprietary-blend transparency** - ingredients whose dose is hidden on the label are flagged `is_proprietary_blend = 1` with `amount = 0`; you can see the hidden-dose ingredients, not just miss them.\n- **PubChem chemistry + canonicalization** - `pubchem_cid`, `molecular_formula`, `molecular_weight`, `canonical_smiles`, `inchikey`. Rows sharing an InChIKey are the same molecule under different names (e.g. Vitamin C / Ascorbic Acid), so you can canonicalize deterministically.\n- **NIH DRI reference intakes** - `recommended_daily_mg` / `upper_safety_limit_mg` from authoritative NIH DRIs, NULL where none exists (never invented).\n- **Honest, uneven coverage** - botanicals and blends legitimately lack chemistry/reference values. NULL means no established value, not missing.\n\n## Field coverage (full dataset)\n\n| Field | Coverage | | Field | Coverage |\n| :--- | ---: | --- | :--- | ---: |\n| Brand / product / ingredient | 100% | | Proprietary-blend flag | 37% of rows |\n| UPC barcode | 86% | | RDA / upper limit (NIH DRI) | ~9% |\n| Dose normalized to mg | 100% | | PubChem CID / formula / weight | ~25% |\n| Servings per container | 85% | | SMILES / InChIKey | ~25% |\n\n## Columns\n\nSee the column descriptions tab - every field is documented. A starter notebook demonstrating loading, tabular preview, dose & proprietary-blend analysis, and chemistry/provenance is attached.\n\n## Safety layer (paid add-on)\n\nBuilt on the same normalized mg doses, a paid **Safety layer** adds **8,800+ supplement x drug interactions** (each cited to its public-domain source and evidence-graded), per-product **% of the NIH tolerable upper limit** with over-limit flags, **condition contraindications**, and **WADA doping flags**. This free sample includes a teaser: per-product columns `product_max_pct_ul`, `product_over_ul_flag`, `product_interaction_count`, plus `interactions_sample.csv` (30 curated examples). Full layer at [suppdb.dataengineered.io](https://suppdb.dataengineered.io).\n\n## License & attribution\n\nThe **sample** is shared under **CC-BY-NC-4.0** (attribution, non-commercial). The **full commercial dataset** is licensed separately via [suppdb.dataengineered.io](https://suppdb.dataengineered.io). Underlying facts are public-domain (NIH DSLD + PubChem). **Not medical advice** - verify against the current physical label.\n\n**Full dataset & updates:** [suppdb.dataengineered.io](https://suppdb.dataengineered.io)",
+  "userSpecifiedSources": "NIH Dietary Supplement Label Database (DSLD)\nhttps://dsld.od.nih.gov/\n\nNIH PubChem\nhttps://pubchem.ncbi.nlm.nih.gov/",
+  "expectedUpdateFrequency": "never",
   "resources": [
     {
       "path": "suppdb_sample.csv",
@@ -122,6 +124,21 @@
             "description": "Canonical SMILES structure string from NIH PubChem. NULL where not a single defined compound."
           },
           {
+            "name": "product_max_pct_ul",
+            "type": "number",
+            "description": "Safety-layer teaser: the product's highest per-serving ingredient dose as a percentage of that ingredient's NIH adult (19-50) Tolerable Upper Intake Level. NULL when no ingredient could be scored against an established UL."
+          },
+          {
+            "name": "product_over_ul_flag",
+            "type": "number",
+            "description": "Safety-layer teaser: 1 when at least one ingredient's per-serving dose exceeds 100% of its adult Tolerable Upper Intake Level (doses with a suspect unit are not counted), else 0."
+          },
+          {
+            "name": "product_interaction_count",
+            "type": "number",
+            "description": "Safety-layer teaser: number of known interactions recorded for this product in the paid Safety layer; 0 when none."
+          },
+          {
             "name": "dsld_label_id",
             "type": "string",
             "description": "NIH DSLD label identifier (provenance)."
@@ -135,6 +152,54 @@
             "name": "dataset_version",
             "type": "string",
             "description": "Snapshot identifier, e.g. 2026.07."
+          }
+        ]
+      }
+    },
+    {
+      "path": "interactions_sample.csv",
+      "description": "30 example interactions from the paid Safety layer (evidence grade clinical, case or theoretical), most severe first. Each pairs a supplement compound with a drug, a drug class or another compound, with severity, mechanism, effect and a cited public-domain source.",
+      "schema": {
+        "fields": [
+          {
+            "name": "supplement",
+            "type": "string",
+            "description": "Canonical name of the supplement compound."
+          },
+          {
+            "name": "partner_type",
+            "type": "string",
+            "description": "What it interacts with: drug, drug_class or compound (another supplement compound)."
+          },
+          {
+            "name": "partner_name",
+            "type": "string",
+            "description": "Name of the interacting drug, drug class or compound."
+          },
+          {
+            "name": "severity",
+            "type": "string",
+            "description": "Interaction severity: contraindicated, major or moderate in this sample."
+          },
+          {
+            "name": "mechanism",
+            "type": "string",
+            "description": "How the interaction works, as stated by the source."
+          },
+          {
+            "name": "effect",
+            "type": "string",
+            "description": "The effect of combining the two."
+          },
+          {
+            "name": "evidence_grade",
+            "type": "string",
+            "description": "Evidence behind the entry: clinical, case or theoretical."
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "Cited public-domain source, e.g. MedlinePlus, a DailyMed drug label or NIH ODS."
           }
         ]
       }

@@ -8,6 +8,7 @@ All notable changes to the SuppDB dataset snapshots.
 
 ## Site update — 2026-09-29
 
+- **Kaggle metadata file**: `kaggle/dataset/dataset-metadata.json` now carries the live Kaggle subtitle, description (with the Safety layer section), keyword order, sources list and update frequency. Its column list follows the actual CSV: the three Safety-layer teaser columns (`product_max_pct_ul`, `product_over_ul_flag`, `product_interaction_count`) and `interactions_sample.csv` are now described (2026-09-29).
 - **Site name**: the licence attribution, the Kaggle dataset description and starter notebook, and `assets/README.md` now name `suppdb.dataengineered.io` instead of `suppdb.net`. No page or data change (2026-09-29).
 - **Security policy link**: `SECURITY.md` showed the site link as `suppdb.net`; it now shows `suppdb.dataengineered.io`, the address the link already pointed to (2026-09-29).
 - **Visit counts**: Cloudflare Web Analytics adds its cookie-free page-view beacon to every page. The beacon loaded, but the Content-Security-Policy in `_headers` did not list the address it reports to, so browsers blocked every report and no visits were counted since Web Analytics was switched on (2026-09-05). `connect-src` now also allows `https://cloudflareinsights.com`. No other source is added.
