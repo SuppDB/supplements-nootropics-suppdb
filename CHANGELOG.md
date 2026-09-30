@@ -6,6 +6,10 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-10-01
+
+- **Sitemap dates follow page content**: `scripts/seo_common.py` (shared by the DataEngineered sites) dates each sitemap entry by the last commit that changed the page itself. It compares pages without line-ending differences and without the markup the translation build owns (language alternates and the header and footer language menus), and skips commits that only moved that markup, so regenerating an unchanged page keeps its date instead of taking the day of the run. No page or sitemap change in this update (2026-10-01).
+
 ## Site update — 2026-09-29
 
 - **Kaggle metadata file**: `kaggle/dataset/dataset-metadata.json` now carries the live Kaggle subtitle, description (with the Safety layer section), keyword order, sources list and update frequency. Its column list follows the actual CSV: the three Safety-layer teaser columns (`product_max_pct_ul`, `product_over_ul_flag`, `product_interaction_count`) and `interactions_sample.csv` are now described (2026-09-29).
