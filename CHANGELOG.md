@@ -6,6 +6,10 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-10-02
+
+- **Kaggle starter notebook prints the file name, not the full path**: Kaggle now mounts an attached dataset under a path that includes the owner's account name, and the notebook's first cell printed that whole path. It now prints only the sample's file name (`Loaded: suppdb_sample.csv`). That one line of `kaggle/notebook/suppdb-starter-notebook.ipynb` changed, and the notebook was re-run on Kaggle (version 7) (2026-10-02).
+
 ## Site update — 2026-10-01
 
 - **Sitemap dates follow page content**: `scripts/seo_common.py` (shared by the DataEngineered sites) dates each sitemap entry by the last commit that changed the page itself. It compares pages without line-ending differences and without the markup the translation build owns (language alternates and the header and footer language menus), and skips commits that only moved that markup, so regenerating an unchanged page keeps its date instead of taking the day of the run. No page or sitemap change in this update (2026-10-01).
