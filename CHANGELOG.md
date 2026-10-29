@@ -6,6 +6,12 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-10-30
+
+- **New social card, no counts**: the image shown when the site is shared, and in search and app results, still read "17,000+ real products" and "115,000+ ingredient records". It also showed the retired address `supplements-nootropics-suppdb.pages.dev`. The new `og-image-v2.png` shows `suppdb.dataengineered.io` and no counts, only what does not change between snapshots. It lists: NIH DSLD labels, PubChem chemistry, doses normalized to mg, proprietary blends flagged, InChIKey canonicalization, source URL on every record. Every page reference moved to the new file: the homepage and the statistics page, in English and 4 languages, their JSON-LD, the web manifest and the service worker. The new service-worker cache name drops the old copy. PNGs are cached as immutable for a year, so the old `og-image.png` is deleted and now answers 404 (2026-10-30).
+- **Kaggle cover redrawn**: `assets/kaggle-cover.png` (README banner and Kaggle cover) had the same old address and count. It is redrawn in the same style, without counts (2026-10-30).
+- **Card renderer**: `scripts/render_cards.py` draws both images, so a later change starts from the source instead of an edited PNG (2026-10-30).
+
 ## Site update — 2026-10-29
 
 - **Safety layer checkout on its own product**: the $199 Safety & Interaction Layer button now opens a new Stripe checkout (`buy.stripe.com/4gM9AU5t61IGdM7fuU3840l`) on the homepage (English + 4 languages), the README, `llms.txt` and the Kaggle metadata file. The old checkout was set up on the $49 catalog's Stripe product, so a Safety buyer's checkout page and receipt showed the catalog's name and description. The new one shows "SuppDB Safety & Interaction Layer". The price, the files and the download are unchanged (2026-10-29).
