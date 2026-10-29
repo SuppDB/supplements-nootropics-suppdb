@@ -851,6 +851,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "59907de924cff070": {
+  "src": "Instant download · interactions · upper-limit % · contraindications",
+  "t": "Téléchargement immédiat · interactions · % de limite supérieure · contre-indications",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-29"
+ },
  "59c539e85ddc0bdf": {
   "src": "What format is the dataset delivered in when I purchase the snapshot?",
   "t": "Sous quel format le jeu de données est-il livré lorsque j'achète le snapshot ?",
@@ -1366,6 +1372,12 @@
   "t": "Répertoire des ingrédients : S",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "883dfc923daa177e": {
+  "src": "<0>Instant download</0> after payment (the download page stays valid for re-downloads) · one-time purchase · public-domain sources.",
+  "t": "<0>Téléchargement immédiat</0> après paiement (la page de téléchargement reste valable pour de nouveaux téléchargements) · paiement unique · sources du domaine public.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-29"
  },
  "88dfbfc29bf4b22e": {
   "src": "Get the dataset",
@@ -2212,6 +2224,12 @@
   "t": "Toutes les étiquettes de produits",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "dbb77ebfe4dd7851": {
+  "src": "Instant download after payment · secure Stripe checkout · Apple Pay / Google Pay{0} Not medical advice — label facts and cited interaction references; verify with a clinician.",
+  "t": "Téléchargement immédiat après paiement · paiement Stripe sécurisé · Apple Pay / Google Pay{0} Pas un avis médical — informations d'étiquette et références d'interactions citées ; vérifiez auprès d'un professionnel de santé.",
+  "by": "claude-opus-5-5",
+  "at": "2026-10-29"
  },
  "dbf8b4b1afdd2fc8": {
   "src": "A listing is flagged as a proprietary blend when the label groups it under a blend total instead of stating its own amount; the blend flag and the missing amount are both taken from the NIH DSLD label record. Forms with fewer than {0} products are omitted.",
