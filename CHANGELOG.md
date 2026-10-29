@@ -6,6 +6,11 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-10-29
+
+- **Safety layer checkout on its own product**: the $199 Safety & Interaction Layer button now opens a new Stripe checkout (`buy.stripe.com/4gM9AU5t61IGdM7fuU3840l`) on the homepage (English + 4 languages), the README, `llms.txt` and the Kaggle metadata file. The old checkout was set up on the $49 catalog's Stripe product, so a Safety buyer's checkout page and receipt showed the catalog's name and description. The new one shows "SuppDB Safety & Interaction Layer". The price, the files and the download are unchanged (2026-10-29).
+- **Safety layer delivery wording corrected**: the Safety tier said "Delivered by email within 24 h", but it has always been an instant download after payment, from a download page that stays valid for re-downloads. Its pricing card (English + 4 languages) now says so. The $49 catalog is still delivered by email, and its wording is unchanged (2026-10-29).
+
 ## Site update — 2026-10-02
 
 - **Kaggle starter notebook prints the file name, not the full path**: Kaggle now mounts an attached dataset under a path that includes the owner's account name, and the notebook's first cell printed that whole path. It now prints only the sample's file name (`Loaded: suppdb_sample.csv`). That one line of `kaggle/notebook/suppdb-starter-notebook.ipynb` changed, and the notebook was re-run on Kaggle (version 7) (2026-10-02).
