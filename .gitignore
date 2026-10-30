@@ -25,6 +25,7 @@ pubchem_cache/
 dsld_manifest.json
 
 # OS / tooling
+.cards-build/
 __pycache__/
 *.py[cod]
 .DS_Store

@@ -273,7 +273,7 @@ def build_page(s, charts):
     desc = (f"Supplements in numbers from {n(P)} NIH DSLD labels: the most common ingredients, share of products using proprietary blends, doses versus the daily reference "
             f"intake and the upper limit, forms, magnesium forms, caffeine per serving. Free to cite and embed.")
     ld = article_ld(site, "Dietary supplements in numbers: statistics from the SuppDB label database", desc, FIRST_PUBLISHED,
-                    f"{site.base_url}/og-image.png", ["dietary supplements", "nootropics", "proprietary blends", "vitamin doses", "NIH DSLD"])
+                    f"{site.base_url}/og-image-v2.png", ["dietary supplements", "nootropics", "proprietary blends", "vitamin doses", "NIH DSLD"])
 
     return f"""<!DOCTYPE html>
 <html lang="en" class="dark">
@@ -290,7 +290,7 @@ def build_page(s, charts):
   <meta property="og:description" content="{esc(desc)}" />
   <meta property="og:url" content="{site.page_url}" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="{site.base_url}/og-image.png" />
+  <meta property="og:image" content="{site.base_url}/og-image-v2.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

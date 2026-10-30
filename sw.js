@@ -12,12 +12,12 @@
  * are never written to or served from the cache.
  */
 
-const CACHE_NAME = 'suppdb-public-cache-v2026.09.1';
+const CACHE_NAME = 'suppdb-public-cache-v2026.10.1';
 const CORE_ASSETS = [
   '/',
   '/favicon.ico',
   '/favicon.png',
-  '/og-image.png',
+  '/og-image-v2.png',
   '/site.webmanifest',
   '/sitemap.xml',
   '/samples/suppdb_sample.csv'

@@ -48,3 +48,20 @@ When copy is new or changed:
 
 After a content refresh goes live, re-submit IndexNow deliberately
 (`node scripts/indexnow-submit.mjs suppdb` from the portfolio root).
+
+## Card images
+
+`og-image-v2.png` (social card, also the product image on both SuppDB Stripe products) and
+`assets/kaggle-cover.png` (Kaggle cover, README banner) are drawn by `render_cards.py`
+(Windows, Microsoft Edge, numpy; no Pillow):
+
+```bash
+python scripts/render_cards.py
+```
+
+The cards carry no counts, so a data refresh never makes them stale. `_headers` serves
+`/*.png` as immutable for a year: a changed social card needs a new file name, every
+reference updated (pages through the English source + `i18n_common.py build`,
+`generate_stats.py`, `site.webmanifest`, `sw.js`), and the old path listed in
+`RETIRED_FILES` in `functions/_middleware.js`. Re-upload the card to the two Stripe products
+and the cover on Kaggle (dataset Settings) by hand; neither has a build step.
