@@ -1,6 +1,6 @@
 # SuppDB — Data Dictionary
 
-Field reference for the SuppDB supplements & nootropics dataset (snapshot `2026.09`).
+Field reference for the SuppDB supplements & nootropics dataset.
 The free sample (`samples/suppdb_sample.csv`) is a **flat, one-row-per-active-ingredient**
 table using the columns below. The full dataset ships the same fields in CSV and JSON,
 plus a relational SQLite build.
