@@ -929,6 +929,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "623240531ae1fb52": {
+  "src": "<0>Latest monthly snapshot</0> · one-time purchase, no recurring fees. Public-domain sources (NIH DSLD + PubChem).",
+  "t": "<0>Neuester monatlicher Snapshot</0> · einmaliger Kauf, keine wiederkehrenden Gebühren. Gemeinfreie Quellen (NIH DSLD + PubChem).",
+  "by": "claude-opus-5-5",
+  "at": "2026-11-06"
+ },
  "62b4aa574f708ad2": {
   "src": "Brand",
   "t": "Marke",
@@ -2212,6 +2218,12 @@
   "t": "{0} ist ein Nahrungsergänzungsmittel ({1}) von {2} mit {3} mL pro Portion, angeführt von {4} mit {5} mg. Normalisierte Nährwertangaben für alle {6}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "db0d3a9bf0876452": {
+  "src": "One-time purchase · {0} products · Monthly snapshot",
+  "t": "Einmaliger Kauf · {0} Produkte · Monatlicher Snapshot",
+  "by": "claude-opus-5-5",
+  "at": "2026-11-06"
  },
  "db33ef01eb92f1f6": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all…",

@@ -929,6 +929,12 @@
   "by": "claude-opus-5",
   "at": "2026-09-17"
  },
+ "623240531ae1fb52": {
+  "src": "<0>Latest monthly snapshot</0> · one-time purchase, no recurring fees. Public-domain sources (NIH DSLD + PubChem).",
+  "t": "<0>Snapshot mensual más reciente</0> · pago único, sin cuotas recurrentes. Fuentes de dominio público (NIH DSLD + PubChem).",
+  "by": "claude-opus-5-5",
+  "at": "2026-11-06"
+ },
  "62b4aa574f708ad2": {
   "src": "Brand",
   "t": "Marca",
@@ -2212,6 +2218,12 @@
   "t": "{0} es un suplemento en formato {1} de {2}, con {3} mL por porción, encabezado por {4} con {5} mg. Información normalizada de los {6}",
   "by": "claude-opus-5",
   "at": "2026-09-17"
+ },
+ "db0d3a9bf0876452": {
+  "src": "One-time purchase · {0} products · Monthly snapshot",
+  "t": "Pago único · {0} productos · Snapshot mensual",
+  "by": "claude-opus-5-5",
+  "at": "2026-11-06"
  },
  "db33ef01eb92f1f6": {
   "src": "{0} is a {1} supplement from {2} at {3} {4} per serving across {5} ingredients. Normalized supplement facts for all…",

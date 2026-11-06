@@ -6,6 +6,11 @@ All notable changes to the SuppDB dataset snapshots.
 > recurring schedule, so the live figures only grow — the numbers below stay
 > accurate between snapshots.
 
+## Site update — 2026-11-06
+
+- **Pricing card no longer names an edition**: the homepage pricing card and licence note said "Snapshot 2026.09", but buyers get the newest monthly build, so the label fell behind with every refresh. They now read "Monthly snapshot" and "Latest monthly snapshot" (English and the four translations); the README badge and the data dictionary's heading no longer name an edition either.
+- **"One-time download" became "One-time purchase"**: the download page stays valid for re-downloads, so the download is not one-time; the payment is.
+
 ## Site update — 2026-10-30
 
 - **New social card, no counts**: the image shown when the site is shared, and in search and app results, still read "17,000+ real products" and "115,000+ ingredient records". It also showed the retired address `supplements-nootropics-suppdb.pages.dev`. The new `og-image-v2.png` shows `suppdb.dataengineered.io` and no counts, only what does not change between snapshots. It lists: NIH DSLD labels, PubChem chemistry, doses normalized to mg, proprietary blends flagged, InChIKey canonicalization, source URL on every record. Every page reference moved to the new file: the homepage and the statistics page, in English and 4 languages, their JSON-LD, the web manifest and the service worker. The new service-worker cache name drops the old copy. PNGs are cached as immutable for a year, so the old `og-image.png` is deleted and now answers 404 (2026-10-30).

@@ -11,7 +11,7 @@
 [![🤗 Explorer](https://img.shields.io/badge/%F0%9F%A4%97%20Spaces-sample%20explorer-ffd21e.svg)](https://huggingface.co/spaces/Ichlibitiche/dataset-sample-explorers)
 [![Brands: 2,000+](https://img.shields.io/badge/Brands-2%2C000%2B-4c8bf5.svg)](#whats-inside)
 [![Source: NIH DSLD](https://img.shields.io/badge/Source-NIH%20DSLD%20%2B%20PubChem-2fb389.svg)](#provenance)
-[![Snapshot: 2026.09](https://img.shields.io/badge/Snapshot-2026.09-blue.svg)](CHANGELOG.md)
+[![Snapshot: monthly](https://img.shields.io/badge/Snapshot-monthly-blue.svg)](CHANGELOG.md)
 [![Safety layer: 8,300+ interactions](https://img.shields.io/badge/Safety%20layer-8%2C300%2B%20interactions-e11d48.svg)](#safety-layer)
 [![Get the data](https://img.shields.io/badge/Get%20the%20data-suppdb.dataengineered.io-10b981.svg)](https://suppdb.dataengineered.io)
 
