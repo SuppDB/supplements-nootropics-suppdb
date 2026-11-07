@@ -7,9 +7,16 @@ const NEW_HOST = "suppdb.dataengineered.io";
 // Repo-only files. Pages serves the whole repository root, so without this the
 // translation catalogs, the build scripts, their config, the README and dotfiles
 // would be downloadable from the site. They get the site's normal 404 instead
-// (they stay in the GitHub repository).
-const REPO_ONLY_PREFIXES = ["/locales/", "/scripts/"];
-const REPO_ONLY_FILES = new Set(["/i18n.config.json", "/readme.md", "/vercel.json", "/requirements.txt"]);
+// (they stay in the GitHub repository), as do the Kaggle upload files, examples,
+// notebooks, tests, the changelog, the GitHub community files and the i18n tool's
+// marker file in each language folder. Anything a page, llms.txt or a listing
+// links stays served.
+const REPO_ONLY_PREFIXES = ["/locales/", "/scripts/", "/kaggle/", "/examples/", "/notebooks/", "/tests/"];
+const REPO_ONLY_FILES = new Set([
+  "/i18n.config.json", "/readme.md", "/vercel.json", "/requirements.txt",
+  "/changelog.md", "/contributing.md", "/code_of_conduct.md", "/security.md", "/assets/readme.md",
+  "/es/_i18n-generated.txt", "/de/_i18n-generated.txt", "/fr/_i18n-generated.txt", "/pt-br/_i18n-generated.txt",
+]);
 
 // Images deleted from the repository (2026-10-30, replaced by the count-free og-image-v2.png).
 // They were served as immutable for a year, and Pages can keep answering a deleted immutable
